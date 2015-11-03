@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>WHAM: The Weighted Histogram Analysis Method</title>
+    <meta name="description" content="Blog of Guillaume Bouvier
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="http://bloggb.fr/science/2014/10/23/wham-the-weighted-histogram-analysis-method.html">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+<!--google analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55934945-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!--mathjax-->
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">bloggb</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+          <a class="page-link" href="/bibliography.html">Bibliography</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="wham-the-weighted-histogram-analysis-method">WHAM: The Weighted Histogram Analysis Method</h1>
+
+<p>First of all, a good introduction to the WHAM method can be found <a href="http://biomaps.rutgers.edu/wham_derivation.pdf">here</a> or <a href="/assets/wham_derivation.pdf">here for a local copy</a>.</p>
+
+<p>Sometime, it’s necessary to determine properties from combined simulations under
+different conditions. The <strong>WHAM</strong> method allows to unbias the distribution of
+the combined simulations.</p>
+
+<p>Here, we present the result on a 1D toy model sampled with a Markov Chain Monte
+Carlo (<strong>MCMC</strong>)</p>
+
+<p>Here the import in the ipython notebook:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
+<span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">as</span> <span class="nn">gridspec</span>
+<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="kn">as</span> <span class="nn">optim</span></code></pre></figure>
+
+<p>The 1D potential is constructed with a 1D polynomial fit of some points</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'o'</span><span class="p">)</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+
+<span class="n">x_lin</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x_lin</span><span class="p">,</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s">'Potential'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s">'discrete coordinates'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">grid</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_4_0.png" alt="png" /></p>
+
+<p>This potential is then sampled using a MCMC</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">montecarlo</span><span class="p">(</span><span class="n">potential</span><span class="o">=</span><span class="n">E</span><span class="p">,</span> <span class="n">nstep</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+    <span class="n">traj</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nstep</span><span class="p">):</span>
+        <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span> <span class="o">+</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">):</span>
+            <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span> <span class="o">+</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">potential</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">-</span> <span class="n">potential</span><span class="p">(</span><span class="n">pos_prev</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c">#print p(delta)</span>
+            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
+                <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
+        <span class="c">#print pos, pos_prev, delta, potential(pos), potential(pos_prev)</span>
+        <span class="n">traj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">asarray</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span></code></pre></figure>
+
+<p>We used six different temperature (\(T=\beta^{-1}\)):</p>
+
+<ul>
+  <li>
+    <p>\(\beta=1.00\)</p>
+  </li>
+  <li>
+    <p>\(\beta=0.85\)</p>
+  </li>
+  <li>
+    <p>\(\beta=0.70\)</p>
+  </li>
+  <li>
+    <p>\(\beta=0.55\)</p>
+  </li>
+  <li>
+    <p>\(\beta=0.40\)</p>
+  </li>
+  <li>
+    <p>\(\beta=0.25\)</p>
+  </li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">beta_list</span> <span class="o">=</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">traj_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">beta</span> <span class="ow">in</span> <span class="n">beta_list</span><span class="p">:</span>
+    <span class="n">traj_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">montecarlo</span><span class="p">(</span><span class="n">nstep</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">))</span></code></pre></figure>
+
+<p>And then we plot the distributions obtained from the 6 MCMC:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">rcParams</span><span class="p">[</span><span class="s">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span><span class="mi">8</span>
+<span class="n">gs</span> <span class="o">=</span> <span class="n">gridspec</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">traj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">traj_list</span><span class="p">):</span>
+    <span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span>
+    <span class="n">title</span><span class="p">(</span><span class="s">r'$</span><span class="err">\</span><span class="s">beta$ = </span><span class="si">%.2</span><span class="s">f'</span><span class="o">%</span><span class="n">beta_list</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">ylabel</span><span class="p">(</span><span class="s">'$</span><span class="err">\</span><span class="s">pi$'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">xlabel</span><span class="p">(</span><span class="s">'discrete coordinates'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">grid</span><span class="p">()</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">hist</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="n">twinx</span><span class="p">()</span>
+    <span class="n">plot</span><span class="p">(</span><span class="n">x_lin</span><span class="p">,</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'r'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">ylabel</span><span class="p">(</span><span class="s">'Potential'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_10_0.png" alt="png" /></p>
+
+<p>We can look at the distribution of the six MCMC simulations merged together:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">rcParams</span><span class="p">[</span><span class="s">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">traj_combined</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">traj_list</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">hist</span><span class="p">(</span><span class="n">traj_combined</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">normed</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s">'discrete coordinates'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s">'$</span><span class="err">\</span><span class="s">pi$'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">twinx</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x_lin</span><span class="p">,</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'r'</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s">'Potential'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">title</span><span class="p">(</span><span class="s">'Combined trajectory'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_12_0.png" alt="png" /></p>
+
+<p>This distribution is biased as we run the MCMC at 6 different temperatures. The
+aim of WHAM is to unbias the distribution. We assume that <script type="math/tex">p_{ij}</script>, the biased
+probability of bin j in the i-th simulation, is related to <script type="math/tex">p_{j}</script>, the unbiased
+probability of bin j via:</p>
+
+<script type="math/tex; mode=display">p_{ij} = f_{i}c_{ij}p_{j}^{o}</script>
+
+<p>where <script type="math/tex">c_{ij}</script> is the biasing factor and <script type="math/tex">f_{i}</script> is a normalizing constant
+chosen such that <script type="math/tex">\sum_{j}p_{ij}=1</script>:</p>
+
+<script type="math/tex; mode=display">f_{i} = \frac{1}{\sum_{j}c_{ij}p_{j}^{o}}</script>
+
+<p>For the temperature biasing:</p>
+
+<script type="math/tex; mode=display">c_{ij} = \exp{(-(\beta_{i}-\beta_{0})E_{j})}</script>
+
+<p>We assume that we want to compute the potential of mean force (<strong>PMF</strong>) at
+\(\beta=1\).</p>
+
+<p>We can compute \(c_{ij}\):</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">n_sim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">beta_list</span><span class="p">)</span> <span class="c"># number of simulations</span>
+<span class="n">n_bin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_lin</span><span class="p">)</span> <span class="c"># number of bins</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_sim</span><span class="p">,</span> <span class="n">n_bin</span><span class="p">))</span>
+<span class="n">beta0</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># the beta of the unbias distribution we want to compute</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">beta</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">beta_list</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">e</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">)):</span>
+        <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">beta</span><span class="o">-</span><span class="n">beta0</span><span class="p">)</span><span class="o">*</span><span class="n">e</span><span class="p">)</span></code></pre></figure>
+
+<p>Just for fun, the visualisation of c:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">rcParams</span><span class="p">[</span><span class="s">'figure.figsize'</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span><span class="mi">5</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">())</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">colorbar</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_18_0.png" alt="png" /></p>
+
+<p>An optimal estimate of \(p_{j}^{o}\) is given by:</p>
+
+<script type="math/tex; mode=display">p_{j}^{o} = \frac{\sum_{i=1}^{S}n_{ij}}{\sum_{i=1}^{S}N_{i}f_{i}c_{ij}}</script>
+
+<p>with <script type="math/tex">n_{ij}</script> the number of bin count for simulation i and bin j and <script type="math/tex">N_{i}</script> the
+total number of sample generated by the i-th simulation.</p>
+
+<p>and, as said before:</p>
+
+<script type="math/tex; mode=display">f_{i} = \frac{1}{\sum_{j=1}^{M}c_{ij}p_{j}^{o}}</script>
+
+<p>S is the total number of simulations (here \(S=6\)) and M is the total number of
+bins (here \(M=100\)).</p>
+
+<p>We can easily compute \(n_{ij}\;\forall\;(i,j)\)</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">n</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_sim</span><span class="p">,</span> <span class="n">n_bin</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">traj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">traj_list</span><span class="p">):</span>
+    <span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span></code></pre></figure>
+
+<p>A representation of n:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">matshow</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">())</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">colorbar</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_23_0.png" alt="png" /></p>
+
+<p>Now we use <code>fsolve</code> to solve the WHAM equations described below:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">p0_guess</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">n_bin</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+<span class="n">f_guess</span> <span class="o">=</span> <span class="n">ones</span><span class="p">(</span><span class="n">n_sim</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([</span><span class="n">traj</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="n">traj_list</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">residual</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
+    <span class="n">p0</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="n">P</span><span class="p">[:</span><span class="n">n_bin</span><span class="p">],</span><span class="n">P</span><span class="p">[</span><span class="n">n_bin</span><span class="p">:]</span>
+    <span class="c">#print p0.shape, f.shape</span>
+    <span class="n">res1</span> <span class="o">=</span> <span class="n">p0</span> <span class="o">-</span> <span class="n">n</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">f</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">res2</span> <span class="o">=</span> <span class="n">f</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">c</span><span class="o">*</span><span class="n">p0</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">res1</span><span class="p">,</span> <span class="n">res2</span><span class="p">))</span>
+<span class="c">#residual(concatenate((p0_guess,f_guess)))</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">fsolve</span><span class="p">(</span><span class="n">residual</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">p0_guess</span><span class="p">,</span> <span class="n">f_guess</span><span class="p">)))</span>
+<span class="c">#print P.x</span>
+<span class="n">p0</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="n">P</span><span class="p">[:</span><span class="n">n_bin</span><span class="p">],</span><span class="n">P</span><span class="p">[</span><span class="n">n_bin</span><span class="p">:]</span></code></pre></figure>
+
+<p>And here the result; the unbias distribution for \(\beta=1\)</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">plot</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s">'discrete coordinates'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">ylabel</span><span class="p">(</span><span class="s">'$</span><span class="err">\</span><span class="s">pi$'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_27_0.png" alt="png" /></p>
+
+<p>We can then derived the free energy profile (F) or Potential of Mean force
+(PMF):</p>
+
+<script type="math/tex; mode=display">F = F_{0} - \frac{1}{\beta}\ln(p^o)</script>
+
+<p>and compare to the initial one, used in the toy model:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="n">log</span><span class="p">(</span><span class="n">p0</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'PMF'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x_lin</span><span class="p">,</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Original potential'</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s">'Potential'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s">'discrete coordinates'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">grid</span><span class="p">()</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">legend</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_29_0.png" alt="png" /></p>
+
+<p>If we normalized with the \(F_{0}\) factor we obtain:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">F0</span> <span class="o">=</span> <span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="n">p0</span><span class="p">)</span> <span class="o">+</span> <span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">F0</span><span class="o">-</span><span class="n">log</span><span class="p">(</span><span class="n">p0</span><span class="p">),</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'PMF'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x_lin</span><span class="p">,</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">),</span> <span class="s">'--'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'Original potential'</span><span class="p">)</span>
+<span class="n">grid</span><span class="p">()</span>
+<span class="n">tmp</span> <span class="o">=</span> <span class="n">legend</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="/assets/wham_files/wham_31_0.png" alt="png" /></p>
+
+            <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'gb-blog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">bloggb</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>bloggb</li>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/bougui505">
+              <span class="icon  icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+                </svg>
+              </span>
+
+              <span class="username">bougui505</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/bougui505">
+              <span class="icon  icon--twitter">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/>
+                </svg>
+              </span>
+
+              <span class="username">bougui505</span>
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Blog of Guillaume Bouvier
+</p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://izar.crabdance.com/" property="cc:attributionName" rel="cc:attributionURL">Guillaume Bouvier</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+
+</html>

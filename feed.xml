@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bloggb</title>
+    <description>Blog of Guillaume Bouvier
+</description>
+    <link>http://bloggb.fr/</link>
+    <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 03 Nov 2015 11:08:51 +0100</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2015 11:08:51 +0100</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Get a progress bar for a process in shell with pv -- Pipe Viewer --</title>
+        <description>&lt;h1 id=&quot;get-a-progress-bar-for-a-process-in-shell-with-pv----pipe-viewer---&quot;&gt;Get a progress bar for a process in shell with pv – Pipe Viewer –&lt;/h1&gt;
+
+&lt;h2 id=&quot;monitor-the-progress-accordingly-to-the-number-of-lines-in-the-output-file&quot;&gt;Monitor the progress accordingly to the number of lines in the output file.&lt;/h2&gt;
+
+&lt;p&gt;In the example below, the target number of line for the output is 330000:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./get_weights.sh | pv -s 330000 -l &amp;gt; frames_weight.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sample output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 103k 0:13:27 [ 128/s ] [=============================&amp;gt;                                                                     ] 31% ETA 0:29:46
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 29 Oct 2015 00:00:00 +0100</pubDate>
+        <link>http://bloggb.fr/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</guid>
+        
+        <category>pv</category>
+        
+        <category>linux</category>
+        
+        <category>shell</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Extract a subset of frames from a DCD trajectory file with MDAnalysis</title>
+        <description>&lt;h1 id=&quot;extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis&quot;&gt;Extract a subset of frames from a DCD trajectory file with MDAnalysis&lt;/h1&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;frame_list_file.txt&lt;/code&gt; is an ASCII file containing one frame id per line,
+starting from 0. Repetitions of frames are allowed and will be kept in the
+output file. The order of the frames will be preserved in the output DCD file.&lt;/p&gt;
+
+&lt;p&gt;If the list of frames is not given as a file, the standard input is read
+instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;awk &#39;{print $3}&#39; some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To extract all frames from a trajectory just give:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/12537c00c8e1679577de.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 27 Oct 2015 00:00:00 +0100</pubDate>
+        <link>http://bloggb.fr/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</guid>
+        
+        <category>python</category>
+        
+        <category>mdanalysis</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Compute native contacts ratio from a dcd trajectory file with MD-Analysis</title>
+        <description>&lt;h1 id=&quot;compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis&quot;&gt;Compute native contacts ratio from a dcd trajectory file with MD-Analysis&lt;/h1&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;native_contacts.py file.dcd file.pdb file.psf [any valid selection string]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The selection string is optional and can be any valid selection string for
+selectAtoms() that produces identical selections in mobile and reference. e.g.
+&lt;code&gt;&quot;resid 6-91&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I don’t know why but the number of native contacts for the last frame is not
+computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cc8415df4102becceede.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 23 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</guid>
+        
+        <category>mdanalysis</category>
+        
+        <category>python</category>
+        
+        <category>science</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</title>
+        <description>&lt;h1 id=&quot;compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data&quot;&gt;Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data&lt;/h1&gt;
+
+&lt;p&gt;This script compute the theoretical SAXS profile for each frame of a &lt;code&gt;dcd&lt;/code&gt; format trajectory.
+The corresponding chi value is computed from experimental data.&lt;/p&gt;
+
+&lt;p&gt;Dependencies:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ks.uiuc.edu/Development/MDTools/catdcd/&quot;&gt;catdcd&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://integrativemodeling.org/&quot;&gt;IMP, the Integrative Modeling Platform&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/parallel/&quot;&gt;GNU parallel&lt;/a&gt; &lt;a href=&quot;/linux/2015/09/14/gnu-parallel.html&quot;&gt;See this blog post&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I use two functions detailed in other blog posts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/2015/10/21/split-a-multi-model-pdb-from-shell.html&quot;&gt;&lt;code&gt;splitpdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html&quot;&gt;&lt;code&gt;mspdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Two scripts are required:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The main shell script:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2fa82c1d039155503416.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The IMP python script:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/7d32ce504bfbff965ee4.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</guid>
+        
+        <category>saxs</category>
+        
+        <category>imp</category>
+        
+        <category>parallel</category>
+        
+        <category>catdcd</category>
+        
+        <category>science</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Coding style: highlight text that goes over the 80 column limit in vim</title>
+        <description>&lt;h1 id=&quot;coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim&quot;&gt;Coding style: highlight text that goes over the 80 column limit in vim&lt;/h1&gt;
+
+&lt;p&gt;Coding style: highlights the background in a subtle red for text that goes over the 80 column limit (from: &lt;a href=&quot;http://stackoverflow.com/a/235970/1679629&quot;&gt;stackoverflow&lt;/a&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;highlight OverLength ctermbg=LightRed ctermfg=black guibg=#592929
+match OverLength /\%81v.\+/
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</guid>
+        
+        <category>vim</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>`Argument list too long` error with GNU parallel</title>
+        <description>&lt;h1 id=&quot;argument-list-too-long-error-with-gnu-parallel&quot;&gt;&lt;code&gt;Argument list too long&lt;/code&gt; error with GNU parallel&lt;/h1&gt;
+
+&lt;p&gt;When the number of arguments is too long, GNU parallel raises a &lt;code&gt;Argument list too long&lt;/code&gt; error.&lt;/p&gt;
+
+&lt;p&gt;A possible solution is to use the &lt;code&gt;find&lt;/code&gt; command:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    find directory -name &lt;span class=&quot;s2&quot;&gt;&quot;*.dat&quot;&lt;/span&gt; |&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    parallel -k --eta &lt;span class=&quot;s2&quot;&gt;&quot;grep Chi {} | awk -F&#39;Chi = &#39; &#39;{print &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&#39;&quot;&lt;/span&gt; &amp;gt; out.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;instead of the classical syntax:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    ls directory/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.dat |&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    parallel -k --eta &lt;span class=&quot;s2&quot;&gt;&quot;grep Chi {} | awk -F&#39;Chi = &#39; &#39;{print &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&#39;&quot;&lt;/span&gt; &amp;gt; out.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    parallel -k --eta &lt;span class=&quot;s2&quot;&gt;&quot;grep Chi {} | awk -F&#39;Chi = &#39; &#39;{print &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&#39;&quot;&lt;/span&gt; ::: directory/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.dat &amp;gt; out.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</guid>
+        
+        <category>parallel</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Align dcd trajectory with MDAnalysis</title>
+        <description>&lt;h1 id=&quot;align-dcd-trajectory-with-mdanalysis&quot;&gt;Align dcd trajectory with MDAnalysis&lt;/h1&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;align_dcd.py file.dcd file.pdb file.psf [any valid selection string]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The selection string is optional and can be any valid selection string for
+selectAtoms() that produces identical selections in mobile and reference. e.g.
+&lt;code&gt;&quot;resid 6-91&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b5fbdb2de5b9c1ff106e.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/22/align-dcd-trajectory-with-mdanalysis.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/align-dcd-trajectory-with-mdanalysis.html</guid>
+        
+        <category>mdanalysis</category>
+        
+        <category>python</category>
+        
+        <category>science</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Split a multi model pdb from shell</title>
+        <description>&lt;h1 id=&quot;split-a-multi-model-pdb-from-shell&quot;&gt;Split a multi model pdb from shell&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;awk &lt;span class=&quot;s1&quot;&gt;&#39;$0 ~ /ATOM      1/ {i++} {print &amp;gt;&amp;gt; &quot;pdbs/out_&quot;i&quot;.pdb&quot;} {fflush(&quot;pdbs/out_&quot;i&quot;.pdb&quot;)}&#39;&lt;/span&gt; filename.pdb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;It’s possible to use the csplit command too. In the example below, I’ve a pdb file containing 50000 models delimited by &lt;code&gt;MODEL X&lt;/code&gt; and &lt;code&gt;ENDMDL&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;csplit -z -f /dev/shm/docking_ -n 5 docking_results.pdb &lt;span class=&quot;s1&quot;&gt;&#39;/ENDMDL/1&#39;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;{49999}&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;code&gt;-n&lt;/code&gt;: number of digits&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;-z&lt;/code&gt;: remove empty output files&lt;/p&gt;
+
+&lt;p&gt;In the previous example the output files are named (in the &lt;code&gt;/dev/shm/&lt;/code&gt; directory):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docking_00000
+docking_00001
+...
+docking_49999
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you want to add a suffix (for example &lt;code&gt;.pdb&lt;/code&gt;) you have to specify the format:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;csplit -z -f /dev/shm/docking_ -b &lt;span class=&quot;s1&quot;&gt;&#39;%05d.pdb&#39;&lt;/span&gt; docking_results.pdb &lt;span class=&quot;s1&quot;&gt;&#39;/ENDMDL/1&#39;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;{49999}&#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Below is the final function:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;splitpdb &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;n_models&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;grep -c MODEL &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+    csplit -z -f /dev/shm/model_ -b &lt;span class=&quot;s1&quot;&gt;&#39;%04d.pdb&#39;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/ENDMDL/1&#39;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;expr &lt;span class=&quot;nv&quot;&gt;$n_models&lt;/span&gt; - 1&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If you want 100 structures per output file&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;awk &lt;span class=&quot;s1&quot;&gt;&#39;$0 ~ /ATOM 1/ {i++} {print &amp;gt;&amp;gt; &quot;pdbs/smap_&quot;int(i/100)&quot;.pdb&quot;} {fflush(&quot;pdbs/smap_&quot;int(i/100)&quot;.pdb&quot;)}&#39;&lt;/span&gt; smap.pdb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Wed, 21 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/21/split-a-multi-model-pdb-from-shell.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/21/split-a-multi-model-pdb-from-shell.html</guid>
+        
+        <category>shell</category>
+        
+        <category>linux</category>
+        
+        <category>bash</category>
+        
+        <category>awk</category>
+        
+        <category>zsh</category>
+        
+        <category>csplit</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Get a range of script arguments in zsh</title>
+        <description>&lt;h1 id=&quot;get-a-range-of-script-arguments-in-zsh&quot;&gt;Get a range of script arguments in zsh&lt;/h1&gt;
+
+&lt;h2 id=&quot;get-for-example-3-arguments-from-the-fourth-one&quot;&gt;Get, for example, 3 arguments from the fourth one:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;:4:3&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;get-all-the-arguments&quot;&gt;Get all the arguments:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;get-all-the-arguments-from-the-second-one&quot;&gt;Get all the arguments from the second one:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;:2&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Wed, 21 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/21/get-a-range-of-script-arguments-in-zsh.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/21/get-a-range-of-script-arguments-in-zsh.html</guid>
+        
+        <category>zsh</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Work with arrays in zsh</title>
+        <description>&lt;h1 id=&quot;work-with-arrays-in-zsh&quot;&gt;Work with arrays in zsh&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;a b c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;
+a b c
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]
+a
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2]
+b&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;iterate-values&quot;&gt;Iterate values:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;done
+&lt;/span&gt;a
+b
+c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;append-values&quot;&gt;Append values&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;a+&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;
+1
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;a+&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
+&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;
+1 2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 20 Oct 2015 00:00:00 +0200</pubDate>
+        <link>http://bloggb.fr/2015/10/20/work-with-arrays-in-zsh.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/10/20/work-with-arrays-in-zsh.html</guid>
+        
+        <category>zsh</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
