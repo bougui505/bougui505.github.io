@@ -95,26 +95,17 @@
 
 <p>Usage:</p>
 
-<pre><code>./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd [frame_list_file.txt, all, -] [selection]
+<pre><code>./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
 </code></pre>
 
 <p>The <code>frame_list_file.txt</code> is an ASCII file containing one frame id per line,
 starting from 0. Repetitions of frames are allowed and will be kept in the
 output file. The order of the frames will be preserved in the output DCD file.</p>
 
-<p>The list of frame can be specified from the standard input. Just put a <code>-</code>
-instead of the <code>filename</code>. This feature is convenient to pipe from awk, for
-example:</p>
+<p>If the list of frames is not given as a file, the standard input is read
+instead. This feature is conveninant to pipe from awk, for example:</p>
 
-<pre><code>awk '{print $3}' some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd -
-</code></pre>
-
-<p><code>[selection]</code> is an optional argument. It’s a string specifying the atom to
-select (any valid selection string for <code>selectAtoms()</code>)</p>
-
-<p>To extract all frames from a trajectory with a specified selection just give:</p>
-
-<pre><code>./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd all 'resid 6-91'
+<pre><code>awk '{print $3}' some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
 </code></pre>
 
 <noscript><pre>400: Invalid request
