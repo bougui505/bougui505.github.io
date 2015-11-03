@@ -6,9 +6,46 @@
 </description>
     <link>http://bloggb.fr/</link>
     <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 03 Nov 2015 12:54:40 +0100</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2015 12:54:40 +0100</lastBuildDate>
+    <pubDate>Tue, 03 Nov 2015 15:33:04 +0100</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2015 15:33:04 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Generate jekyll site locally and push source file and static web site to github</title>
+        <description>&lt;h1 id=&quot;generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github&quot;&gt;Generate jekyll site locally and push source file and static web site to github&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;First, set the environment variable &lt;code&gt;BLOGDIR&lt;/code&gt; to the directory containing the
+source file for your blog.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Set the origin remote repositories properly for the source directory and the
+generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in jekyll.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then you can use the code below from the command line:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./jekyll_push.sh &lt;span class=&quot;s2&quot;&gt;&quot;Message of the git commit&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/85ce0e40d36ed7c8442d.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 03 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://bloggb.fr/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>github</category>
+        
+        <category>git</category>
+        
+        
+      </item>
     
       <item>
         <title>Get a progress bar for a process in shell with pv -- Pipe Viewer --</title>
@@ -335,45 +372,6 @@ docking_49999
         <pubDate>Wed, 21 Oct 2015 00:00:00 +0200</pubDate>
         <link>http://bloggb.fr/2015/10/21/get-a-range-of-script-arguments-in-zsh.html</link>
         <guid isPermaLink="true">http://bloggb.fr/2015/10/21/get-a-range-of-script-arguments-in-zsh.html</guid>
-        
-        <category>zsh</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Work with arrays in zsh</title>
-        <description>&lt;h1 id=&quot;work-with-arrays-in-zsh&quot;&gt;Work with arrays in zsh&lt;/h1&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;a b c&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;
-a b c
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;1]
-a
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;2]
-b&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;iterate-values&quot;&gt;Iterate values:&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;done
-&lt;/span&gt;a
-b
-c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;append-values&quot;&gt;Append values&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=()&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;a+&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;
-1
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;a+&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;2
-&lt;span class=&quot;gp&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$a&lt;/span&gt;
-1 2&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Tue, 20 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bloggb.fr/2015/10/20/work-with-arrays-in-zsh.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/20/work-with-arrays-in-zsh.html</guid>
         
         <category>zsh</category>
         
