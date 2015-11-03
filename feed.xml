@@ -6,8 +6,8 @@
 </description>
     <link>http://bloggb.fr/</link>
     <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 03 Nov 2015 15:33:04 +0100</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2015 15:33:04 +0100</lastBuildDate>
+    <pubDate>Tue, 03 Nov 2015 15:59:34 +0100</pubDate>
+    <lastBuildDate>Tue, 03 Nov 2015 15:59:34 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -81,22 +81,26 @@ generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in j
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
+&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd [frame_list_file.txt, all, -] [selection]
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The &lt;code&gt;frame_list_file.txt&lt;/code&gt; is an ASCII file containing one frame id per line,
 starting from 0. Repetitions of frames are allowed and will be kept in the
 output file. The order of the frames will be preserved in the output DCD file.&lt;/p&gt;
 
-&lt;p&gt;If the list of frames is not given as a file, the standard input is read
-instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
+&lt;p&gt;The list of frame can be specified from the standard input. Just put a &lt;code&gt;-&lt;/code&gt;
+instead of the &lt;code&gt;filename&lt;/code&gt;. This feature is convenient to pipe from awk, for
+example:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;awk &#39;{print $3}&#39; some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
+&lt;pre&gt;&lt;code&gt;awk &#39;{print $3}&#39; some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd -
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;To extract all frames from a trajectory just give:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;[selection]&lt;/code&gt; is an optional argument. It’s a string specifying the atom to
+select (any valid selection string for &lt;code&gt;selectAtoms()&lt;/code&gt;)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd all
+&lt;p&gt;To extract all frames from a trajectory with a specified selection just give:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd all &#39;resid 6-91&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
