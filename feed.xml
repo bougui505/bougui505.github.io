@@ -6,9 +6,44 @@
 </description>
     <link>http://bloggb.fr/</link>
     <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 03 Nov 2015 17:30:05 +0100</pubDate>
-    <lastBuildDate>Tue, 03 Nov 2015 17:30:05 +0100</lastBuildDate>
+    <pubDate>Wed, 04 Nov 2015 11:35:36 +0100</pubDate>
+    <lastBuildDate>Wed, 04 Nov 2015 11:35:36 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Select a subset of atoms from a trajectory file with MDanalysis</title>
+        <description>&lt;h1 id=&quot;select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis&quot;&gt;Select a subset of atoms from a trajectory file with MDanalysis&lt;/h1&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;./select_atoms_from_dcd.py topology.[pdb,psf,crd,gro] trajectory.[dcd,xtc,trr,xyz] outfile.[dcd,npy] &#39;selection string&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://pythonhosted.org/MDAnalysis/documentation_pages/overview.html&quot;&gt;MDAnalysis documentation&lt;/a&gt;
+for accepted input files for topology and trajectory.&lt;/p&gt;
+
+&lt;p&gt;If the output file name is with &lt;code&gt;npy&lt;/code&gt; extension a numpy file is outputted with
+an array containing the atomic coordinates of the selected atoms. This file
+format can be convenient to perform analysis on coordinates with python.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html&quot;&gt;MDAnalysis documentation&lt;/a&gt;
+for selection syntax.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/0411d863a2c6d2df4bcc.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 04 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://bloggb.fr/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</guid>
+        
+        <category>mdanalysis</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Generate jekyll site locally and push source file and static web site to github</title>
@@ -337,38 +372,6 @@ docking_49999
         <category>zsh</category>
         
         <category>csplit</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Get a range of script arguments in zsh</title>
-        <description>&lt;h1 id=&quot;get-a-range-of-script-arguments-in-zsh&quot;&gt;Get a range of script arguments in zsh&lt;/h1&gt;
-
-&lt;h2 id=&quot;get-for-example-3-arguments-from-the-fourth-one&quot;&gt;Get, for example, 3 arguments from the fourth one:&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;:4:3&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;get-all-the-arguments&quot;&gt;Get all the arguments:&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;get-all-the-arguments-from-the-second-one&quot;&gt;Get all the arguments from the second one:&lt;/h2&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;x &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;:2&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;; &lt;span class=&quot;k&quot;&gt;do
-    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$x&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Wed, 21 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bloggb.fr/2015/10/21/get-a-range-of-script-arguments-in-zsh.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/21/get-a-range-of-script-arguments-in-zsh.html</guid>
-        
-        <category>zsh</category>
         
         
       </item>
