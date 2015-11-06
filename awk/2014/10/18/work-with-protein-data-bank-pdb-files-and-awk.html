@@ -111,9 +111,14 @@
 
 <h2 id="strip-hydrogens-from-a-pdb-file">Strip hydrogens from a <code>pdb</code> file</h2>
 
+<p>The <code>mktemp -p /dev/shm</code> function ensure that a unique temporary file name is
+created. This feature is important to run this function in parallel on multiple
+files.</p>
+
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function </span>stripH <span class="o">()</span> <span class="o">{</span>
+    <span class="nv">tmpfile</span><span class="o">=</span><span class="k">$(</span>mktemp -p /dev/shm<span class="k">)</span>
     awk <span class="s1">'{if ($1=="ATOM" &amp;&amp; $3 !~ /H/) {c+=1; printf("%-6s%5s %4s %3s %s%4s    %8s%8s%8s\n", $1,c,$3,$4,$5,$6,$7,$8,$9)} \
-    else if ($1=="MODEL" || $1=="ENDMDL") {c=0; print $0}}'</span> <span class="nv">$1</span> &gt; /dev/shm/tmp.pdb <span class="o">&amp;&amp;</span> mv /dev/shm/tmp.pdb <span class="nv">$1</span>
+    else if ($1=="MODEL" || $1=="ENDMDL") {c=0; print $0}}'</span> <span class="nv">$1</span> &gt; <span class="nv">$tmpfile</span> <span class="o">&amp;&amp;</span> mv <span class="nv">$tmpfile</span> <span class="nv">$1</span>:h/rec_noH.pdb
 <span class="o">}</span></code></pre></figure>
 
 
