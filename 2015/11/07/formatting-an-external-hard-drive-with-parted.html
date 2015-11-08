@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Formatting an external hard drive with parted</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bloggb.fr/blog/page7/">
+    <link rel="canonical" href="http://bloggb.fr/2015/11/07/formatting-an-external-hard-drive-with-parted.html">
 </head>
 
 
@@ -91,145 +91,108 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="formatting-an-external-hard-drive-with-parted">Formatting an external hard drive with parted</h1>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 139%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 93%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 93%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 70%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 130%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 70%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 135%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 170%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 143%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 107%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 116%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 107%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 116%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 93%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 93%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 70%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 107%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 153%' href='/tags.html#science'>science</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 130%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 139%' href='/tags.html#zsh'>zsh</a>
+<h2 id="identifying-the-external-usb-hard-drive">Identifying the external usb hard drive</h2>
 
-   </div>
+<p>Plug the usb hard drive and type <code>df -Th</code> (<code>T</code>: allow to display the file system type):</p>
 
-  <h1 class="page-heading">Posts</h1>
+<pre><code>/dev/sdb1        fuseblk    932G    121M  932G   1% /media/yourusername/Elements
+</code></pre>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 21, 2014</span>
+<p>Unmount the partition to format; here:</p>
 
-        <h2>
-          <a class="post-link" href="/python/2014/10/21/transition-networks-with-python.html">Transition networks with python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
+<pre><code>umount /dev/sdb1
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/python/2014/10/20/figure-size-font-and-latex-with-matplotlib-and-python.html">Figure size, font and LaTeX with matplotlib and python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
+<h2 id="parted">Parted</h2>
 
-        <h2>
-          <a class="post-link" href="/latex/2014/10/20/truncate-header-in-fancyhdr.html">Truncate header in fancyhdr</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
+<pre><code>sudo parted /dev/sdb
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/20/use-jekyll-with-bibtex.html">Use Jekyll with BibTeX</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+<ul>
+  <li>
+    <p>display the partition table:</p>
 
-        <h2>
-          <a class="post-link" href="/vim/2014/10/18/spell-check-in-vim.html">Spell check in vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+    <p>(parted) print
+  Model: WD Elements 10B8 (scsi)
+  Disk /dev/sdb: 1000GB
+  Sector size (logical/physical): 512B/512B
+  Partition Table: msdos
+  Disk Flags:</p>
 
-        <h2>
-          <a class="post-link" href="/latex/2014/10/18/latex-templates.html">LaTeX templates</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+    <p>Number  Start   End     Size    Type     File system  Flags
+   1      1049kB  1000GB  1000GB  primary  ntfs</p>
+  </li>
+  <li>
+    <p>delete partition 1:</p>
 
-        <h2>
-          <a class="post-link" href="/git/2014/10/18/git-pull-that-run-out-of-memory-on-the-server.html">Git pull that run out of memory on the server</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+    <p>(parted) rm 1</p>
+  </li>
+  <li>
+    <p>Create a new partition table</p>
 
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html">Work with protein data bank (pdb) files and awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+    <p>(parted) mklabel msdos
+  Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
+  Yes/No? Yes</p>
+  </li>
+  <li>
+    <p>make a partition</p>
 
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/awk-if-else-syntax.html">awk if-else syntax</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 17, 2014</span>
+    <p>(parted) mkpart
+  Partition type?  primary/extended? primary
+  File system type?  [ext2]? ext4
+  Start? 0%
+  End? -1s</p>
+  </li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/10/17/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>Remark: <code>-1s</code>: last sector of the drive</p>
 
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page6" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 7 of 7</span>
-      
-        <span class="next ">Next</span>
-      
-    </div>
+<pre><code>(parted) print
+Model: WD Elements 10B8 (scsi)
+Disk /dev/sdb: 1000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1000GB  1000GB  primary  ext4         lba
+</code></pre>
 
-</div>
+<ul>
+  <li>
+    <p>exit parted</p>
+
+    <p>(parted) quit
+  Information: You may need to update /etc/fstab.</p>
+  </li>
+</ul>
+
+<h2 id="formating">Formating</h2>
+
+<pre><code>sudo mkfs.ext4 /dev/sdb1
+</code></pre>
+
+<h2 id="test">Test</h2>
+
+<p>Unplug and plug again the disk and:</p>
+
+<pre><code>$ df -hT
+/dev/sdb1                            ext4         917G     72M  871G   1% /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
+</code></pre>
+
+<p>Try to write on it:</p>
+
+<pre><code>cd /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
+touch toto
+</code></pre>
+
+<p>If you get a <code>permission denied</code> just try to:</p>
+
+<pre><code>cd ..
+sudo chown yourusername:yourgroupname 4fc9b323-ac89-444a-9483-9af84030e1a1
+</code></pre>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">
