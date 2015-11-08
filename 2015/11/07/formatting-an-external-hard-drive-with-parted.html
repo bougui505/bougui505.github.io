@@ -110,42 +110,39 @@
 <pre><code>sudo parted /dev/sdb
 </code></pre>
 
-<ul>
-  <li>
-    <p>display the partition table:</p>
+<h3 id="display-the-partition-table">display the partition table:</h3>
 
-    <p>(parted) print
-  Model: WD Elements 10B8 (scsi)
-  Disk /dev/sdb: 1000GB
-  Sector size (logical/physical): 512B/512B
-  Partition Table: msdos
-  Disk Flags:</p>
+<pre><code>(parted) print
+Model: WD Elements 10B8 (scsi)
+Disk /dev/sdb: 1000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
 
-    <p>Number  Start   End     Size    Type     File system  Flags
-   1      1049kB  1000GB  1000GB  primary  ntfs</p>
-  </li>
-  <li>
-    <p>delete partition 1:</p>
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1000GB  1000GB  primary  ntfs
+</code></pre>
 
-    <p>(parted) rm 1</p>
-  </li>
-  <li>
-    <p>Create a new partition table</p>
+<h3 id="delete-partition-1">delete partition 1:</h3>
 
-    <p>(parted) mklabel msdos
-  Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
-  Yes/No? Yes</p>
-  </li>
-  <li>
-    <p>make a partition</p>
+<pre><code>(parted) rm 1
+</code></pre>
 
-    <p>(parted) mkpart
-  Partition type?  primary/extended? primary
-  File system type?  [ext2]? ext4
-  Start? 0%
-  End? -1s</p>
-  </li>
-</ul>
+<h3 id="create-a-new-partition-table">Create a new partition table</h3>
+
+<pre><code>(parted) mklabel msdos
+Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
+Yes/No? Yes
+</code></pre>
+
+<h3 id="make-a-partition">make a partition</h3>
+
+<pre><code>(parted) mkpart
+Partition type?  primary/extended? primary
+File system type?  [ext2]? ext4
+Start? 0%
+End? -1s
+</code></pre>
 
 <p>Remark: <code>-1s</code>: last sector of the drive</p>
 
@@ -160,14 +157,11 @@ Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ext4         lba
 </code></pre>
 
-<ul>
-  <li>
-    <p>exit parted</p>
+<h3 id="exit-parted">exit parted</h3>
 
-    <p>(parted) quit
-  Information: You may need to update /etc/fstab.</p>
-  </li>
-</ul>
+<pre><code>(parted) quit
+Information: You may need to update /etc/fstab.
+</code></pre>
 
 <h2 id="formating">Formating</h2>
 

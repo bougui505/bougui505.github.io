@@ -6,8 +6,8 @@
 </description>
     <link>http://bloggb.fr/</link>
     <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 08 Nov 2015 15:28:55 +0100</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 15:28:55 +0100</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 15:31:33 +0100</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 15:31:33 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -31,42 +31,39 @@
 &lt;pre&gt;&lt;code&gt;sudo parted /dev/sdb
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;display the partition table:&lt;/p&gt;
+&lt;h3 id=&quot;display-the-partition-table&quot;&gt;display the partition table:&lt;/h3&gt;
 
-    &lt;p&gt;(parted) print
-  Model: WD Elements 10B8 (scsi)
-  Disk /dev/sdb: 1000GB
-  Sector size (logical/physical): 512B/512B
-  Partition Table: msdos
-  Disk Flags:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(parted) print
+Model: WD Elements 10B8 (scsi)
+Disk /dev/sdb: 1000GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
 
-    &lt;p&gt;Number  Start   End     Size    Type     File system  Flags
-   1      1049kB  1000GB  1000GB  primary  ntfs&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;delete partition 1:&lt;/p&gt;
+Number  Start   End     Size    Type     File system  Flags
+ 1      1049kB  1000GB  1000GB  primary  ntfs
+&lt;/code&gt;&lt;/pre&gt;
 
-    &lt;p&gt;(parted) rm 1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Create a new partition table&lt;/p&gt;
+&lt;h3 id=&quot;delete-partition-1&quot;&gt;delete partition 1:&lt;/h3&gt;
 
-    &lt;p&gt;(parted) mklabel msdos
-  Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
-  Yes/No? Yes&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;make a partition&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(parted) rm 1
+&lt;/code&gt;&lt;/pre&gt;
 
-    &lt;p&gt;(parted) mkpart
-  Partition type?  primary/extended? primary
-  File system type?  [ext2]? ext4
-  Start? 0%
-  End? -1s&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;create-a-new-partition-table&quot;&gt;Create a new partition table&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;(parted) mklabel msdos
+Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
+Yes/No? Yes
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;make-a-partition&quot;&gt;make a partition&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;(parted) mkpart
+Partition type?  primary/extended? primary
+File system type?  [ext2]? ext4
+Start? 0%
+End? -1s
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Remark: &lt;code&gt;-1s&lt;/code&gt;: last sector of the drive&lt;/p&gt;
 
@@ -81,14 +78,11 @@ Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ext4         lba
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;exit parted&lt;/p&gt;
+&lt;h3 id=&quot;exit-parted&quot;&gt;exit parted&lt;/h3&gt;
 
-    &lt;p&gt;(parted) quit
-  Information: You may need to update /etc/fstab.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;(parted) quit
+Information: You may need to update /etc/fstab.
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;formating&quot;&gt;Formating&lt;/h2&gt;
 
