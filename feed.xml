@@ -6,13 +6,13 @@
 </description>
     <link>http://bloggb.fr/</link>
     <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 09 Nov 2015 11:39:03 +0100</pubDate>
-    <lastBuildDate>Mon, 09 Nov 2015 11:39:03 +0100</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2015 13:30:11 +0100</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2015 13:30:11 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
-        <title>Very basic progress reporting in python</title>
-        <description>&lt;h1 id=&quot;very-basic-progress-reporting-in-python&quot;&gt;Very basic progress reporting in python&lt;/h1&gt;
+        <title>Progress reporting in python</title>
+        <description>&lt;h1 id=&quot;progress-reporting-in-python&quot;&gt;Progress reporting in python&lt;/h1&gt;
 
 &lt;p&gt;Can be useful in IPython notebook to monitor a progress without displaying huge
 number of lines with print command.&lt;/p&gt;
@@ -46,8 +46,8 @@ number of lines with print command.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 09 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/11/09/very-basic-progress-reporting-in-python.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/11/09/very-basic-progress-reporting-in-python.html</guid>
+        <link>http://bloggb.fr/2015/11/09/progress-reporting-in-python.html</link>
+        <guid isPermaLink="true">http://bloggb.fr/2015/11/09/progress-reporting-in-python.html</guid>
         
         <category>python</category>
         
