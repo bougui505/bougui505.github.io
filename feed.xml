@@ -6,8 +6,8 @@
 </description>
     <link>http://bloggb.fr/</link>
     <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 09 Nov 2015 13:31:55 +0100</pubDate>
-    <lastBuildDate>Mon, 09 Nov 2015 13:31:55 +0100</lastBuildDate>
+    <pubDate>Mon, 09 Nov 2015 13:48:28 +0100</pubDate>
+    <lastBuildDate>Mon, 09 Nov 2015 13:48:28 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -15,7 +15,8 @@
         <description>&lt;h1 id=&quot;progress-reporting-in-python&quot;&gt;Progress reporting in python&lt;/h1&gt;
 
 &lt;p&gt;Can be useful in IPython notebook to monitor a progress without displaying huge
-number of lines with print command.&lt;/p&gt;
+number of lines with print command. The expected time for arrival (ETA) is
+given.&lt;/p&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
@@ -29,15 +30,15 @@ number of lines with print command.&lt;/p&gt;
 
 &lt;p&gt;Sample output:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;10 %
-20 %
-30 %
-40 %
-50 %
-60 %
-70 %
-80 %
-90 %
+&lt;pre&gt;&lt;code&gt;10 % ETA: 0:00:08.995230
+20 % ETA: 0:00:07.999784
+30 % ETA: 0:00:06.999839
+40 % ETA: 0:00:05.999814
+50 % ETA: 0:00:04.999885
+60 % ETA: 0:00:03.999876
+70 % ETA: 0:00:02.999919
+80 % ETA: 0:00:01.999954
+90 % ETA: 0:00:00.999971
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
