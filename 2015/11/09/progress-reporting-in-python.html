@@ -101,9 +101,9 @@ number of lines with print command.</p>
 <p>Usage:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">basic_progress_reporting</span> <span class="kn">as</span> <span class="nn">bprogress</span>
+<span class="kn">import</span> <span class="nn">progress_reporting</span> <span class="kn">as</span> <span class="nn">Progress</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">progress</span> <span class="o">=</span> <span class="n">bprogress</span><span class="o">.</span><span class="n">Progress</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">progress</span> <span class="o">=</span> <span class="n">Progress</span><span class="o">.</span><span class="n">Progress</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
     <span class="n">progress</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></code></pre></figure>
