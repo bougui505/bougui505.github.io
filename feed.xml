@@ -4,10 +4,10 @@
     <title>bloggb</title>
     <description>Blog of Guillaume Bouvier
 </description>
-    <link>http://bloggb.fr/</link>
-    <atom:link href="http://bloggb.fr/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 09 Nov 2015 13:48:28 +0100</pubDate>
-    <lastBuildDate>Mon, 09 Nov 2015 13:48:28 +0100</lastBuildDate>
+    <link>http://bougui505.github.io/</link>
+    <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 16 Nov 2015 11:31:06 +0100</pubDate>
+    <lastBuildDate>Mon, 16 Nov 2015 11:31:06 +0100</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -47,8 +47,8 @@ given.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 09 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/11/09/progress-reporting-in-python.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/11/09/progress-reporting-in-python.html</guid>
+        <link>http://bougui505.github.io/2015/11/09/progress-reporting-in-python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/09/progress-reporting-in-python.html</guid>
         
         <category>python</category>
         
@@ -155,8 +155,8 @@ sudo chown yourusername:yourgroupname 4fc9b323-ac89-444a-9483-9af84030e1a1
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Sat, 07 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/11/07/formatting-an-external-hard-drive-with-parted.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/11/07/formatting-an-external-hard-drive-with-parted.html</guid>
+        <link>http://bougui505.github.io/2015/11/07/formatting-an-external-hard-drive-with-parted.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/07/formatting-an-external-hard-drive-with-parted.html</guid>
         
         <category>linux</category>
         
@@ -190,8 +190,8 @@ for selection syntax.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 04 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</guid>
+        <link>http://bougui505.github.io/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</guid>
         
         <category>mdanalysis</category>
         
@@ -225,8 +225,8 @@ generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in j
 
 </description>
         <pubDate>Tue, 03 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</guid>
+        <link>http://bougui505.github.io/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</guid>
         
         <category>jekyll</category>
         
@@ -253,8 +253,8 @@ generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in j
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Thu, 29 Oct 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</guid>
+        <link>http://bougui505.github.io/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</guid>
         
         <category>pv</category>
         
@@ -290,8 +290,8 @@ instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 27 Oct 2015 00:00:00 +0100</pubDate>
-        <link>http://bloggb.fr/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</guid>
+        <link>http://bougui505.github.io/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</guid>
         
         <category>python</category>
         
@@ -322,8 +322,8 @@ computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 23 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bloggb.fr/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</guid>
+        <link>http://bougui505.github.io/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</guid>
         
         <category>mdanalysis</category>
         
@@ -376,8 +376,8 @@ The corresponding chi value is computed from experimental data.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bloggb.fr/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</guid>
+        <link>http://bougui505.github.io/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</guid>
         
         <category>saxs</category>
         
@@ -403,8 +403,8 @@ match OverLength /\%81v.\+/
 &lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bloggb.fr/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</guid>
+        <link>http://bougui505.github.io/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</guid>
         
         <category>vim</category>
         
@@ -433,8 +433,8 @@ match OverLength /\%81v.\+/
 
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bloggb.fr/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</link>
-        <guid isPermaLink="true">http://bloggb.fr/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</guid>
+        <link>http://bougui505.github.io/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</guid>
         
         <category>parallel</category>
         
