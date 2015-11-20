@@ -95,7 +95,7 @@
       <div class="wrapper">
         <h1 id="use-latexdiff-tool-with-git">Use latexdiff tool with git</h1>
 
-<p>What is <code>latexdiff</code> ?
+<p>What is <code class="highlighter-rouge">latexdiff</code> ?
 Below the description of the debian package:</p>
 
 <blockquote>
@@ -136,21 +136,22 @@ reject selected changes only.</p>
   <p>Homepage: <a href="http://bullard.esc.cam.ac.uk/~tilmann/soft.html">http://bullard.esc.cam.ac.uk/~tilmann/soft.html</a></p>
 </blockquote>
 
-<p>First install <code>latexdiff</code></p>
+<p>First install <code class="highlighter-rouge">latexdiff</code></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo apt-get install latexdiff</code></pre></figure>
 
-<p>To use it with git, just add this line to your <code>~/.gitconfig</code>:</p>
+<p>To use it with git, just add this line to your <code class="highlighter-rouge">~/.gitconfig</code>:</p>
 
-<pre><code>[difftool.latexdiff]
+<div class="highlighter-rouge"><pre class="highlight"><code>[difftool.latexdiff]
     cmd = latexdiff "$LOCAL" "$REMOTE"
 </code></pre>
+</div>
 
-<p>For example to generate a diff file <code>diff.tex</code> between the current version of the file <code>document.tex</code> and the commit <code>83533d8</code> just type:</p>
+<p>For example to generate a diff file <code class="highlighter-rouge">diff.tex</code> between the current version of the file <code class="highlighter-rouge">document.tex</code> and the commit <code class="highlighter-rouge">83533d8</code> just type:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git difftool -t latexdiff 83533d8 -- document.tex &gt; diff.tex</code></pre></figure>
 
-<p>And now you can compile the <code>diff.tex</code> to highlight the difference easily.</p>
+<p>And now you can compile the <code class="highlighter-rouge">diff.tex</code> to highlight the difference easily.</p>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

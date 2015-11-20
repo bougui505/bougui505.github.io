@@ -101,19 +101,19 @@
 
 <p>It takes a long time (several minutes) on the raspberry pi.</p>
 
-<p>Then creates the file <code>_plugins/ext.rb</code> or add the following line to the file <code>_plugins/ext.rb</code> if its already exists:</p>
+<p>Then creates the file <code class="highlighter-rouge">_plugins/ext.rb</code> or add the following line to the file <code class="highlighter-rouge">_plugins/ext.rb</code> if its already exists:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">inline</span> <span class="n">code</span></code></pre></figure>
 
-<p>Then create the directory <code>_bibliography</code>:</p>
+<p>Then create the directory <code class="highlighter-rouge">_bibliography</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir _bibliography</code></pre></figure>
 
-<p>In this directory put your bib file under the name <code>references.bib</code>.</p>
+<p>In this directory put your bib file under the name <code class="highlighter-rouge">references.bib</code>.</p>
 
-<p>In the root directory of the jekyll web site create the file <code>bibliography.md</code>:</p>
+<p>In the root directory of the jekyll web site create the file <code class="highlighter-rouge">bibliography.md</code>:</p>
 
-<pre><code>---
+<div class="highlighter-rouge"><pre class="highlight"><code>---
 layout: default
 title: Bibliography
 ---
@@ -122,16 +122,18 @@ title: Bibliography
 
 {% bibliography %}
 </code></pre>
+</div>
 
 <p>That’s all.
-With the default jekyll theme a link to the generated bibliography page should appear in the top navigation bar of the generated web site (<code>jekyll build</code>).</p>
+With the default jekyll theme a link to the generated bibliography page should appear in the top navigation bar of the generated web site (<code class="highlighter-rouge">jekyll build</code>).</p>
 
-<p>If you want to sort the bibliography by year you can add this in the <code>_config.yml</code></p>
+<p>If you want to sort the bibliography by year you can add this in the <code class="highlighter-rouge">_config.yml</code></p>
 
-<pre><code>scholar:
+<div class="highlighter-rouge"><pre class="highlight"><code>scholar:
     sort_by: year
     order: descending
 </code></pre>
+</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

@@ -95,12 +95,13 @@
       <div class="wrapper">
         <h1 id="do-not-display-long-line-with-awk-usage-with-ipython-notebooks">Do not display long line with awk: usage with IPython notebooks</h1>
 
-<p>IPython notebook embeds image in the <code>.ipynb</code> file which produces huge lines.
+<p>IPython notebook embeds image in the <code class="highlighter-rouge">.ipynb</code> file which produces huge lines.
 It’s not convenient to display the raw text in a terminal.
 Awk can be used to filter the display:</p>
 
-<pre><code>awk 'length($0)&lt;1000' myfile.ipynb | less
+<div class="highlighter-rouge"><pre class="highlight"><code>awk 'length($0)&lt;1000' myfile.ipynb | less
 </code></pre>
+</div>
 
 <p>With this command you won’t display line with more than 999 characters.</p>
 

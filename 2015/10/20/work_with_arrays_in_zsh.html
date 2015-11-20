@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Compute rmsd between two pdb with awk</title>
+    <title>Work with arrays in zsh</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/17/compute-rmsd-between-two-pdb-with-awk.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/10/20/work_with_arrays_in_zsh.html">
 </head>
 
 
@@ -93,11 +93,32 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="compute-rmsd-between-two-pdb-with-awk">Compute rmsd between two pdb with awk</h1>
+        <h1 id="work-with-arrays-in-zsh">Work with arrays in zsh</h1>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/9468443bd82e58e9ac3f.js"> </script>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">a</span><span class="o">=(</span>a b c<span class="o">)</span>
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
+a b c
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>1]
+a
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>2]
+b</code></pre></figure>
+
+<h2 id="iterate-values">Iterate values:</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="k">for </span>x <span class="k">in</span> <span class="nv">$a</span>; <span class="k">do </span><span class="nb">echo</span> <span class="nv">$x</span>; <span class="k">done
+</span>a
+b
+c</code></pre></figure>
+
+<h2 id="append-values">Append values</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">a</span><span class="o">=()</span>
+<span class="gp">$ </span>a+<span class="o">=</span>1
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
+1
+<span class="gp">$ </span>a+<span class="o">=</span>2
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
+1 2</code></pre></figure>
 
 
             <div id="disqus_thread"></div>

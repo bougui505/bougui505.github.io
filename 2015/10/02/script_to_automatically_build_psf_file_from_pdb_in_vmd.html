@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Sum over all columns with awk</title>
+    <title>Script to automatically build psf file from pdb in VMD</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/awk/2015/07/08/sum-over-all-columns-with-awk.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/10/02/script_to_automatically_build_psf_file_from_pdb_in_vmd.html">
 </head>
 
 
@@ -93,10 +93,31 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="sum-over-all-columns-with-awk">Sum over all columns with awk</h1>
+        <h1 id="script-to-automatically-build-psf-file-from-pdb-in-vmd">Script to automatically build psf file from pdb in VMD</h1>
 
-<pre><code>awk '{for (i=1;i&lt;=NF;i++) s[i]=$i+p[i]; p[i]=$i} END {for (i=1;i&lt;=NF;i++) print s[i]}' your_file.txt
-</code></pre>
+<p>Here is the script:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/f0fa80ae9f0abc42e2d9.js"> </script>
+
+<p>Just replace <code class="highlighter-rouge">PDB</code> with your pdb file name and launch the script with:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vmd -dispdev text -e autopsf.tcl</code></pre></figure>
+
+<p>In zsh shell you can automatize this script for multiple pdb with:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in </span>models/out_??.pdb; <span class="k">do
+    </span><span class="nb">echo</span> <span class="nv">$x</span>
+    vmd -dispdev text -e <span class="o">=(</span>sed <span class="s2">"s,PDB,</span><span class="nv">$x</span><span class="s2">,"</span> autopsf.tcl<span class="o">)</span>
+<span class="k">done</span></code></pre></figure>
+
+<p>Where: <code class="highlighter-rouge">models/out_??.pdb</code> are your input pdb files.</p>
+
+<p>You can even run it in <a href="/linux/2015/09/14/gnu_parallel.html">parallel</a> with GNU parallel (to use with care as I’m note quite certain that the creation of the zsh temporary file is adapted to parallel processing…):</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ls out_??.pdb | parallel --eta vmd -dispdev text -e <span class="o">=(</span>sed <span class="s2">"s,PDB,{},"</span> autopsf.tcl<span class="o">)</span> &gt; /dev/null</code></pre></figure>
+
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

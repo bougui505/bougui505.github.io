@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Modulo in bash</title>
+    <title>Select a subset of atoms from a trajectory file with MDanalysis</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/07/modulo-in-bash.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html">
 </head>
 
 
@@ -93,25 +93,28 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="modulo-in-bash">Modulo in bash</h1>
+        <h1 id="select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis">Select a subset of atoms from a trajectory file with MDanalysis</h1>
 
-<p>The command below return the modulo 15 of variable <code>$i</code>:</p>
+<p>Usage:</p>
 
-<pre><code>t=$(expr $i % 15)
+<div class="highlighter-rouge"><pre class="highlight"><code>./select_atoms_from_dcd.py topology.[pdb,psf,crd,gro] trajectory.[dcd,xtc,trr,xyz] outfile.[dcd,npy] 'selection string'
 </code></pre>
+</div>
 
-<p>For example:</p>
+<p>See <a href="https://pythonhosted.org/MDAnalysis/documentation_pages/overview.html">MDAnalysis documentation</a>
+for accepted input files for topology and trajectory.</p>
 
-<pre><code>i=0
-for x in ????_protein.pdb; do
-    my_command &amp;
-    ((i++))
-    t=$(expr $i % 15 + 2)
-    sleep $t
-done
-</code></pre>
+<p>If the output file name is with <code class="highlighter-rouge">npy</code> extension a numpy file is outputted with
+an array containing the atomic coordinates of the selected atoms. This file
+format can be convenient to perform analysis on coordinates with python.</p>
 
-<p>allows to increment the sleep by <code>$i % 15 + 2</code> which can be convenient to wait for a long process in background and to avoid overloading of the machine.</p>
+<p>See <a href="https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html">MDAnalysis documentation</a>
+for selection syntax.</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/0411d863a2c6d2df4bcc.js"> </script>
+
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

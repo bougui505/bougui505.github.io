@@ -108,21 +108,22 @@ a colleague, etc.</p>
 
 <ul>
   <li>
-    <p>put <code>\RequirePackage{snapshot}</code> before <code>\documentclass</code> in your <code>.tex</code> file and run latex or pdflatex on it.</p>
+    <p>put <code class="highlighter-rouge">\RequirePackage{snapshot}</code> before <code class="highlighter-rouge"><span class="k">\documentclass</span></code> in your <code class="highlighter-rouge">.tex</code> file and run latex or pdflatex on it.</p>
   </li>
   <li>
-    <p>run bundledoc on generated <code>.dep</code> file.</p>
+    <p>run bundledoc on generated <code class="highlighter-rouge">.dep</code> file.</p>
   </li>
 </ul>
 
 <h2 id="configuration-file">Configuration file:</h2>
 
-<p>Below is the content of my configuration file <code>~/.bundledoc.cfg</code>:</p>
+<p>Below is the content of my configuration file <code class="highlighter-rouge">~/.bundledoc.cfg</code>:</p>
 
-<pre><code>bundle: (tar -czvf $BDBASE.tar.gz $BDINPUTS)
+<div class="highlighter-rouge"><pre class="highlight"><code>bundle: (tar -czvf $BDBASE.tar.gz $BDINPUTS)
 sink:   &gt; /dev/null 2&gt;&amp;1
 find:   kpsewhich -progname=latex $BDINPUTS
 </code></pre>
+</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

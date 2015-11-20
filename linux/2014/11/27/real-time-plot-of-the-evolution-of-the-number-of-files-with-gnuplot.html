@@ -95,11 +95,11 @@
       <div class="wrapper">
         <h1 id="real-time-plot-of-the-evolution-of-the-number-of-files-with-gnuplot">Real time plot of the evolution of the number of files with gnuplot</h1>
 
-<p>Usage example to monitor the number of files <code>dms/smap_*_no_H.dms</code></p>
+<p>Usage example to monitor the number of files <code class="highlighter-rouge">dms/smap_*_no_H.dms</code></p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>./file_monitor.sh dms/smap_<span class="se">\*</span>_no_H.dms</code></pre></figure>
 
-<h2 id="the-main-script-filemonitorsh">The main script: <code>file_monitor.sh</code></h2>
+<h2 id="the-main-script-filemonitorsh">The main script: <code class="highlighter-rouge">file_monitor.sh</code></h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 <span class="c"># -*- coding: UTF8 -*-</span>
@@ -127,7 +127,7 @@ sleep 2
     <span class="k">done</span>
 /bin/rm <span class="nv">$outfile</span></code></pre></figure>
 
-<h2 id="the-gnuplot-script-loopplt">The gnuplot script: <code>loop.plt</code></h2>
+<h2 id="the-gnuplot-script-loopplt">The gnuplot script: <code class="highlighter-rouge">loop.plt</code></h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set </span>grid
 <span class="nb">set </span>xlabel <span class="s2">"running time (s)"</span>
@@ -138,7 +138,7 @@ pause 2
 replot
 reread</code></pre></figure>
 
-<h2 id="to-monitor-the-number-of-qsub-jobs-qstatmonitorsh">To monitor the number of qsub jobs: <code>qstat_monitor.sh</code></h2>
+<h2 id="to-monitor-the-number-of-qsub-jobs-qstatmonitorsh">To monitor the number of qsub jobs: <code class="highlighter-rouge">qstat_monitor.sh</code></h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 <span class="c"># -*- coding: UTF8 -*-</span>

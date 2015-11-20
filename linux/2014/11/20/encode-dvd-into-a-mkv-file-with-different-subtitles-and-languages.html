@@ -96,7 +96,7 @@
         <h1 id="encode-dvd-into-a-mkv-file-with-different-subtitles-and-languages">Encode DVD into a mkv file with different subtitles and languages</h1>
 
 <p>First you have to find the chapter you want to encode and the ids for the subtitles and audio.
-You can use the tool <code>lsdvd</code> for this:</p>
+You can use the tool <code class="highlighter-rouge">lsdvd</code> for this:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>lsdvd -as
 Disc Title: FANTASTIC
@@ -131,7 +131,7 @@ mencoder dvd://1 -dvd-device /dev/dvd  -aid 128 -of rawaudio -oac mp3lame -ovc c
 <span class="c"># French</span>
 mencoder dvd://1 -dvd-device /dev/dvd  -aid 129 -of rawaudio -oac mp3lame -ovc copy -o <span class="nv">$mtitle</span>/french.mp3</code></pre></figure>
 
-<p>The audio id (<code>aid</code>) 128 and 129 are given by the Stream id 0x80 and 0x81 (hexadecimal notations <script type="math/tex">8\times16</script> and <script type="math/tex">8\times16+1</script>)</p>
+<p>The audio id (<code class="highlighter-rouge">aid</code>) 128 and 129 are given by the Stream id 0x80 and 0x81 (hexadecimal notations <script type="math/tex">8\times16</script> and <script type="math/tex">8\times16+1</script>)</p>
 
 <p>The same for the subtitles:</p>
 

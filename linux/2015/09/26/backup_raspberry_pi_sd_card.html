@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Align dcd trajectory with MDAnalysis</title>
+    <title>Backup raspberry pi SD card</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/22/align-dcd-trajectory-with-mdanalysis.html">
+    <link rel="canonical" href="http://bougui505.github.io/linux/2015/09/26/backup_raspberry_pi_sd_card.html">
 </head>
 
 
@@ -93,20 +93,50 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="align-dcd-trajectory-with-mdanalysis">Align dcd trajectory with MDAnalysis</h1>
+        <h1 id="backup-raspberry-pi-sd-card">Backup raspberry pi SD card</h1>
 
-<p>Usage:</p>
+<p>To backup the SD card:</p>
 
-<pre><code>align_dcd.py file.dcd file.pdb file.psf [any valid selection string]
-</code></pre>
+<ul>
+  <li>First read the SD card on a linux computer and identify it:</li>
+</ul>
 
-<p>The selection string is optional and can be any valid selection string for
-selectAtoms() that produces identical selections in mobile and reference. e.g.
-<code>"resid 6-91"</code></p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo fdisk -l
+Disque /dev/sda : 232,9 GiB, 250059350016 octets, 488397168 secteurs
+Unités : secteur de 1 × 512 <span class="o">=</span> 512 octets
+Taille de secteur <span class="o">(</span>logique / physique<span class="o">)</span> : 512 octets / 512 octets
+taille d<span class="s1">'E/S (minimale / optimale) : 512 octets / 512 octets
+Type d'</span>étiquette de disque : dos
+Identifiant de disque : 0x0008d6d7
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/b5fbdb2de5b9c1ff106e.js"> </script>
+Device     Boot    Start       End   Sectors   Size Id Type
+/dev/sda1  <span class="k">*</span>        2048  19531775  19529728   9,3G 83 Linux
+/dev/sda2       19533822 488396799 468862978 223,6G  5 Extended
+/dev/sda5       19533824  23384063   3850240   1,9G 82 Linux swap / Solaris
+/dev/sda6       23386112 488396799 465010688 221,8G 83 Linux
+
+Disque /dev/mmcblk0 : 14,9 GiB, 15931539456 octets, 31116288 secteurs
+Unités : secteur de 1 × 512 <span class="o">=</span> 512 octets
+Taille de secteur <span class="o">(</span>logique / physique<span class="o">)</span> : 512 octets / 512 octets
+taille d<span class="s1">'E/S (minimale / optimale) : 512 octets / 512 octets
+Type d'</span>étiquette de disque : dos
+Identifiant de disque : 0x000b5098
+
+Device         Boot  Start      End  Sectors  Size Id Type
+/dev/mmcblk0p1        8192   122879   114688   56M  c W95 FAT32 <span class="o">(</span>LBA<span class="o">)</span>
+/dev/mmcblk0p2      122880 31116287 30993408 14,8G 83 Linux</code></pre></figure>
+
+<ul>
+  <li>Backup and compress the image:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0 | gzip -9 &gt; ./raspberrypi_20150926.img.gz</code></pre></figure>
+
+<ul>
+  <li>To restore the image:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gunzip ./raspberrypi_20150926.img.gz | sudo dd <span class="nv">of</span><span class="o">=</span>/dev/mmcblk0</code></pre></figure>
 
 
             <div id="disqus_thread"></div>

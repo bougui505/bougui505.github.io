@@ -97,18 +97,20 @@
 
 <p>From the <a href="http://jekyllrb.com/docs/pagination/">jekyll documentation</a></p>
 
-<p>To enable pagination for your blog, add a line to the <code>_config.yml</code> file that specifies how many items should be displayed per page:</p>
+<p>To enable pagination for your blog, add a line to the <code class="highlighter-rouge">_config.yml</code> file that specifies how many items should be displayed per page:</p>
 
-<pre><code>paginate: 10
+<div class="highlighter-rouge"><pre class="highlight"><code>paginate: 10
 </code></pre>
+</div>
 
 <p>You may also specify where the destination of the pagination pages:</p>
 
-<pre><code>paginate_path: "blog/page:num"
+<div class="highlighter-rouge"><pre class="highlight"><code>paginate_path: "blog/page:num"
 </code></pre>
+</div>
 
 <p>And then render the paginated posts.
-Modify the <code>index.html</code> and add or correct to:</p>
+Modify the <code class="highlighter-rouge">index.html</code> and add or correct to:</p>
 
 <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"post-list"</span><span class="nt">&gt;</span>
   {% for post in paginator.posts %}
@@ -148,7 +150,7 @@ Modify the <code>index.html</code> and add or correct to:</p>
 <figure class="highlight"><pre><code class="language-html" data-lang="html"> 
 {% if paginator.previous_page == 1 %} </code></pre></figure>
 
-<p>condition to point the previous link to the root <code>index.html</code>.</p>
+<p>condition to point the previous link to the root <code class="highlighter-rouge">index.html</code>.</p>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

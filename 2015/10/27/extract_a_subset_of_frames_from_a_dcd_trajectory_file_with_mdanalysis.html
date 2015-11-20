@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Backup raspberry pi SD card</title>
+    <title>Extract a subset of frames from a DCD trajectory file with MDAnalysis</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/09/26/backup-raspberry-pi-sd-card.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html">
 </head>
 
 
@@ -93,50 +93,28 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="backup-raspberry-pi-sd-card">Backup raspberry pi SD card</h1>
+        <h1 id="extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis">Extract a subset of frames from a DCD trajectory file with MDAnalysis</h1>
 
-<p>To backup the SD card:</p>
+<p>Usage:</p>
 
-<ul>
-  <li>First read the SD card on a linux computer and identify it:</li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
+</code></pre>
+</div>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo fdisk -l
-Disque /dev/sda : 232,9 GiB, 250059350016 octets, 488397168 secteurs
-Unités : secteur de 1 × 512 <span class="o">=</span> 512 octets
-Taille de secteur <span class="o">(</span>logique / physique<span class="o">)</span> : 512 octets / 512 octets
-taille d<span class="s1">'E/S (minimale / optimale) : 512 octets / 512 octets
-Type d'</span>étiquette de disque : dos
-Identifiant de disque : 0x0008d6d7
+<p>The <code class="highlighter-rouge">frame_list_file.txt</code> is an ASCII file containing one frame id per line,
+starting from 0. Repetitions of frames are allowed and will be kept in the
+output file. The order of the frames will be preserved in the output DCD file.</p>
 
-Device     Boot    Start       End   Sectors   Size Id Type
-/dev/sda1  <span class="k">*</span>        2048  19531775  19529728   9,3G 83 Linux
-/dev/sda2       19533822 488396799 468862978 223,6G  5 Extended
-/dev/sda5       19533824  23384063   3850240   1,9G 82 Linux swap / Solaris
-/dev/sda6       23386112 488396799 465010688 221,8G 83 Linux
+<p>If the list of frames is not given as a file, the standard input is read
+instead. This feature is conveninant to pipe from awk, for example:</p>
 
-Disque /dev/mmcblk0 : 14,9 GiB, 15931539456 octets, 31116288 secteurs
-Unités : secteur de 1 × 512 <span class="o">=</span> 512 octets
-Taille de secteur <span class="o">(</span>logique / physique<span class="o">)</span> : 512 octets / 512 octets
-taille d<span class="s1">'E/S (minimale / optimale) : 512 octets / 512 octets
-Type d'</span>étiquette de disque : dos
-Identifiant de disque : 0x000b5098
+<div class="highlighter-rouge"><pre class="highlight"><code>awk '{print $3}' some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
+</code></pre>
+</div>
 
-Device         Boot  Start      End  Sectors  Size Id Type
-/dev/mmcblk0p1        8192   122879   114688   56M  c W95 FAT32 <span class="o">(</span>LBA<span class="o">)</span>
-/dev/mmcblk0p2      122880 31116287 30993408 14,8G 83 Linux</code></pre></figure>
-
-<ul>
-  <li>Backup and compress the image:</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sudo dd <span class="k">if</span><span class="o">=</span>/dev/mmcblk0 | gzip -9 &gt; ./raspberrypi_20150926.img.gz</code></pre></figure>
-
-<ul>
-  <li>To restore the image:</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gunzip ./raspberrypi_20150926.img.gz | sudo dd <span class="nv">of</span><span class="o">=</span>/dev/mmcblk0</code></pre></figure>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/12537c00c8e1679577de.js"> </script>
 
 
             <div id="disqus_thread"></div>

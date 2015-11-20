@@ -114,7 +114,7 @@ The first dimension gives the frames, the second the atoms and the third the <sc
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fittingCoordsets</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">50001</span><span class="p">,</span><span class="mi">341</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c"># the numpy array containing the trajectory</span>
                                                     <span class="c"># for this exemple: 50001 frames, 341 atoms</span></code></pre></figure>
 
-<p>And now we can compute the RMSD between the first frame <code>0</code> and the following ones with optimal alignment:</p>
+<p>And now we can compute the RMSD between the first frame <code class="highlighter-rouge">0</code> and the following ones with optimal alignment:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">calculator</span> <span class="o">=</span> <span class="n">pyRMSD</span><span class="o">.</span><span class="n">RMSDCalculator</span><span class="o">.</span><span class="n">RMSDCalculator</span><span class="p">(</span><span class="s">'QCP_OMP_CALCULATOR'</span><span class="p">,</span> <span class="n">fittingCoordsets</span><span class="p">)</span>
 <span class="n">out</span> <span class="o">=</span> <span class="n">calculator</span><span class="o">.</span><span class="n">oneVsTheOthers</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span></code></pre></figure>

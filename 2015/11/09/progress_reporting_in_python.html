@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Split a multi model pdb from shell</title>
+    <title>Progress reporting in python</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/21/split-a-multi-model-pdb-from-shell.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/11/09/progress_reporting_in_python.html">
 </head>
 
 
@@ -93,42 +93,39 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="split-a-multi-model-pdb-from-shell">Split a multi model pdb from shell</h1>
+        <h1 id="progress-reporting-in-python">Progress reporting in python</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">awk <span class="s1">'$0 ~ /ATOM      1/ {i++} {print &gt;&gt; "pdbs/out_"i".pdb"} {fflush("pdbs/out_"i".pdb")}'</span> filename.pdb</code></pre></figure>
+<p>Can be useful in IPython notebook to monitor a progress without displaying huge
+number of lines with print command. The expected time for arrival (ETA) is
+given.</p>
 
-<p>It’s possible to use the csplit command too. In the example below, I’ve a pdb file containing 50000 models delimited by <code>MODEL X</code> and <code>ENDMDL</code>:</p>
+<p>Usage:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">csplit -z -f /dev/shm/docking_ -n 5 docking_results.pdb <span class="s1">'/ENDMDL/1'</span> <span class="s1">'{49999}'</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">progress_reporting</span> <span class="kn">as</span> <span class="nn">Progress</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">progress</span> <span class="o">=</span> <span class="n">Progress</span><span class="o">.</span><span class="n">Progress</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.01</span><span class="p">)</span>
+    <span class="n">progress</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></code></pre></figure>
 
-<p><code>-n</code>: number of digits</p>
+<p>Sample output:</p>
 
-<p><code>-z</code>: remove empty output files</p>
-
-<p>In the previous example the output files are named (in the <code>/dev/shm/</code> directory):</p>
-
-<pre><code>docking_00000
-docking_00001
-...
-docking_49999
+<div class="highlighter-rouge"><pre class="highlight"><code>10 % ETA: 0:00:08.995230
+20 % ETA: 0:00:07.999784
+30 % ETA: 0:00:06.999839
+40 % ETA: 0:00:05.999814
+50 % ETA: 0:00:04.999885
+60 % ETA: 0:00:03.999876
+70 % ETA: 0:00:02.999919
+80 % ETA: 0:00:01.999954
+90 % ETA: 0:00:00.999971
 </code></pre>
+</div>
 
-<p>If you want to add a suffix (for example <code>.pdb</code>) you have to specify the format:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">csplit -z -f /dev/shm/docking_ -b <span class="s1">'%05d.pdb'</span> docking_results.pdb <span class="s1">'/ENDMDL/1'</span> <span class="s1">'{49999}'</span></code></pre></figure>
-
-<p>Below is the final function:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function </span>splitpdb <span class="o">()</span> <span class="o">{</span>
-    <span class="nv">n_models</span><span class="o">=</span><span class="k">$(</span>grep -c MODEL <span class="nv">$1</span><span class="k">)</span>
-    csplit -z -f /dev/shm/model_ -b <span class="s1">'%04d.pdb'</span> <span class="nv">$1</span> <span class="s1">'/ENDMDL/1'</span> <span class="s2">"{</span><span class="k">$(</span>expr <span class="nv">$n_models</span> - 1<span class="k">)</span><span class="s2">}"</span>
-<span class="o">}</span></code></pre></figure>
-
-<ul>
-  <li>If you want 100 structures per output file</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">awk <span class="s1">'$0 ~ /ATOM 1/ {i++} {print &gt;&gt; "pdbs/smap_"int(i/100)".pdb"} {fflush("pdbs/smap_"int(i/100)".pdb")}'</span> smap.pdb</code></pre></figure>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/0a1e82708a7f24c85fb4.js"> </script>
 
 
             <div id="disqus_thread"></div>

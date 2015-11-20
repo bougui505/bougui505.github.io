@@ -6,9 +6,33 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 16 Nov 2015 11:31:06 +0100</pubDate>
-    <lastBuildDate>Mon, 16 Nov 2015 11:31:06 +0100</lastBuildDate>
-    <generator>Jekyll v3.0.0</generator>
+    <pubDate>Fri, 20 Nov 2015 11:02:08 +0100</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2015 11:02:08 +0100</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Interactive svg with inkscape</title>
+        <description>&lt;h1 id=&quot;interactive-svg-with-inkscape&quot;&gt;Interactive svg with inkscape&lt;/h1&gt;
+
+&lt;p&gt;Just open the object properties for a given object in inkscape with a right
+click or (&lt;code class=&quot;highlighter-rouge&quot;&gt;Shift+Ctrl+O&lt;/code&gt;) and unfold the interactivity section:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/inkscape_object_properties.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this example, when you will open the svg file in a web browser, the object
+will appear when moving the mouse pointer onto an image. It will disappear when
+you move out the pointer.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/11/20/interactive_svg_with_inkscape.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/20/interactive_svg_with_inkscape.html</guid>
+        
+        <category>inkscape</category>
+        
+        <category>svg</category>
+        
+        
+      </item>
     
       <item>
         <title>Progress reporting in python</title>
@@ -30,7 +54,7 @@ given.&lt;/p&gt;
 
 &lt;p&gt;Sample output:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;10 % ETA: 0:00:08.995230
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;10 % ETA: 0:00:08.995230
 20 % ETA: 0:00:07.999784
 30 % ETA: 0:00:06.999839
 40 % ETA: 0:00:05.999814
@@ -40,6 +64,7 @@ given.&lt;/p&gt;
 80 % ETA: 0:00:01.999954
 90 % ETA: 0:00:00.999971
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
 &lt;/pre&gt;&lt;/noscript&gt;
@@ -47,8 +72,8 @@ given.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 09 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/11/09/progress-reporting-in-python.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/11/09/progress-reporting-in-python.html</guid>
+        <link>http://bougui505.github.io/2015/11/09/progress_reporting_in_python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/09/progress_reporting_in_python.html</guid>
         
         <category>python</category>
         
@@ -61,24 +86,27 @@ given.&lt;/p&gt;
 
 &lt;h2 id=&quot;identifying-the-external-usb-hard-drive&quot;&gt;Identifying the external usb hard drive&lt;/h2&gt;
 
-&lt;p&gt;Plug the usb hard drive and type &lt;code&gt;df -Th&lt;/code&gt; (&lt;code&gt;T&lt;/code&gt;: allow to display the file system type):&lt;/p&gt;
+&lt;p&gt;Plug the usb hard drive and type &lt;code class=&quot;highlighter-rouge&quot;&gt;df -Th&lt;/code&gt; (&lt;code class=&quot;highlighter-rouge&quot;&gt;T&lt;/code&gt;: allow to display the file system type):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/dev/sdb1        fuseblk    932G    121M  932G   1% /media/yourusername/Elements
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/dev/sdb1        fuseblk    932G    121M  932G   1% /media/yourusername/Elements
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Unmount the partition to format; here:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;umount /dev/sdb1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;umount /dev/sdb1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;parted&quot;&gt;Parted&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo parted /dev/sdb
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo parted /dev/sdb
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;display-the-partition-table&quot;&gt;display the partition table:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;(parted) print
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) print
 Model: WD Elements 10B8 (scsi)
 Disk /dev/sdb: 1000GB
 Sector size (logical/physical): 512B/512B
@@ -88,31 +116,35 @@ Disk Flags:
 Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ntfs
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;delete-partition-1&quot;&gt;delete partition 1:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;(parted) rm 1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) rm 1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;create-a-new-partition-table&quot;&gt;Create a new partition table&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;(parted) mklabel msdos
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) mklabel msdos
 Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
 Yes/No? Yes
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;make-a-partition&quot;&gt;make a partition&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;(parted) mkpart
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) mkpart
 Partition type?  primary/extended? primary
 File system type?  [ext2]? ext4
 Start? 0%
 End? -1s
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Remark: &lt;code&gt;-1s&lt;/code&gt;: last sector of the drive&lt;/p&gt;
+&lt;p&gt;Remark: &lt;code class=&quot;highlighter-rouge&quot;&gt;-1s&lt;/code&gt;: last sector of the drive&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;(parted) print
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) print
 Model: WD Elements 10B8 (scsi)
 Disk /dev/sdb: 1000GB
 Sector size (logical/physical): 512B/512B
@@ -122,41 +154,47 @@ Disk Flags:
 Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ext4         lba
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;exit-parted&quot;&gt;exit parted&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;(parted) quit
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) quit
 Information: You may need to update /etc/fstab.
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;formating&quot;&gt;Formating&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo mkfs.ext4 /dev/sdb1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo mkfs.ext4 /dev/sdb1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;test&quot;&gt;Test&lt;/h2&gt;
 
 &lt;p&gt;Unplug and plug again the disk and:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;$ df -hT
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ df -hT
 /dev/sdb1                            ext4         917G     72M  871G   1% /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Try to write on it:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cd /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
 touch toto
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;If you get a &lt;code&gt;permission denied&lt;/code&gt; just try to:&lt;/p&gt;
+&lt;p&gt;If you get a &lt;code class=&quot;highlighter-rouge&quot;&gt;permission denied&lt;/code&gt; just try to:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cd ..
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd ..
 sudo chown yourusername:yourgroupname 4fc9b323-ac89-444a-9483-9af84030e1a1
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Sat, 07 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/11/07/formatting-an-external-hard-drive-with-parted.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/11/07/formatting-an-external-hard-drive-with-parted.html</guid>
+        <link>http://bougui505.github.io/2015/11/07/formatting_an_external_hard_drive_with_parted.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/07/formatting_an_external_hard_drive_with_parted.html</guid>
         
         <category>linux</category>
         
@@ -171,13 +209,14 @@ sudo chown yourusername:yourgroupname 4fc9b323-ac89-444a-9483-9af84030e1a1
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./select_atoms_from_dcd.py topology.[pdb,psf,crd,gro] trajectory.[dcd,xtc,trr,xyz] outfile.[dcd,npy] &#39;selection string&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./select_atoms_from_dcd.py topology.[pdb,psf,crd,gro] trajectory.[dcd,xtc,trr,xyz] outfile.[dcd,npy] &#39;selection string&#39;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;See &lt;a href=&quot;https://pythonhosted.org/MDAnalysis/documentation_pages/overview.html&quot;&gt;MDAnalysis documentation&lt;/a&gt;
 for accepted input files for topology and trajectory.&lt;/p&gt;
 
-&lt;p&gt;If the output file name is with &lt;code&gt;npy&lt;/code&gt; extension a numpy file is outputted with
+&lt;p&gt;If the output file name is with &lt;code class=&quot;highlighter-rouge&quot;&gt;npy&lt;/code&gt; extension a numpy file is outputted with
 an array containing the atomic coordinates of the selected atoms. This file
 format can be convenient to perform analysis on coordinates with python.&lt;/p&gt;
 
@@ -190,8 +229,8 @@ for selection syntax.&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 04 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/11/04/select-a-subset-of-atoms-from-a-trajectory-file-with-mdanalysis.html</guid>
+        <link>http://bougui505.github.io/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html</guid>
         
         <category>mdanalysis</category>
         
@@ -206,12 +245,12 @@ for selection syntax.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;First, set the environment variable &lt;code&gt;BLOGDIR&lt;/code&gt; to the directory containing the
+    &lt;p&gt;First, set the environment variable &lt;code class=&quot;highlighter-rouge&quot;&gt;BLOGDIR&lt;/code&gt; to the directory containing the
 source file for your blog.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Set the origin remote repositories properly for the source directory and the
-generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in jekyll.&lt;/p&gt;
+generated directory in &lt;code class=&quot;highlighter-rouge&quot;&gt;$BLOGDIR/_site&lt;/code&gt;, the default in jekyll.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -225,8 +264,8 @@ generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in j
 
 </description>
         <pubDate>Tue, 03 Nov 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/11/03/generate-jekyll-site-locally-and-push-source-file-and-static-web-site-to-github.html</guid>
+        <link>http://bougui505.github.io/2015/11/03/generate_jekyll_site_locally_and_push_source_file_and_static_web_site_to_github.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/03/generate_jekyll_site_locally_and_push_source_file_and_static_web_site_to_github.html</guid>
         
         <category>jekyll</category>
         
@@ -249,12 +288,13 @@ generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in j
 
 &lt;p&gt;Sample output:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; 103k 0:13:27 [ 128/s ] [=============================&amp;gt;                                                                     ] 31% ETA 0:29:46
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 103k 0:13:27 [ 128/s ] [=============================&amp;gt;                                                                     ] 31% ETA 0:29:46
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Thu, 29 Oct 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/29/get-a-progress-bar-for-a-process-in-shell-with-pv-pipe-viewer.html</guid>
+        <link>http://bougui505.github.io/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html</guid>
         
         <category>pv</category>
         
@@ -271,18 +311,20 @@ generated directory in &lt;code&gt;$BLOGDIR/_site&lt;/code&gt;, the default in j
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;The &lt;code&gt;frame_list_file.txt&lt;/code&gt; is an ASCII file containing one frame id per line,
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;frame_list_file.txt&lt;/code&gt; is an ASCII file containing one frame id per line,
 starting from 0. Repetitions of frames are allowed and will be kept in the
 output file. The order of the frames will be preserved in the output DCD file.&lt;/p&gt;
 
 &lt;p&gt;If the list of frames is not given as a file, the standard input is read
 instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;awk &#39;{print $3}&#39; some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;awk &#39;{print $3}&#39; some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
 &lt;/pre&gt;&lt;/noscript&gt;
@@ -290,8 +332,8 @@ instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 27 Oct 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html</guid>
+        <link>http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html</guid>
         
         <category>python</category>
         
@@ -306,12 +348,13 @@ instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;native_contacts.py file.dcd file.pdb file.psf [any valid selection string]
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;native_contacts.py file.dcd file.pdb file.psf [any valid selection string]
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;The selection string is optional and can be any valid selection string for
 selectAtoms() that produces identical selections in mobile and reference. e.g.
-&lt;code&gt;&quot;resid 6-91&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;resid 6-91&quot;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;I don’t know why but the number of native contacts for the last frame is not
 computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
@@ -322,8 +365,8 @@ computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
 
 </description>
         <pubDate>Fri, 23 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bougui505.github.io/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/23/compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis.html</guid>
+        <link>http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html</guid>
         
         <category>mdanalysis</category>
         
@@ -338,7 +381,7 @@ computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
         <title>Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</title>
         <description>&lt;h1 id=&quot;compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data&quot;&gt;Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data&lt;/h1&gt;
 
-&lt;p&gt;This script compute the theoretical SAXS profile for each frame of a &lt;code&gt;dcd&lt;/code&gt; format trajectory.
+&lt;p&gt;This script compute the theoretical SAXS profile for each frame of a &lt;code class=&quot;highlighter-rouge&quot;&gt;dcd&lt;/code&gt; format trajectory.
 The corresponding chi value is computed from experimental data.&lt;/p&gt;
 
 &lt;p&gt;Dependencies:&lt;/p&gt;
@@ -346,14 +389,14 @@ The corresponding chi value is computed from experimental data.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.ks.uiuc.edu/Development/MDTools/catdcd/&quot;&gt;catdcd&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://integrativemodeling.org/&quot;&gt;IMP, the Integrative Modeling Platform&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/parallel/&quot;&gt;GNU parallel&lt;/a&gt; &lt;a href=&quot;/linux/2015/09/14/gnu-parallel.html&quot;&gt;See this blog post&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/parallel/&quot;&gt;GNU parallel&lt;/a&gt; &lt;a href=&quot;/linux/2015/09/14/gnu_parallel.html&quot;&gt;See this blog post&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I use two functions detailed in other blog posts:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/2015/10/21/split-a-multi-model-pdb-from-shell.html&quot;&gt;&lt;code&gt;splitpdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html&quot;&gt;&lt;code&gt;mspdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2015/10/21/split_a_multi_model_pdb_from_shell.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;splitpdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mspdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Two scripts are required:&lt;/p&gt;
@@ -376,8 +419,8 @@ The corresponding chi value is computed from experimental data.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bougui505.github.io/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html</guid>
+        <link>http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</guid>
         
         <category>saxs</category>
         
@@ -398,45 +441,16 @@ The corresponding chi value is computed from experimental data.&lt;/p&gt;
 
 &lt;p&gt;Coding style: highlights the background in a subtle red for text that goes over the 80 column limit (from: &lt;a href=&quot;http://stackoverflow.com/a/235970/1679629&quot;&gt;stackoverflow&lt;/a&gt;).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;highlight OverLength ctermbg=LightRed ctermfg=black guibg=#592929
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;highlight OverLength ctermbg=LightRed ctermfg=black guibg=#592929
 match OverLength /\%81v.\+/
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bougui505.github.io/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html</guid>
+        <link>http://bougui505.github.io/2015/10/22/coding_style-_highlight_text_that_goes_over_the_80_column_limit_in_vim.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/coding_style-_highlight_text_that_goes_over_the_80_column_limit_in_vim.html</guid>
         
         <category>vim</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>`Argument list too long` error with GNU parallel</title>
-        <description>&lt;h1 id=&quot;argument-list-too-long-error-with-gnu-parallel&quot;&gt;&lt;code&gt;Argument list too long&lt;/code&gt; error with GNU parallel&lt;/h1&gt;
-
-&lt;p&gt;When the number of arguments is too long, GNU parallel raises a &lt;code&gt;Argument list too long&lt;/code&gt; error.&lt;/p&gt;
-
-&lt;p&gt;A possible solution is to use the &lt;code&gt;find&lt;/code&gt; command:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    find directory -name &lt;span class=&quot;s2&quot;&gt;&quot;*.dat&quot;&lt;/span&gt; |&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    parallel -k --eta &lt;span class=&quot;s2&quot;&gt;&quot;grep Chi {} | awk -F&#39;Chi = &#39; &#39;{print &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&#39;&quot;&lt;/span&gt; &amp;gt; out.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;instead of the classical syntax:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    ls directory/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.dat |&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    parallel -k --eta &lt;span class=&quot;s2&quot;&gt;&quot;grep Chi {} | awk -F&#39;Chi = &#39; &#39;{print &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&#39;&quot;&lt;/span&gt; &amp;gt; out.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    parallel -k --eta &lt;span class=&quot;s2&quot;&gt;&quot;grep Chi {} | awk -F&#39;Chi = &#39; &#39;{print &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&#39;&quot;&lt;/span&gt; ::: directory/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.dat &amp;gt; out.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-</description>
-        <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bougui505.github.io/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html</guid>
-        
-        <category>parallel</category>
         
         
       </item>

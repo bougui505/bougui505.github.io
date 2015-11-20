@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Making a slideshow for a speech from Inkscape</title>
+    <title>Interactive svg with inkscape</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/08/28/svg-to-pdf.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/11/20/interactive_svg_with_inkscape.html">
 </head>
 
 
@@ -93,32 +93,16 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="making-a-slideshow-for-a-speech-from-inkscape">Making a slideshow for a speech from Inkscape</h1>
+        <h1 id="interactive-svg-with-inkscape">Interactive svg with inkscape</h1>
 
-<p>Update: a very nice tool to make svg presentations from inkscape: <a href="http://sozi.baierouge.fr/">sozi</a></p>
+<p>Just open the object properties for a given object in inkscape with a right
+click or (<code class="highlighter-rouge">Shift+Ctrl+O</code>) and unfold the interactivity section:</p>
 
-<p>See the <a href="https://github.com/bougui505/svg_to_pdf">github dedicated page</a>.</p>
+<p><img src="/assets/inkscape_object_properties.png" alt="png" /></p>
 
-<p>Convert multiple svg files to pdf files and concatenate the resulting pdf files to a single one.</p>
-
-<p>Take a toc file as argument.
-This file contains the names of the svg files in the order you want to produce the pdf file.</p>
-
-<p>Args:</p>
-
-<ul>
-  <li>$1: toc file</li>
-  <li>$2: output pdf file name</li>
-</ul>
-
-<p>Replace the occurence of #P by the page number and #T by the total number of pages.</p>
-
-<p>Dependencies: inkscape, pdftk or gs</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/3d0be24c9a12d75a11a5.js"> </script>
-
+<p>In this example, when you will open the svg file in a web browser, the object
+will appear when moving the mouse pointer onto an image. It will disappear when
+you move out the pointer.</p>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

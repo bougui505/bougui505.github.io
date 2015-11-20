@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</title>
+    <title>Plotting from linux terminal</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/22/compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data.html">
+    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/08/plotting_from_linux_terminal.html">
 </head>
 
 
@@ -93,43 +93,55 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data">Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</h1>
+        <h1 id="plotting-from-linux-terminal">Plotting from linux terminal</h1>
 
-<p>This script compute the theoretical SAXS profile for each frame of a <code>dcd</code> format trajectory.
-The corresponding chi value is computed from experimental data.</p>
+<h2 id="the-plotutils-package">The plotutils package</h2>
 
-<p>Dependencies:</p>
+<p>From the <a href="http://www.gnu.org/software/plotutils/">official website</a>:</p>
 
-<ul>
-  <li><a href="http://www.ks.uiuc.edu/Development/MDTools/catdcd/">catdcd</a></li>
-  <li><a href="https://integrativemodeling.org/">IMP, the Integrative Modeling Platform</a></li>
-  <li><a href="http://www.gnu.org/software/parallel/">GNU parallel</a> <a href="/linux/2015/09/14/gnu-parallel.html">See this blog post</a></li>
-</ul>
+<blockquote>
+  <p>The GNU plotutils package contains software for both programmers and technical users. Its centerpiece is libplot, a powerful C/C++ function library for exporting 2-D vector graphics in many file formats, both vector and bitmap. On the X Window System, it can also do 2-D vector graphics animations.</p>
+</blockquote>
 
-<p>I use two functions detailed in other blog posts:</p>
+<p>Example of usage to plot 1 column data file (<code class="highlighter-rouge">data.txt</code>):</p>
 
-<ul>
-  <li><a href="/2015/10/21/split-a-multi-model-pdb-from-shell.html"><code>splitpdb</code></a></li>
-  <li><a href="/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html"><code>mspdb</code></a></li>
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code>graph --auto-abscissa -T ps dat.txt | display
+</code></pre>
+</div>
 
-<p>Two scripts are required:</p>
+<h2 id="ctioga2">ctioga2</h2>
 
-<ul>
-  <li>The main shell script:</li>
-</ul>
+<p>From the <a href="http://ctioga2.sourceforge.net/index.html">official website</a></p>
+
+<blockquote>
+  <p>ctioga2 is a powerful command-line based polymorphic plotting program, based on the Tioga plotting library.</p>
+</blockquote>
+
+<blockquote>
+  <p>It produces publication-quality PDF files; you make yourself an opinion of those looking at the [gallery]{http://ctioga2.sourceforge.net/galleries.html}.</p>
+</blockquote>
+
+<blockquote>
+  <p>It is a complete rewrite of ctioga. Compatibility was kept when it was not a problem. Most simple graphs from ctioga can be used directly with ctioga2.</p>
+</blockquote>
+
+<blockquote>
+  <p>It benefits from several years of experience writing ctioga, and in particular which mistakes to avoid. It features an original polymorphic interface, which can be driven either using directly the command-line or through command-files.</p>
+</blockquote>
+
+<p>Example of usage to plot 1 column data file (<code class="highlighter-rouge">data.txt</code>) in zsh:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ctioga2 -X =(cat -n data.txt)
+</code></pre>
+</div>
+
+<h2 id="using-matplotlib">Using matplotlib</h2>
+
+<p>You can use this command line interface of matplotlib (work in progress):</p>
 
 <noscript><pre>400: Invalid request
 </pre></noscript>
-<script src="https://gist.github.com/2fa82c1d039155503416.js"> </script>
-
-<ul>
-  <li>The IMP python script:</li>
-</ul>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/7d32ce504bfbff965ee4.js"> </script>
+<script src="https://gist.github.com/8fb357f63547a757ee87.js"> </script>
 
 
             <div id="disqus_thread"></div>

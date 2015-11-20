@@ -166,10 +166,11 @@
 <span class="n">scatter</span><span class="p">(</span><span class="n">lm</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">lm</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s">'r'</span><span class="p">)</span>
 <span class="k">print</span> <span class="n">lm</span></code></pre></figure>
 
-<pre><code>[[ 70 122]
+<div class="highlighter-rouge"><pre class="highlight"><code>[[ 70 122]
  [108  49]
  [157  17]]
 </code></pre>
+</div>
 
 <p><img src="/assets/adaptive_sampling_files/adaptive_sampling_6_1.png" alt="png" /></p>
 
@@ -203,8 +204,8 @@
     <span class="k">return</span> <span class="n">asarray</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span></code></pre></figure>
 
 <p>We define here the number of parallel trajectories to run for the adaptive
-sampling (<code>nclone</code>), the number of clusters to define (<code>nstates</code>), the number of
-round to perform (<code>nround</code>) and the number of MCMC steps per round (<code>nstep</code>).</p>
+sampling (<code class="highlighter-rouge">nclone</code>), the number of clusters to define (<code class="highlighter-rouge">nstates</code>), the number of
+round to perform (<code class="highlighter-rouge">nround</code>) and the number of MCMC steps per round (<code class="highlighter-rouge">nstep</code>).</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">nclone</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">nstates</span> <span class="o">=</span> <span class="mi">3</span>
@@ -236,7 +237,7 @@ round to perform (<code>nround</code>) and the number of MCMC steps per round (<
 
 <h2 id="the-adaptive-sampling">The adaptive sampling</h2>
 
-<p>We start from the <code>nclone*nstep</code> first frames of the standard trajectory</p>
+<p>We start from the <code class="highlighter-rouge">nclone*nstep</code> first frames of the standard trajectory</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">trajs</span> <span class="o">=</span> <span class="p">[</span><span class="n">traj_unique</span><span class="p">[</span><span class="n">r</span><span class="o">*</span><span class="n">nstep</span><span class="p">:(</span><span class="n">r</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">nstep</span><span class="p">]</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nclone</span><span class="p">)]</span>
 <span class="c">#print asarray(trajs).shape</span>
@@ -259,7 +260,7 @@ round to perform (<code>nround</code>) and the number of MCMC steps per round (<
     <span class="n">starts</span> <span class="o">=</span> <span class="n">starts</span><span class="p">[</span><span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">cdist</span><span class="p">(</span><span class="n">starts</span><span class="p">,</span> <span class="n">starts_prev</span><span class="p">)</span><span class="o">.</span><span class="nb">min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]][:</span><span class="n">nclone</span><span class="p">]</span>
     <span class="k">print</span> <span class="n">r</span><span class="p">,</span><span class="n">starts</span></code></pre></figure>
 
-<pre><code>1 [[119  46]
+<div class="highlighter-rouge"><pre class="highlight"><code>1 [[119  46]
  [160  16]]
 2 [[145  18]
  [115  47]]
@@ -278,6 +279,7 @@ round to perform (<code>nround</code>) and the number of MCMC steps per round (<
 9 [[154  17]
  [108  46]]
 </code></pre>
+</div>
 
 <p>The obtained distribution with the clustering looks like:</p>
 

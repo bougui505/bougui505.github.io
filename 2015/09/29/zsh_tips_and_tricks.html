@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Coding style: highlight text that goes over the 80 column limit in vim</title>
+    <title>zsh tips and tricks</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/22/coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/09/29/zsh_tips_and_tricks.html">
 </head>
 
 
@@ -93,13 +93,26 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="coding-style-highlight-text-that-goes-over-the-80-column-limit-in-vim">Coding style: highlight text that goes over the 80 column limit in vim</h1>
+        <h1 id="zsh-tips-and-tricks">zsh tips and tricks</h1>
 
-<p>Coding style: highlights the background in a subtle red for text that goes over the 80 column limit (from: <a href="http://stackoverflow.com/a/235970/1679629">stackoverflow</a>).</p>
+<h2 id="create-temporary-file-on-the-fly-containing-the-results-of-a-command">Create temporary file, on the fly, containing the results of a command:</h2>
 
-<pre><code>highlight OverLength ctermbg=LightRed ctermfg=black guibg=#592929
-match OverLength /\%81v.\+/
-</code></pre>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">multivalue <span class="o">=(</span>awk <span class="s1">'{print $4","$5","$6}'</span> 4MBR.dms<span class="o">)</span> 4MBO.dx 4MBO.surf</code></pre></figure>
+
+<p>Will get the columns 4, 5 and 6 as input of multivalue</p>
+
+<h2 id="get-the-filename-without-extension-modifier">Get the filename without extension (modifier)</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">pdbfile</span><span class="o">=</span>pdb2l0s.ent.gz
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$pdbfile</span>:r
+pdb2l0s.ent</code></pre></figure>
+
+<h2 id="remove-a-trailing-pathname-component-leaving-the-head-modifier">Remove a trailing pathname component, leaving the head. (modifier)</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">test</span><span class="o">=</span>pdz2/relax/0056pdz2_0019.pdb
+<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$test</span>:h
+pdz2/relax</code></pre></figure>
+
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

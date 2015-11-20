@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>`Argument list too long` error with GNU parallel</title>
+    <title>GNU parallel</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/22/argument-list-too-long-error-with-gnu-parallel.html">
+    <link rel="canonical" href="http://bougui505.github.io/linux/2015/09/14/gnu_parallel.html">
 </head>
 
 
@@ -93,24 +93,20 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="argument-list-too-long-error-with-gnu-parallel"><code>Argument list too long</code> error with GNU parallel</h1>
+        <h1 id="gnu-parallel">GNU parallel</h1>
 
-<p>When the number of arguments is too long, GNU parallel raises a <code>Argument list too long</code> error.</p>
+<p><a href="https://en.wikipedia.org/wiki/GNU_parallel">GNU parallel is a command-line driven utility for Linux or other Unix-like operating systems which allows the user to execute shell scripts in parallel. GNU parallel is free software, written by Ole Tange in Perl. It is available under the terms of GPLv3.</a></p>
 
-<p>A possible solution is to use the <code>find</code> command:</p>
+<p>For example, to process listed files in parallel:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    find directory -name <span class="s2">"*.dat"</span> |<span class="se">\</span>
-    parallel -k --eta <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> &gt; out.txt</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ls relax/????c2qjkM_.1_????_noH.pdb | parallel -k --eta ./rmsd.awk c2qjkM_.1.pdb <span class="o">{}</span> &gt; rmsds.txt</code></pre></figure>
 
-<p>instead of the classical syntax:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>-k             Keep same order
+--eta          Show the estimated number of seconds before finishing
+</code></pre>
+</div>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ls directory/<span class="k">*</span>.dat |<span class="se">\</span>
-    parallel -k --eta <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> &gt; out.txt</code></pre></figure>
-
-<p>or</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    parallel -k --eta <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> ::: directory/<span class="k">*</span>.dat &gt; out.txt</code></pre></figure>
-
+<p><code class="highlighter-rouge">parallel</code> replaces <code class="highlighter-rouge"><span class="p">{}</span></code> by the output files of <code class="highlighter-rouge">ls</code> for this example.</p>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

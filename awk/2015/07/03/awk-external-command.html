@@ -95,11 +95,12 @@
       <div class="wrapper">
         <h1 id="run-external-command-with-awk-example-with-cat-command">Run external command with awk: example with cat command.</h1>
 
-<p>In the example below, you pass the filename <code>myfilename.pdb</code> to awk variable <code>x</code> and <code>cat</code> the content of the file each time <code>MODEL</code> is present in column 1 of the <code>inputfilename.pdb</code>:</p>
+<p>In the example below, you pass the filename <code class="highlighter-rouge">myfilename.pdb</code> to awk variable <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">cat</code> the content of the file each time <code class="highlighter-rouge">MODEL</code> is present in column 1 of the <code class="highlighter-rouge">inputfilename.pdb</code>:</p>
 
-<pre><code>rec=myfilename.pdb
+<div class="highlighter-rouge"><pre class="highlight"><code>rec=myfilename.pdb
 awk -v x=$rec '{if ($1=="MODEL") system("cat " x); else {print $0}}' inputfilename.pdb
 </code></pre>
+</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

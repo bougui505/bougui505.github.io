@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Increment value in zsh</title>
+    <title>Split a multi model pdb from shell</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/20/increment-value-in-zsh.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/10/21/split_a_multi_model_pdb_from_shell.html">
 </head>
 
 
@@ -93,14 +93,43 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="increment-value-in-zsh">Increment value in zsh</h1>
+        <h1 id="split-a-multi-model-pdb-from-shell">Split a multi model pdb from shell</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">i</span><span class="o">=</span>0
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$i</span>
-0
-<span class="gp">$ </span><span class="o">((</span> i+<span class="o">=</span>1 <span class="o">))</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$i</span>
-1</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">awk <span class="s1">'$0 ~ /ATOM      1/ {i++} {print &gt;&gt; "pdbs/out_"i".pdb"} {fflush("pdbs/out_"i".pdb")}'</span> filename.pdb</code></pre></figure>
+
+<p>It’s possible to use the csplit command too. In the example below, I’ve a pdb file containing 50000 models delimited by <code class="highlighter-rouge">MODEL X</code> and <code class="highlighter-rouge">ENDMDL</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">csplit -z -f /dev/shm/docking_ -n 5 docking_results.pdb <span class="s1">'/ENDMDL/1'</span> <span class="s1">'{49999}'</span></code></pre></figure>
+
+<p><code class="highlighter-rouge">-n</code>: number of digits</p>
+
+<p><code class="highlighter-rouge">-z</code>: remove empty output files</p>
+
+<p>In the previous example the output files are named (in the <code class="highlighter-rouge">/dev/shm/</code> directory):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>docking_00000
+docking_00001
+...
+docking_49999
+</code></pre>
+</div>
+
+<p>If you want to add a suffix (for example <code class="highlighter-rouge">.pdb</code>) you have to specify the format:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">csplit -z -f /dev/shm/docking_ -b <span class="s1">'%05d.pdb'</span> docking_results.pdb <span class="s1">'/ENDMDL/1'</span> <span class="s1">'{49999}'</span></code></pre></figure>
+
+<p>Below is the final function:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function </span>splitpdb <span class="o">()</span> <span class="o">{</span>
+    <span class="nv">n_models</span><span class="o">=</span><span class="k">$(</span>grep -c MODEL <span class="nv">$1</span><span class="k">)</span>
+    csplit -z -f /dev/shm/model_ -b <span class="s1">'%04d.pdb'</span> <span class="nv">$1</span> <span class="s1">'/ENDMDL/1'</span> <span class="s2">"{</span><span class="k">$(</span>expr <span class="nv">$n_models</span> - 1<span class="k">)</span><span class="s2">}"</span>
+<span class="o">}</span></code></pre></figure>
+
+<ul>
+  <li>If you want 100 structures per output file</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">awk <span class="s1">'$0 ~ /ATOM 1/ {i++} {print &gt;&gt; "pdbs/smap_"int(i/100)".pdb"} {fflush("pdbs/smap_"int(i/100)".pdb")}'</span> smap.pdb</code></pre></figure>
 
 
             <div id="disqus_thread"></div>

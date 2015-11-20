@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>GNU parallel</title>
+    <title>Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/09/14/gnu-parallel.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html">
 </head>
 
 
@@ -93,19 +93,44 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="gnu-parallel">GNU parallel</h1>
+        <h1 id="compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data">Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</h1>
 
-<p><a href="https://en.wikipedia.org/wiki/GNU_parallel">GNU parallel is a command-line driven utility for Linux or other Unix-like operating systems which allows the user to execute shell scripts in parallel. GNU parallel is free software, written by Ole Tange in Perl. It is available under the terms of GPLv3.</a></p>
+<p>This script compute the theoretical SAXS profile for each frame of a <code class="highlighter-rouge">dcd</code> format trajectory.
+The corresponding chi value is computed from experimental data.</p>
 
-<p>For example, to process listed files in parallel:</p>
+<p>Dependencies:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ls relax/????c2qjkM_.1_????_noH.pdb | parallel -k --eta ./rmsd.awk c2qjkM_.1.pdb <span class="o">{}</span> &gt; rmsds.txt</code></pre></figure>
+<ul>
+  <li><a href="http://www.ks.uiuc.edu/Development/MDTools/catdcd/">catdcd</a></li>
+  <li><a href="https://integrativemodeling.org/">IMP, the Integrative Modeling Platform</a></li>
+  <li><a href="http://www.gnu.org/software/parallel/">GNU parallel</a> <a href="/linux/2015/09/14/gnu_parallel.html">See this blog post</a></li>
+</ul>
 
-<pre><code>-k             Keep same order
---eta          Show the estimated number of seconds before finishing
-</code></pre>
+<p>I use two functions detailed in other blog posts:</p>
 
-<p><code>parallel</code> replaces <code>{}</code> by the output files of <code>ls</code> for this example.</p>
+<ul>
+  <li><a href="/2015/10/21/split_a_multi_model_pdb_from_shell.html"><code class="highlighter-rouge">splitpdb</code></a></li>
+  <li><a href="/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html"><code class="highlighter-rouge">mspdb</code></a></li>
+</ul>
+
+<p>Two scripts are required:</p>
+
+<ul>
+  <li>The main shell script:</li>
+</ul>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/2fa82c1d039155503416.js"> </script>
+
+<ul>
+  <li>The IMP python script:</li>
+</ul>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/7d32ce504bfbff965ee4.js"> </script>
+
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

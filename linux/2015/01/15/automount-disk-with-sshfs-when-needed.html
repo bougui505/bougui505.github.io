@@ -98,44 +98,48 @@
 <p>From the <a href="https://help.ubuntu.com/community/Autofs">ubuntu documentation</a></p>
 
 <blockquote>
-  <p><code>autofs</code> is a program for automatically mounting directories on an as-needed basis.
+  <p><code class="highlighter-rouge">autofs</code> is a program for automatically mounting directories on an as-needed basis.
 Auto-mounts are mounted only as they are accessed, and are unmounted after a period of inactivity.
 Because of this, automounting NFS/Samba shares conserves bandwidth and offers better overall performance compared to static mounts via fstab.</p>
 </blockquote>
 
-<h2 id="install-the-autofs-package">Install the <code>autofs</code> package</h2>
+<h2 id="install-the-autofs-package">Install the <code class="highlighter-rouge">autofs</code> package</h2>
 
 <p>In Debian:</p>
 
-<pre><code>sudo apt-get install autofs
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install autofs
 </code></pre>
+</div>
 
-<p>And edit the file <code>/etc/auto.master</code> by adding this line:</p>
+<p>And edit the file <code class="highlighter-rouge">/etc/auto.master</code> by adding this line:</p>
 
-<pre><code>/mnt/sshfs /etc/auto.sshfs uid=1000,gid=1000,--timeout=30,--ghost
+<div class="highlighter-rouge"><pre class="highlight"><code>/mnt/sshfs /etc/auto.sshfs uid=1000,gid=1000,--timeout=30,--ghost
 </code></pre>
+</div>
 
 <p>Replace the uid and gid by your user-id and group-id respectively (obtained respectively with id -u username and id -g username).
-<code>--timeout=30</code> is to unmount the disk when you didn’t use it for 30 seconds.</p>
+<code class="highlighter-rouge">--timeout=30</code> is to unmount the disk when you didn’t use it for 30 seconds.</p>
 
-<p>Create the file <code>/etc/auto.sshfs</code> with this content:</p>
+<p>Create the file <code class="highlighter-rouge">/etc/auto.sshfs</code> with this content:</p>
 
-<pre><code>mydisk -fstype=fuse,port=22,rw,allow_other :sshfs\#username@host\:/path/to/your/disk/to/mount/
+<div class="highlighter-rouge"><pre class="highlight"><code>mydisk -fstype=fuse,port=22,rw,allow_other :sshfs\#username@host\:/path/to/your/disk/to/mount/
 </code></pre>
+</div>
 
 <ul>
-  <li><code>mydisk</code> is the name of the local directory created</li>
-  <li><code>username</code> is the distant username</li>
-  <li><code>host</code> is the distant host</li>
-  <li><code>/path/to/your/disk/to/mount/</code> is the path to the directory to mount</li>
+  <li><code class="highlighter-rouge">mydisk</code> is the name of the local directory created</li>
+  <li><code class="highlighter-rouge">username</code> is the distant username</li>
+  <li><code class="highlighter-rouge">host</code> is the distant host</li>
+  <li><code class="highlighter-rouge">/path/to/your/disk/to/mount/</code> is the path to the directory to mount</li>
 </ul>
 
 <p>Then, reload autofs:</p>
 
-<pre><code>sudo /etc/init.d/autofs restart
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo /etc/init.d/autofs restart
 </code></pre>
+</div>
 
-<p>When you will access to <code>/mnt/sshfs/mydisk</code> the disk will be automatically mount.
+<p>When you will access to <code class="highlighter-rouge">/mnt/sshfs/mydisk</code> the disk will be automatically mount.
 The ssh keys must be properly!</p>
 
             <div id="disqus_thread"></div>

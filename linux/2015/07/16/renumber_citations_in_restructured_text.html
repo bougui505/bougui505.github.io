@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Awk: determine if a string is numeric</title>
+    <title>Renumber citations in restructured text</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/09/24/awk-determine-if-a-string-is-numeric.html">
+    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/16/renumber_citations_in_restructured_text.html">
 </head>
 
 
@@ -93,12 +93,24 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="awk-determine-if-a-string-is-numeric">Awk: determine if a string is numeric</h1>
+        <h1 id="renumber-citations-in-restructured-text">Renumber citations in restructured text</h1>
 
-<pre><code>awk 'function isnum(x){return(x==x+0)} {if (isnum($1)) {print $1}}'
+<h2 id="syntax-for-citations-in-markdown">Syntax for citations in markdown</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>I'll cite a publication [Bouvier_2010]_
+and an other one [Bouvier_2014]_.
+
+.. [Bouvier_2010] Bouvier, G., Evrard-Todeschi, N., Girault, J.-P. &amp; Bertho, G. Automatic clustering of docking poses in virtual screening process using self-organizing map. Bioinformatics 26, 53–60 (2010).
+.. [Bouvier_2014] Bouvier, G., Desdouits, N., Ferber, M., Blondel, A. &amp; Nilges, M. An automatic tool to analyze and cluster macromolecular conformations based on Self-Organizing Maps. Bioinformatics btu849 (2014).
 </code></pre>
+</div>
 
-<p>Will print <code>$1</code> only if the content is numeric.</p>
+<p>This script below will replace the citation occurrences with incremental number from 1 and compile the file in pdf with <code class="highlighter-rouge">pandoc</code>:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/baa041df449fc8640369.js"> </script>
+
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

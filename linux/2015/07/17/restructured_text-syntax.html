@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Work with arrays in zsh</title>
+    <title>Restructured text syntax</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/20/work-with-arrays-in-zsh.html">
+    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/17/restructured_text-syntax.html">
 </head>
 
 
@@ -93,33 +93,25 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="work-with-arrays-in-zsh">Work with arrays in zsh</h1>
+        <h1 id="restructured-text-syntax">Restructured text syntax</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">a</span><span class="o">=(</span>a b c<span class="o">)</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
-a b c
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>1]
-a
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>2]
-b</code></pre></figure>
+<h2 id="citations">Citations</h2>
 
-<h2 id="iterate-values">Iterate values:</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>I'll cite a publication [Bouvier_2010]_
+and an other one [Bouvier_2014]_.
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="k">for </span>x <span class="k">in</span> <span class="nv">$a</span>; <span class="k">do </span><span class="nb">echo</span> <span class="nv">$x</span>; <span class="k">done
-</span>a
-b
-c</code></pre></figure>
+.. [Bouvier_2010] Bouvier, G., Evrard-Todeschi, N., Girault, J.-P. &amp; Bertho, G. Automatic clustering of docking poses in virtual screening process using self-organizing map. Bioinformatics 26, 53–60 (2010).
+.. [Bouvier_2014] Bouvier, G., Desdouits, N., Ferber, M., Blondel, A. &amp; Nilges, M. An automatic tool to analyze and cluster macromolecular conformations based on Self-Organizing Maps. Bioinformatics btu849 (2014).
+</code></pre>
+</div>
 
-<h2 id="append-values">Append values</h2>
+<h2 id="math">Math</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">a</span><span class="o">=()</span>
-<span class="gp">$ </span>a+<span class="o">=</span>1
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
-1
-<span class="gp">$ </span>a+<span class="o">=</span>2
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
-1 2</code></pre></figure>
+<h3 id="inline">Inline</h3>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>:math:`50\times50`
+</code></pre>
+</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

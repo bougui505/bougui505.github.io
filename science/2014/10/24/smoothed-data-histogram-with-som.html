@@ -240,8 +240,8 @@ The membership to all but the closest <script type="math/tex">s</script> bins is
     <span class="n">sdhmat</span> <span class="o">=</span> <span class="n">sdhmat</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">sdhmat</span></code></pre></figure>
 
-<p>For large dataset you can run out of memory when you compute the full distance matrix <code>dmat</code> with <code>scipy.spatial.distance.cdist(inputmat, smap.reshape(x*y,n))</code>.
-Instead of computing <code>dmat</code> you can use <a href="http://docs.scipy.org/doc/scipy-0.13.0/reference/generated/scipy.spatial.KDTree.html">KDTree</a> or <a href="http://docs.scipy.org/doc/scipy-0.13.0/reference/generated/scipy.spatial.cKDTree.html">cKDTree</a>.
+<p>For large dataset you can run out of memory when you compute the full distance matrix <code class="highlighter-rouge">dmat</code> with <code class="highlighter-rouge">scipy.spatial.distance.cdist(inputmat, smap.reshape(x*y,n))</code>.
+Instead of computing <code class="highlighter-rouge">dmat</code> you can use <a href="http://docs.scipy.org/doc/scipy-0.13.0/reference/generated/scipy.spatial.KDTree.html">KDTree</a> or <a href="http://docs.scipy.org/doc/scipy-0.13.0/reference/generated/scipy.spatial.cKDTree.html">cKDTree</a>.
 This class provides an index into a set of k-dimensional points which can be used to rapidly look up the nearest neighbors of any point.
 In the function below I’ve also added the data parameter to project a weighted sum of the data with the rule exposed before.</p>
 
@@ -266,7 +266,7 @@ In the function below I’ve also added the data parameter to project a weighted
     <span class="k">return</span> <span class="n">sdhmat</span></code></pre></figure>
 
 <p>I’ve slightly changed the function to apply a distance cutoff
-<code>distances_threshold</code> instead of a cutoff on the number of bins (<script type="math/tex">s</script>):</p>
+<code class="highlighter-rouge">distances_threshold</code> instead of a cutoff on the number of bins (<script type="math/tex">s</script>):</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">sdh</span><span class="p">(</span><span class="n">smap</span><span class="p">,</span> <span class="n">inputmat</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">distances_threshold</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="s">"""
@@ -300,7 +300,7 @@ In the function below I’ve also added the data parameter to project a weighted
     <span class="n">sdhmat</span> <span class="o">=</span> <span class="n">sdhmat</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">sdhmat</span></code></pre></figure>
 
-<p>And we choose a smoothing parameter <code>s</code> of 16</p>
+<p>And we choose a smoothing parameter <code class="highlighter-rouge">s</code> of 16</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">sdhmat</span> <span class="o">=</span> <span class="n">sdh</span><span class="p">(</span><span class="n">som</span><span class="o">.</span><span class="n">smap</span><span class="p">,</span><span class="n">traj</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span></code></pre></figure>
 

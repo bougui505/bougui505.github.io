@@ -118,33 +118,35 @@
 
 <h3 id="compute-the-descriptors-from-the-trajectory-in-dcd-format">Compute the descriptors from the trajectory in dcd format</h3>
 
-<p>We start from the DCD trajectory file (<code>traj.dcd</code>) of the folding trajectory of the G protein.
+<p>We start from the DCD trajectory file (<code class="highlighter-rouge">traj.dcd</code>) of the folding trajectory of the G protein.
 Only the <script type="math/tex">C_{\alpha}</script> atoms were kept.
 This is sufficient for the conformational clustering.</p>
 
-<p>First we create a configuration file (<code>makeVectorsFromdcd_PCA.conf</code>) for the python script <code>applications/makeVectorsFromdcd_PCA.py</code> with the following content:</p>
+<p>First we create a configuration file (<code class="highlighter-rouge">makeVectorsFromdcd_PCA.conf</code>) for the python script <code class="highlighter-rouge">applications/makeVectorsFromdcd_PCA.py</code> with the following content:</p>
 
 <ul>
-  <li><code>nframes</code>: the number of frames</li>
-  <li><code>structFile</code>: the pdb of your structure</li>
-  <li><code>projection</code>: set to True</li>
-  <li><code>nProcess</code>: the number of parallel jobs</li>
+  <li><code class="highlighter-rouge">nframes</code>: the number of frames</li>
+  <li><code class="highlighter-rouge">structFile</code>: the pdb of your structure</li>
+  <li><code class="highlighter-rouge">projection</code>: set to True</li>
+  <li><code class="highlighter-rouge">nProcess</code>: the number of parallel jobs</li>
 </ul>
 
-<p>Below, the <code>makeVectorsFromdcd_PCA.conf</code> file:</p>
+<p>Below, the <code class="highlighter-rouge">makeVectorsFromdcd_PCA.conf</code> file:</p>
 
-<pre><code>[makeVectors]
+<div class="highlighter-rouge"><pre class="highlight"><code>[makeVectors]
 nframes: 750000
 structFile: struct.pdb
 trajFile: traj.dcd
 projection: True
 nProcess: 2
 </code></pre>
+</div>
 
 <p>Now, we can run the script:</p>
 
-<pre><code>$ python makeVectorsFromdcd_PCA.py makeVectorsFromdcd_PCA.conf
+<div class="highlighter-rouge"><pre class="highlight"><code>$ python makeVectorsFromdcd_PCA.py makeVectorsFromdcd_PCA.conf
 </code></pre>
+</div>
 
 <p>To generate the conformational descriptors for each frame of the trajectory as described in the publication.</p>
 
@@ -165,7 +167,7 @@ nProcess: 2
 <span class="o">%</span> <span class="n">pylab</span> <span class="n">inline</span> <span class="c"># if you use ipython notebook</span></code></pre></figure>
 
 <p>Then, we load the input matrix containing the conformational descriptors.
-After that we can learn the SOM with <code>som.learn</code>.</p>
+After that we can learn the SOM with <code class="highlighter-rouge">som.learn</code>.</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">inputmatrix</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">'projections.npy'</span><span class="p">)</span>
 <span class="n">som</span> <span class="o">=</span> <span class="n">SOM2</span><span class="o">.</span><span class="n">SOM</span><span class="p">(</span><span class="n">inputmatrix</span><span class="p">)</span>
@@ -246,7 +248,7 @@ Below is the code to flood the map and unwrap it:</p>
 
 <p><img src="/assets/sausage.png" alt="sausage" /></p>
 
-<h4 id="sausagepy"><code>sausage.py</code></h4>
+<h4 id="sausagepy"><code class="highlighter-rouge">sausage.py</code></h4>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
 <span class="c"># -*- coding: UTF8 -*-</span>
@@ -307,7 +309,7 @@ Thanks!
 
 <p>This script requires these pymol scripts:</p>
 
-<h4 id="alignallpy"><code>align_all.py</code></h4>
+<h4 id="alignallpy"><code class="highlighter-rouge">align_all.py</code></h4>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#! /usr/bin/env python</span>
 <span class="c"># original Written by Jules Jacobsen (jacobsen@ebi.ac.uk). Feel free to do whatever you like with this code.</span>
@@ -366,7 +368,7 @@ Thanks!
 
 <span class="n">cmd</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="s">'align_all'</span><span class="p">,</span><span class="n">align_all</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="rmsfstatespy"><code>rmsf_states.py</code></h4>
+<h4 id="rmsfstatespy"><code class="highlighter-rouge">rmsf_states.py</code></h4>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#! /usr/bin/python</span>
 <span class="c"># Copyright (c) 2009 Robert L. Campbell (rlc1@queensu.ca)</span>

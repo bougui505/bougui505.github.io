@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Plotting from linux terminal</title>
+    <title>Compute native contacts ratio from a dcd trajectory file with MD-Analysis</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/08/plotting-from-linux-terminal.html">
+    <link rel="canonical" href="http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html">
 </head>
 
 
@@ -93,53 +93,24 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="plotting-from-linux-terminal">Plotting from linux terminal</h1>
+        <h1 id="compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis">Compute native contacts ratio from a dcd trajectory file with MD-Analysis</h1>
 
-<h2 id="the-plotutils-package">The plotutils package</h2>
+<p>Usage:</p>
 
-<p>From the <a href="http://www.gnu.org/software/plotutils/">official website</a>:</p>
-
-<blockquote>
-  <p>The GNU plotutils package contains software for both programmers and technical users. Its centerpiece is libplot, a powerful C/C++ function library for exporting 2-D vector graphics in many file formats, both vector and bitmap. On the X Window System, it can also do 2-D vector graphics animations.</p>
-</blockquote>
-
-<p>Example of usage to plot 1 column data file (<code>data.txt</code>):</p>
-
-<pre><code>graph --auto-abscissa -T ps dat.txt | display
+<div class="highlighter-rouge"><pre class="highlight"><code>native_contacts.py file.dcd file.pdb file.psf [any valid selection string]
 </code></pre>
+</div>
 
-<h2 id="ctioga2">ctioga2</h2>
+<p>The selection string is optional and can be any valid selection string for
+selectAtoms() that produces identical selections in mobile and reference. e.g.
+<code class="highlighter-rouge">"resid 6-91"</code></p>
 
-<p>From the <a href="http://ctioga2.sourceforge.net/index.html">official website</a></p>
-
-<blockquote>
-  <p>ctioga2 is a powerful command-line based polymorphic plotting program, based on the Tioga plotting library.</p>
-</blockquote>
-
-<blockquote>
-  <p>It produces publication-quality PDF files; you make yourself an opinion of those looking at the [gallery]{http://ctioga2.sourceforge.net/galleries.html}.</p>
-</blockquote>
-
-<blockquote>
-  <p>It is a complete rewrite of ctioga. Compatibility was kept when it was not a problem. Most simple graphs from ctioga can be used directly with ctioga2.</p>
-</blockquote>
-
-<blockquote>
-  <p>It benefits from several years of experience writing ctioga, and in particular which mistakes to avoid. It features an original polymorphic interface, which can be driven either using directly the command-line or through command-files.</p>
-</blockquote>
-
-<p>Example of usage to plot 1 column data file (<code>data.txt</code>) in zsh:</p>
-
-<pre><code>ctioga2 -X =(cat -n data.txt)
-</code></pre>
-
-<h2 id="using-matplotlib">Using matplotlib</h2>
-
-<p>You can use this command line interface of matplotlib (work in progress):</p>
+<p>I don’t know why but the number of native contacts for the last frame is not
+computed, for the version of MDAnalyis I use (0.7.3).</p>
 
 <noscript><pre>400: Invalid request
 </pre></noscript>
-<script src="https://gist.github.com/8fb357f63547a757ee87.js"> </script>
+<script src="https://gist.github.com/cc8415df4102becceede.js"> </script>
 
 
             <div id="disqus_thread"></div>

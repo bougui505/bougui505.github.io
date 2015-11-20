@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Extract a subset of frames from a DCD trajectory file with MDAnalysis</title>
+    <title>Modulo in bash</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/10/27/extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis.html">
+    <link rel="canonical" href="http://bougui505.github.io/linux/2015/07/07/modulo_in_bash.html">
 </head>
 
 
@@ -93,27 +93,27 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis">Extract a subset of frames from a DCD trajectory file with MDAnalysis</h1>
+        <h1 id="modulo-in-bash">Modulo in bash</h1>
 
-<p>Usage:</p>
+<p>The command below return the modulo 15 of variable <code class="highlighter-rouge">$i</code>:</p>
 
-<pre><code>./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
+<div class="highlighter-rouge"><pre class="highlight"><code>t=$(expr $i % 15)
 </code></pre>
+</div>
 
-<p>The <code>frame_list_file.txt</code> is an ASCII file containing one frame id per line,
-starting from 0. Repetitions of frames are allowed and will be kept in the
-output file. The order of the frames will be preserved in the output DCD file.</p>
+<p>For example:</p>
 
-<p>If the list of frames is not given as a file, the standard input is read
-instead. This feature is conveninant to pipe from awk, for example:</p>
-
-<pre><code>awk '{print $3}' some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
+<div class="highlighter-rouge"><pre class="highlight"><code>i=0
+for x in ????_protein.pdb; do
+    my_command &amp;
+    ((i++))
+    t=$(expr $i % 15 + 2)
+    sleep $t
+done
 </code></pre>
+</div>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/12537c00c8e1679577de.js"> </script>
-
+<p>allows to increment the sleep by <code class="highlighter-rouge">$i % 15 + 2</code> which can be convenient to wait for a long process in background and to avoid overloading of the machine.</p>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">
