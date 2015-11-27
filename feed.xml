@@ -6,9 +6,48 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 Nov 2015 15:37:37 +0100</pubDate>
-    <lastBuildDate>Thu, 26 Nov 2015 15:37:37 +0100</lastBuildDate>
+    <pubDate>Fri, 27 Nov 2015 14:34:07 +0100</pubDate>
+    <lastBuildDate>Fri, 27 Nov 2015 14:34:07 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Make a pdf format slideshow from a unique svg file</title>
+        <description>&lt;h1 id=&quot;make-a-pdf-format-slideshow-from-a-unique-svg-file&quot;&gt;Make a pdf format slideshow from a unique svg file&lt;/h1&gt;
+
+&lt;p&gt;This post is related to this post: &lt;a href=&quot;/linux/2015/08/28/svg_to_pdf.html&quot;&gt;Making a slideshow for a speech from Inkscape&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You simply have to design your slides in Inkscape and delineate them by a
+rectangle. Once this is done, you group all the object that constitute a slide.
+Then, you have to name this object &lt;code class=&quot;highlighter-rouge&quot;&gt;slide1&lt;/code&gt;. Repeat this operation for the
+other slides: &lt;code class=&quot;highlighter-rouge&quot;&gt;slide2&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;slide3&lt;/code&gt;, …, &lt;code class=&quot;highlighter-rouge&quot;&gt;slideN&lt;/code&gt;, where &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt; is the total number
+of slides.&lt;/p&gt;
+
+&lt;p&gt;Then, use the script below, with this command line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./sozi_to_pdf.sh file.svg out.pdf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This script is called after &lt;a href=&quot;http://sozi.baierouge.fr/&quot;&gt;sozi&lt;/a&gt; extension to
+Inkscape. It can be used to convert a Sozi presentation to pdf, with no need to
+install &lt;a href=&quot;http://sozi.baierouge.fr/pages/tutorial-converting.html&quot;&gt;this script&lt;/a&gt;
+with PhantomJS library.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 27 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html</guid>
+        
+        <category>inkscape</category>
+        
+        <category>svg</category>
+        
+        
+      </item>
     
       <item>
         <title>Write data to B-factor column of a PDB file</title>
@@ -397,64 +436,6 @@ computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
         <category>mdanalysis</category>
         
         <category>python</category>
-        
-        <category>science</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</title>
-        <description>&lt;h1 id=&quot;compute-theoretical-saxs-profile-for-each-frame-of-a-dcd-format-trajectory-and-the-corresponding-chi-value-from-experimental-data&quot;&gt;Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data&lt;/h1&gt;
-
-&lt;p&gt;This script compute the theoretical SAXS profile for each frame of a &lt;code class=&quot;highlighter-rouge&quot;&gt;dcd&lt;/code&gt; format trajectory.
-The corresponding chi value is computed from experimental data.&lt;/p&gt;
-
-&lt;p&gt;Dependencies:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.ks.uiuc.edu/Development/MDTools/catdcd/&quot;&gt;catdcd&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://integrativemodeling.org/&quot;&gt;IMP, the Integrative Modeling Platform&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.gnu.org/software/parallel/&quot;&gt;GNU parallel&lt;/a&gt; &lt;a href=&quot;/linux/2015/09/14/gnu_parallel.html&quot;&gt;See this blog post&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I use two functions detailed in other blog posts:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/2015/10/21/split_a_multi_model_pdb_from_shell.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;splitpdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;mspdb&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Two scripts are required:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The main shell script:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/2fa82c1d039155503416.js&quot;&gt; &lt;/script&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The IMP python script:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/7d32ce504bfbff965ee4.js&quot;&gt; &lt;/script&gt;
-
-</description>
-        <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</guid>
-        
-        <category>saxs</category>
-        
-        <category>imp</category>
-        
-        <category>parallel</category>
-        
-        <category>catdcd</category>
         
         <category>science</category>
         

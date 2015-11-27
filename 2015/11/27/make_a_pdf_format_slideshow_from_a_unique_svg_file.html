@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Make a pdf format slideshow from a unique svg file</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page7/">
+    <link rel="canonical" href="http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html">
 </head>
 
 
@@ -93,145 +93,31 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="make-a-pdf-format-slideshow-from-a-unique-svg-file">Make a pdf format slideshow from a unique svg file</h1>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 142%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 93%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 93%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 70%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 129%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 106%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 134%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 168%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 142%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 106%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 116%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 116%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 116%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 93%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 93%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 106%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 106%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 152%' href='/tags.html#science'>science</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 129%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 138%' href='/tags.html#zsh'>zsh</a>
+<p>This post is related to this post: <a href="/linux/2015/08/28/svg_to_pdf.html">Making a slideshow for a speech from Inkscape</a></p>
 
-   </div>
+<p>You simply have to design your slides in Inkscape and delineate them by a
+rectangle. Once this is done, you group all the object that constitute a slide.
+Then, you have to name this object <code class="highlighter-rouge">slide1</code>. Repeat this operation for the
+other slides: <code class="highlighter-rouge">slide2</code>, <code class="highlighter-rouge">slide3</code>, …, <code class="highlighter-rouge">slideN</code>, where <code class="highlighter-rouge">N</code> is the total number
+of slides.</p>
 
-  <h1 class="page-heading">Posts</h1>
+<p>Then, use the script below, with this command line:</p>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/23/mathjax-in-jekyll-based-blog.html">Mathjax in jekyll based blog</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/science/2014/10/23/wham-the-weighted-histogram-analysis-method.html">WHAM: The Weighted Histogram Analysis Method</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/latex/2014/10/23/latex-acronym-package.html">LaTeX acronym package</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/git/2014/10/22/git-tagging.html">Git - tagging</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 21, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/python/2014/10/21/transition-networks-with-python.html">Transition networks with python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/python/2014/10/20/figure-size-font-and-latex-with-matplotlib-and-python.html">Figure size, font and LaTeX with matplotlib and python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/latex/2014/10/20/truncate-header-in-fancyhdr.html">Truncate header in fancyhdr</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/20/use-jekyll-with-bibtex.html">Use Jekyll with BibTeX</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2014/10/18/spell-check-in-vim.html">Spell check in vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/latex/2014/10/18/latex-templates.html">LaTeX templates</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page6" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 7 of 8</span>
-      
-        <a href="/blog/page8" class="next">Next</a>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>./sozi_to_pdf.sh file.svg out.pdf
+</code></pre>
 </div>
+
+<p>This script is called after <a href="http://sozi.baierouge.fr/">sozi</a> extension to
+Inkscape. It can be used to convert a Sozi presentation to pdf, with no need to
+install <a href="http://sozi.baierouge.fr/pages/tutorial-converting.html">this script</a>
+with PhantomJS library.</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/39e33fc7f811ee6da931.js"> </script>
+
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">
