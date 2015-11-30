@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 Nov 2015 17:14:14 +0100</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2015 17:14:14 +0100</lastBuildDate>
+    <pubDate>Mon, 30 Nov 2015 17:21:10 +0100</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2015 17:21:10 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -16,6 +16,13 @@
 
 &lt;p&gt;This script makes a directory hierarchy by date (&lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY/MM/DD&lt;/code&gt;) and do not
 transfer photos already transfered.&lt;/p&gt;
+
+&lt;h2 id=&quot;dependencies&quot;&gt;Dependencies:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ivarch.com/programs/pv.shtml&quot;&gt;pv&lt;/a&gt; (to install it: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install pv&lt;/code&gt;) (see this &lt;a href=&quot;/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html&quot;&gt;blog post&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;zsh (but should be OK for other shells)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;usage&quot;&gt;Usage:&lt;/h2&gt;
 
