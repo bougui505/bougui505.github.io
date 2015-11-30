@@ -6,9 +6,44 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 27 Nov 2015 14:34:07 +0100</pubDate>
-    <lastBuildDate>Fri, 27 Nov 2015 14:34:07 +0100</lastBuildDate>
+    <pubDate>Mon, 30 Nov 2015 17:14:14 +0100</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2015 17:14:14 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Smart copy of photos from external memory card</title>
+        <description>&lt;h1 id=&quot;smart-copy-of-photos-from-external-memory-card&quot;&gt;Smart copy of photos from external memory card&lt;/h1&gt;
+
+&lt;p&gt;This script makes a directory hierarchy by date (&lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY/MM/DD&lt;/code&gt;) and do not
+transfer photos already transfered.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./get_photos.sh /path/to/the/mounted/memory/card
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Don’t forget to change the destination directory in the script…&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/0aade36ec855acd8702a.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 30 Nov 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/11/30/smart_copy_of_photos_from_external_memory_card.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/11/30/smart_copy_of_photos_from_external_memory_card.html</guid>
+        
+        <category>photos</category>
+        
+        <category>linux</category>
+        
+        <category>shell</category>
+        
+        <category>zsh</category>
+        
+        
+      </item>
     
       <item>
         <title>Make a pdf format slideshow from a unique svg file</title>
@@ -403,41 +438,6 @@ instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
         <category>python</category>
         
         <category>mdanalysis</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Compute native contacts ratio from a dcd trajectory file with MD-Analysis</title>
-        <description>&lt;h1 id=&quot;compute-native-contacts-ratio-from-a-dcd-trajectory-file-with-md-analysis&quot;&gt;Compute native contacts ratio from a dcd trajectory file with MD-Analysis&lt;/h1&gt;
-
-&lt;p&gt;Usage:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;native_contacts.py file.dcd file.pdb file.psf [any valid selection string]
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The selection string is optional and can be any valid selection string for
-selectAtoms() that produces identical selections in mobile and reference. e.g.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;resid 6-91&quot;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I don’t know why but the number of native contacts for the last frame is not
-computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/cc8415df4102becceede.js&quot;&gt; &lt;/script&gt;
-
-</description>
-        <pubDate>Fri, 23 Oct 2015 00:00:00 +0200</pubDate>
-        <link>http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html</guid>
-        
-        <category>mdanalysis</category>
-        
-        <category>python</category>
-        
-        <category>science</category>
         
         
       </item>
