@@ -6,9 +6,34 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 02 Dec 2015 10:40:11 +0100</pubDate>
-    <lastBuildDate>Wed, 02 Dec 2015 10:40:11 +0100</lastBuildDate>
+    <pubDate>Wed, 02 Dec 2015 10:58:32 +0100</pubDate>
+    <lastBuildDate>Wed, 02 Dec 2015 10:58:32 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Convert 3-letters amino acid code to 1-letter code with awk</title>
+        <description>&lt;h1 id=&quot;convert-3-letters-amino-acid-code-to-1-letter-code-with-awk&quot;&gt;Convert 3-letters amino acid code to 1-letter code with awk&lt;/h1&gt;
+
+&lt;p&gt;Field separator for input file can be “,” or “ “.&lt;/p&gt;
+
+&lt;h2 id=&quot;usage&quot;&gt;Usage:&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./three_to_one_letter_code_aa.awk sequence_file.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6573bebf565b72ae935b.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 02 Dec 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/12/02/convert_3-letters_amino_acid_code_to_1-letter_code_with_awk.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/12/02/convert_3-letters_amino_acid_code_to_1-letter_code_with_awk.html</guid>
+        
+        <category>awk</category>
+        
+        
+      </item>
     
       <item>
         <title>Smart copy of photos from external memory card</title>
@@ -408,43 +433,6 @@ generated directory in &lt;code class=&quot;highlighter-rouge&quot;&gt;$BLOGDIR/
         <category>linux</category>
         
         <category>shell</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Extract a subset of frames from a DCD trajectory file with MDAnalysis</title>
-        <description>&lt;h1 id=&quot;extract-a-subset-of-frames-from-a-dcd-trajectory-file-with-mdanalysis&quot;&gt;Extract a subset of frames from a DCD trajectory file with MDAnalysis&lt;/h1&gt;
-
-&lt;p&gt;Usage:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd frame_list_file.txt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;frame_list_file.txt&lt;/code&gt; is an ASCII file containing one frame id per line,
-starting from 0. Repetitions of frames are allowed and will be kept in the
-output file. The order of the frames will be preserved in the output DCD file.&lt;/p&gt;
-
-&lt;p&gt;If the list of frames is not given as a file, the standard input is read
-instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;awk &#39;{print $3}&#39; some_text_file.txt | ./extract_frames_from_dcd.py file.pdb file.dcd outfile.dcd
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/12537c00c8e1679577de.js&quot;&gt; &lt;/script&gt;
-
-</description>
-        <pubDate>Tue, 27 Oct 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html</guid>
-        
-        <category>python</category>
-        
-        <category>mdanalysis</category>
         
         
       </item>
