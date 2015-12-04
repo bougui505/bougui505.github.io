@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2015/12/04/ipython_2.3.0-2_cannot_save_or_autosave_over_mounted_directory_via_sshfs.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2015/12/02/convert_3-letters_amino_acid_code_to_1-letter_code_with_awk.html</loc>
         </url>
     

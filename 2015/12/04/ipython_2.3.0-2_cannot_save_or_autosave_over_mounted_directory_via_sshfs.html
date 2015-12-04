@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>iPython 2.3.0-2 cannot save or autosave over mounted directory via sshfs</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page2/">
+    <link rel="canonical" href="http://bougui505.github.io/2015/12/04/ipython_2.3.0-2_cannot_save_or_autosave_over_mounted_directory_via_sshfs.html">
 </head>
 
 
@@ -99,149 +99,25 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="ipython-230-2-cannot-save-or-autosave-over-mounted-directory-via-sshfs">iPython 2.3.0-2 cannot save or autosave over mounted directory via sshfs</h1>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 144%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 92%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 92%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 92%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 70%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 128%' href='/tags.html#git'>git</a>
-<a style='font-size: 106%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 133%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 168%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 141%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 115%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 106%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 115%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 115%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 92%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 92%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 115%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 150%' href='/tags.html#science'>science</a>
-<a style='font-size: 106%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 92%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 128%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 141%' href='/tags.html#zsh'>zsh</a>
+<p>A workaround for this bug is to add this options to the file <code class="highlighter-rouge">/etc/auto.sshfs</code>:</p>
 
-   </div>
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 29, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html">Get a progress bar for a process in shell with pv -- Pipe Viewer --</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 27, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html">Extract a subset of frames from a DCD trajectory file with MDAnalysis</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html">Compute native contacts ratio from a dcd trajectory file with MD-Analysis</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html">Compute theoretical SAXS profile for each frame of a dcd format trajectory and the corresponding Chi value from experimental data</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/22/coding_style-_highlight_text_that_goes_over_the_80_column_limit_in_vim.html">Coding style: highlight text that goes over the 80 column limit in vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/22/argument_list_too_long_error_with_gnu_parallel.html">`Argument list too long` error with GNU parallel</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/22/align_dcd_trajectory_with_mdanalysis.html">Align dcd trajectory with MDAnalysis</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 21, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/21/split_a_multi_model_pdb_from_shell.html">Split a multi model pdb from shell</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 21, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/21/get_a_range_of_script_arguments_in_zsh.html">Get a range of script arguments in zsh</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/10/20/work_with_arrays_in_zsh.html">Work with arrays in zsh</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 2 of 8</span>
-      
-        <a href="/blog/page3" class="next">Next</a>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>workaround=rename,noexec
+</code></pre>
 </div>
+
+<p>The full line of my <code class="highlighter-rouge">/etc/auto.sshfs</code> is:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>home_pro -fstype=fuse,port=22,rw,allow_other,workaround=rename,noexec :sshfs\#username@hostname\:/path/to/the/directory/to/mount
+</code></pre>
+</div>
+
+<h2 id="related-post">Related post:</h2>
+
+<ul>
+  <li><a href="/linux/2015/01/15/automount-disk-with-sshfs-when-needed.html">Automount disk with sshfs when needed, with autofs</a></li>
+</ul>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

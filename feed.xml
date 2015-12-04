@@ -6,9 +6,46 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Dec 2015 10:53:19 +0100</pubDate>
-    <lastBuildDate>Fri, 04 Dec 2015 10:53:19 +0100</lastBuildDate>
+    <pubDate>Fri, 04 Dec 2015 16:06:20 +0100</pubDate>
+    <lastBuildDate>Fri, 04 Dec 2015 16:06:20 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>iPython 2.3.0-2 cannot save or autosave over mounted directory via sshfs</title>
+        <description>&lt;h1 id=&quot;ipython-230-2-cannot-save-or-autosave-over-mounted-directory-via-sshfs&quot;&gt;iPython 2.3.0-2 cannot save or autosave over mounted directory via sshfs&lt;/h1&gt;
+
+&lt;p&gt;A workaround for this bug is to add this options to the file &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/auto.sshfs&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;workaround=rename,noexec
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The full line of my &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/auto.sshfs&lt;/code&gt; is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;home_pro -fstype=fuse,port=22,rw,allow_other,workaround=rename,noexec :sshfs\#username@hostname\:/path/to/the/directory/to/mount
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;related-post&quot;&gt;Related post:&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/linux/2015/01/15/automount-disk-with-sshfs-when-needed.html&quot;&gt;Automount disk with sshfs when needed, with autofs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 04 Dec 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/12/04/ipython_2.3.0-2_cannot_save_or_autosave_over_mounted_directory_via_sshfs.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/12/04/ipython_2.3.0-2_cannot_save_or_autosave_over_mounted_directory_via_sshfs.html</guid>
+        
+        <category>ipython</category>
+        
+        <category>python</category>
+        
+        <category>sshfs</category>
+        
+        <category>autofs</category>
+        
+        
+      </item>
     
       <item>
         <title>Convert 3-letters amino acid code to 1-letter code with awk</title>
@@ -404,35 +441,6 @@ generated directory in &lt;code class=&quot;highlighter-rouge&quot;&gt;$BLOGDIR/
         <category>github</category>
         
         <category>git</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Get a progress bar for a process in shell with pv -- Pipe Viewer --</title>
-        <description>&lt;h1 id=&quot;get-a-progress-bar-for-a-process-in-shell-with-pv----pipe-viewer---&quot;&gt;Get a progress bar for a process in shell with pv – Pipe Viewer –&lt;/h1&gt;
-
-&lt;h2 id=&quot;monitor-the-progress-accordingly-to-the-number-of-lines-in-the-output-file&quot;&gt;Monitor the progress accordingly to the number of lines in the output file.&lt;/h2&gt;
-
-&lt;p&gt;In the example below, the target number of line for the output is 330000:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./get_weights.sh | pv -s 330000 -l &amp;gt; frames_weight.txt&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Sample output:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; 103k 0:13:27 [ 128/s ] [=============================&amp;gt;                                                                     ] 31% ETA 0:29:46
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Thu, 29 Oct 2015 00:00:00 +0100</pubDate>
-        <link>http://bougui505.github.io/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html</link>
-        <guid isPermaLink="true">http://bougui505.github.io/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html</guid>
-        
-        <category>pv</category>
-        
-        <category>linux</category>
-        
-        <category>shell</category>
         
         
       </item>
