@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/12/02/convert_3-letters_amino_acid_code_to_1-letter_code_with_awk.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/30/smart_copy_of_photos_from_external_memory_card.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/26/write_data_to_b-factor_column_of_a_pdb_file.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/20/interactive_svg_with_inkscape.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/09/progress_reporting_in_python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/07/formatting_an_external_hard_drive_with_parted.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/11/03/generate_jekyll_site_locally_and_push_source_file_and_static_web_site_to_github.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/29/get_a_progress_bar_for_a_process_in_shell_with_pv_-_pipe_viewer_.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/22/coding_style-_highlight_text_that_goes_over_the_80_column_limit_in_vim.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/22/argument_list_too_long_error_with_gnu_parallel.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/22/align_dcd_trajectory_with_mdanalysis.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/21/split_a_multi_model_pdb_from_shell.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/21/get_a_range_of_script_arguments_in_zsh.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/20/work_with_arrays_in_zsh.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/20/increment_value_in_zsh.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/19/spring_layout_for_annotating_plot_in_matplotlib.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/10/02/script_to_automatically_build_psf_file_from_pdb_in_vmd.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/09/29/zsh_tips_and_tricks.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/2015/09/29/utility_to_create_jekyll_blog_template_file_from_the_command_line_interface.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/09/26/backup_raspberry_pi_sd_card.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/09/24/awk_determine_if_a_string_is_numeric.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/09/14/gnu_parallel.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/08/28/svg_to_pdf.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/07/17/restructured_text-syntax.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/07/17/compute_rmsd_between_two_pdb_with_awk.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/07/16/renumber_citations_in_restructured_text.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/awk/2015/07/08/sum_over_all_columns_with_awk.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/07/08/plotting_from_linux_terminal.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/07/07/modulo_in_bash.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/awk/2015/07/03/awk-external-command.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/vim/2015/06/22/vim-scrolling-option.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/vim/2015/04/13/semantic-linefeeds-in-vim-for-easier-git-versioning-of-latex-documents.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/latex/2015/04/10/bundledoc-bundle-together-all-files-needed-to-compile-your-latex-document.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2015/03/31/reload-library-automatically-in-ipython-notebook.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2015/02/05/computing-rmsd-efficiently-with-pyrmsd-in-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2015/01/26/geodesic-distance-transform-in-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2015/01/15/automount-disk-with-sshfs-when-needed.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/science/2015/01/13/new-publication-an-automatic-tool-to-analyze-and-cluster-macromolecular-conformations-based-on-self-organizing-maps.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/vim/2015/01/12/vim-find-exactly-n-starting-spaces.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/12/10/zsh-script-to-convert-and-format-ipython-notebook-to-jekyll-markdown-file.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2014/12/10/metadynamics-on-a-2d-surface-potential-with-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/12/06/deploy-jekyll-site-with-git.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/12/03/use-git-to-keep-incremental-backup-of-edited-files.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/science/2014/12/02/adaptive-sampling-of-a-2d-surface-potential-by-markov-chain-monte-carlo-with-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/11/27/real-time-plot-of-the-evolution-of-the-number-of-files-with-gnuplot.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/git/2014/11/25/use-latexdiff-tool-with-git.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/11/20/encode-dvd-into-a-mkv-file-with-different-subtitles-and-languages.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/11/19/syntax-highlighting-with-pygment-in-the-shell.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2014/11/17/simple-markov-chain-monte-carlo-mcmc-algorithm-in-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2014/11/12/sum-element-of-an-array-from-given-labels-in-python-without-for-loop.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/linux/2014/11/09/configure-freedns-afraidorg-service-with-inadyn.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/awk/2014/11/06/do-not-display-long-line-with-awk.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/science/2014/11/02/elastic-network-model-of-proteins-with-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2014/10/29/n-curve-gaussian-fitting-with-gaussian-mixture-models.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/jekyll/2014/10/27/paginate-with-jekyll.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/vim/2014/10/27/word-wrap-without-line-breaks.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/science/2014/10/24/smoothed-data-histogram-with-som.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/jekyll/2014/10/23/mathjax-in-jekyll-based-blog.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/science/2014/10/23/wham-the-weighted-histogram-analysis-method.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/latex/2014/10/23/latex-acronym-package.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/git/2014/10/22/git-tagging.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2014/10/21/transition-networks-with-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/python/2014/10/20/figure-size-font-and-latex-with-matplotlib-and-python.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/latex/2014/10/20/truncate-header-in-fancyhdr.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/jekyll/2014/10/20/use-jekyll-with-bibtex.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/vim/2014/10/18/spell-check-in-vim.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/latex/2014/10/18/latex-templates.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/git/2014/10/18/git-pull-that-run-out-of-memory-on-the-server.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/awk/2014/10/18/awk-if-else-syntax.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://bougui505.github.io/jekyll/update/2014/10/17/welcome-to-jekyll.html</loc>
+        </url>
+    
+</urlset>
