@@ -173,6 +173,25 @@ Number  Start   End     Size    Type     File system  Flags
 </code></pre>
 </div>
 
+<h4 id="in-case-of-warning-the-resulting-partition-is-not-properly-aligned-for-best-performance">In case of: <code class="highlighter-rouge">Warning: The resulting partition is not properly aligned for best performance.</code></h4>
+
+<p>Cancel the operation:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Warning: The resulting partition is not properly aligned for best performance.
+Ignore/Cancel? C
+</code></pre>
+</div>
+
+<p>And try again with <code class="highlighter-rouge">100%</code> instead of <code class="highlighter-rouge">-1s</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(parted) mkpart
+Partition type?  primary/extended? primary
+File system type?  [ext2]? ext4
+Start? 0%
+End? 100%
+</code></pre>
+</div>
+
 <h3 id="exit-parted">exit parted</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>(parted) quit

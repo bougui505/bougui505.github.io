@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Dec 2015 16:06:20 +0100</pubDate>
-    <lastBuildDate>Fri, 04 Dec 2015 16:06:20 +0100</lastBuildDate>
+    <pubDate>Fri, 11 Dec 2015 18:42:23 +0100</pubDate>
+    <lastBuildDate>Fri, 11 Dec 2015 18:42:23 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -322,6 +322,25 @@ Disk Flags:
 
 Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ext4         lba
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;in-case-of-warning-the-resulting-partition-is-not-properly-aligned-for-best-performance&quot;&gt;In case of: &lt;code class=&quot;highlighter-rouge&quot;&gt;Warning: The resulting partition is not properly aligned for best performance.&lt;/code&gt;&lt;/h4&gt;
+
+&lt;p&gt;Cancel the operation:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Warning: The resulting partition is not properly aligned for best performance.
+Ignore/Cancel? C
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And try again with &lt;code class=&quot;highlighter-rouge&quot;&gt;100%&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;-1s&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(parted) mkpart
+Partition type?  primary/extended? primary
+File system type?  [ext2]? ext4
+Start? 0%
+End? 100%
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
