@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Search in Jekyll blog site with TapirGo</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/">
+    <link rel="canonical" href="http://bougui505.github.io/2015/12/14/search_in_jekyll_blog_site_with_tapirgo.html">
 </head>
 
 
@@ -99,153 +99,53 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="search-in-jekyll-blog-site-with-tapirgo">Search in Jekyll blog site with TapirGo</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<p><a href="http://tapirgo.com/">TapirGo</a> is free, third party service for searching RSS
+feeds.</p>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 144%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 92%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 92%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 92%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 128%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 106%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 137%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 168%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 141%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 106%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 115%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 115%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 115%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 92%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 92%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 150%' href='/tags.html#science'>science</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 106%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 115%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 92%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 128%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 141%' href='/tags.html#zsh'>zsh</a>
+<ul>
+  <li>First of all, you need to generate a full xml file of your site with the
+standard <code class="highlighter-rouge">feed.xml</code> at the root of your blog site:</li>
+</ul>
 
-   </div>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/6c3b4b36a383290d624d.js"> </script>
 
-  <h1 class="page-heading">Posts</h1>
+<ul>
+  <li>
+    <p>Subscribe to <a href="http://tapirgo.com/">TapirGo</a> and give the link to the <code class="highlighter-rouge">feed.xml</code>
+page.</p>
+  </li>
+  <li>
+    <p>Create the file <code class="highlighter-rouge">search.html</code> at the root directory:</p>
+  </li>
+</ul>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Dec 14, 2015</span>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/39ba5044e902a1a0efef.js"> </script>
 
-        <h2>
-          <a class="post-link" href="/2015/12/14/search_in_jekyll_blog_site_with_tapirgo.html">Search in Jekyll blog site with TapirGo</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 4, 2015</span>
+<p>Replace <code class="highlighter-rouge">YOUR_TOKEN</code> by your token given by <a href="http://tapirgo.com/">TapirGo</a>.</p>
 
-        <h2>
-          <a class="post-link" href="/2015/12/04/ipython_2.3.0-2_cannot_save_or_autosave_over_mounted_directory_via_sshfs.html">iPython 2.3.0-2 cannot save or autosave over mounted directory via sshfs</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Dec 2, 2015</span>
+<ul>
+  <li>and the file <code class="highlighter-rouge">jquery-tapir.min.js</code> from this
+<a href="https://github.com/TapirGo/jQuery-Plugin">Github</a> repository:</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/2015/12/02/convert_3-letters_amino_acid_code_to_1-letter_code_with_awk.html">Convert 3-letters amino acid code to 1-letter code with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 30, 2015</span>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/f597289d82e9a0090386.js"> </script>
 
-        <h2>
-          <a class="post-link" href="/2015/11/30/smart_copy_of_photos_from_external_memory_card.html">Smart copy of photos from external memory card</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 27, 2015</span>
+<ul>
+  <li>Add the search box in the index page (<code class="highlighter-rouge">index.html</code> file):</li>
+</ul>
 
-        <h2>
-          <a class="post-link" href="/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html">Make a pdf format slideshow from a unique svg file</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 26, 2015</span>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/35cd2416a5ff8ce8af92.js"> </script>
 
-        <h2>
-          <a class="post-link" href="/2015/11/26/write_data_to_b-factor_column_of_a_pdb_file.html">Write data to B-factor column of a PDB file</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 20, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/11/20/interactive_svg_with_inkscape.html">Interactive svg with inkscape</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 9, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/11/09/progress_reporting_in_python.html">Progress reporting in python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 7, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/11/07/formatting_an_external_hard_drive_with_parted.html">Formatting an external hard drive with parted</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 4, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html">Select a subset of atoms from a trajectory file with MDanalysis</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        <span class="previous">Previous</span>
-      
-      <span class="page_number ">Page: 1 of 8</span>
-      
-        <a href="/blog/page2" class="next">Next</a>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

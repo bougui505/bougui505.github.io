@@ -6,9 +6,70 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Dec 2015 16:44:42 +0100</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2015 16:44:42 +0100</lastBuildDate>
+    <pubDate>Mon, 14 Dec 2015 17:21:29 +0100</pubDate>
+    <lastBuildDate>Mon, 14 Dec 2015 17:21:29 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Search in Jekyll blog site with TapirGo</title>
+        <description>&lt;h1 id=&quot;search-in-jekyll-blog-site-with-tapirgo&quot;&gt;Search in Jekyll blog site with TapirGo&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tapirgo.com/&quot;&gt;TapirGo&lt;/a&gt; is free, third party service for searching RSS
+feeds.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;First of all, you need to generate a full xml file of your site with the
+standard &lt;code class=&quot;highlighter-rouge&quot;&gt;feed.xml&lt;/code&gt; at the root of your blog site:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6c3b4b36a383290d624d.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Subscribe to &lt;a href=&quot;http://tapirgo.com/&quot;&gt;TapirGo&lt;/a&gt; and give the link to the &lt;code class=&quot;highlighter-rouge&quot;&gt;feed.xml&lt;/code&gt;
+page.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create the file &lt;code class=&quot;highlighter-rouge&quot;&gt;search.html&lt;/code&gt; at the root directory:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/39ba5044e902a1a0efef.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;YOUR_TOKEN&lt;/code&gt; by your token given by &lt;a href=&quot;http://tapirgo.com/&quot;&gt;TapirGo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;and the file &lt;code class=&quot;highlighter-rouge&quot;&gt;jquery-tapir.min.js&lt;/code&gt; from this
+&lt;a href=&quot;https://github.com/TapirGo/jQuery-Plugin&quot;&gt;Github&lt;/a&gt; repository:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f597289d82e9a0090386.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add the search box in the index page (&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/35cd2416a5ff8ce8af92.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/12/14/search_in_jekyll_blog_site_with_tapirgo.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/12/14/search_in_jekyll_blog_site_with_tapirgo.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>TapirGo</category>
+        
+        
+      </item>
     
       <item>
         <title>iPython 2.3.0-2 cannot save or autosave over mounted directory via sshfs</title>
