@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Dec 2015 23:03:48 +0100</pubDate>
-    <lastBuildDate>Tue, 15 Dec 2015 23:03:48 +0100</lastBuildDate>
+    <pubDate>Tue, 15 Dec 2015 23:05:09 +0100</pubDate>
+    <lastBuildDate>Tue, 15 Dec 2015 23:05:09 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -1623,7 +1623,7 @@ Reload all modules (except those excluded by %aimport) every time before executi
 &lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/python.png&quot; alt=&quot;XKCD&quot; /&gt;
-[http://xkcd.com/353/]{http://xkcd.com/353/}&lt;/p&gt;
+&lt;a href=&quot;http://xkcd.com/353/&quot;&gt;http://xkcd.com/353/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 31 Mar 2015 17:01:31 +0200</pubDate>
         <link>http://bougui505.github.io/python/2015/03/31/reload-library-automatically-in-ipython-notebook.html</link>
