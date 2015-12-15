@@ -6,9 +6,49 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Dec 2015 17:21:29 +0100</pubDate>
-    <lastBuildDate>Mon, 14 Dec 2015 17:21:29 +0100</lastBuildDate>
+    <pubDate>Tue, 15 Dec 2015 10:23:49 +0100</pubDate>
+    <lastBuildDate>Tue, 15 Dec 2015 10:23:49 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Use ProxyCommand with ssh to connect to host1 through host2</title>
+        <description>&lt;h1 id=&quot;use-proxycommand-with-ssh-to-connect-to-host1-through-host2&quot;&gt;Use ProxyCommand with ssh to connect to host1 through host2&lt;/h1&gt;
+
+&lt;p&gt;Sometime an host (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;host1&lt;/code&gt;) cannot be reached directly with ssh. However,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;host2&lt;/code&gt; can be reached via ssh, and &lt;code class=&quot;highlighter-rouge&quot;&gt;host2&lt;/code&gt; can connect to &lt;code class=&quot;highlighter-rouge&quot;&gt;host1&lt;/code&gt; via ssh.&lt;/p&gt;
+
+&lt;p&gt;I define:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;username1&lt;/code&gt;: your username for &lt;code class=&quot;highlighter-rouge&quot;&gt;host1&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;username2&lt;/code&gt;: your username for &lt;code class=&quot;highlighter-rouge&quot;&gt;host2&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, &lt;code class=&quot;highlighter-rouge&quot;&gt;username1&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;username2&lt;/code&gt; can be identical.&lt;/p&gt;
+
+&lt;p&gt;You can transparently connect to &lt;code class=&quot;highlighter-rouge&quot;&gt;host1&lt;/code&gt; through &lt;code class=&quot;highlighter-rouge&quot;&gt;host2&lt;/code&gt; with ssh by setting up
+a ProxyCommand in &lt;code class=&quot;highlighter-rouge&quot;&gt;.ssh/config&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Host host1
+    User username1
+    ProxyCommand ssh username2@host2 exec nc host1 22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 15 Dec 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/12/15/use_proxycommand_with_ssh_to_connect_to_host1_through_host2.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/12/15/use_proxycommand_with_ssh_to_connect_to_host1_through_host2.html</guid>
+        
+        <category>ssh</category>
+        
+        <category>ProxyCommand</category>
+        
+        
+      </item>
     
       <item>
         <title>Search in Jekyll blog site with TapirGo</title>
