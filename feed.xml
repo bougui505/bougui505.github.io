@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Dec 2015 10:26:44 +0100</pubDate>
-    <lastBuildDate>Tue, 15 Dec 2015 10:26:44 +0100</lastBuildDate>
+    <pubDate>Tue, 15 Dec 2015 10:36:44 +0100</pubDate>
+    <lastBuildDate>Tue, 15 Dec 2015 10:36:44 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -44,6 +44,9 @@ a ProxyCommand in &lt;code class=&quot;highlighter-rouge&quot;&gt;.ssh/config&lt
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh host1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/im_an_idiot.png&quot; alt=&quot;XKCD comics&quot; /&gt;
+&lt;a href=&quot;https://xkcd.com/530/&quot;&gt;https://xkcd.com/530/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Dec 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/12/15/use_proxycommand_with_ssh_to_connect_to_host1_through_host2.html</link>
