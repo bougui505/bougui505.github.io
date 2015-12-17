@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Simple zsh calculator</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page4/">
+    <link rel="canonical" href="http://bougui505.github.io/2015/12/17/simple_zsh_calculator.html">
 </head>
 
 
@@ -99,156 +99,80 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="simple-zsh-calculator">Simple zsh calculator</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<p>Everything comes from:
+<a href="https://github.com/arzzen/calc.plugin.zsh">https://github.com/arzzen/calc.plugin.zsh</a></p>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 144%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 92%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 92%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 92%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 128%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 70%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 106%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 137%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 168%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 141%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 106%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 115%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 115%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 115%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 92%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 92%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 92%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 115%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 106%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 150%' href='/tags.html#science'>science</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 128%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 144%' href='/tags.html#zsh'>zsh</a>
+<p>A very simple handy zsh function to perform simple calculation from the zsh
+shell:</p>
 
-   </div>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># bc - An arbitrary precision calculator language</span>
+<span class="k">function</span> <span class="o">=</span> 
+<span class="o">{</span>
+  <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> | bc -l
+<span class="o">}</span>
 
-  <h1 class="page-heading">Posts</h1>
+<span class="nb">alias </span><span class="nv">calc</span><span class="o">=</span><span class="s2">"="</span></code></pre></figure>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 14, 2015</span>
+<p>Usage:</p>
 
-        <h2>
-          <a class="post-link" href="/linux/2015/09/14/gnu_parallel.html">GNU parallel</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 28, 2015</span>
+<div class="highlighter-rouge"><pre class="highlight"><code># addition
+root@pc:~$ = 5+3
+8
 
-        <h2>
-          <a class="post-link" href="/linux/2015/08/28/svg_to_pdf.html">Making a slideshow for a speech from Inkscape</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 17, 2015</span>
+# multiplication
+root@pc:~$ = '4*2'
+8
 
-        <h2>
-          <a class="post-link" href="/linux/2015/07/17/restructured_text-syntax.html">Restructured text syntax</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 17, 2015</span>
+# subtraction
+root@pc:~$ = -4-2
+-6
 
-        <h2>
-          <a class="post-link" href="/linux/2015/07/17/compute_rmsd_between_two_pdb_with_awk.html">Compute rmsd between two pdb with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 16, 2015</span>
+# division
+root@pc:~$ = 4/2
+2.00000000000000000000
 
-        <h2>
-          <a class="post-link" href="/linux/2015/07/16/renumber_citations_in_restructured_text.html">Renumber citations in restructured text</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 8, 2015</span>
+# square root 
+root@pc:~$ = "scale=30; sqrt(2)"
+1.414213562373095048801688724209
 
-        <h2>
-          <a class="post-link" href="/awk/2015/07/08/sum_over_all_columns_with_awk.html">Sum over all columns with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 8, 2015</span>
+# power
+root@pc:~$ = "6^6"
+46656
 
-        <h2>
-          <a class="post-link" href="/linux/2015/07/08/plotting_from_linux_terminal.html">Plotting from linux terminal</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 7, 2015</span>
+# parentheses
+root@pc:~$ = "(6^6)^6"
+10314424798490535546171949056
 
-        <h2>
-          <a class="post-link" href="/linux/2015/07/07/modulo_in_bash.html">Modulo in bash</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 3, 2015</span>
+# convert from decimal to hexadecimal 
+root@pc:~$ = "obase=16; 255"
+FF
 
-        <h2>
-          <a class="post-link" href="/awk/2015/07/03/awk-external-command.html">Run external command with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 22, 2015</span>
+# convert from decimal to binary 
+root@pc ~$ = "obase=2; 12"
+1100
 
-        <h2>
-          <a class="post-link" href="/vim/2015/06/22/vim-scrolling-option.html">Vim scrolling option</a>
-        </h2>
-      </li>
-    
-  </ul>
+# convert from binary to decimal 
+root@pc ~$ = "ibase=2; obase=A;1100"
+12
 
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page3" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 4 of 8</span>
-      
-        <a href="/blog/page5" class="next">Next</a>
-      
-    </div>
+# convert from hexadecimal to decimal 
+root@pc ~$ = "ibase=16; obase=A;FF"
+255
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+# arctangent
+root@pc ~$ = "a(1)"
+.78539816339744830961
 
+# PI value
+root@pc ~$ = "scale=10; 4*a(1)"
+3.1415926532
+
+# more complex
+root@pc ~$ = "scale=2; 3.4+7/8-(5.94*(4*a(1)))"
+-14.26
+</code></pre>
 </div>
 
             <div id="disqus_thread"></div>

@@ -6,9 +6,96 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Dec 2015 23:05:09 +0100</pubDate>
-    <lastBuildDate>Tue, 15 Dec 2015 23:05:09 +0100</lastBuildDate>
+    <pubDate>Thu, 17 Dec 2015 14:11:41 +0100</pubDate>
+    <lastBuildDate>Thu, 17 Dec 2015 14:11:41 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Simple zsh calculator</title>
+        <description>&lt;h1 id=&quot;simple-zsh-calculator&quot;&gt;Simple zsh calculator&lt;/h1&gt;
+
+&lt;p&gt;Everything comes from:
+&lt;a href=&quot;https://github.com/arzzen/calc.plugin.zsh&quot;&gt;https://github.com/arzzen/calc.plugin.zsh&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A very simple handy zsh function to perform simple calculation from the zsh
+shell:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# bc - An arbitrary precision calculator language&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; | bc -l
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;=&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# addition
+root@pc:~$ = 5+3
+8
+
+# multiplication
+root@pc:~$ = &#39;4*2&#39;
+8
+
+# subtraction
+root@pc:~$ = -4-2
+-6
+
+# division
+root@pc:~$ = 4/2
+2.00000000000000000000
+
+# square root 
+root@pc:~$ = &quot;scale=30; sqrt(2)&quot;
+1.414213562373095048801688724209
+
+# power
+root@pc:~$ = &quot;6^6&quot;
+46656
+
+# parentheses
+root@pc:~$ = &quot;(6^6)^6&quot;
+10314424798490535546171949056
+
+# convert from decimal to hexadecimal 
+root@pc:~$ = &quot;obase=16; 255&quot;
+FF
+
+# convert from decimal to binary 
+root@pc ~$ = &quot;obase=2; 12&quot;
+1100
+
+# convert from binary to decimal 
+root@pc ~$ = &quot;ibase=2; obase=A;1100&quot;
+12
+
+# convert from hexadecimal to decimal 
+root@pc ~$ = &quot;ibase=16; obase=A;FF&quot;
+255
+
+# arctangent
+root@pc ~$ = &quot;a(1)&quot;
+.78539816339744830961
+
+# PI value
+root@pc ~$ = &quot;scale=10; 4*a(1)&quot;
+3.1415926532
+
+# more complex
+root@pc ~$ = &quot;scale=2; 3.4+7/8-(5.94*(4*a(1)))&quot;
+-14.26
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 17 Dec 2015 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2015/12/17/simple_zsh_calculator.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2015/12/17/simple_zsh_calculator.html</guid>
+        
+        <category>zsh</category>
+        
+        
+      </item>
     
       <item>
         <title>Use ProxyCommand with ssh to connect to host1 through host2</title>

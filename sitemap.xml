@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2015/12/17/simple_zsh_calculator.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2015/12/15/use_proxycommand_with_ssh_to_connect_to_host1_through_host2.html</loc>
         </url>
     
