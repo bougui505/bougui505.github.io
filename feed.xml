@@ -6,9 +6,94 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 11 Feb 2016 10:26:26 +0100</pubDate>
-    <lastBuildDate>Thu, 11 Feb 2016 10:26:26 +0100</lastBuildDate>
+    <pubDate>Tue, 16 Feb 2016 09:59:14 +0100</pubDate>
+    <lastBuildDate>Tue, 16 Feb 2016 09:59:14 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Logical Volume Manager (LVM)</title>
+        <description>&lt;h1 id=&quot;logical-volume-manager-lvm&quot;&gt;Logical Volume Manager (LVM)&lt;/h1&gt;
+
+&lt;h2 id=&quot;listing-physical-volumes-pv&quot;&gt;Listing Physical Volumes (PV)&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo pvs
+  PV         VG           Fmt  Attr PSize   PFree
+  /dev/sda5  mantrisse-vg lvm2 a--  465,52g 247,52g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;listing-volume-groups-vg&quot;&gt;Listing Volume Groups (VG)&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo vgs
+  VG           #PV #LV #SN Attr   VSize   VFree
+  mantrisse-vg   1   3   0 wz--n- 465,52g 247,52g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;listing-logical-volumes-lv&quot;&gt;Listing Logical Volumes (LV)&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo lvs
+  LV     VG           Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  home   mantrisse-vg -wi-ao---- 100,00g
+  root   mantrisse-vg -wi-ao---- 100,00g
+  swap_1 mantrisse-vg -wi-ao----  18,00g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;display-informations-about-logical-volumes&quot;&gt;Display informations about logical volumes&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo lvdisplay
+    [...]
+  --- Logical volume ---
+  LV Path                /dev/mantrisse-vg/home
+  LV Name                home
+  VG Name                mantrisse-vg
+    [...]
+  LV Write Access        read/write
+  LV Creation host, time mantrisse, 2015-09-02 14:34:37 +0200
+  LV Status              available
+  # open                 1
+  LV Size                100,00 GiB
+  Current LE             25600
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           254:2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;resize-a-given-lv&quot;&gt;Resize a given LV&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Resize &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/mantrisse-vg/home&lt;/code&gt; by adding 50 Go:&lt;/p&gt;
+
+    &lt;p&gt;bougui@mantrisse ~&amp;gt; sudo lvresize -L+50g /dev/mantrisse-vg/home
+    Size of logical volume mantrisse-vg/home changed from 100,00 GiB (25600 extents) to 150,00 GiB (38400 extents).
+    Logical volume home successfully resized&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;and then resize the file system to cover the full space available:&lt;/p&gt;
+
+    &lt;p&gt;bougui@mantrisse ~&amp;gt; sudo resize2fs /dev/mantrisse-vg/home
+  resize2fs 1.42.12 (29-Aug-2014)
+  Le système de fichiers de /dev/mantrisse-vg/home est monté sur /home ; le changement de taille doit être effectué en ligne
+  old_desc_blocks = 7, new_desc_blocks = 10
+  Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39321600 blocs (4k).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 16 Feb 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/02/16/logical_volume_manager_(lvm).html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/02/16/logical_volume_manager_(lvm).html</guid>
+        
+        <category>lvm</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>matplotlib: scale colorbar to match graphic height</title>
