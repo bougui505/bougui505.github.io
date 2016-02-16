@@ -154,24 +154,23 @@
 
 <h2 id="resize-a-given-lv">Resize a given LV</h2>
 
-<ul>
-  <li>
-    <p>Resize <code class="highlighter-rouge">/dev/mantrisse-vg/home</code> by adding 50 Go:</p>
+<h3 id="resize-devmantrisse-vghome-by-adding-50-go">Resize <code class="highlighter-rouge">/dev/mantrisse-vg/home</code> by adding 50 Go:</h3>
 
-    <p>bougui@mantrisse ~&gt; sudo lvresize -L+50g /dev/mantrisse-vg/home
-    Size of logical volume mantrisse-vg/home changed from 100,00 GiB (25600 extents) to 150,00 GiB (38400 extents).
-    Logical volume home successfully resized</p>
-  </li>
-  <li>
-    <p>and then resize the file system to cover the full space available:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; sudo lvresize -L+50g /dev/mantrisse-vg/home
+  Size of logical volume mantrisse-vg/home changed from 100,00 GiB (25600 extents) to 150,00 GiB (38400 extents).
+  Logical volume home successfully resized
+</code></pre>
+</div>
 
-    <p>bougui@mantrisse ~&gt; sudo resize2fs /dev/mantrisse-vg/home
-  resize2fs 1.42.12 (29-Aug-2014)
-  Le système de fichiers de /dev/mantrisse-vg/home est monté sur /home ; le changement de taille doit être effectué en ligne
-  old_desc_blocks = 7, new_desc_blocks = 10
-  Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39321600 blocs (4k).</p>
-  </li>
-</ul>
+<h3 id="and-then-resize-the-file-system-to-cover-the-full-space-available">and then resize the file system to cover the full space available:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; sudo resize2fs /dev/mantrisse-vg/home
+resize2fs 1.42.12 (29-Aug-2014)
+Le système de fichiers de /dev/mantrisse-vg/home est monté sur /home ; le changement de taille doit être effectué en ligne
+old_desc_blocks = 7, new_desc_blocks = 10
+Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39321600 blocs (4k).
+</code></pre>
+</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">
