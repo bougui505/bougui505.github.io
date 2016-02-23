@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 16 Feb 2016 16:23:18 +0100</pubDate>
-    <lastBuildDate>Tue, 16 Feb 2016 16:23:18 +0100</lastBuildDate>
+    <pubDate>Tue, 23 Feb 2016 15:19:36 +0100</pubDate>
+    <lastBuildDate>Tue, 23 Feb 2016 15:19:36 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Create animated gif from multiple images with ImageMagick</title>
+        <description>&lt;h1 id=&quot;create-animated-gif-from-multiple-images-with-imagemagick&quot;&gt;Create animated gif from multiple images with ImageMagick&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;convert -delay 6 -quality 95 -layers OptimizePlus montage_?????.png movie.gif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.imagemagick.org/Usage/anim_opt/#optimizeplus&quot;&gt;OptimizePlus&lt;/a&gt; reduces
+the final size of the gif file by performing an optimization.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 23 Feb 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/02/23/create_animated_gif_from_multiple_images_with_imagemagick.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/02/23/create_animated_gif_from_multiple_images_with_imagemagick.html</guid>
+        
+        <category>imagemagick</category>
+        
+        
+      </item>
     
       <item>
         <title>Logical Volume Manager (LVM)</title>
