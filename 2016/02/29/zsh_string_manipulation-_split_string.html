@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>ZSH string manipulation: split string</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page5/">
+    <link rel="canonical" href="http://bougui505.github.io/2016/02/29/zsh_string_manipulation-_split_string.html">
 </head>
 
 
@@ -101,159 +101,18 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="zsh-string-manipulation-split-string">ZSH string manipulation: split string</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<h2 id="split-string-in-a-given-word-separator-ws">Split string in a given word separator (<code class="highlighter-rouge">ws</code>)</h2>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 143%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 92%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 92%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 92%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 127%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 105%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 70%' href='/tags.html#imagemagick'>imagemagick</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 136%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 169%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 70%' href='/tags.html#lvm'>lvm</a>
-<a style='font-size: 143%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 114%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 114%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 114%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 114%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 92%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 92%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 149%' href='/tags.html#science'>science</a>
-<a style='font-size: 92%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 114%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 105%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 70%' href='/tags.html#tikz'>tikz</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 127%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 146%' href='/tags.html#zsh'>zsh</a>
+<p>For example <code class="highlighter-rouge">_</code>:</p>
 
-   </div>
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jul 8, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2015/07/08/sum_over_all_columns_with_awk.html">Sum over all columns with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 8, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/linux/2015/07/08/plotting_from_linux_terminal.html">Plotting from linux terminal</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 7, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/linux/2015/07/07/modulo_in_bash.html">Modulo in bash</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 3, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2015/07/03/awk-external-command.html">Run external command with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 22, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2015/06/22/vim-scrolling-option.html">Vim scrolling option</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 13, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2015/04/13/semantic-linefeeds-in-vim-for-easier-git-versioning-of-latex-documents.html">Semantic linefeeds in vim for easier git versioning of LaTeX documents</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 10, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/latex/2015/04/10/bundledoc-bundle-together-all-files-needed-to-compile-your-latex-document.html">bundledoc: bundle together all files needed to compile your LaTeX document</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 31, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/python/2015/03/31/reload-library-automatically-in-ipython-notebook.html">Reload library automatically in IPython notebook</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Feb 5, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/python/2015/02/05/computing-rmsd-efficiently-with-pyrmsd-in-python.html">Computing RMSD efficiently with pyRMSD in python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jan 26, 2015</span>
-
-        <h2>
-          <a class="post-link" href="/python/2015/01/26/geodesic-distance-transform-in-python.html">Geodesic distance transform in python</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page4" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 5 of 9</span>
-      
-        <a href="/blog/page6" class="next">Next</a>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; x="foo_1"
+bougui@mantrisse ~&gt; echo $x[(ws:_:)1]
+foo
+bougui@mantrisse ~&gt; echo $x[(ws:_:)2]
+1
+</code></pre>
 </div>
 
             <div id="disqus_thread"></div>

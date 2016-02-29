@@ -6,9 +6,34 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 23 Feb 2016 15:19:36 +0100</pubDate>
-    <lastBuildDate>Tue, 23 Feb 2016 15:19:36 +0100</lastBuildDate>
+    <pubDate>Mon, 29 Feb 2016 11:13:27 +0100</pubDate>
+    <lastBuildDate>Mon, 29 Feb 2016 11:13:27 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>ZSH string manipulation: split string</title>
+        <description>&lt;h1 id=&quot;zsh-string-manipulation-split-string&quot;&gt;ZSH string manipulation: split string&lt;/h1&gt;
+
+&lt;h2 id=&quot;split-string-in-a-given-word-separator-ws&quot;&gt;Split string in a given word separator (&lt;code class=&quot;highlighter-rouge&quot;&gt;ws&lt;/code&gt;)&lt;/h2&gt;
+
+&lt;p&gt;For example &lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; x=&quot;foo_1&quot;
+bougui@mantrisse ~&amp;gt; echo $x[(ws:_:)1]
+foo
+bougui@mantrisse ~&amp;gt; echo $x[(ws:_:)2]
+1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 29 Feb 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/02/29/zsh_string_manipulation-_split_string.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/02/29/zsh_string_manipulation-_split_string.html</guid>
+        
+        <category>zsh</category>
+        
+        
+      </item>
     
       <item>
         <title>Create animated gif from multiple images with ImageMagick</title>
