@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 29 Feb 2016 11:13:27 +0100</pubDate>
-    <lastBuildDate>Mon, 29 Feb 2016 11:13:27 +0100</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 16:40:47 +0100</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 16:40:47 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Slideshow: Unraveling protein functional motions using Self-Organizing Maps.</title>
+        <description>&lt;h1 id=&quot;slideshow-unraveling-protein-functional-motions-using-self-organizing-maps&quot;&gt;Slideshow: Unraveling protein functional motions using Self-Organizing Maps.&lt;/h1&gt;
+
+&lt;iframe src=&quot;https://docs.google.com/presentation/d/1zAcWg_0k-pYlO2LYaaoiuaLbji9tLBLTBNMX_WAJt6o/embed?start=false&amp;amp;loop=true&amp;amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;749&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+
+</description>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/03/08/slideshow-_unraveling_protein_functional_motions_using_self-organizing_maps..html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/03/08/slideshow-_unraveling_protein_functional_motions_using_self-organizing_maps..html</guid>
+        
+        <category>slideshow</category>
+        
+        <category>science</category>
+        
+        
+      </item>
     
       <item>
         <title>ZSH string manipulation: split string</title>
