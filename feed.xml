@@ -6,9 +6,33 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 08 Mar 2016 16:40:47 +0100</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 16:40:47 +0100</lastBuildDate>
+    <pubDate>Tue, 05 Apr 2016 10:08:12 +0200</pubDate>
+    <lastBuildDate>Tue, 05 Apr 2016 10:08:12 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Moving average in python</title>
+        <description>&lt;h1 id=&quot;moving-average-in-python&quot;&gt;Moving average in python&lt;/h1&gt;
+
+&lt;p&gt;Below is the code for computing a moving average in python:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;movingaverage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ones&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;numpy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;convolve&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;same&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;-&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;gray&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alpha&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;movingaverage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;logE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;r&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;linewidth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;3.&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/moving_average.png&quot; alt=&quot;moving_average&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/04/05/moving_average_in_python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/04/05/moving_average_in_python.html</guid>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Slideshow: Unraveling protein functional motions using Self-Organizing Maps.</title>
@@ -1291,9 +1315,7 @@ c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is the script:&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/f0fa80ae9f0abc42e2d9.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f0fa80ae9f0abc42e2d9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Just replace &lt;code class=&quot;highlighter-rouge&quot;&gt;PDB&lt;/code&gt; with your pdb file name and launch the script with:&lt;/p&gt;
 
@@ -2964,9 +2986,7 @@ You can use git for this versioning but it’s not convenient to initialize the 
 
 &lt;p&gt;Below, it’s a little shell script to automatize the backup process (and &lt;a href=&quot;https://github.com/bougui505/git_backup&quot;&gt;here&lt;/a&gt; the github repository):&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/a572fe58168603fc3fed.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a572fe58168603fc3fed.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;The usage is very simple.
 If you want to backup a file in the current working directory:&lt;/p&gt;
