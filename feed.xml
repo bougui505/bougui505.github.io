@@ -6,9 +6,44 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 Apr 2016 15:43:39 +0200</pubDate>
-    <lastBuildDate>Thu, 07 Apr 2016 15:43:39 +0200</lastBuildDate>
+    <pubDate>Mon, 11 Apr 2016 12:03:28 +0200</pubDate>
+    <lastBuildDate>Mon, 11 Apr 2016 12:03:28 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Convert C alpha only protein structure to all atoms structure using Modeller</title>
+        <description>&lt;h1 id=&quot;convert-c-alpha-only-protein-structure-to-all-atoms-structure-using-modeller&quot;&gt;Convert C alpha only protein structure to all atoms structure using Modeller&lt;/h1&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./modeller_ca_to_all_atoms.py input_structure_ca.pdb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;It returns modeller_out.pdb, an all atoms structure.&lt;/p&gt;
+
+&lt;p&gt;The script extracts distances between C alpha atoms and read the beta factor
+column of the pdb to get the standard deviation from the target distance and
+applies a Gaussian distance restraint along with the stereochemical restraints
+(BOND, ANGLE, DIHEDRAL, IMPROPER).&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/07281e1e0156193c5ef047b1e0113106.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 11 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/04/11/convert_c_alpha_only_protein_structure_to_all_atoms_structure_using_modeller.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/04/11/convert_c_alpha_only_protein_structure_to_all_atoms_structure_using_modeller.html</guid>
+        
+        <category>modeller</category>
+        
+        <category>python</category>
+        
+        <category>science</category>
+        
+        
+      </item>
     
       <item>
         <title>Moving average in python</title>
