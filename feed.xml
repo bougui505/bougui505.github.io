@@ -6,9 +6,59 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Apr 2016 12:03:28 +0200</pubDate>
-    <lastBuildDate>Mon, 11 Apr 2016 12:03:28 +0200</lastBuildDate>
+    <pubDate>Mon, 11 Apr 2016 16:04:45 +0200</pubDate>
+    <lastBuildDate>Mon, 11 Apr 2016 16:04:45 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Setting higher screen resolution for external monitor on Linux</title>
+        <description>&lt;h1 id=&quot;setting-higher-screen-resolution-for-external-monitor-on-linux&quot;&gt;Setting higher screen resolution for external monitor on Linux&lt;/h1&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;xrandr&lt;/code&gt; command gives you informations about your actual displays, and the
+names of the displays (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;DP2&lt;/code&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; xrandr
+Screen 0: minimum 320 x 200, current 3200 x 1200, maximum 8192 x 8192
+eDP1 connected primary 1600x900+0+0 (normal left inverted right x axis y axis) 309mm x 174mm
+   1600x900      59.99*+  40.00  
+   1440x900      59.89  
+   1360x768      59.80    59.96  
+   1152x864      60.00  
+   1024x768      60.00  
+   800x600       60.32    56.25  
+   640x480       59.94  
+DP1 disconnected (normal left inverted right x axis y axis)
+HDMI1 disconnected (normal left inverted right x axis y axis)
+DP2 connected 1600x1200+1600+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   1024x768      60.00  
+   800x600       60.32    56.25  
+   848x480       60.00  
+   640x480       59.94  
+   1600x1200_60.00  59.87* 
+HDMI2 disconnected (normal left inverted right x axis y axis)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Typically, the command &lt;code class=&quot;highlighter-rouge&quot;&gt;cvt&lt;/code&gt; format the parameters you want for the chosen
+resolution (usually given by the constructor of the monitor you use).&lt;/p&gt;
+
+&lt;p&gt;After that, you add a new mode to xrandr and you add this new mode to the
+chosen display (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;DP2&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Then, you choose this new mode for this &lt;code class=&quot;highlighter-rouge&quot;&gt;DP2&lt;/code&gt; display.&lt;/p&gt;
+
+&lt;p&gt;The script below set the resolution of the second display &lt;code class=&quot;highlighter-rouge&quot;&gt;DP2&lt;/code&gt; to 1600x1200:&lt;/p&gt;
+
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a1817073bc5ec0cd61e69a643b091fdc.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 11 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/04/11/setting_higher_screen_resolution_for_external_monitor_on_linux.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/04/11/setting_higher_screen_resolution_for_external_monitor_on_linux.html</guid>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Convert C alpha only protein structure to all atoms structure using Modeller</title>
@@ -895,10 +945,7 @@ format can be convenient to perform analysis on coordinates with python.&lt;/p&g
 &lt;p&gt;See &lt;a href=&quot;https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html&quot;&gt;MDAnalysis documentation&lt;/a&gt;
 for selection syntax.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/0411d863a2c6d2df4bcc.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/0411d863a2c6d2df4bcc.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 04 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html</link>
