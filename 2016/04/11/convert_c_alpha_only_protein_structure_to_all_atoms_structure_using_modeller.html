@@ -105,7 +105,7 @@
 
 <p>Usage:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./modeller_ca_to_all_atoms.py input_structure_ca.pdb
+<div class="highlighter-rouge"><pre class="highlight"><code>./modeller_ca_to_all_atoms.py input_structure_ca.pdb [bb]
 </code></pre>
 </div>
 
@@ -115,6 +115,9 @@
 column of the pdb to get the standard deviation from the target distance and
 applies a Gaussian distance restraint along with the stereochemical restraints
 (BOND, ANGLE, DIHEDRAL, IMPROPER).</p>
+
+<p>The script can also handle backbone only protein structure and return a full
+atom protein. Just add the <code class="highlighter-rouge">bb</code> keyword argument.</p>
 
 <noscript><pre>400: Invalid request
 </pre></noscript>
