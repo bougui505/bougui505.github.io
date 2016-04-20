@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Vim scrolling option</title>
+    <title>Adding vim data-source to Zeitgeist</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/vim/2015/06/22/vim-scrolling-option.html">
+    <link rel="canonical" href="http://bougui505.github.io/2016/04/20/adding_vim_data-source_to_zeitgeist.html">
 </head>
 
 
@@ -103,20 +103,21 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="vim-scrolling-option">Vim scrolling option</h1>
+        <h1 id="adding-vim-data-source-to-zeitgeist">Adding vim data-source to Zeitgeist</h1>
 
-<p>When you split Vim window you might want to scroll simultaneously or not.
-To change the behaviour:</p>
+<p>Zeitgeist is a software service which logs the users’s activities and events,
+like files opened. However, Zeitgeist detects mainly files opened using Gnome
+applications like Gedit for text files. However, using Vim, Zeitgeist doesn’t
+detect file opening.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>:set scrollbind
-</code></pre>
-</div>
+<p>Below is a nice Vim plugin that I found
+<a href="https://github.com/jeffwheeler/vimfiles/blob/master/plugin/zeitgeist.vim">here</a>
+to add Vim as a data-source for Zeitgeist:</p>
 
-<p>or</p>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/a0cbacb2eb9dad685aff6b24c2ab8792.js"> </script>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>:set scrollbind!
-</code></pre>
-</div>
 
             <div id="disqus_thread"></div>
     <script type="text/javascript">

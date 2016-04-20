@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/04/20/adding_vim_data-source_to_zeitgeist.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/04/11/setting_higher_screen_resolution_for_external_monitor_on_linux.html</loc>
         </url>
     
