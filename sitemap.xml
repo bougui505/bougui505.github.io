@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/05/04/display_the_list_of_files_installed_along_with_a_debian_package.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/04/20/adding_vim_data-source_to_zeitgeist.html</loc>
         </url>
     

@@ -6,9 +6,28 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 Apr 2016 13:51:21 +0200</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2016 13:51:21 +0200</lastBuildDate>
+    <pubDate>Wed, 04 May 2016 10:53:36 +0200</pubDate>
+    <lastBuildDate>Wed, 04 May 2016 10:53:36 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Display the list of files installed along with a Debian Package</title>
+        <description>&lt;h1 id=&quot;display-the-list-of-files-installed-along-with-a-debian-package&quot;&gt;Display the list of files installed along with a Debian Package&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dpkg-query -L package_name
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 04 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/04/display_the_list_of_files_installed_along_with_a_debian_package.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/04/display_the_list_of_files_installed_along_with_a_debian_package.html</guid>
+        
+        <category>debian</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Adding vim data-source to Zeitgeist</title>
@@ -114,7 +133,10 @@ applies a Gaussian distance restraint along with the stereochemical restraints
 &lt;p&gt;The script can also handle backbone only protein structure and return a full
 atom protein. Just add the &lt;code class=&quot;highlighter-rouge&quot;&gt;bb&lt;/code&gt; keyword argument.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/07281e1e0156193c5ef047b1e0113106.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/07281e1e0156193c5ef047b1e0113106.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 11 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/11/convert_c_alpha_only_protein_structure_to_all_atoms_structure_using_modeller.html</link>
