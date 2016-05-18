@@ -6,9 +6,52 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 10 May 2016 10:44:25 +0200</pubDate>
-    <lastBuildDate>Tue, 10 May 2016 10:44:25 +0200</lastBuildDate>
+    <pubDate>Wed, 18 May 2016 12:08:26 +0200</pubDate>
+    <lastBuildDate>Wed, 18 May 2016 12:08:26 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Randomly change desktop wallpaper on Gnome desktop</title>
+        <description>&lt;h1 id=&quot;randomly-change-desktop-wallpaper-on-gnome-desktop&quot;&gt;Randomly change desktop wallpaper on Gnome desktop&lt;/h1&gt;
+
+&lt;p&gt;Below is the script to change the desktop wallpaper. The images are assumed to
+be in &lt;code class=&quot;highlighter-rouge&quot;&gt;$HOME/wallpapers&lt;/code&gt; directory:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e543ab6937ba31488d98ff081f9ef139.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Just add that entry to the user crontab to change the wallpaper every hour
+(with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;crontab -e&lt;/code&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 * * * * sh /PATH/TO/SCRIPT/random_wallpaper.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you get the following error message:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(process:21381): dconf-WARNING **: failed to commit changes to dconf: Cannot autolaunch D-Bus without X11 $DISPLAY
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Just add that line to your crontab:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DISPLAY=:0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This line tell cron that the display it requires to run the windowed applications is found at 0. (see &lt;a href=&quot;http://www.codecoffee.com/tipsforlinux/articles/23.html&quot;&gt;http://www.codecoffee.com/tipsforlinux/articles/23.html&lt;/a&gt;)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 18 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/18/randomly_change_desktop_wallpaper_on_gnome_desktop.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/18/randomly_change_desktop_wallpaper_on_gnome_desktop.html</guid>
+        
+        <category>gnome</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Solve the git error: command not found: git-receive-pack</title>
