@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 May 2016 16:04:12 +0200</pubDate>
-    <lastBuildDate>Fri, 20 May 2016 16:04:12 +0200</lastBuildDate>
+    <pubDate>Fri, 20 May 2016 16:05:58 +0200</pubDate>
+    <lastBuildDate>Fri, 20 May 2016 16:05:58 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -26,8 +26,11 @@ output file is a special file or symlink, the data will be written to it.&lt;/p&
 
 &lt;p&gt;If no output file is specified, sponge outputs to stdout.&lt;/p&gt;
 
-&lt;p&gt;For example:
-    sed ‘…’ file | grep ‘…’ | sponge file&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sed &#39;...&#39; file | grep &#39;...&#39; | sponge file
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;That’s it!&lt;/p&gt;
 </description>
