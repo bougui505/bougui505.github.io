@@ -6,9 +6,41 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 May 2016 11:04:56 +0200</pubDate>
-    <lastBuildDate>Fri, 20 May 2016 11:04:56 +0200</lastBuildDate>
+    <pubDate>Fri, 20 May 2016 16:04:12 +0200</pubDate>
+    <lastBuildDate>Fri, 20 May 2016 16:04:12 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Linux redirection: read from and write to the same file. Use a sponge!</title>
+        <description>&lt;h1 id=&quot;linux-redirection-read-from-and-write-to-the-same-file-use-a-sponge&quot;&gt;Linux redirection: read from and write to the same file. Use a sponge!&lt;/h1&gt;
+
+&lt;p&gt;From the man page:&lt;/p&gt;
+
+&lt;p&gt;sponge  reads standard input and writes it out to the specified file. Unlike a
+shell redirect, sponge soaks up all its input before opening the output  file.
+This allows constructing pipelines that read from and write to the same file.&lt;/p&gt;
+
+&lt;p&gt;It also creates the output file atomically by renaming a temp file into place,
+and preserves the permissions of the output file if it already exists.  If the
+output file is a special file or symlink, the data will be written to it.&lt;/p&gt;
+
+&lt;p&gt;If no output file is specified, sponge outputs to stdout.&lt;/p&gt;
+
+&lt;p&gt;For example:
+    sed ‘…’ file | grep ‘…’ | sponge file&lt;/p&gt;
+
+&lt;p&gt;That’s it!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/20/linux_redirection-_read_from_and_write_to_the_same_file._use_a_sponge..html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/20/linux_redirection-_read_from_and_write_to_the_same_file._use_a_sponge..html</guid>
+        
+        <category>linux</category>
+        
+        <category>shell</category>
+        
+        
+      </item>
     
       <item>
         <title>Get CrashPlan backup status using a shell command line on Linux</title>
