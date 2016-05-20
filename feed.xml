@@ -6,9 +6,91 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 19 May 2016 15:54:56 +0200</pubDate>
-    <lastBuildDate>Thu, 19 May 2016 15:54:56 +0200</lastBuildDate>
+    <pubDate>Fri, 20 May 2016 10:25:20 +0200</pubDate>
+    <lastBuildDate>Fri, 20 May 2016 10:25:20 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Check automatically for update in Debian</title>
+        <description>&lt;h1 id=&quot;check-automatically-for-update-in-debian&quot;&gt;Check automatically for update in Debian&lt;/h1&gt;
+
+&lt;p&gt;The package &lt;code class=&quot;highlighter-rouge&quot;&gt;cron-apt&lt;/code&gt; is designed to automatically update the package list and
+download upgraded packages. Therefore it basically calls the command
+&lt;a href=&quot;https://help.ubuntu.com/community/AutoWeeklyUpdateHowTo&quot;&gt;[1]&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;apt-get update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To install &lt;code class=&quot;highlighter-rouge&quot;&gt;cron-apt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install cron-apt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;By default, &lt;code class=&quot;highlighter-rouge&quot;&gt;cron-apt&lt;/code&gt; uses &lt;code class=&quot;highlighter-rouge&quot;&gt;cron&lt;/code&gt; to run regularly (each day at 4am). This
+method is not convenient for a personal desktop computer which is often turned
+off at that time.&lt;/p&gt;
+
+&lt;p&gt;You can use &lt;code class=&quot;highlighter-rouge&quot;&gt;anacron&lt;/code&gt; instead of cron to execute &lt;code class=&quot;highlighter-rouge&quot;&gt;cron-apt&lt;/code&gt; regularly. For
+doing this, just link the executable in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/cron.daily/&lt;/code&gt; directory:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ln -s /usr/sbin/cron-apt /etc/cron.d/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;However &lt;code class=&quot;highlighter-rouge&quot;&gt;anacron&lt;/code&gt; is automatically launched each day at 7:30 am by &lt;code class=&quot;highlighter-rouge&quot;&gt;cron&lt;/code&gt;. The
+command that launch &lt;code class=&quot;highlighter-rouge&quot;&gt;anacron&lt;/code&gt; by &lt;code class=&quot;highlighter-rouge&quot;&gt;cron&lt;/code&gt; is found in this file:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/cron.d/anacron&lt;/code&gt;. Once again, this could be not optimal for a desktop
+computer. Furthermore when you start your laptop without power supply anacron
+won’t be launched. You can then add another, more convenient, entry in the
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/cron.d/anacron&lt;/code&gt; file to launch &lt;code class=&quot;highlighter-rouge&quot;&gt;anacron&lt;/code&gt; at 12:30 pm for example. The
+full &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/cron.d/anacron&lt;/code&gt; file then looks like:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# /etc/cron.d/anacron: crontab entries for the anacron package
+
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+30 7    * * *   root    test -x /etc/init.d/anacron &amp;amp;&amp;amp; /usr/sbin/invoke-rc.d anacron start &amp;gt;/dev/null
+30 12    * * *   root   test -x /etc/init.d/anacron &amp;amp;&amp;amp; /usr/sbin/invoke-rc.d anacron start &amp;gt;/dev/null
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I always use the command line, then it can be very convenient to display a
+message with the number of updates available for my system when I log in to my
+favourite shell. To do so I added this line to the anacrontab
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/anacrontab&lt;/code&gt;):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1   10  check_update echo &quot;$(date +&#39;%Y%m%d %T&#39;) $(aptitude search &#39;~U&#39; | wc -l) packages can be updated.&quot; &amp;gt; /home/USER/.motd # message of the day
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And I use the following script to print the message of the day when I start a
+new shell:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1aa8d4d97c913e15cfc50a291b3d1753.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Then I added the following command to my shell configuration script (&lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;, …):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~/PATH/TO/THE/SCRIPT/print_motd.sh # Message of the day
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 20 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/20/check_automatically_for_update_in_debian.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/20/check_automatically_for_update_in_debian.html</guid>
+        
+        <category>debian</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Make a shell script exits if any subcommand failed</title>
