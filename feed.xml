@@ -6,13 +6,19 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 May 2016 16:05:58 +0200</pubDate>
-    <lastBuildDate>Fri, 20 May 2016 16:05:58 +0200</lastBuildDate>
+    <pubDate>Fri, 20 May 2016 16:13:05 +0200</pubDate>
+    <lastBuildDate>Fri, 20 May 2016 16:13:05 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Linux redirection: read from and write to the same file. Use a sponge!</title>
         <description>&lt;h1 id=&quot;linux-redirection-read-from-and-write-to-the-same-file-use-a-sponge&quot;&gt;Linux redirection: read from and write to the same file. Use a sponge!&lt;/h1&gt;
+
+&lt;p&gt;Installation on Debian/Ubuntu:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install moreutils
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;From the man page:&lt;/p&gt;
 
