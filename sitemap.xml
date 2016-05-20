@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/05/20/get_crashplan_backup_status_using_a_shell_command_line_on_linux.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/05/20/check_automatically_for_update_in_debian.html</loc>
         </url>
     

@@ -6,9 +6,51 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 May 2016 10:25:20 +0200</pubDate>
-    <lastBuildDate>Fri, 20 May 2016 10:25:20 +0200</lastBuildDate>
+    <pubDate>Fri, 20 May 2016 11:02:34 +0200</pubDate>
+    <lastBuildDate>Fri, 20 May 2016 11:02:34 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Get CrashPlan backup status using a shell command line on Linux</title>
+        <description>&lt;h1 id=&quot;get-crashplan-backup-status-using-a-shell-command-line-on-linux&quot;&gt;Get CrashPlan backup status using a shell command line on Linux&lt;/h1&gt;
+
+&lt;p&gt;I use &lt;a href=&quot;coastal_models/model_0106.pdb&quot;&gt;Crashplan&lt;/a&gt; to backup my file on Linux.
+The backup system works well, however there is no shell commands to obtain
+informations about files status – are they backuped or not and when the last
+backup has been done?&lt;/p&gt;
+
+&lt;p&gt;I wrote this little script to obtain such informations from the log file
+(&lt;code class=&quot;highlighter-rouge&quot;&gt;$HOME/crashplan/log/backup_files.log.0&lt;/code&gt;) – change the path if you don’t
+install CrashPlan in the same location – and print them out in a formatted
+way:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ba9db84a2fc6f9330f3ccf32a352a98e.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Example usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~/Documents&amp;gt; bstat bibliography.bib user_guides
+Last backup date:      Status:    Filename:
+2016-05-09 15:58:00    NOT        bibliography.bib
+2016-05-09 15:54:00    OK         user_guides
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The status field is &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt; when the last version of the file is backuped on
+CrashPlan and &lt;code class=&quot;highlighter-rouge&quot;&gt;NOT&lt;/code&gt; if the last version is not – the modification time of the
+file is posterior to the backup date.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/20/get_crashplan_backup_status_using_a_shell_command_line_on_linux.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/20/get_crashplan_backup_status_using_a_shell_command_line_on_linux.html</guid>
+        
+        <category>linux</category>
+        
+        <category>crashplan</category>
+        
+        
+      </item>
     
       <item>
         <title>Check automatically for update in Debian</title>
