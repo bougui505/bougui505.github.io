@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/05/23/create_a_github_gist_and_clone_it_transparently_to_a_git_repo.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/05/20/linux_redirection-_read_from_and_write_to_the_same_file._use_a_sponge..html</loc>
         </url>
     

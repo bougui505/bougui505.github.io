@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Create a Github gist and clone it transparently to a git repo</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page9/">
+    <link rel="canonical" href="http://bougui505.github.io/2016/05/23/create_a_github_gist_and_clone_it_transparently_to_a_git_repo.html">
 </head>
 
 
@@ -103,165 +103,32 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="create-a-github-gist-and-clone-it-transparently-to-a-git-repo">Create a Github gist and clone it transparently to a git repo</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<p>This script depends of <code class="highlighter-rouge">gist-paste</code>. To install it on Debian:</p>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 138%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 90%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 90%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 90%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#crashplan'>crashplan</a>
-<a style='font-size: 90%' href='/tags.html#debian'>debian</a>
-<a style='font-size: 90%' href='/tags.html#github'>github</a>
-<a style='font-size: 131%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 70%' href='/tags.html#gnome'>gnome</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 70%' href='/tags.html#imagemagick'>imagemagick</a>
-<a style='font-size: 102%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 131%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 70%' href='/tags.html#lvm'>lvm</a>
-<a style='font-size: 170%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 141%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 111%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 117%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 70%' href='/tags.html#modeller'>modeller</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 111%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 166%' href='/tags.html#python'>python</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 111%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 90%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 90%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 90%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#slideshow'>slideshow</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 117%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 102%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 148%' href='/tags.html#science'>science</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 70%' href='/tags.html#tikz'>tikz</a>
-<a style='font-size: 127%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 141%' href='/tags.html#zsh'>zsh</a>
-<a style='font-size: 70%' href='/tags.html#zeitgeist'>zeitgeist</a>
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install gist
+</code></pre>
+</div>
 
-   </div>
+<p>The script below creates a gist and clone the resulting git repo to your
+current working directory to transparently obtain a git repo:</p>
 
-  <h1 class="page-heading">Posts</h1>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js"> </script>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Nov 2, 2014</span>
+<p>Usage:</p>
 
-        <h2>
-          <a class="post-link" href="/science/2014/11/02/elastic-network-model-of-proteins-with-python.html">Elastic network model of proteins with python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 29, 2014</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>gist-clone your_file
+</code></pre>
+</div>
 
-        <h2>
-          <a class="post-link" href="/python/2014/10/29/n-curve-gaussian-fitting-with-gaussian-mixture-models.html">n-curve Gaussian fitting with Gaussian mixture models</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 27, 2014</span>
+<p>Then, you can directly commit and push your changes to gist using:</p>
 
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/27/paginate-with-jekyll.html">Paginate with jekyll</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 27, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2014/10/27/word-wrap-without-line-breaks.html">Word wrap without line breaks with vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 24, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/science/2014/10/24/smoothed-data-histogram-with-som.html">Smoothed data histogram with SOM</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/23/mathjax-in-jekyll-based-blog.html">Mathjax in jekyll based blog</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/science/2014/10/23/wham-the-weighted-histogram-analysis-method.html">WHAM: The Weighted Histogram Analysis Method</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/latex/2014/10/23/latex-acronym-package.html">LaTeX acronym package</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/git/2014/10/22/git-tagging.html">Git - tagging</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 21, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/python/2014/10/21/transition-networks-with-python.html">Transition networks with python</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page8" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 9 of 10</span>
-      
-        <a href="/blog/page10" class="next">Next</a>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>git commit -a -m "Your commit message"
+git push
+</code></pre>
 </div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
@@ -269,7 +136,7 @@
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/blog/page9/"
+      data-href="http://bougui505.github.io/2016/05/23/create_a_github_gist_and_clone_it_transparently_to_a_git_repo.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
