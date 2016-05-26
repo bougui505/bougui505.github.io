@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 23 May 2016 14:20:28 +0200</pubDate>
-    <lastBuildDate>Mon, 23 May 2016 14:20:28 +0200</lastBuildDate>
+    <pubDate>Thu, 26 May 2016 15:49:02 +0200</pubDate>
+    <lastBuildDate>Thu, 26 May 2016 15:49:02 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -159,7 +159,7 @@ off at that time.&lt;/p&gt;
 &lt;p&gt;You can use &lt;code class=&quot;highlighter-rouge&quot;&gt;anacron&lt;/code&gt; instead of cron to execute &lt;code class=&quot;highlighter-rouge&quot;&gt;cron-apt&lt;/code&gt; regularly. For
 doing this, just link the executable in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/cron.daily/&lt;/code&gt; directory:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ln -s /usr/sbin/cron-apt /etc/cron.d/
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo ln -s /usr/sbin/cron-apt /etc/cron.daily/
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -465,10 +465,7 @@ atom protein. Just add the &lt;code class=&quot;highlighter-rouge&quot;&gt;bb&lt
 
 &lt;p&gt;Usefull to publish matplotlib plot directly in LaTeX:&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/b844feb1bdfba3072ca92a6d6961f71b.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b844feb1bdfba3072ca92a6d6961f71b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 05 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/05/create_pgf_plot_from_python_matplotlib.html</link>
@@ -2054,10 +2051,7 @@ and an other one [Bouvier_2014]_.
         <title>Compute rmsd between two pdb with awk</title>
         <description>&lt;h1 id=&quot;compute-rmsd-between-two-pdb-with-awk&quot;&gt;Compute rmsd between two pdb with awk&lt;/h1&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/9468443bd82e58e9ac3f.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/9468443bd82e58e9ac3f.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 17 Jul 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/linux/2015/07/17/compute_rmsd_between_two_pdb_with_awk.html</link>
