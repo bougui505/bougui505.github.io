@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Configure ssmtp to use the mail Linux command line to send email with gmail</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page9/">
+    <link rel="canonical" href="http://bougui505.github.io/2016/05/27/configure_ssmtp_to_use_the_mail_linux_command_line_to_send_email_with_gmail.html">
 </head>
 
 
@@ -103,175 +103,41 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="configure-ssmtp-to-use-the-mail-linux-command-line-to-send-email-with-gmail">Configure ssmtp to use the mail Linux command line to send email with gmail</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<p>First of all, install the <code class="highlighter-rouge">ssmtp</code> package:</p>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 137%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 90%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 90%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 70%' href='/tags.html#crashplan'>crashplan</a>
-<a style='font-size: 90%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 90%' href='/tags.html#debian'>debian</a>
-<a style='font-size: 70%' href='/tags.html#gmail'>gmail</a>
-<a style='font-size: 70%' href='/tags.html#gnome'>gnome</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 90%' href='/tags.html#github'>github</a>
-<a style='font-size: 131%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 102%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 70%' href='/tags.html#imagemagick'>imagemagick</a>
-<a style='font-size: 131%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 140%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 170%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 70%' href='/tags.html#lvm'>lvm</a>
-<a style='font-size: 117%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 70%' href='/tags.html#modeller'>modeller</a>
-<a style='font-size: 110%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 110%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 165%' href='/tags.html#python'>python</a>
-<a style='font-size: 110%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 90%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 90%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 147%' href='/tags.html#science'>science</a>
-<a style='font-size: 102%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 90%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 117%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#slideshow'>slideshow</a>
-<a style='font-size: 70%' href='/tags.html#ssmtp'>ssmtp</a>
-<a style='font-size: 70%' href='/tags.html#tikz'>tikz</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 127%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 140%' href='/tags.html#zsh'>zsh</a>
-<a style='font-size: 70%' href='/tags.html#zeitgeist'>zeitgeist</a>
-
-   </div>
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Nov 6, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2014/11/06/do-not-display-long-line-with-awk.html">Do not display long line with awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 2, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/science/2014/11/02/elastic-network-model-of-proteins-with-python.html">Elastic network model of proteins with python</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 29, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/python/2014/10/29/n-curve-gaussian-fitting-with-gaussian-mixture-models.html">n-curve Gaussian fitting with Gaussian mixture models</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 27, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/27/paginate-with-jekyll.html">Paginate with jekyll</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 27, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/vim/2014/10/27/word-wrap-without-line-breaks.html">Word wrap without line breaks with vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 24, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/science/2014/10/24/smoothed-data-histogram-with-som.html">Smoothed data histogram with SOM</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/23/mathjax-in-jekyll-based-blog.html">Mathjax in jekyll based blog</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/science/2014/10/23/wham-the-weighted-histogram-analysis-method.html">WHAM: The Weighted Histogram Analysis Method</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 23, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/latex/2014/10/23/latex-acronym-package.html">LaTeX acronym package</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 22, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/git/2014/10/22/git-tagging.html">Git - tagging</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page8" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 9 of 10</span>
-      
-        <a href="/blog/page10" class="next">Next</a>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@aldebaran ~&gt; sudo apt-get install ssmtp
+</code></pre>
 </div>
+
+<p>Then edit the file <code class="highlighter-rouge">/etc/ssmtp</code> and just pust that content to the file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>#Debug=YES
+root=USER@gmail.com
+AuthUser=USER@gmail.com
+AuthPass=YOUR_GMAIL_PASSWORD
+FromLineOverride=YES
+mailhub=smtp.gmail.com:465
+UseTLS=YES
+</code></pre>
+</div>
+
+<p>Then, a quick test:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@aldebaran ~&gt; echo "This is a test" | mail -s "Test" USER@gmail.com
+</code></pre>
+</div>
+
+<p>For sure, just replace <code class="highlighter-rouge">USER</code> by your Gmail username, in the configuration file
+and in the test command line.</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/blog/page9/"
+      data-href="http://bougui505.github.io/2016/05/27/configure_ssmtp_to_use_the_mail_linux_command_line_to_send_email_with_gmail.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">

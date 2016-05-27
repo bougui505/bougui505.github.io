@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/05/27/configure_ssmtp_to_use_the_mail_linux_command_line_to_send_email_with_gmail.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/05/23/create_a_github_gist_and_clone_it_transparently_to_a_git_repo.html</loc>
         </url>
     

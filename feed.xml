@@ -6,9 +6,53 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 26 May 2016 15:49:02 +0200</pubDate>
-    <lastBuildDate>Thu, 26 May 2016 15:49:02 +0200</lastBuildDate>
+    <pubDate>Fri, 27 May 2016 16:37:33 +0200</pubDate>
+    <lastBuildDate>Fri, 27 May 2016 16:37:33 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Configure ssmtp to use the mail Linux command line to send email with gmail</title>
+        <description>&lt;h1 id=&quot;configure-ssmtp-to-use-the-mail-linux-command-line-to-send-email-with-gmail&quot;&gt;Configure ssmtp to use the mail Linux command line to send email with gmail&lt;/h1&gt;
+
+&lt;p&gt;First of all, install the &lt;code class=&quot;highlighter-rouge&quot;&gt;ssmtp&lt;/code&gt; package:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@aldebaran ~&amp;gt; sudo apt-get install ssmtp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then edit the file &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/ssmtp&lt;/code&gt; and just pust that content to the file:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Debug=YES
+root=USER@gmail.com
+AuthUser=USER@gmail.com
+AuthPass=YOUR_GMAIL_PASSWORD
+FromLineOverride=YES
+mailhub=smtp.gmail.com:465
+UseTLS=YES
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then, a quick test:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@aldebaran ~&amp;gt; echo &quot;This is a test&quot; | mail -s &quot;Test&quot; USER@gmail.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;For sure, just replace &lt;code class=&quot;highlighter-rouge&quot;&gt;USER&lt;/code&gt; by your Gmail username, in the configuration file
+and in the test command line.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 27 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/27/configure_ssmtp_to_use_the_mail_linux_command_line_to_send_email_with_gmail.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/27/configure_ssmtp_to_use_the_mail_linux_command_line_to_send_email_with_gmail.html</guid>
+        
+        <category>linux</category>
+        
+        <category>gmail</category>
+        
+        <category>ssmtp</category>
+        
+        
+      </item>
     
       <item>
         <title>Create a Github gist and clone it transparently to a git repo</title>
@@ -23,9 +67,7 @@
 &lt;p&gt;The script below creates a gist and clone the resulting git repo to your
 current working directory to transparently obtain a git repo:&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
@@ -465,7 +507,10 @@ atom protein. Just add the &lt;code class=&quot;highlighter-rouge&quot;&gt;bb&lt
 
 &lt;p&gt;Usefull to publish matplotlib plot directly in LaTeX:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b844feb1bdfba3072ca92a6d6961f71b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b844feb1bdfba3072ca92a6d6961f71b.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 05 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/05/create_pgf_plot_from_python_matplotlib.html</link>
@@ -862,10 +907,7 @@ page.&lt;/p&gt;
   &lt;li&gt;Add the search box in the index page (&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file):&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/35cd2416a5ff8ce8af92.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/35cd2416a5ff8ce8af92.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/12/14/search_in_jekyll_blog_site_with_tapirgo.html</link>
@@ -2051,7 +2093,10 @@ and an other one [Bouvier_2014]_.
         <title>Compute rmsd between two pdb with awk</title>
         <description>&lt;h1 id=&quot;compute-rmsd-between-two-pdb-with-awk&quot;&gt;Compute rmsd between two pdb with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/9468443bd82e58e9ac3f.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9468443bd82e58e9ac3f.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 17 Jul 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/linux/2015/07/17/compute_rmsd_between_two_pdb_with_awk.html</link>
