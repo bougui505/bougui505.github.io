@@ -133,6 +133,19 @@ output file is a special file or symlink, the data will be written to it.</p>
 
 <p>That’s it!</p>
 
+<p>Remark: The moreutils package is in conflict with GNU parallel (parallel
+package) because the moreutils package comes with its own <code class="highlighter-rouge">parallel</code> command.
+However, the <code class="highlighter-rouge">parallel</code> command provided by the moreutils package is much less
+powerful than the GNU parallel. If you want to keep the GNU <code class="highlighter-rouge">parallel</code> command
+and use the <code class="highlighter-rouge">sponge</code> command to, you can install <code class="highlighter-rouge">sponge</code> locally in
+<code class="highlighter-rouge">$HOME/bin</code> for example. To do so:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>git clone git://git.joeyh.name/moreutils
+cd moreutils
+gcc sponge.c -o ~/bin/sponge
+</code></pre>
+</div>
+
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
