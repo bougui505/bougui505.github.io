@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 May 2016 13:59:12 +0200</pubDate>
-    <lastBuildDate>Mon, 30 May 2016 13:59:12 +0200</lastBuildDate>
+    <pubDate>Mon, 30 May 2016 14:00:57 +0200</pubDate>
+    <lastBuildDate>Mon, 30 May 2016 14:00:57 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -156,7 +156,7 @@ output file is a special file or symlink, the data will be written to it.&lt;/p&
 package) because the moreutils package comes with its own &lt;code class=&quot;highlighter-rouge&quot;&gt;parallel&lt;/code&gt; command.
 However, the &lt;code class=&quot;highlighter-rouge&quot;&gt;parallel&lt;/code&gt; command provided by the moreutils package is much less
 powerful than the GNU parallel. If you want to keep the GNU &lt;code class=&quot;highlighter-rouge&quot;&gt;parallel&lt;/code&gt; command
-and use the &lt;code class=&quot;highlighter-rouge&quot;&gt;sponge&lt;/code&gt; command to, you can install &lt;code class=&quot;highlighter-rouge&quot;&gt;sponge&lt;/code&gt; locally in
+and use the &lt;code class=&quot;highlighter-rouge&quot;&gt;sponge&lt;/code&gt; command too, you can install &lt;code class=&quot;highlighter-rouge&quot;&gt;sponge&lt;/code&gt; locally in
 &lt;code class=&quot;highlighter-rouge&quot;&gt;$HOME/bin&lt;/code&gt; for example. To do so:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git://git.joeyh.name/moreutils
