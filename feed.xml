@@ -6,9 +6,36 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 27 May 2016 16:37:33 +0200</pubDate>
-    <lastBuildDate>Fri, 27 May 2016 16:37:33 +0200</lastBuildDate>
+    <pubDate>Mon, 30 May 2016 11:47:08 +0200</pubDate>
+    <lastBuildDate>Mon, 30 May 2016 11:47:08 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Check if there is missing CA in a pdb file</title>
+        <description>&lt;h1 id=&quot;check-if-there-is-missing-ca-in-a-pdb-file&quot;&gt;Check if there is missing CA in a pdb file&lt;/h1&gt;
+
+&lt;p&gt;Below is a simple awk script that return the number of missing CA in a PDB file:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cc94b9c57087187eb7518060e6561a39.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./check_pdb.awk pdbfile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 30 May 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/05/30/check_if_there_is_missing_ca_in_a_pdb_file.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/05/30/check_if_there_is_missing_ca_in_a_pdb_file.html</guid>
+        
+        <category>awk</category>
+        
+        <category>pdb</category>
+        
+        
+      </item>
     
       <item>
         <title>Configure ssmtp to use the mail Linux command line to send email with gmail</title>
@@ -67,7 +94,9 @@ and in the test command line.&lt;/p&gt;
 &lt;p&gt;The script below creates a gist and clone the resulting git repo to your
 current working directory to transparently obtain a git repo:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
@@ -907,7 +936,10 @@ page.&lt;/p&gt;
   &lt;li&gt;Add the search box in the index page (&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file):&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/35cd2416a5ff8ce8af92.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/35cd2416a5ff8ce8af92.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 14 Dec 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/12/14/search_in_jekyll_blog_site_with_tapirgo.html</link>

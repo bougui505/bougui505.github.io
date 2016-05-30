@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>About</title>
+    <title>Check if there is missing CA in a pdb file</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/about/">
+    <link rel="canonical" href="http://bougui505.github.io/2016/05/30/check_if_there_is_missing_ca_in_a_pdb_file.html">
 </head>
 
 
@@ -105,87 +105,18 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="post">
+        <h1 id="check-if-there-is-missing-ca-in-a-pdb-file">Check if there is missing CA in a pdb file</h1>
 
-  <header class="post-header">
-    <h1 class="post-title">About</h1>
-  </header>
+<p>Below is a simple awk script that return the number of missing CA in a PDB file:</p>
 
-  <article class="post-content">
-    <h3 id="guillaume-bouvier">Guillaume Bouvier</h3>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/cc94b9c57087187eb7518060e6561a39.js"> </script>
 
-<p><img src="/assets/photo_id_128.jpg" alt="photo_id" /></p>
+<p>Usage:</p>
 
-<p>guillaume.bouvier{at}ens-cachan.org</p>
-
-<p><a href="https://github.com/bougui505/CV/blob/english/cv.rst">Link to my full resume</a></p>
-
-<h2 id="research-experience">Research experience:</h2>
-
-<h3 id="from-2010-post-doctoral-position">From 2010: Post-doctoral position</h3>
-
-<ul>
-  <li>Institut Pasteur, <a href="http://www.pasteur.fr/recherche/unites/Binfs">Structural Bioinformatics Unit</a> - Paris, France.
-    <ul>
-      <li>Protein dynamic, ligand docking and virtual screening.</li>
-      <li>Machine learning and non-linear dimensionality reduction of protein conformational space.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="phd-student">2007-2010: PhD student</h3>
-
-<ul>
-  <li>Laboratoire de Chimie et de Biochimie Pharmacologiques et Toxicologiques (UMR8601 CNRS).
-    <ul>
-      <li><a href="/assets/These_Guillaume_Bouvier.pdf">Thèse de doctorat: Étude d’inhibiteurs de l’intégrase du VIH-1 par RMN et modélisation moléculaire. Développement et validation d’un outil de criblage virtuel</a></li>
-      <li>Nuclear Magnetic resonance (NMR) of protein ligand interactions.</li>
-      <li>Virtual screening and molecular modeling.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="bibliographyhttpizarcrabdancecombibliographyhtml"><a href="http://izar.crabdance.com/bibliography.html">Bibliography</a></h3>
-
-<h2 id="education">Education:</h2>
-
-<ul>
-  <li>
-    <p>École Normale Supérieure de Cachan: biochemistry and biophysic</p>
-  </li>
-  <li>
-    <p>Agrégé de Biochimie Génie biologique (2006)</p>
-  </li>
-</ul>
-
-<hr />
-
-<p>Below my pgp public key:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: GnuPG v1.4.12 (GNU/Linux)
-
-mQENBFR4L0UBCADx2/RLxw4mNWakdyLiVdDzetF5oifyL2MPA6t1h8LbnB+6gHg1
-TCmdjjaZnLHHmmkU0/5PlU7ceMU4HgGvPiKuNJocfaDpixdf0Pqe7FrllPzOSNNp
-4ljasTRbULLA2hiTGhZ6+LnKZjrCoEf0RunZjlwJ28Vf5BqD4HkuwMnpjSLJYEVi
-6B1htjP6XDAVW3Bs51Sl6eHlrd5eZNd4wjNAnYa4NWyiYctWy11pn5wpnbrvli9D
-isGZxCajaTAS4NOUi//jL5SywX3/laBfwz8HPYQrrRFJoEKAydVEDoLo7OKwiUog
-TsjlQ6v1WGLYgvRayd3CR/hF1mo9jV+mtQu7ABEBAAG0J0d1aWxsYXVtZSBCb3V2
-aWVyIDxib3VndWk1MDVAZ21haWwuY29tPokBOAQTAQIAIgUCVHgvRQIbAwYLCQgH
-AwIGFQgCCQoLBBYCAwECHgECF4AACgkQdESH6ha4BLZd3wgAk2dhvb6yyAnx27U1
-NIpvMOX/EuokD+TokBN4y9xBdrCDlYRAucYs2SMTkvcUDSRO7L6ovJ9P6VjoEIhO
-ZpvC0bzPDe1HWOYxxgo8Vz3O+2twNy75RlLN863ryoJfPe0C96pkkm/c0/47KanE
-6sdwu73J44XX/Gg5iu9YhNAsjL72bF4NiivuRoiN+NleHAd0vezq27zTbvQi0TtE
-WFkG+EvDXHEKm+IUqV+rcFnZCPpT7smzADSoO2IvjkIVr0KI0HbJkvCkLOOSG00x
-GcJ/r3RmIpXWgcnc+0ckpQ2ifO0ktstv/XTfr8NzSaNveStbrJEVqcf1YYWqVhRI
-hGJQTg==
-=oO2+
------END PGP PUBLIC KEY BLOCK-----
+<div class="highlighter-rouge"><pre class="highlight"><code>./check_pdb.awk pdbfile
 </code></pre>
-</div>
-
-  </article>
-
 </div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
@@ -193,7 +124,7 @@ hGJQTg==
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/about/"
+      data-href="http://bougui505.github.io/2016/05/30/check_if_there_is_missing_ca_in_a_pdb_file.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
