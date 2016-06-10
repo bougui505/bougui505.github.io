@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 30 May 2016 14:00:57 +0200</pubDate>
-    <lastBuildDate>Mon, 30 May 2016 14:00:57 +0200</lastBuildDate>
+    <pubDate>Fri, 10 Jun 2016 11:58:25 +0200</pubDate>
+    <lastBuildDate>Fri, 10 Jun 2016 11:58:25 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -197,6 +197,9 @@ way:&lt;/p&gt;
 &lt;p&gt;Example usage:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~/Documents&amp;gt; bstat bibliography.bib user_guides
+Last completed backup: 00h05m12s ago
+Next backup in 00h09m48s
+___________________________________________
 Last backup date:      Status:    Filename:
 2016-05-09 15:58:00    NOT        bibliography.bib
 2016-05-09 15:54:00    OK         user_guides
@@ -206,6 +209,27 @@ Last backup date:      Status:    Filename:
 &lt;p&gt;The status field is &lt;code class=&quot;highlighter-rouge&quot;&gt;OK&lt;/code&gt; when the last version of the file is backuped on
 CrashPlan and &lt;code class=&quot;highlighter-rouge&quot;&gt;NOT&lt;/code&gt; if the last version is not – the modification time of the
 file is posterior to the backup date.&lt;/p&gt;
+
+&lt;p&gt;Along with the information above, the command displays some statistics about
+the last time of a complete backup occurred and the time to the next backup.
+When a backup is currently running it displays the running time of the current
+backup instead of the ‘Next backup’ information:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Last completed backup: 00h15m10s ago
+Backup running for: 00h00m10s
+___________________________________________
+[...]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you want to display only the activity statistics:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; bstat -a
+Last completed backup: 00h12m53s ago
+Next backup in 00h02m07s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 </description>
         <pubDate>Fri, 20 May 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/05/20/get_crashplan_backup_status_using_a_shell_command_line_on_linux.html</link>
