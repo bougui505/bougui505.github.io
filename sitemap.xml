@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/06/21/compute_timeseries_rmsd_from_a_dcd_trajectory_file_using_mdanalysis.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/05/30/check_if_there_is_missing_ca_in_a_pdb_file.html</loc>
         </url>
     
