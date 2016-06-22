@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 21 Jun 2016 11:52:51 +0200</pubDate>
-    <lastBuildDate>Tue, 21 Jun 2016 11:52:51 +0200</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 16:01:17 +0200</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 16:01:17 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Fill missing values in a column formatted text file with awk</title>
+        <description>&lt;h1 id=&quot;fill-missing-values-in-a-column-formatted-text-file-with-awk&quot;&gt;Fill missing values in a column formatted text file with awk&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f4f9da37be9a31aaa1b7f0c790619969.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 22 Jun 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/06/22/fill_missing_values_in_a_column_formatted_text_file_with_awk.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/06/22/fill_missing_values_in_a_column_formatted_text_file_with_awk.html</guid>
+        
+        <category>awk</category>
+        
+        
+      </item>
     
       <item>
         <title>Compute timeseries RMSD from a dcd trajectory file using MDAnalysis</title>
