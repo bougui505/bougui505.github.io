@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/06/29/making_better_scatter_plot-_sort_data_points_for_scatter_plots_to_plot_first_most_frequent_data.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/06/22/fill_missing_values_in_a_column_formatted_text_file_with_awk.html</loc>
         </url>
     
