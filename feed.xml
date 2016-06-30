@@ -6,9 +6,34 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 29 Jun 2016 15:43:56 +0200</pubDate>
-    <lastBuildDate>Wed, 29 Jun 2016 15:43:56 +0200</lastBuildDate>
+    <pubDate>Thu, 30 Jun 2016 16:44:05 +0200</pubDate>
+    <lastBuildDate>Thu, 30 Jun 2016 16:44:05 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Temporarily suppress console output in python (From: Dave Smith&#39;s Blog)</title>
+        <description>&lt;h1 id=&quot;temporarily-suppress-console-output-in-python-from-dave-smiths-blog&quot;&gt;Temporarily suppress console output in python (From: Dave Smith’s Blog)&lt;/h1&gt;
+
+&lt;p&gt;The trick come from &lt;a href=&quot;http://thesmithfam.org/blog/2012/10/25/temporarily-suppress-console-output-in-python/&quot;&gt;Dave Smith’s Blog&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Sometime some functions spams your console and you want to suppress
+temporarly the output.&lt;/p&gt;
+
+&lt;p&gt;The function below do the job:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6a4588669de1ea5df11dafd2d6eabb70.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 30 Jun 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/06/30/temporarily_suppress_console_output_in_python_(from-_dave_smith's_blog).html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/06/30/temporarily_suppress_console_output_in_python_(from-_dave_smith's_blog).html</guid>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Making better scatter plot: sort data points for scatter plots to plot first most frequent data</title>
