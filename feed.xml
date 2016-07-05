@@ -6,9 +6,42 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 30 Jun 2016 16:44:05 +0200</pubDate>
-    <lastBuildDate>Thu, 30 Jun 2016 16:44:05 +0200</lastBuildDate>
+    <pubDate>Tue, 05 Jul 2016 10:38:35 +0200</pubDate>
+    <lastBuildDate>Tue, 05 Jul 2016 10:38:35 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Create temp files and catch ctrl-C signal to cleanup</title>
+        <description>&lt;h1 id=&quot;create-temp-files-and-catch-ctrl-c-signal-to-cleanup&quot;&gt;Create temp files and catch ctrl-C signal to cleanup&lt;/h1&gt;
+
+&lt;p&gt;Sometimes temporary files are required, but it’s important to cleanup when the
+script is over even when &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-c&lt;/code&gt; is pressed to abort the running script. Below
+is the sequence for creating temp files with &lt;code class=&quot;highlighter-rouge&quot;&gt;mktemp&lt;/code&gt; and cleaning them up when
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-c&lt;/code&gt; is pressed:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Decompress the log files in a tmp file:
+TMPFILE=$(mktemp -p /dev/shm)
+zcat -f $LOGFILE &amp;gt; $TMPFILE
+
+# cleanup function
+# see: http://goo.gl/2aUQc
+trap &quot;rm $TMPFILE; exit&quot; SIGHUP SIGINT SIGTERM
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The example above, decompress some log files in a temp file located in ram disk
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/shm&lt;/code&gt;.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 05 Jul 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/07/05/create_temp_files_and_catch_ctrl-c_signal_to_cleanup.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/07/05/create_temp_files_and_catch_ctrl-c_signal_to_cleanup.html</guid>
+        
+        <category>linux</category>
+        
+        <category>shell</category>
+        
+        
+      </item>
     
       <item>
         <title>Temporarily suppress console output in python (From: Dave Smith&#39;s Blog)</title>
