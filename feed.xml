@@ -6,9 +6,50 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Jul 2016 12:43:12 +0200</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2016 12:43:12 +0200</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2016 20:12:11 +0200</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2016 20:12:11 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Making a bluetooth speaker working with Debian 8.5</title>
+        <description>&lt;h1 id=&quot;making-a-bluetooth-speaker-working-with-debian-85&quot;&gt;Making a bluetooth speaker working with Debian 8.5&lt;/h1&gt;
+
+&lt;p&gt;This solution works for me with the Bose SoundLink Mini.&lt;/p&gt;
+
+&lt;h2 id=&quot;install-the-required-packages&quot;&gt;Install the required packages:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;edit-and-check-etcpulsedefaultpa&quot;&gt;Edit and check /etc/pulse/default.pa&lt;/h2&gt;
+
+&lt;p&gt;Be sure that the lines below are present in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/pulse/default.pa&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.ifexists module-bluetooth-discover.so
+load-module module-bluetooth-discover
+.endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And add the line below (or check if presents):&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;load-module module-switch-on-connect
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then restart the computer and it should work!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jul 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/07/06/making_a_bluetooth_speaker_working_with_debian_8.5.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/07/06/making_a_bluetooth_speaker_working_with_debian_8.5.html</guid>
+        
+        <category>bluetooth</category>
+        
+        <category>pulseaudio</category>
+        
+        
+      </item>
     
       <item>
         <title>Compress a PDF file using gs</title>
@@ -1134,9 +1175,7 @@ page.&lt;/p&gt;
 &lt;a href=&quot;https://github.com/TapirGo/jQuery-Plugin&quot;&gt;Github&lt;/a&gt; repository:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/f597289d82e9a0090386.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f597289d82e9a0090386.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Add the search box in the index page (&lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file):&lt;/li&gt;
@@ -1285,10 +1324,7 @@ Inkscape. It can be used to convert a Sozi presentation to pdf, with no need to
 install &lt;a href=&quot;http://sozi.baierouge.fr/pages/tutorial-converting.html&quot;&gt;this script&lt;/a&gt;
 with PhantomJS library.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 27 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html</link>
@@ -1840,10 +1876,7 @@ selectAtoms() that produces identical selections in mobile and reference. e.g.
 
 &lt;p&gt;Remark: You can give a pdb file instead of the psf file.&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/b5fbdb2de5b9c1ff106e.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b5fbdb2de5b9c1ff106e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2015/10/22/align_dcd_trajectory_with_mdanalysis.html</link>

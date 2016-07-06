@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Make a pdf format slideshow from a unique svg file</title>
+    <title>Making a bluetooth speaker working with Debian 8.5</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html">
+    <link rel="canonical" href="http://bougui505.github.io/2016/07/06/making_a_bluetooth_speaker_working_with_debian_8.5.html">
 </head>
 
 
@@ -105,35 +105,40 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="make-a-pdf-format-slideshow-from-a-unique-svg-file">Make a pdf format slideshow from a unique svg file</h1>
+        <h1 id="making-a-bluetooth-speaker-working-with-debian-85">Making a bluetooth speaker working with Debian 8.5</h1>
 
-<p>This post is related to this post: <a href="/linux/2015/08/28/svg_to_pdf.html">Making a slideshow for a speech from Inkscape</a></p>
+<p>This solution works for me with the Bose SoundLink Mini.</p>
 
-<p>You simply have to design your slides in Inkscape and delineate them by a
-rectangle. Once this is done, you group all the object that constitute a slide.
-Then, you have to name this object <code class="highlighter-rouge">slide1</code>. Repeat this operation for the
-other slides: <code class="highlighter-rouge">slide2</code>, <code class="highlighter-rouge">slide3</code>, …, <code class="highlighter-rouge">slideN</code>, where <code class="highlighter-rouge">N</code> is the total number
-of slides.</p>
+<h2 id="install-the-required-packages">Install the required packages:</h2>
 
-<p>Then, use the script below, with this command line:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>./sozi_to_pdf.sh file.svg out.pdf
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware
 </code></pre>
 </div>
 
-<p>This script is called after <a href="http://sozi.baierouge.fr/">sozi</a> extension to
-Inkscape. It can be used to convert a Sozi presentation to pdf, with no need to
-install <a href="http://sozi.baierouge.fr/pages/tutorial-converting.html">this script</a>
-with PhantomJS library.</p>
+<h2 id="edit-and-check-etcpulsedefaultpa">Edit and check /etc/pulse/default.pa</h2>
 
-<p>true<script src="https://gist.github.com/39e33fc7f811ee6da931.js"> </script></p>
+<p>Be sure that the lines below are present in <code class="highlighter-rouge">/etc/pulse/default.pa</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.ifexists module-bluetooth-discover.so
+load-module module-bluetooth-discover
+.endif
+</code></pre>
+</div>
+
+<p>And add the line below (or check if presents):</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>load-module module-switch-on-connect
+</code></pre>
+</div>
+
+<p>Then restart the computer and it should work!</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html"
+      data-href="http://bougui505.github.io/2016/07/06/making_a_bluetooth_speaker_working_with_debian_8.5.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
