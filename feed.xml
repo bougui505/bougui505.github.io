@@ -6,16 +6,19 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Jul 2016 12:41:33 +0200</pubDate>
-    <lastBuildDate>Wed, 06 Jul 2016 12:41:33 +0200</lastBuildDate>
+    <pubDate>Wed, 06 Jul 2016 12:43:12 +0200</pubDate>
+    <lastBuildDate>Wed, 06 Jul 2016 12:43:12 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Compress a PDF file using gs</title>
         <description>&lt;h1 id=&quot;compress-a-pdf-file-using-gs&quot;&gt;Compress a PDF file using gs&lt;/h1&gt;
 
-&lt;p&gt;Usage:
-    ./compressPDF in.pdf out.pdf&lt;/p&gt;
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./compressPDF in.pdf out.pdf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
 &lt;/pre&gt;&lt;/noscript&gt;
