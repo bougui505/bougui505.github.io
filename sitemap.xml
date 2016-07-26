@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/07/26/etckeeper_-_store_etc_directory_in_git,_mercurial,_bazaar,_or_darcs.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/07/06/making_a_bluetooth_speaker_working_with_debian_8.5.html</loc>
         </url>
     
