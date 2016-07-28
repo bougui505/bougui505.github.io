@@ -6,17 +6,17 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 28 Jul 2016 10:48:38 +0200</pubDate>
-    <lastBuildDate>Thu, 28 Jul 2016 10:48:38 +0200</lastBuildDate>
+    <pubDate>Thu, 28 Jul 2016 10:50:38 +0200</pubDate>
+    <lastBuildDate>Thu, 28 Jul 2016 10:50:38 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Modeller: generate an extended protein conformation from an initial PDB file</title>
         <description>&lt;h1 id=&quot;modeller-generate-an-extended-protein-conformation-from-an-initial-pdb-file&quot;&gt;Modeller: generate an extended protein conformation from an initial PDB file&lt;/h1&gt;
 
-&lt;p&gt;The script below take a pdb file as argument and read its sequence and topology
-to generate an extended conformation of the protein. The output file is a pdb
-file named &lt;code class=&quot;highlighter-rouge&quot;&gt;modeller_out.pdb&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The script below takes a pdb file as argument and reads its sequence and
+topology to generate an extended conformation of the protein. The output file
+is a pdb file named &lt;code class=&quot;highlighter-rouge&quot;&gt;modeller_out.pdb&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
