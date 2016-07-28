@@ -6,9 +6,39 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 Jul 2016 14:58:42 +0200</pubDate>
-    <lastBuildDate>Tue, 26 Jul 2016 14:58:42 +0200</lastBuildDate>
+    <pubDate>Thu, 28 Jul 2016 10:48:38 +0200</pubDate>
+    <lastBuildDate>Thu, 28 Jul 2016 10:48:38 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Modeller: generate an extended protein conformation from an initial PDB file</title>
+        <description>&lt;h1 id=&quot;modeller-generate-an-extended-protein-conformation-from-an-initial-pdb-file&quot;&gt;Modeller: generate an extended protein conformation from an initial PDB file&lt;/h1&gt;
+
+&lt;p&gt;The script below take a pdb file as argument and read its sequence and topology
+to generate an extended conformation of the protein. The output file is a pdb
+file named &lt;code class=&quot;highlighter-rouge&quot;&gt;modeller_out.pdb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./generate_extended.py protein.pdb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e30a41e06c50eb8863cf43a4fa5d5743.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 28 Jul 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/07/28/modeller-_generate_an_extended_protein_conformation_from_an_initial_pdb_file.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/07/28/modeller-_generate_an_extended_protein_conformation_from_an_initial_pdb_file.html</guid>
+        
+        <category>modeller</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>etckeeper - store etc directory in git, mercurial, bazaar, or darcs</title>
