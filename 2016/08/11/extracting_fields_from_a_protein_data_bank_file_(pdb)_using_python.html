@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Convert C alpha only protein structure to all atoms structure using Modeller</title>
+    <title>Extracting fields from a Protein Data Bank file (PDB) using python</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2016/04/11/convert_c_alpha_only_protein_structure_to_all_atoms_structure_using_modeller.html">
+    <link rel="canonical" href="http://bougui505.github.io/2016/08/11/extracting_fields_from_a_protein_data_bank_file_(pdb)_using_python.html">
 </head>
 
 
@@ -107,35 +107,35 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="convert-c-alpha-only-protein-structure-to-all-atoms-structure-using-modeller">Convert C alpha only protein structure to all atoms structure using Modeller</h1>
+        <h1 id="extracting-fields-from-a-protein-data-bank-file-pdb-using-python">Extracting fields from a Protein Data Bank file (PDB) using python</h1>
 
-<p>Usage:</p>
+<p>Sometime, for large <code class="highlighter-rouge">pdb</code> files, one cannot use the <code class="highlighter-rouge">split</code> command from python.
+Below is the python line to extract fields from a <code class="highlighter-rouge">pdb</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./modeller_ca_to_all_atoms.py input_structure_ca.pdb [bb]
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'min.pdb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">pdbfile</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">pdbfile</span><span class="p">:</span>
+        <span class="k">print</span> <span class="n">line</span>
+        <span class="n">splitted_line</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="p">[:</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">12</span><span class="p">:</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">17</span><span class="p">:</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">22</span><span class="p">:</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">30</span><span class="p">:</span><span class="mi">38</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">38</span><span class="p">:</span><span class="mi">46</span><span class="p">],</span> <span class="n">line</span><span class="p">[</span><span class="mi">46</span><span class="p">:</span><span class="mi">54</span><span class="p">]]</span>
+        <span class="k">print</span> <span class="n">splitted_line</span>
+        <span class="k">print</span> <span class="s">"</span><span class="si">%-6</span><span class="s">s</span><span class="si">%5</span><span class="s">s </span><span class="si">%4</span><span class="s">s </span><span class="si">%3</span><span class="s">s </span><span class="si">%</span><span class="s">s</span><span class="si">%4</span><span class="s">s    </span><span class="si">%8</span><span class="s">s</span><span class="si">%8</span><span class="s">s</span><span class="si">%8</span><span class="s">s</span><span class="se">\n</span><span class="s">"</span><span class="o">%</span><span class="nb">tuple</span><span class="p">(</span><span class="n">splitted_line</span><span class="p">)</span></code></pre></figure>
+
+<p>Sample output:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># Original line
+HETATM10000  O   HOH B3257       2.509  40.006  -4.097  1.00  0.00           O
+# Splitted line
+['HETATM', '10000', ' O  ', 'HOH', 'B', '3257', '   2.509', '  40.006', '  -4.097']
+# Go back to pdb formatted line
+HETATM10000  O   HOH B3257       2.509  40.006  -4.097
 </code></pre>
 </div>
-
-<p>It returns modeller_out.pdb, an all atoms structure.</p>
-
-<p>The script extracts distances between C alpha atoms and read the beta factor
-column of the pdb to get the standard deviation from the target distance and
-applies a Gaussian distance restraint along with the stereochemical restraints
-(BOND, ANGLE, DIHEDRAL, IMPROPER).</p>
-
-<p>The script can also handle backbone only protein structure and return a full
-atom protein. Just add the <code class="highlighter-rouge">bb</code> keyword argument.</p>
-
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/07281e1e0156193c5ef047b1e0113106.js"> </script>
-
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2016/04/11/convert_c_alpha_only_protein_structure_to_all_atoms_structure_using_modeller.html"
+      data-href="http://bougui505.github.io/2016/08/11/extracting_fields_from_a_protein_data_bank_file_(pdb)_using_python.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
