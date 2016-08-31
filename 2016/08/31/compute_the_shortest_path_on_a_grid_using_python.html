@@ -216,10 +216,14 @@ with diagonal included.</p>
 <p><img src="/assets/shortest_path_files/shortest_path_7_1.png" alt="png" /></p>
 
 <p>I’ve slightly modified the <code class="highlighter-rouge">dijkstra</code> algorithm to change the metric between
-nodes: <code class="highlighter-rouge">max((V[e]-V[cc]), 0)</code> instead of <code class="highlighter-rouge">(V[e]-V[cc])**2</code>.</p>
+nodes: <code class="highlighter-rouge">(V[e]-V[cc])</code> instead of <code class="highlighter-rouge">(V[e]-V[cc])**2</code>.</p>
+
+<p>With that distance, negative distances exists.</p>
 
 <p>Then, I added a metropolis criteria to accept the next step with a given
-probability: <code class="highlighter-rouge">m[e]/d &gt; numpy.random.random()</code>:</p>
+probability: <code class="highlighter-rouge">m[e]/d &gt; numpy.random.random()</code>, but we should take care of the
+negative distances, thats why I’ve changed the distance for that function to:
+<code class="highlighter-rouge">[max((V[e]-V[cc]), 0)</code></p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">dijkstra_metropolis</span><span class="p">(</span><span class="n">V</span><span class="p">):</span>
     <span class="n">mask</span> <span class="o">=</span> <span class="n">V</span><span class="o">.</span><span class="n">mask</span>
