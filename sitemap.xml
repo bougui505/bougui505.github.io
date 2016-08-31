@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/08/31/compute_the_shortest_path_on_a_grid_using_python.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/08/26/compute_secondary_structure_content_from_a_dcd_trajectory_file_using_python,_mdanalysis_and_dssp.html</loc>
         </url>
     
