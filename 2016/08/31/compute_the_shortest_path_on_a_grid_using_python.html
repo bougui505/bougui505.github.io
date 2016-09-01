@@ -268,6 +268,60 @@ Dijkstra (in red):</p>
 
 <p><img src="/assets/shortest_path_files/shortest_path_metropolis.png" alt="png" /></p>
 
+<p>As I want to obtain a reasonable path that sample basins in the potential, I
+wrote the functions below.</p>
+
+<p>The basic idea behind the <code class="highlighter-rouge">extend_path</code> function is to extend the shortest path
+obtained by taking neighbors of nodes in the path that minimize the potential.
+A set keeps record of the cells already visited during the extension process.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">get_neighbors</span><span class="p">(</span><span class="n">cc</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">visited_nodes</span><span class="p">):</span>
+    <span class="n">connectivity</span> <span class="o">=</span> <span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">))]</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">asarray</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span> <span class="o">-</span> <span class="n">connectivity</span> 
+                 <span class="k">if</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">V</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">V</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+    <span class="n">neighbors</span> <span class="o">=</span> <span class="p">[</span> <span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">neighbors</span> <span class="k">if</span> <span class="n">e</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">visited_nodes</span> <span class="p">]</span>
+    <span class="k">return</span> <span class="n">neighbors</span>
+
+<span class="k">def</span> <span class="nf">extend_path</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="s">"""
+    Extend the given path with n steps
+    """</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">path</span><span class="p">]</span>
+    <span class="n">do_break</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">visited_nodes</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">visited_nodes</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="n">dist_min</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">inf</span>
+        <span class="k">for</span> <span class="n">i_cc</span><span class="p">,</span> <span class="n">cc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">path</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+            <span class="n">neighbors</span> <span class="o">=</span> <span class="n">get_neighbors</span><span class="p">(</span><span class="n">cc</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">visited_nodes</span><span class="p">)</span>
+            <span class="n">next_step</span> <span class="o">=</span> <span class="n">path</span><span class="p">[</span><span class="n">i_cc</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">next_neighbors</span> <span class="o">=</span> <span class="n">get_neighbors</span><span class="p">(</span><span class="n">next_step</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">visited_nodes</span><span class="p">)</span>
+            <span class="n">join_neighbors</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">neighbors</span><span class="p">)</span> <span class="o">&amp;</span> <span class="nb">set</span><span class="p">(</span><span class="n">next_neighbors</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">join_neighbors</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">tentative_distance</span> <span class="o">=</span> <span class="p">[</span> <span class="n">V</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">join_neighbors</span> <span class="p">]</span>
+                <span class="n">argmin_dist</span> <span class="o">=</span> <span class="n">argmin</span><span class="p">(</span><span class="n">tentative_distance</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">tentative_distance</span><span class="p">[</span><span class="n">argmin_dist</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">dist_min</span><span class="p">:</span>
+                    <span class="n">dist_min</span><span class="p">,</span> <span class="n">new_step</span><span class="p">,</span> <span class="n">new_step_index</span>  <span class="o">=</span> <span class="n">tentative_distance</span><span class="p">[</span><span class="n">argmin_dist</span><span class="p">],</span> <span class="n">join_neighbors</span><span class="p">[</span><span class="n">argmin_dist</span><span class="p">],</span> <span class="n">i_cc</span><span class="o">+</span><span class="mi">1</span>
+        <span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">new_step_index</span><span class="p">,</span> <span class="n">new_step</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">path</span></code></pre></figure>
+
+<p>Below is the result I obtained by extending the shortest path with 250 steps:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">path_ext</span> <span class="o">=</span> <span class="n">extend_path</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="mi">250</span><span class="p">)</span>
+<span class="k">print</span> <span class="nb">len</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">path_ext</span><span class="p">)</span>
+<span class="n">path_ext</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">path_ext</span><span class="p">)</span>
+<span class="n">contourf</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">path</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">path</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="s">'w.-'</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">path_ext</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">path_ext</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="s">'r.-'</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="p">()</span></code></pre></figure>
+
+<p><img src="/assets/shortest_path_files/path_extended.png" alt="png" /></p>
+
+<p>As expected I start to sample the deeper basins first when I increase <code class="highlighter-rouge">n</code>, as
+seen below:</p>
+
+<p><img src="/assets/shortest_path_files/path_extended_evolving.png" alt="png" /></p>
+
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
