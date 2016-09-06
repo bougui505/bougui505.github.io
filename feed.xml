@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 06 Sep 2016 12:33:39 +0200</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2016 12:33:39 +0200</lastBuildDate>
+    <pubDate>Tue, 06 Sep 2016 12:38:11 +0200</pubDate>
+    <lastBuildDate>Tue, 06 Sep 2016 12:38:11 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -17,6 +17,55 @@
 &lt;p&gt;Usage:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./align_pdb_seq.py pdb1 pdb2 [...]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Example output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ./align_pdb_seq.py 148l.pdb 2lcb.pdb
+
+                         MODELLER 9.16, 2016/01/07, r10745
+
+     PROTEIN STRUCTURE MODELLING BY SATISFACTION OF SPATIAL RESTRAINTS
+
+
+                     Copyright(c) 1989-2016 Andrej Sali
+                            All Rights Reserved
+
+                             Written by A. Sali
+                               with help from
+              B. Webb, M.S. Madhusudhan, M-Y. Shen, G.Q. Dong,
+          M.A. Marti-Renom, N. Eswar, F. Alber, M. Topf, B. Oliva,
+             A. Fiser, R. Sanchez, B. Yerkovich, A. Badretdinov,
+                     F. Melo, J.P. Overington, E. Feyfant
+                 University of California, San Francisco, USA
+                    Rockefeller University, New York, USA
+                      Harvard University, Cambridge, USA
+                   Imperial Cancer Research Fund, London, UK
+              Birkbeck College, University of London, London, UK
+
+
+Kind, OS, HostName, Kernel, Processor: 4, Linux mantrisse 3.16.0-4-amd64 x86_64
+Date and time of compilation         : 2016/01/07 09:23:18
+MODELLER executable type             : x86_64-intel8
+Job starting time (YY/MM/DD HH:MM:SS): 2016/09/06 12:36:19
+
+
+SALIGN_____&amp;gt; adding the next group to the alignment; iteration    1
+ _aln.pos         10        20        30        40        50        60
+148l      MNIFEMLRIDEGLRLKIYKDTEGYYEIGIGHLLTKSPSLNAAKSELDKAIGRNTNGVITKDEAEKLFN 
+2lcb      MNIFEMLRIDEGLRLKIYKDTEGYYTIGIGHLLTKSPSLNAAKSELDKAIGRNTNGVITKDEAEKLFN 
+ _consrvd ************************* ******************************************
+
+ _aln.p   70        80        90       100       110       120       130
+148l      QDVDAAVRGILRNAKLKPVYDSLDAVRRAALINMVFQMGETGVAGFTNSLRMLQQKRWDEAAVNLAKS 
+2lcb      QDVDAAVRGILRNAKLKPVYDSLDAVRRAAAINMVFQMGETGVAGFTNSLRMLQQKRWDEAAVNLAKS 
+ _consrvd ****************************** *************************************
+
+ _aln.pos  140       150       160
+148l      RWYNQTPNRAKRVITTFRTGTWDAYKN/A 
+2lcb      RWYNQTPNRAKRVITTFRTGTWDAYKN-L 
+ _consrvd ***************************
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
