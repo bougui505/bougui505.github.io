@@ -6,9 +6,43 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 06 Sep 2016 12:38:11 +0200</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2016 12:38:11 +0200</lastBuildDate>
+    <pubDate>Tue, 06 Sep 2016 13:35:19 +0200</pubDate>
+    <lastBuildDate>Tue, 06 Sep 2016 13:35:19 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Mutate a single residue in a pdb with python and Modeller</title>
+        <description>&lt;h1 id=&quot;mutate-a-single-residue-in-a-pdb-with-python-and-modeller&quot;&gt;Mutate a single residue in a pdb with python and Modeller&lt;/h1&gt;
+
+&lt;p&gt;From &lt;a href=&quot;http://salilab.org/modeller/wiki/Mutate%20model&quot;&gt;this modeller wiki page&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;The script below takes a given PDB file, and mutates a single residue. The
+residue’s position is then optimized, and the unoptimized and optimized
+energies are reported.&lt;/p&gt;
+
+&lt;p&gt;Note that this script if run multiple times will produce the same model each
+time, because Modeller is deterministic. If you want to build multiple models,
+change the value of rand_seed (see comments in the script) each time. This may
+be useful if some models, for example, cannot be optimized due to steric
+clashes.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/efbd203e70f9103d329404ec18778ebb.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 06 Sep 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/09/06/mutate_a_single_residue_in_a_pdb_with_python_and_modeller.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/09/06/mutate_a_single_residue_in_a_pdb_with_python_and_modeller.html</guid>
+        
+        <category>python</category>
+        
+        <category>modeller</category>
+        
+        <category>science</category>
+        
+        
+      </item>
     
       <item>
         <title>Align pdb sequences using python and Modeller</title>
