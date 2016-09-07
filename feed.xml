@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 07 Sep 2016 10:38:22 +0200</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2016 10:38:22 +0200</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2016 10:40:00 +0200</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2016 10:40:00 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -34,7 +34,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;NB: From the &lt;a href=&quot;http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions&quot;&gt;zsh documentation om hook functions&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;NB: From the &lt;a href=&quot;http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions&quot;&gt;zsh documentation on hook functions&lt;/a&gt;:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;preexec&lt;/code&gt;&lt;/p&gt;
 
