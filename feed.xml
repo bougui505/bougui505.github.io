@@ -6,9 +6,55 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 06 Sep 2016 14:44:32 +0200</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2016 14:44:32 +0200</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2016 10:38:22 +0200</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2016 10:38:22 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>zsh: show right prompt with date ONLY when command is executed</title>
+        <description>&lt;h1 id=&quot;zsh-show-right-prompt-with-date-only-when-command-is-executed&quot;&gt;zsh: show right prompt with date ONLY when command is executed&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;preexec () {
+    DATE=$( date +&quot;[%H:%M:%S]&quot; )
+    local len_right=$( strlen &quot;$DATE&quot; )
+    len_right=$(( $len_right+1 ))
+    local right_start=$(($COLUMNS - $len_right))
+    local len_cmd=$( strlen &quot;$@&quot; )
+    local len_prompt=$(strlen &quot;$PROMPT&quot; )
+    local len_left=$(($len_cmd+$len_prompt))
+    RDATE=&quot;\033[${right_start}C ${DATE}&quot;
+    if [ $len_left -lt $right_start ]; then
+        # command does not overwrite right prompt
+        # ok to move up one line
+        echo -e &quot;\033[1A${RDATE}&quot;
+    else
+        echo -e &quot;${RDATE}&quot;
+    fi
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;NB: From the &lt;a href=&quot;http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions&quot;&gt;zsh documentation om hook functions&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;preexec&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Executed just after a command has been read and is about to be executed. If the
+history mechanism is active (regardless of whether the line was discarded from
+the history buffer), the string that the user typed is passed as the first
+argument, otherwise it is an empty string. The actual command that will be
+executed (including expanded aliases) is passed in two different forms: the
+second argument is a single-line, size-limited version of the command (with
+things like function bodies elided); the third argument contains the full text
+that is being executed.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/09/07/zsh-_show_right_prompt_with_date_only_when_command_is_executed.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/09/07/zsh-_show_right_prompt_with_date_only_when_command_is_executed.html</guid>
+        
+        <category>zsh</category>
+        
+        
+      </item>
     
       <item>
         <title>Mutate a single residue in a pdb with python and Modeller</title>

@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/09/07/zsh-_show_right_prompt_with_date_only_when_command_is_executed.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/09/06/mutate_a_single_residue_in_a_pdb_with_python_and_modeller.html</loc>
         </url>
     
