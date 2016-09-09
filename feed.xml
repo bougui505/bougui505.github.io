@@ -6,9 +6,40 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 07 Sep 2016 10:40:00 +0200</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2016 10:40:00 +0200</lastBuildDate>
+    <pubDate>Fri, 09 Sep 2016 11:59:22 +0200</pubDate>
+    <lastBuildDate>Fri, 09 Sep 2016 11:59:22 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Repair a protein using Modeller and python</title>
+        <description>&lt;h1 id=&quot;repair-a-protein-using-modeller-and-python&quot;&gt;Repair a protein using Modeller and python&lt;/h1&gt;
+
+&lt;p&gt;The python script below use modeller to repair a given &lt;code class=&quot;highlighter-rouge&quot;&gt;pdb&lt;/code&gt; file:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;adding missing hydrogens&lt;/li&gt;
+  &lt;li&gt;adding missing side chains&lt;/li&gt;
+  &lt;li&gt;adding missing backbone atoms from CA trace&lt;/li&gt;
+  &lt;li&gt;…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e31d472e222d693b54b7391faaef7742.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 09 Sep 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/09/09/repair_a_protein_using_modeller_and_python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/09/09/repair_a_protein_using_modeller_and_python.html</guid>
+        
+        <category>modeller</category>
+        
+        <category>science</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>zsh: show right prompt with date ONLY when command is executed</title>
