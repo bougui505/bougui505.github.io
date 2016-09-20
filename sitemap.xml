@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/09/20/compute_the_radius_of_gyration_for_each_frame_of_a_trajectory_using_mdanalysis.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/09/09/repair_a_protein_using_modeller_and_python.html</loc>
         </url>
     
