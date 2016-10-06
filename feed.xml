@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 06 Oct 2016 11:10:45 +0200</pubDate>
-    <lastBuildDate>Thu, 06 Oct 2016 11:10:45 +0200</lastBuildDate>
+    <pubDate>Thu, 06 Oct 2016 14:51:40 +0200</pubDate>
+    <lastBuildDate>Thu, 06 Oct 2016 14:51:40 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -2481,7 +2481,10 @@ The corresponding chi value is computed from experimental data.&lt;/p&gt;
   &lt;li&gt;The IMP python script:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/7d32ce504bfbff965ee4.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/7d32ce504bfbff965ee4.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</link>
@@ -2640,6 +2643,8 @@ docking_49999
         <category>zsh</category>
         
         <category>csplit</category>
+        
+        <category>pdb</category>
         
         
       </item>
