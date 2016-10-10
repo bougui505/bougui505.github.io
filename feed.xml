@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 06 Oct 2016 14:51:40 +0200</pubDate>
-    <lastBuildDate>Thu, 06 Oct 2016 14:51:40 +0200</lastBuildDate>
+    <pubDate>Mon, 10 Oct 2016 11:55:32 +0200</pubDate>
+    <lastBuildDate>Mon, 10 Oct 2016 11:55:32 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Compute pairwise RMSD between a given list of frame for a trajectory</title>
+        <description>&lt;h1 id=&quot;compute-pairwise-rmsd-between-a-given-list-of-frame-for-a-trajectory&quot;&gt;Compute pairwise RMSD between a given list of frame for a trajectory&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/8f88f08620d46c95a018fd0a371efa1e.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 10 Oct 2016 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2016/10/10/compute_pairwise_rmsd_between_a_given_list_of_frame_for_a_trajectory.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/10/10/compute_pairwise_rmsd_between_a_given_list_of_frame_for_a_trajectory.html</guid>
+        
+        <category>mdanalysis</category>
+        
+        
+      </item>
     
       <item>
         <title>Compute the radius of gyration for each frame of a trajectory using MDAnalysis</title>
