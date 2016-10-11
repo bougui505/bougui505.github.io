@@ -108,25 +108,9 @@
       <div class="wrapper">
         <h1 id="zsh-show-right-prompt-with-date-only-when-command-is-executed">zsh: show right prompt with date ONLY when command is executed</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>preexec () {
-    DATE=$( date +"[%H:%M:%S]" )
-    local len_right=$( strlen "$DATE" )
-    len_right=$(( $len_right+1 ))
-    local right_start=$(($COLUMNS - $len_right))
-    local len_cmd=$( strlen "$@" )
-    local len_prompt=$(strlen "$PROMPT" )
-    local len_left=$(($len_cmd+$len_prompt))
-    RDATE="\033[${right_start}C ${DATE}"
-    if [ $len_left -lt $right_start ]; then
-        # command does not overwrite right prompt
-        # ok to move up one line
-        echo -e "\033[1A${RDATE}"
-    else
-        echo -e "${RDATE}"
-    fi
-}
-</code></pre>
-</div>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/ec54cca1b0517f85afbd954eb166c69c.js"> </script>
 
 <p>NB: From the <a href="http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions">zsh documentation on hook functions</a>:</p>
 
