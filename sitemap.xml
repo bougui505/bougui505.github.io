@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2016/11/03/lzma_compression_in_parallel.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2016/10/20/stream_data_in_real_time_with_python.html</loc>
         </url>
     

@@ -6,9 +6,43 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 20 Oct 2016 11:39:47 +0200</pubDate>
-    <lastBuildDate>Thu, 20 Oct 2016 11:39:47 +0200</lastBuildDate>
+    <pubDate>Thu, 03 Nov 2016 13:51:38 +0100</pubDate>
+    <lastBuildDate>Thu, 03 Nov 2016 13:51:38 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>lzma compression in parallel</title>
+        <description>&lt;h1 id=&quot;lzma-compression-in-parallel&quot;&gt;lzma compression in parallel&lt;/h1&gt;
+
+&lt;p&gt;pxz: parallel LZMA compressor using liblzma&lt;/p&gt;
+
+&lt;p&gt;Parallel XZ is a compression utility that takes advantage of running LZMA
+compression of different parts of an input file on multiple cores and
+processors simultaneously. Its primary goal is to utilize all resources to
+speed up compression time with minimal possible influence on compression ratio.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation-on-debian&quot;&gt;Installation on Debian&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install pxz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;running-with-tar&quot;&gt;Running with tar&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar -I pxz -cvf archive.tar.xz stuff_to_compress
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 03 Nov 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/11/03/lzma_compression_in_parallel.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/11/03/lzma_compression_in_parallel.html</guid>
+        
+        <category>lzma</category>
+        
+        <category>compression</category>
+        
+        
+      </item>
     
       <item>
         <title>Stream data in real time with python</title>
