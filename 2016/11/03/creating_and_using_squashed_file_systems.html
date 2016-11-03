@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Creating and using squashed file systems</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page13/">
+    <link rel="canonical" href="http://bougui505.github.io/2016/11/03/creating_and_using_squashed_file_systems.html">
 </head>
 
 
@@ -107,137 +107,46 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="creating-and-using-squashed-file-systems">Creating and using squashed file systems</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<p>SquashFS is a read-only compressed file system.</p>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 137%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 89%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 70%' href='/tags.html#bluetooth'>bluetooth</a>
-<a style='font-size: 89%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 89%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 70%' href='/tags.html#crashplan'>crashplan</a>
-<a style='font-size: 70%' href='/tags.html#compression'>compression</a>
-<a style='font-size: 70%' href='/tags.html#dssp'>dssp</a>
-<a style='font-size: 89%' href='/tags.html#debian'>debian</a>
-<a style='font-size: 70%' href='/tags.html#etckeeper'>etckeeper</a>
-<a style='font-size: 70%' href='/tags.html#gs'>gs</a>
-<a style='font-size: 70%' href='/tags.html#gnome'>gnome</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 70%' href='/tags.html#gmail'>gmail</a>
-<a style='font-size: 89%' href='/tags.html#github'>github</a>
-<a style='font-size: 130%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 70%' href='/tags.html#imagemagick'>imagemagick</a>
-<a style='font-size: 100%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 126%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 165%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 70%' href='/tags.html#lvm'>lvm</a>
-<a style='font-size: 70%' href='/tags.html#lzma'>lzma</a>
-<a style='font-size: 135%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 119%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 70%' href='/tags.html#mpi'>mpi</a>
-<a style='font-size: 130%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 114%' href='/tags.html#modeller'>modeller</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 70%' href='/tags.html#pulseaudio'>pulseaudio</a>
-<a style='font-size: 123%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 70%' href='/tags.html#pdf'>pdf</a>
-<a style='font-size: 108%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 89%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 89%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 70%' href='/tags.html#squashfs'>squashfs</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 100%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 150%' href='/tags.html#science'>science</a>
-<a style='font-size: 119%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#ssmtp'>ssmtp</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 89%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 70%' href='/tags.html#slideshow'>slideshow</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 70%' href='/tags.html#tikz'>tikz</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 123%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 137%' href='/tags.html#zsh'>zsh</a>
-<a style='font-size: 70%' href='/tags.html#zeitgeist'>zeitgeist</a>
+<p>From <a href="http://www.tldp.org/HOWTO/html_single/SquashFS-HOWTO/#whatis">the original documentation</a></p>
 
-   </div>
+<p>SquashFS is a read-only file system that lets you compress whole file systems
+or single directories, write them to other devices/partitions or to ordinary
+files, and then mount them directly (if a device) or using a loopback device
+(if it is a file). The modular, compact system design of SquashFS is bliss. For
+archiving purposes, <strong>SquashFS gives you a lot more flexibility and performance
+speed than a tarball archive</strong>.</p>
 
-  <h1 class="page-heading">Posts</h1>
+<h2 id="in-order-to-create-a-squashed-file-system-out-of-a-single-directory-say-somedir-and-output-it-to-a-regular-file-thus-producing-a-file-system-image-you-need-to-say-only-one-magic-phrase">In order to create a squashed file system out of a single directory (say, /some/dir), and output it to a regular file (thus, producing a file system image), you need to say only one magic phrase:</h2>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/git/2014/10/18/git-pull-that-run-out-of-memory-on-the-server.html">Git pull that run out of memory on the server</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html">Work with protein data bank (pdb) files and awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/awk-if-else-syntax.html">awk if-else syntax</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 17, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/10/17/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page12" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 13 of 13</span>
-      
-        <span class="next ">Next</span>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>mksquashfs /some/dir dir.sqsh
+</code></pre>
 </div>
+
+<h2 id="you-can-now-use-the-mount-command-to-mount-it-using-a-loopback-device">You can now use the mount command to mount it using a loopback device:</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo mkdir /mnt/squashfs
+sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
+</code></pre>
+</div>
+
+<h2 id="unmounting-the-squashfs">Unmounting the squashfs:</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo umount /mnt/squashfs
+</code></pre>
+</div>
+
+<p><a href="http://tldp.org/HOWTO/SquashFS-HOWTO/creatingandusing.html">Original and complete howto here</a></p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/blog/page13/"
+      data-href="http://bougui505.github.io/2016/11/03/creating_and_using_squashed_file_systems.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">

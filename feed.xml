@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 03 Nov 2016 14:32:44 +0100</pubDate>
-    <lastBuildDate>Thu, 03 Nov 2016 14:32:44 +0100</lastBuildDate>
+    <pubDate>Thu, 03 Nov 2016 15:32:27 +0100</pubDate>
+    <lastBuildDate>Thu, 03 Nov 2016 15:32:27 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -40,6 +40,51 @@ speed up compression time with minimal possible influence on compression ratio.&
         <category>lzma</category>
         
         <category>compression</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Creating and using squashed file systems</title>
+        <description>&lt;h1 id=&quot;creating-and-using-squashed-file-systems&quot;&gt;Creating and using squashed file systems&lt;/h1&gt;
+
+&lt;p&gt;SquashFS is a read-only compressed file system.&lt;/p&gt;
+
+&lt;p&gt;From &lt;a href=&quot;http://www.tldp.org/HOWTO/html_single/SquashFS-HOWTO/#whatis&quot;&gt;the original documentation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;SquashFS is a read-only file system that lets you compress whole file systems
+or single directories, write them to other devices/partitions or to ordinary
+files, and then mount them directly (if a device) or using a loopback device
+(if it is a file). The modular, compact system design of SquashFS is bliss. For
+archiving purposes, &lt;strong&gt;SquashFS gives you a lot more flexibility and performance
+speed than a tarball archive&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;in-order-to-create-a-squashed-file-system-out-of-a-single-directory-say-somedir-and-output-it-to-a-regular-file-thus-producing-a-file-system-image-you-need-to-say-only-one-magic-phrase&quot;&gt;In order to create a squashed file system out of a single directory (say, /some/dir), and output it to a regular file (thus, producing a file system image), you need to say only one magic phrase:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mksquashfs /some/dir dir.sqsh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;you-can-now-use-the-mount-command-to-mount-it-using-a-loopback-device&quot;&gt;You can now use the mount command to mount it using a loopback device:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo mkdir /mnt/squashfs
+sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;unmounting-the-squashfs&quot;&gt;Unmounting the squashfs:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo umount /mnt/squashfs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tldp.org/HOWTO/SquashFS-HOWTO/creatingandusing.html&quot;&gt;Original and complete howto here&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Nov 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/11/03/creating_and_using_squashed_file_systems.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/11/03/creating_and_using_squashed_file_systems.html</guid>
+        
+        <category>squashfs</category>
         
         
       </item>
