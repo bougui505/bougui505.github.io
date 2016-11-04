@@ -6,9 +6,63 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Nov 2016 09:22:15 +0100</pubDate>
-    <lastBuildDate>Fri, 04 Nov 2016 09:22:15 +0100</lastBuildDate>
+    <pubDate>Fri, 04 Nov 2016 21:25:49 +0100</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2016 21:25:49 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>mpi4py: some working examples</title>
+        <description>&lt;h1 id=&quot;mpi4py-some-working-examples&quot;&gt;mpi4py: some working examples&lt;/h1&gt;
+
+&lt;h2 id=&quot;original-imports&quot;&gt;Original imports:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;mpi4py&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MPI&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;COMM&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MPI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;COMM_WORLD&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;SIZE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COMM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# Number of CPUS&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;RANK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COMM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get_rank&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;broadcasting-data-between-nodes&quot;&gt;Broadcasting data between nodes:&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;RANK&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;COMM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;scattering-jobs-to-nodes&quot;&gt;Scattering jobs to nodes&lt;/h2&gt;
+
+&lt;p&gt;To scatter jobs to nodes when the number of jobs is not equal to the number of
+process:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c67232497207a2ff16edc0775fc3c228.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Example output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse /d/shm&amp;gt;  mpirun -np 2 ./scatter_jobs_mpi.py
+Job array:
+[[0 1]
+ [2 None]]
+rank 0: job 0
+rank 1: job 1
+rank 0: job 2
+{0: 0, 1: 1, 2: 4}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/11/04/mpi4py-_some_working_examples.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/11/04/mpi4py-_some_working_examples.html</guid>
+        
+        <category>mpi</category>
+        
+        <category>mpi4py</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>lzma compression in parallel</title>
@@ -4208,9 +4262,7 @@ However some manual operations are required to format the resulting file:&lt;/p&
 
 &lt;p&gt;Below is the script to automatically format an &lt;code class=&quot;highlighter-rouge&quot;&gt;ipynb&lt;/code&gt; file to jekyll markdown:&lt;/p&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/ddf7a6a5ffede1d17fc9.js&quot;&gt; &lt;/script&gt;
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/ddf7a6a5ffede1d17fc9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Usage: &lt;code class=&quot;highlighter-rouge&quot;&gt;./ipynb_to_jekyll.sh ipynbfile &quot;Title of the post&quot;&lt;/code&gt;&lt;/p&gt;
 

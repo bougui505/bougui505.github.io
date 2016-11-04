@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>zsh script to convert and format iPython notebook to jekyll markdown file</title>
+    <title>mpi4py: some working examples</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/linux/2014/12/10/zsh-script-to-convert-and-format-ipython-notebook-to-jekyll-markdown-file.html">
+    <link rel="canonical" href="http://bougui505.github.io/2016/11/04/mpi4py-_some_working_examples.html">
 </head>
 
 
@@ -107,31 +107,51 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="zsh-script-to-convert-and-format-ipython-notebook-to-jekyll-markdown-file">zsh script to convert and format iPython notebook to jekyll markdown file</h1>
+        <h1 id="mpi4py-some-working-examples">mpi4py: some working examples</h1>
 
-<p>iPython notebooks are very convenient for blogging.
-<code class="highlighter-rouge">nbconvert</code> can easily convert <code class="highlighter-rouge">ipynb</code> file to markdown.
-However some manual operations are required to format the resulting file:</p>
+<h2 id="original-imports">Original imports:</h2>
 
-<ul>
-  <li>Adding the YAML header for jekyll</li>
-  <li>Add the liquid tags for python syntax highlighting</li>
-  <li>Change the path to the <code class="highlighter-rouge">png</code> image files</li>
-</ul>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
+<span class="n">COMM</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span>
+<span class="n">SIZE</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">Get_size</span><span class="p">()</span> <span class="c"># Number of CPUS</span>
+<span class="n">RANK</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">Get_rank</span><span class="p">()</span></code></pre></figure>
 
-<p>Below is the script to automatically format an <code class="highlighter-rouge">ipynb</code> file to jekyll markdown:</p>
+<h2 id="broadcasting-data-between-nodes">Broadcasting data between nodes:</h2>
 
-<p>true<script src="https://gist.github.com/ddf7a6a5ffede1d17fc9.js"> </script></p>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">if</span> <span class="n">RANK</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">bcast</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">root</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code></pre></figure>
 
-<p>Usage: <code class="highlighter-rouge">./ipynb_to_jekyll.sh ipynbfile "Title of the post"</code></p>
+<h2 id="scattering-jobs-to-nodes">Scattering jobs to nodes</h2>
 
+<p>To scatter jobs to nodes when the number of jobs is not equal to the number of
+process:</p>
+
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/c67232497207a2ff16edc0775fc3c228.js"> </script>
+
+<p>Example output:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse /d/shm&gt;  mpirun -np 2 ./scatter_jobs_mpi.py
+Job array:
+[[0 1]
+ [2 None]]
+rank 0: job 0
+rank 1: job 1
+rank 0: job 2
+{0: 0, 1: 1, 2: 4}
+</code></pre>
+</div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/linux/2014/12/10/zsh-script-to-convert-and-format-ipython-notebook-to-jekyll-markdown-file.html"
+      data-href="http://bougui505.github.io/2016/11/04/mpi4py-_some_working_examples.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
