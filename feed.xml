@@ -6,9 +6,115 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Nov 2016 21:25:49 +0100</pubDate>
-    <lastBuildDate>Fri, 04 Nov 2016 21:25:49 +0100</lastBuildDate>
+    <pubDate>Tue, 22 Nov 2016 12:53:44 +0100</pubDate>
+    <lastBuildDate>Tue, 22 Nov 2016 12:53:44 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Install Crashplan on a Raspberry Pi</title>
+        <description>&lt;h1 id=&quot;install-crashplan-on-a-raspberry-pi&quot;&gt;Install Crashplan on a Raspberry Pi&lt;/h1&gt;
+
+&lt;h2 id=&quot;install-the-required-packages&quot;&gt;Install the required packages&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install oracle-java8-jdk
+sudo apt-get install libjna-java
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;install-crashplan&quot;&gt;Install Crashplan&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.crashplan.com/en-us/download/&quot;&gt;Download Crashplan&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Untar the &lt;code class=&quot;highlighter-rouge&quot;&gt;tgz&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;p&gt;And run the installation script, to install Crashplan as root:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Crashplan will not work out of the box.&lt;/p&gt;
+
+&lt;h2 id=&quot;patch-crashplan-to-work-on-the-pi&quot;&gt;Patch Crashplan to work on the Pi&lt;/h2&gt;
+
+&lt;p&gt;Force Crashplan to use the RPi (Raspbian) JRE:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo rm -r /usr/local/crashplan/jre
+sudo ln -s /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt /usr/local/crashplan/jre
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And change these two files:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd /usr/local/crashplan
+sudo rm libjtux.so
+sudo wget http://bougui505.github.io/assets/libjtux.so
+
+sudo rm libmd5.so
+sudo wget http://bougui505.github.io/assets/libmd5.so
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;start-crashplan&quot;&gt;Start Crashplan&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo /usr/local/crashplan/bin/CrashPlanEngine start
+$ sudo /usr/local/crashplan/bin/CrashPlanEngine status
+CrashPlan Engine (pid 1891) is running.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;configure-crashplan-remotely-using-the-local-crashplan-user-interface-ui&quot;&gt;Configure Crashplan remotely using the local Crashplan user interface (UI)&lt;/h2&gt;
+
+&lt;h3 id=&quot;definitions&quot;&gt;Definitions:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The local computer is defined as your desktop computer&lt;/li&gt;
+  &lt;li&gt;The remote computer is the RPi&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See the &lt;a href=&quot;https://support.code42.com/CrashPlan/4/Configuring/Using_CrashPlan_On_A_Headless_Computer&quot;&gt;Crashplan
+support&lt;/a&gt;
+for full explanations.&lt;/p&gt;
+
+&lt;h3 id=&quot;copy-the-token-from-the-rpi&quot;&gt;Copy the token from the Rpi:&lt;/h3&gt;
+
+&lt;p&gt;The token is located in &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/crashplan/.ui_info&lt;/code&gt; if Crashplan is installed
+as root or in &lt;code class=&quot;highlighter-rouge&quot;&gt;~/.crashplan/.ui_info&lt;/code&gt; if installed as user.&lt;/p&gt;
+
+&lt;p&gt;The format of the &lt;code class=&quot;highlighter-rouge&quot;&gt;.ui_info&lt;/code&gt; file is:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;PORT,Authentication_Token,IP_Address
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Copy the Authentication Token from the RPi and paste it to replace the
+Authentication Token in the local &lt;code class=&quot;highlighter-rouge&quot;&gt;.ui_info&lt;/code&gt; file, after having backup the
+local &lt;code class=&quot;highlighter-rouge&quot;&gt;.ui_info&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;change-the-port-in-the-local-conf-file&quot;&gt;Change the port in the local conf file&lt;/h2&gt;
+
+&lt;p&gt;Just change the port from 4243 to 4200 in the local &lt;code class=&quot;highlighter-rouge&quot;&gt;.ui_info&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;h2 id=&quot;start-port-forwarding-on-the-local-computer&quot;&gt;Start port forwarding on the local computer&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -L 4200:localhost:4243 pi@raspberrypi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;and-start-crashplandesktop-on-local-computer&quot;&gt;And start CrashPlanDesktop on local computer…&lt;/h2&gt;
+
+&lt;p&gt;NB: This doesn’t work anymore…&lt;/p&gt;
+</description>
+        <pubDate>Tue, 22 Nov 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/11/22/install_crashplan_on_a_raspberry_pi.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/11/22/install_crashplan_on_a_raspberry_pi.html</guid>
+        
+        <category>raspberry-pi</category>
+        
+        <category>crashplan</category>
+        
+        
+      </item>
     
       <item>
         <title>mpi4py: some working examples</title>
@@ -4262,7 +4368,9 @@ However some manual operations are required to format the resulting file:&lt;/p&
 
 &lt;p&gt;Below is the script to automatically format an &lt;code class=&quot;highlighter-rouge&quot;&gt;ipynb&lt;/code&gt; file to jekyll markdown:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/ddf7a6a5ffede1d17fc9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ddf7a6a5ffede1d17fc9.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Usage: &lt;code class=&quot;highlighter-rouge&quot;&gt;./ipynb_to_jekyll.sh ipynbfile &quot;Title of the post&quot;&lt;/code&gt;&lt;/p&gt;
 
