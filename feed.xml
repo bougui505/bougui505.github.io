@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 23 Nov 2016 13:06:54 +0100</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2016 13:06:54 +0100</lastBuildDate>
+    <pubDate>Wed, 23 Nov 2016 13:09:11 +0100</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2016 13:09:11 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -39,25 +39,25 @@ Here, &lt;code class=&quot;highlighter-rouge&quot;&gt;/mnt/nfs_share&lt;/code&gt
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Start the &lt;code class=&quot;highlighter-rouge&quot;&gt;rpcbind&lt;/code&gt; service:&lt;/p&gt;
+&lt;h3 id=&quot;start-the-rpcbind-service&quot;&gt;Start the rpcbind service:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service rpcbind start
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Start the nfs server service:&lt;/p&gt;
+&lt;h3 id=&quot;start-the-nfs-server-service&quot;&gt;Start the nfs server service:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo service nfs-kernel-server restart
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Export the shared file system:&lt;/p&gt;
+&lt;h3 id=&quot;export-the-shared-file-system&quot;&gt;Export the shared file system:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo exportfs
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Check the export:&lt;/p&gt;
+&lt;h3 id=&quot;check-the-export&quot;&gt;Check the export:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo showmount
 &lt;/code&gt;&lt;/pre&gt;

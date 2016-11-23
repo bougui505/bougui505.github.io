@@ -134,25 +134,25 @@ Here, <code class="highlighter-rouge">/mnt/nfs_share</code> is the disk to share
 </code></pre>
 </div>
 
-<p>Start the <code class="highlighter-rouge">rpcbind</code> service:</p>
+<h3 id="start-the-rpcbind-service">Start the rpcbind service:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo service rpcbind start
 </code></pre>
 </div>
 
-<p>Start the nfs server service:</p>
+<h3 id="start-the-nfs-server-service">Start the nfs server service:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo service nfs-kernel-server restart
 </code></pre>
 </div>
 
-<p>Export the shared file system:</p>
+<h3 id="export-the-shared-file-system">Export the shared file system:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo exportfs
 </code></pre>
 </div>
 
-<p>Check the export:</p>
+<h3 id="check-the-export">Check the export:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo showmount
 </code></pre>
