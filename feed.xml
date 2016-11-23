@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 23 Nov 2016 13:09:11 +0100</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2016 13:09:11 +0100</lastBuildDate>
+    <pubDate>Wed, 23 Nov 2016 13:56:24 +0100</pubDate>
+    <lastBuildDate>Wed, 23 Nov 2016 13:56:24 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -110,6 +110,34 @@ again, &lt;code class=&quot;highlighter-rouge&quot;&gt;SERVER_IP&lt;/code&gt; is
       <item>
         <title>Install Crashplan on a Raspberry Pi</title>
         <description>&lt;h1 id=&quot;install-crashplan-on-a-raspberry-pi&quot;&gt;Install Crashplan on a Raspberry Pi&lt;/h1&gt;
+
+&lt;h2 id=&quot;update&quot;&gt;Update:&lt;/h2&gt;
+
+&lt;p&gt;Crashplan is quite difficult to install on the RPi and is not supported
+officially to be installed on ARM architectures. Thus, a possible workaround to
+backup your data on your RPi is to setup an NFS server and to backup on it.
+However, the set up of an NFS mounted disk as backup destination for Crashplan
+is not possible. The workaround is to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;create an empty directory as the backup destination on the local disk&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;create the same directory on the nfs&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;setup the local directory as the backup destination on Crashplan&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;remove the local directory while the Crashplan app is still opened&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;soft link (&lt;code class=&quot;highlighter-rouge&quot;&gt;ln -s&lt;/code&gt;) the nfs directory to the location of the previous local directory&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;and voilà!&lt;/p&gt;
 
 &lt;h2 id=&quot;install-the-required-packages&quot;&gt;Install the required packages&lt;/h2&gt;
 
