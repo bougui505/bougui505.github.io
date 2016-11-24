@@ -6,9 +6,62 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 23 Nov 2016 13:56:24 +0100</pubDate>
-    <lastBuildDate>Wed, 23 Nov 2016 13:56:24 +0100</lastBuildDate>
+    <pubDate>Thu, 24 Nov 2016 10:11:08 +0100</pubDate>
+    <lastBuildDate>Thu, 24 Nov 2016 10:11:08 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Set exact time with ntp</title>
+        <description>&lt;h1 id=&quot;set-exact-time-with-ntp&quot;&gt;Set exact time with ntp&lt;/h1&gt;
+
+&lt;h2 id=&quot;edit-the-configuration-file-to-eventually-add-ntp-servers&quot;&gt;Edit the configuration file to eventually add ntp servers&lt;/h2&gt;
+
+&lt;p&gt;Edit the file &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/ntp.conf&lt;/code&gt; and look at the server list and add eventually a server:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;server 0.europe.pool.ntp.org
+server 1.europe.pool.ntp.org
+server 2.europe.pool.ntp.org
+server 3.europe.pool.ntp.org
+server 0.debian.pool.ntp.org iburst
+server 1.debian.pool.ntp.org iburst
+server 2.debian.pool.ntp.org iburst
+server 3.debian.pool.ntp.org iburst
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;restart-the-ntp-service&quot;&gt;Restart the ntp service&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo /etc/init.d/ntp restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;check-if-the-computer-is-synchronized&quot;&gt;Check if the computer is synchronized:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ntpstat
+synchronised to NTP server (XXX.XX.XX.XX) at stratum 3
+    time correct to within 137 ms
+    polling server every 64 s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;eventually-list-the-status-of-each-server-with&quot;&gt;Eventually list the status of each server with:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ntpq -p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 24 Nov 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/11/24/set_exact_time_with_ntp.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/11/24/set_exact_time_with_ntp.html</guid>
+        
+        <category>linux</category>
+        
+        <category>debian</category>
+        
+        <category>ntp</category>
+        
+        
+      </item>
     
       <item>
         <title>Configure NFS server and client</title>

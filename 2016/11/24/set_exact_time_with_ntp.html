@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Set exact time with ntp</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page13/">
+    <link rel="canonical" href="http://bougui505.github.io/2016/11/24/set_exact_time_with_ntp.html">
 </head>
 
 
@@ -107,164 +107,42 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="set-exact-time-with-ntp">Set exact time with ntp</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<h2 id="edit-the-configuration-file-to-eventually-add-ntp-servers">Edit the configuration file to eventually add ntp servers</h2>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 137%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 89%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 70%' href='/tags.html#bluetooth'>bluetooth</a>
-<a style='font-size: 89%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 70%' href='/tags.html#compression'>compression</a>
-<a style='font-size: 89%' href='/tags.html#crashplan'>crashplan</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 89%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 70%' href='/tags.html#dssp'>dssp</a>
-<a style='font-size: 100%' href='/tags.html#debian'>debian</a>
-<a style='font-size: 70%' href='/tags.html#etckeeper'>etckeeper</a>
-<a style='font-size: 70%' href='/tags.html#gnome'>gnome</a>
-<a style='font-size: 70%' href='/tags.html#gs'>gs</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 129%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#gmail'>gmail</a>
-<a style='font-size: 89%' href='/tags.html#github'>github</a>
-<a style='font-size: 70%' href='/tags.html#imagemagick'>imagemagick</a>
-<a style='font-size: 70%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 100%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 126%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 165%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 135%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 70%' href='/tags.html#lzma'>lzma</a>
-<a style='font-size: 70%' href='/tags.html#lvm'>lvm</a>
-<a style='font-size: 129%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 89%' href='/tags.html#mpi'>mpi</a>
-<a style='font-size: 118%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 70%' href='/tags.html#mpi4py'>mpi4py</a>
-<a style='font-size: 113%' href='/tags.html#modeller'>modeller</a>
-<a style='font-size: 70%' href='/tags.html#nfs'>nfs</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 70%' href='/tags.html#ntp'>ntp</a>
-<a style='font-size: 107%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#pulseaudio'>pulseaudio</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 70%' href='/tags.html#pdf'>pdf</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 122%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 89%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 100%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 149%' href='/tags.html#science'>science</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#slideshow'>slideshow</a>
-<a style='font-size: 118%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 100%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 70%' href='/tags.html#squashfs'>squashfs</a>
-<a style='font-size: 89%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 70%' href='/tags.html#ssmtp'>ssmtp</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 70%' href='/tags.html#tikz'>tikz</a>
-<a style='font-size: 122%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 137%' href='/tags.html#zsh'>zsh</a>
-<a style='font-size: 70%' href='/tags.html#zeitgeist'>zeitgeist</a>
+<p>Edit the file <code class="highlighter-rouge">/etc/ntp.conf</code> and look at the server list and add eventually a server:</p>
 
-   </div>
+<div class="highlighter-rouge"><pre class="highlight"><code>server 0.europe.pool.ntp.org
+server 1.europe.pool.ntp.org
+server 2.europe.pool.ntp.org
+server 3.europe.pool.ntp.org
+server 0.debian.pool.ntp.org iburst
+server 1.debian.pool.ntp.org iburst
+server 2.debian.pool.ntp.org iburst
+server 3.debian.pool.ntp.org iburst
+</code></pre>
+</div>
 
-  <h1 class="page-heading">Posts</h1>
+<h2 id="restart-the-ntp-service">Restart the ntp service</h2>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo /etc/init.d/ntp restart
+</code></pre>
+</div>
 
-        <h2>
-          <a class="post-link" href="/latex/2014/10/20/truncate-header-in-fancyhdr.html">Truncate header in fancyhdr</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 20, 2014</span>
+<h2 id="check-if-the-computer-is-synchronized">Check if the computer is synchronized:</h2>
 
-        <h2>
-          <a class="post-link" href="/jekyll/2014/10/20/use-jekyll-with-bibtex.html">Use Jekyll with BibTeX</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ntpstat
+synchronised to NTP server (XXX.XX.XX.XX) at stratum 3
+    time correct to within 137 ms
+    polling server every 64 s
+</code></pre>
+</div>
 
-        <h2>
-          <a class="post-link" href="/vim/2014/10/18/spell-check-in-vim.html">Spell check in vim</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
+<h2 id="eventually-list-the-status-of-each-server-with">Eventually list the status of each server with:</h2>
 
-        <h2>
-          <a class="post-link" href="/latex/2014/10/18/latex-templates.html">LaTeX templates</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/git/2014/10/18/git-pull-that-run-out-of-memory-on-the-server.html">Git pull that run out of memory on the server</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/work-with-protein-data-bank-pdb-files-and-awk.html">Work with protein data bank (pdb) files and awk</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/awk-if-else-syntax.html">awk if-else syntax</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 17, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/10/17/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page12" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 13 of 13</span>
-      
-        <span class="next ">Next</span>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ntpq -p
+</code></pre>
 </div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
@@ -272,7 +150,7 @@
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/blog/page13/"
+      data-href="http://bougui505.github.io/2016/11/24/set_exact_time_with_ntp.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
