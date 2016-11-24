@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 24 Nov 2016 10:11:08 +0100</pubDate>
-    <lastBuildDate>Thu, 24 Nov 2016 10:11:08 +0100</lastBuildDate>
+    <pubDate>Thu, 24 Nov 2016 10:15:01 +0100</pubDate>
+    <lastBuildDate>Thu, 24 Nov 2016 10:15:01 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -49,6 +49,10 @@ synchronised to NTP server (XXX.XX.XX.XX) at stratum 3
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ntpq -p
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;remark&quot;&gt;Remark:&lt;/h2&gt;
+
+&lt;p&gt;You can eventually check the time of your computer on &lt;a href=&quot;http://time.is/&quot;&gt;Time.is&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Thu, 24 Nov 2016 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2016/11/24/set_exact_time_with_ntp.html</link>
