@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 24 Nov 2016 10:15:01 +0100</pubDate>
-    <lastBuildDate>Thu, 24 Nov 2016 10:15:01 +0100</lastBuildDate>
+    <pubDate>Wed, 30 Nov 2016 14:17:01 +0100</pubDate>
+    <lastBuildDate>Wed, 30 Nov 2016 14:17:01 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -2084,6 +2084,14 @@ resize2fs 1.42.12 (29-Aug-2014)
 Le système de fichiers de /dev/mantrisse-vg/home est monté sur /home ; le changement de taille doit être effectué en ligne
 old_desc_blocks = 7, new_desc_blocks = 10
 Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39321600 blocs (4k).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;use-pvresize-to-grow-the-lvm-pv-to-match-the-size-of-the-partition&quot;&gt;Use pvresize to grow the LVM PV to match the size of the partition&lt;/h2&gt;
+
+&lt;p&gt;If the physical volume to resize is &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sda5&lt;/code&gt;, just do:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo pvresize /dev/sda5
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>

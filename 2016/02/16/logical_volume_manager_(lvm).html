@@ -178,6 +178,14 @@ Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39
 </code></pre>
 </div>
 
+<h2 id="use-pvresize-to-grow-the-lvm-pv-to-match-the-size-of-the-partition">Use pvresize to grow the LVM PV to match the size of the partition</h2>
+
+<p>If the physical volume to resize is <code class="highlighter-rouge">/dev/sda5</code>, just do:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; sudo pvresize /dev/sda5
+</code></pre>
+</div>
+
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
