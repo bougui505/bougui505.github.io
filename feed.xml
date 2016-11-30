@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 30 Nov 2016 14:17:01 +0100</pubDate>
-    <lastBuildDate>Wed, 30 Nov 2016 14:17:01 +0100</lastBuildDate>
+    <pubDate>Wed, 30 Nov 2016 14:44:01 +0100</pubDate>
+    <lastBuildDate>Wed, 30 Nov 2016 14:44:01 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -2092,6 +2092,33 @@ Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39
 &lt;p&gt;If the physical volume to resize is &lt;code class=&quot;highlighter-rouge&quot;&gt;/dev/sda5&lt;/code&gt;, just do:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo pvresize /dev/sda5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;shrink-a-given-lv&quot;&gt;Shrink a given LV:&lt;/h2&gt;
+
+&lt;p&gt;It’s a little more tricky to do. First, start from a rescue system (like
+clonezilla) on an usb stick or a CD.&lt;/p&gt;
+
+&lt;h3 id=&quot;be-sure-that-the-filesystem-you-want-to-shrink-is-unmount-use-the-unmount-command-if-required&quot;&gt;Be sure that the filesystem you want to shrink is unmount (use the unmount command if required).&lt;/h3&gt;
+
+&lt;h3 id=&quot;check-the-filesystem-here-devmantrisse-vghome&quot;&gt;Check the filesystem (here: /dev/mantrisse-vg/home)&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo e2fsck -f /dev/mantrisse-vg/home
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;shrink-the-filesystem&quot;&gt;Shrink the filesystem:&lt;/h3&gt;
+
+&lt;p&gt;E.g. to shrink the filesystem to 500G:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo resize2fs /dev/mantrisse-vg/home 500G
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;reduce-the-logical-volume&quot;&gt;Reduce the logical volume:&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo lvreduce -L 500G /dev/mantrisse-vg/home
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>

@@ -186,6 +186,33 @@ Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39
 </code></pre>
 </div>
 
+<h2 id="shrink-a-given-lv">Shrink a given LV:</h2>
+
+<p>It’s a little more tricky to do. First, start from a rescue system (like
+clonezilla) on an usb stick or a CD.</p>
+
+<h3 id="be-sure-that-the-filesystem-you-want-to-shrink-is-unmount-use-the-unmount-command-if-required">Be sure that the filesystem you want to shrink is unmount (use the unmount command if required).</h3>
+
+<h3 id="check-the-filesystem-here-devmantrisse-vghome">Check the filesystem (here: /dev/mantrisse-vg/home)</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo e2fsck -f /dev/mantrisse-vg/home
+</code></pre>
+</div>
+
+<h3 id="shrink-the-filesystem">Shrink the filesystem:</h3>
+
+<p>E.g. to shrink the filesystem to 500G:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo resize2fs /dev/mantrisse-vg/home 500G
+</code></pre>
+</div>
+
+<h3 id="reduce-the-logical-volume">Reduce the logical volume:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo lvreduce -L 500G /dev/mantrisse-vg/home
+</code></pre>
+</div>
+
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
