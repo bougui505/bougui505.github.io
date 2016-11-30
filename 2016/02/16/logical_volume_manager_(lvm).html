@@ -191,7 +191,7 @@ Le système de fichiers sur /dev/mantrisse-vg/home a maintenant une taille de 39
 <p>It’s a little more tricky to do. First, start from a rescue system (like
 clonezilla) on an usb stick or a CD.</p>
 
-<h3 id="be-sure-that-the-filesystem-you-want-to-shrink-is-unmount-use-the-unmount-command-if-required">Be sure that the filesystem you want to shrink is unmount (use the unmount command if required).</h3>
+<h3 id="be-sure-that-the-filesystem-you-want-to-shrink-is-unmount-use-the-umount-command-if-required">Be sure that the filesystem you want to shrink is unmount (use the umount command if required).</h3>
 
 <h3 id="check-the-filesystem-here-devmantrisse-vghome">Check the filesystem (here: /dev/mantrisse-vg/home)</h3>
 
@@ -210,6 +210,32 @@ clonezilla) on an usb stick or a CD.</p>
 <h3 id="reduce-the-logical-volume">Reduce the logical volume:</h3>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>$ sudo lvreduce -L 500G /dev/mantrisse-vg/home
+</code></pre>
+</div>
+
+<h2 id="create-a-logical-volume">Create a Logical volume</h2>
+
+<h3 id="logical-volume-creation-of-size-500g-with-name-backup-in-the-volume-group-mantrisse-vg">Logical Volume creation of size 500G with name backup in the Volume Group mantrisse-vg</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; sudo lvcreate -L 500G -n backup mantrisse-vg
+</code></pre>
+</div>
+
+<h3 id="create-the-ext4-filesystem">Create the ext4 filesystem</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; sudo mkfs -t ext4 /dev/mantrisse-vg/backup
+</code></pre>
+</div>
+
+<h3 id="edit-the-fstab-to-mount-the-lv">Edit the fstab to mount the LV:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/dev/mapper/mantrisse--vg-backup /backup           ext4    defaults        0       2
+</code></pre>
+</div>
+
+<h3 id="mount-the-lv">Mount the LV:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse ~&gt; sudo mount /backup
 </code></pre>
 </div>
 
