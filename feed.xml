@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 30 Nov 2016 15:02:53 +0100</pubDate>
-    <lastBuildDate>Wed, 30 Nov 2016 15:02:53 +0100</lastBuildDate>
+    <pubDate>Fri, 16 Dec 2016 09:13:49 +0100</pubDate>
+    <lastBuildDate>Fri, 16 Dec 2016 09:13:49 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Local nbviewer: Simple read only viewer for ipython notebook files (ipynb)</title>
+        <description>&lt;h1 id=&quot;local-nbviewer-simple-read-only-viewer-for-ipython-notebook-files-ipynb&quot;&gt;Local nbviewer: Simple read only viewer for ipython notebook files (ipynb)&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f80b86a8b34d0dc40ae2f366855e5a42.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 16 Dec 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/12/16/local_nbviewer-_simple_read_only_viewer_for_ipython_notebook_files_(ipynb).html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/12/16/local_nbviewer-_simple_read_only_viewer_for_ipython_notebook_files_(ipynb).html</guid>
+        
+        <category>ipython</category>
+        
+        
+      </item>
     
       <item>
         <title>Set exact time with ntp</title>
