@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 16 Dec 2016 09:13:49 +0100</pubDate>
-    <lastBuildDate>Fri, 16 Dec 2016 09:13:49 +0100</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 09:06:00 +0100</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 09:06:00 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Set wallpaper to the National Geographic photo of the day for Gnome 3</title>
+        <description>&lt;h1 id=&quot;set-wallpaper-to-the-national-geographic-photo-of-the-day-for-gnome-3&quot;&gt;Set wallpaper to the National Geographic photo of the day for Gnome 3&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2830098ceaa73bd9dadbae273aed7bc3.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Dec 2016 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2016/12/20/set_wallpaper_to_the_national_geographic_photo_of_the_day_for_gnome_3.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2016/12/20/set_wallpaper_to_the_national_geographic_photo_of_the_day_for_gnome_3.html</guid>
+        
+        <category>linux</category>
+        
+        <category>gnome</category>
+        
+        <category>photo</category>
+        
+        
+      </item>
     
       <item>
         <title>Local nbviewer: Simple read only viewer for ipython notebook files (ipynb)</title>
