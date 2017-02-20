@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>bloggb</title>
+    <title>Structural alignment with modeller</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/blog/page14/">
+    <link rel="canonical" href="http://bougui505.github.io/2017/02/20/structural_alignment_with_modeller.html">
 </head>
 
 
@@ -109,125 +109,21 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="structural-alignment-with-modeller">Structural alignment with modeller</h1>
 
-<form id="site_search" method="get" action="search.html">
-  <label for="search_box">Search</label><input type="text" id="search_box" name="query">
-  <input type="submit" value="search">
-</form>
+<p>Align <code class="highlighter-rouge">pdb1</code> on <code class="highlighter-rouge">pdb2</code> using modeller. The files are overwritten.</p>
 
-   <div class='cloud'>
-      <span class="post-meta">Tag cloud</span><br>
-      <a style='font-size: 136%' href='/tags.html#awk'>awk</a>
-<a style='font-size: 88%' href='/tags.html#autofs'>autofs</a>
-<a style='font-size: 70%' href='/tags.html#bluetooth'>bluetooth</a>
-<a style='font-size: 88%' href='/tags.html#bash'>bash</a>
-<a style='font-size: 88%' href='/tags.html#csplit'>csplit</a>
-<a style='font-size: 88%' href='/tags.html#crashplan'>crashplan</a>
-<a style='font-size: 70%' href='/tags.html#compression'>compression</a>
-<a style='font-size: 70%' href='/tags.html#catdcd'>catdcd</a>
-<a style='font-size: 70%' href='/tags.html#dssp'>dssp</a>
-<a style='font-size: 99%' href='/tags.html#debian'>debian</a>
-<a style='font-size: 70%' href='/tags.html#etckeeper'>etckeeper</a>
-<a style='font-size: 88%' href='/tags.html#github'>github</a>
-<a style='font-size: 128%' href='/tags.html#git'>git</a>
-<a style='font-size: 70%' href='/tags.html#gnuplot'>gnuplot</a>
-<a style='font-size: 70%' href='/tags.html#gmail'>gmail</a>
-<a style='font-size: 70%' href='/tags.html#gs'>gs</a>
-<a style='font-size: 88%' href='/tags.html#gnome'>gnome</a>
-<a style='font-size: 70%' href='/tags.html#imp'>imp</a>
-<a style='font-size: 70%' href='/tags.html#imagemagick'>imagemagick</a>
-<a style='font-size: 99%' href='/tags.html#inkscape'>inkscape</a>
-<a style='font-size: 88%' href='/tags.html#ipython'>ipython</a>
-<a style='font-size: 125%' href='/tags.html#jekyll'>jekyll</a>
-<a style='font-size: 165%' href='/tags.html#linux'>linux</a>
-<a style='font-size: 70%' href='/tags.html#lzma'>lzma</a>
-<a style='font-size: 70%' href='/tags.html#lvm'>lvm</a>
-<a style='font-size: 134%' href='/tags.html#LaTeX'>LaTeX</a>
-<a style='font-size: 118%' href='/tags.html#matplotlib'>matplotlib</a>
-<a style='font-size: 128%' href='/tags.html#mdanalysis'>mdanalysis</a>
-<a style='font-size: 88%' href='/tags.html#mpi'>mpi</a>
-<a style='font-size: 118%' href='/tags.html#modeller'>modeller</a>
-<a style='font-size: 70%' href='/tags.html#mpi4py'>mpi4py</a>
-<a style='font-size: 70%' href='/tags.html#ntp'>ntp</a>
-<a style='font-size: 70%' href='/tags.html#networkx'>networkx</a>
-<a style='font-size: 70%' href='/tags.html#nfs'>nfs</a>
-<a style='font-size: 70%' href='/tags.html#parted'>parted</a>
-<a style='font-size: 70%' href='/tags.html#photo'>photo</a>
-<a style='font-size: 70%' href='/tags.html#ProxyCommand'>ProxyCommand</a>
-<a style='font-size: 122%' href='/tags.html#pdb'>pdb</a>
-<a style='font-size: 70%' href='/tags.html#photos'>photos</a>
-<a style='font-size: 170%' href='/tags.html#python'>python</a>
-<a style='font-size: 70%' href='/tags.html#pulseaudio'>pulseaudio</a>
-<a style='font-size: 70%' href='/tags.html#pv'>pv</a>
-<a style='font-size: 107%' href='/tags.html#parallel'>parallel</a>
-<a style='font-size: 70%' href='/tags.html#pdf'>pdf</a>
-<a style='font-size: 88%' href='/tags.html#restructured-text'>restructured-text</a>
-<a style='font-size: 99%' href='/tags.html#raspberry-pi'>raspberry-pi</a>
-<a style='font-size: 70%' href='/tags.html#ssh'>ssh</a>
-<a style='font-size: 70%' href='/tags.html#ssmtp'>ssmtp</a>
-<a style='font-size: 150%' href='/tags.html#science'>science</a>
-<a style='font-size: 99%' href='/tags.html#svg'>svg</a>
-<a style='font-size: 118%' href='/tags.html#shell'>shell</a>
-<a style='font-size: 70%' href='/tags.html#squashfs'>squashfs</a>
-<a style='font-size: 88%' href='/tags.html#sshfs'>sshfs</a>
-<a style='font-size: 70%' href='/tags.html#saxs'>saxs</a>
-<a style='font-size: 70%' href='/tags.html#scikit-learn'>scikit-learn</a>
-<a style='font-size: 70%' href='/tags.html#slideshow'>slideshow</a>
-<a style='font-size: 70%' href='/tags.html#tikz'>tikz</a>
-<a style='font-size: 70%' href='/tags.html#TapirGo'>TapirGo</a>
-<a style='font-size: 122%' href='/tags.html#vim'>vim</a>
-<a style='font-size: 70%' href='/tags.html#vmd'>vmd</a>
-<a style='font-size: 70%' href='/tags.html#zeitgeist'>zeitgeist</a>
-<a style='font-size: 136%' href='/tags.html#zsh'>zsh</a>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/44d544462360d72e63590fcfd33d2a29.js"> </script>
 
-   </div>
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Oct 18, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/awk/2014/10/18/awk-if-else-syntax.html">awk if-else syntax</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Oct 17, 2014</span>
-
-        <h2>
-          <a class="post-link" href="/jekyll/update/2014/10/17/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-    <!-- Pagination links -->
-    <div class="pagination">
-      
-        
-        <a href="/blog/page13" class="previous">Previous</a>
-        
-      
-      <span class="page_number ">Page: 14 of 14</span>
-      
-        <span class="next ">Next</span>
-      
-    </div>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
-</div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/blog/page14/"
+      data-href="http://bougui505.github.io/2017/02/20/structural_alignment_with_modeller.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">

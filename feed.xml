@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 21 Dec 2016 10:59:32 +0100</pubDate>
-    <lastBuildDate>Wed, 21 Dec 2016 10:59:32 +0100</lastBuildDate>
+    <pubDate>Mon, 20 Feb 2017 15:09:42 +0100</pubDate>
+    <lastBuildDate>Mon, 20 Feb 2017 15:09:42 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Structural alignment with modeller</title>
+        <description>&lt;h1 id=&quot;structural-alignment-with-modeller&quot;&gt;Structural alignment with modeller&lt;/h1&gt;
+
+&lt;p&gt;Align &lt;code class=&quot;highlighter-rouge&quot;&gt;pdb1&lt;/code&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;pdb2&lt;/code&gt; using modeller. The files are overwritten.&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/44d544462360d72e63590fcfd33d2a29.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 20 Feb 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/02/20/structural_alignment_with_modeller.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/02/20/structural_alignment_with_modeller.html</guid>
+        
+        <category>modeller</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Skew normal distribution in python</title>
