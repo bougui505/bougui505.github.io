@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 20 Feb 2017 15:09:42 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Feb 2017 15:09:42 +0100</lastBuildDate>
+    <pubDate>Wed, 01 Mar 2017 09:45:29 +0100</pubDate>
+    <lastBuildDate>Wed, 01 Mar 2017 09:45:29 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Download electron microscopy density map from the EMDataBank directly from shell</title>
+        <description>&lt;h1 id=&quot;download-electron-microscopy-density-map-from-the-emdatabank-directly-from-shell&quot;&gt;Download electron microscopy density map from the EMDataBank directly from shell&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/25db0a52e0d900b507c291a764b9f2aa.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 01 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/03/01/download_electron_microscopy_density_map_from_the_emdatabank_directly_from_shell.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/03/01/download_electron_microscopy_density_map_from_the_emdatabank_directly_from_shell.html</guid>
+        
+        <category>shell</category>
+        
+        <category>science</category>
+        
+        
+      </item>
     
       <item>
         <title>Structural alignment with modeller</title>
