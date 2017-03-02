@@ -6,9 +6,33 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 01 Mar 2017 09:45:29 +0100</pubDate>
-    <lastBuildDate>Wed, 01 Mar 2017 09:45:29 +0100</lastBuildDate>
+    <pubDate>Thu, 02 Mar 2017 16:20:23 +0100</pubDate>
+    <lastBuildDate>Thu, 02 Mar 2017 16:20:23 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Extract a fasta sequence from a pdbfile using python</title>
+        <description>&lt;h1 id=&quot;extract-a-fasta-sequence-from-a-pdbfile-using-python&quot;&gt;Extract a fasta sequence from a pdbfile using python&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6b114ab6b1c56cbd4f0434b395e75855.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 02 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/03/02/extract_a_fasta_sequence_from_a_pdbfile_using_python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/03/02/extract_a_fasta_sequence_from_a_pdbfile_using_python.html</guid>
+        
+        <category>python</category>
+        
+        <category>science</category>
+        
+        <category>pdb</category>
+        
+        <category>fasta</category>
+        
+        
+      </item>
     
       <item>
         <title>Download electron microscopy density map from the EMDataBank directly from shell</title>

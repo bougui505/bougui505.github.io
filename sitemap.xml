@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/03/02/extract_a_fasta_sequence_from_a_pdbfile_using_python.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/03/01/download_electron_microscopy_density_map_from_the_emdatabank_directly_from_shell.html</loc>
         </url>
     
