@@ -113,7 +113,9 @@
 
 <h2 id="format-a-pdb-with-awk-for-fields-atom-atom--serial-number-atom-name-residue-name-chain-identifier-residue-sequence-number-x-y-z">Format a pdb with awk for fields: [ATOM] [Atom  serial number] [Atom name] [Residue name] [Chain identifier] [Residue sequence number] [x] [y] [z]</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">awk <span class="s1">'{if ($1=="ATOM") printf("%-6s%5s %4s %3s %s%4s    %8s%8s%8s\n", $1,$2,$3,$4,$5,$6,$7,$8,$9); else print $0}'</span> filename.pdb</code></pre></figure>
+<noscript><pre>400: Invalid request
+</pre></noscript>
+<script src="https://gist.github.com/cf292df3a67eb4e3596a4877a1813086.js"> </script>
 
 <h2 id="add-model--for-multiple-models-pdb-files">Add MODEL # for multiple models pdb files</h2>
 

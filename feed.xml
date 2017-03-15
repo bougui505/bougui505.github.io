@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 02 Mar 2017 16:20:23 +0100</pubDate>
-    <lastBuildDate>Thu, 02 Mar 2017 16:20:23 +0100</lastBuildDate>
+    <pubDate>Wed, 15 Mar 2017 09:22:29 +0100</pubDate>
+    <lastBuildDate>Wed, 15 Mar 2017 09:22:29 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -7698,7 +7698,9 @@ git config --global pack.threads &lt;span class=&quot;s2&quot;&gt;&quot;1&quot;&
 
 &lt;h2 id=&quot;format-a-pdb-with-awk-for-fields-atom-atom--serial-number-atom-name-residue-name-chain-identifier-residue-sequence-number-x-y-z&quot;&gt;Format a pdb with awk for fields: [ATOM] [Atom  serial number] [Atom name] [Residue name] [Chain identifier] [Residue sequence number] [x] [y] [z]&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;awk &lt;span class=&quot;s1&quot;&gt;&#39;{if ($1==&quot;ATOM&quot;) printf(&quot;%-6s%5s %4s %3s %s%4s    %8s%8s%8s\n&quot;, $1,$2,$3,$4,$5,$6,$7,$8,$9); else print $0}&#39;&lt;/span&gt; filename.pdb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cf292df3a67eb4e3596a4877a1813086.js&quot;&gt; &lt;/script&gt;
 
 &lt;h2 id=&quot;add-model--for-multiple-models-pdb-files&quot;&gt;Add MODEL # for multiple models pdb files&lt;/h2&gt;
 
