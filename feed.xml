@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 15 Mar 2017 09:38:09 +0100</pubDate>
-    <lastBuildDate>Wed, 15 Mar 2017 09:38:09 +0100</lastBuildDate>
+    <pubDate>Mon, 20 Mar 2017 09:50:01 +0100</pubDate>
+    <lastBuildDate>Mon, 20 Mar 2017 09:50:01 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Using pymol from ipython</title>
+        <description>&lt;h1 id=&quot;using-pymol-from-ipython&quot;&gt;Using pymol from ipython&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/bd9a91d83c186f7639aafc94a9561a61.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 20 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/03/20/using_pymol_from_ipython.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/03/20/using_pymol_from_ipython.html</guid>
+        
+        <category>ipython</category>
+        
+        <category>python</category>
+        
+        <category>pymol</category>
+        
+        
+      </item>
     
       <item>
         <title>Split a multi chain pdb into one pdb file per chain using awk</title>
