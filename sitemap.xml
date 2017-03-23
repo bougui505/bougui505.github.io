@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/03/23/print_alphabetical_order_with_awk.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/03/20/using_pymol_from_ipython.html</loc>
         </url>
     

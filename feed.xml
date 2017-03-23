@@ -6,9 +6,36 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 20 Mar 2017 09:50:01 +0100</pubDate>
-    <lastBuildDate>Mon, 20 Mar 2017 09:50:01 +0100</lastBuildDate>
+    <pubDate>Thu, 23 Mar 2017 13:45:50 +0100</pubDate>
+    <lastBuildDate>Thu, 23 Mar 2017 13:45:50 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Print alphabetical order with awk</title>
+        <description>&lt;h1 id=&quot;print-alphabetical-order-with-awk&quot;&gt;Print alphabetical order with awk&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ for i in $(seq 10); do echo $i; done | awk &#39;BEGIN {split(&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;, A, &quot;&quot;)}{print $0, A[$0]}&#39;
+1 A
+2 B
+3 C
+4 D
+5 E
+6 F
+7 G
+8 H
+9 I
+10 J
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 23 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/03/23/print_alphabetical_order_with_awk.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/03/23/print_alphabetical_order_with_awk.html</guid>
+        
+        <category>awk</category>
+        
+        
+      </item>
     
       <item>
         <title>Using pymol from ipython</title>
