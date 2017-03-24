@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 24 Mar 2017 10:02:42 +0100</pubDate>
-    <lastBuildDate>Fri, 24 Mar 2017 10:02:42 +0100</lastBuildDate>
+    <pubDate>Fri, 24 Mar 2017 10:39:10 +0100</pubDate>
+    <lastBuildDate>Fri, 24 Mar 2017 10:39:10 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -57,6 +57,25 @@
         <category>science</category>
         
         <category>javascript</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Recording movie with chimera</title>
+        <description>&lt;h1 id=&quot;recording-movie-with-chimera&quot;&gt;Recording movie with chimera&lt;/h1&gt;
+
+&lt;p&gt;Save each frame as a &lt;code class=&quot;highlighter-rouge&quot;&gt;png&lt;/code&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;movie&lt;/code&gt; directory with pattern &lt;code class=&quot;highlighter-rouge&quot;&gt;movie_*&lt;/code&gt;. Turn the molecule along the x-axis from 0 to 360 degrees:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;movie record format png directory movie pattern movie_*; turn y 1 360; wait; movie stop
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 24 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/03/24/recording_movie_with_chimera.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/03/24/recording_movie_with_chimera.html</guid>
+        
+        <category>chimera</category>
         
         
       </item>
