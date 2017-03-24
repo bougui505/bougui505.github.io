@@ -6,9 +6,60 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 23 Mar 2017 22:07:27 +0100</pubDate>
-    <lastBuildDate>Thu, 23 Mar 2017 22:07:27 +0100</lastBuildDate>
+    <pubDate>Fri, 24 Mar 2017 10:02:42 +0100</pubDate>
+    <lastBuildDate>Fri, 24 Mar 2017 10:02:42 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Using chimera and javascript for browser based interactive view of macromolecular structure</title>
+        <description>&lt;h1 id=&quot;using-chimera-and-javascript-for-browser-based-interactive-view-of-macromolecular-structure&quot;&gt;Using chimera and javascript for browser based interactive view of macromolecular structure&lt;/h1&gt;
+
+&lt;p&gt;Reference: &lt;a href=&quot;https://goo.gl/7BZYZW&quot;&gt;RBVI Tech Note: Displaying Interactive 3D Model Views in Web Browsers&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;560&quot; src=&quot;https://bougui505.github.io/assets/chimera_javascript/show.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;load-your-pdb-file-in-chimera-and-set-your-view&quot;&gt;Load your PDB file in chimera and set your view&lt;/h2&gt;
+
+&lt;h2 id=&quot;run-the-following-script-just-open-it-via-the-menu&quot;&gt;Run the following script (just open it via the menu):&lt;/h2&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2f09af1c91beaf9938f7a0673986059b.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;It will create a lot of &lt;code class=&quot;highlighter-rouge&quot;&gt;png&lt;/code&gt; image files in the working directory. Just create a directory (here named &lt;code class=&quot;highlighter-rouge&quot;&gt;4ci0&lt;/code&gt; as the PDB code) and move them to it.&lt;/p&gt;
+
+&lt;p&gt;A glob image is present at the upper-left corner of the interactive view. The globe image size was selected to balance visibility (so that the globe orientation is easily seen) and size (so that it does not take up too much screen area over the displayed view). The images in different orientation can be downloaded &lt;a href=&quot;https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/bougui505/blog/tree/master/assets/chimera_javascript/globe&quot;&gt;here&lt;/a&gt;. The unzipped directory should be placed in the working directory.&lt;/p&gt;
+
+&lt;h2 id=&quot;create-the-web-content&quot;&gt;Create the web content:&lt;/h2&gt;
+
+&lt;p&gt;The web content for displaying an interactive 3D model view consists of:&lt;/p&gt;
+
+&lt;p&gt;• a javascript file:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/4844291e2d0e03954d093a92436899d4.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;• the main HTML file:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/377e3945986f8e3e39a259457fec3083.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Along with this file, must be present the two folders of image (&lt;code class=&quot;highlighter-rouge&quot;&gt;globe&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;4ci0&lt;/code&gt;; feel free to change the name of this last folder, but do not forget to change the name in the main HTML file to be consistent.)&lt;/p&gt;
+</description>
+        <pubDate>Fri, 24 Mar 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/03/24/using_chimera_and_javascript_for_browser_based_interactive_view_of_macromolecular_structure.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/03/24/using_chimera_and_javascript_for_browser_based_interactive_view_of_macromolecular_structure.html</guid>
+        
+        <category>chimera</category>
+        
+        <category>science</category>
+        
+        <category>javascript</category>
+        
+        
+      </item>
     
       <item>
         <title>Print alphabetical order with awk</title>
