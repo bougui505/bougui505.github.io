@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 27 Mar 2017 09:47:21 +0200</pubDate>
-    <lastBuildDate>Mon, 27 Mar 2017 09:47:21 +0200</lastBuildDate>
+    <pubDate>Mon, 27 Mar 2017 10:07:31 +0200</pubDate>
+    <lastBuildDate>Mon, 27 Mar 2017 10:07:31 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -83,6 +83,10 @@
       <item>
         <title>Generate an HTML slideshow using python</title>
         <description>&lt;h1 id=&quot;generate-an-html-slideshow-using-python&quot;&gt;Generate an HTML slideshow using python&lt;/h1&gt;
+
+&lt;p&gt;The following script could be useful to generate an animated view of a protein structure like this:&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;560&quot; src=&quot;https://bougui505.github.io/assets/movie_4ci0.html&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;noscript&gt;&lt;pre&gt;400: Invalid request
 &lt;/pre&gt;&lt;/noscript&gt;
