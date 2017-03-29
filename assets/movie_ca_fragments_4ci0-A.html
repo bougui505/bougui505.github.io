@@ -733,7 +733,10 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1}
     x[slideIndex-1].style.display = "block";
-    setTimeout(carousel, 50);
+    // Wait 5 seconds for the first frame
+    if (slideIndex == 1) {setTimeout(carousel, 5000);}
+    // else set the user defined period
+    else {setTimeout(carousel, 50);}
 }
 </script>
 </body>
