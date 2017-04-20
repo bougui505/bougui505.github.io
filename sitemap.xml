@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/04/20/merge_multiple_pdb_files_into_a_unique_multichain_pdb_file_with_awk.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/04/06/run_pymol_interactively_from_ipython_notebook.html</loc>
         </url>
     

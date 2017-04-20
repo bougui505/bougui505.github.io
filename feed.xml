@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 07 Apr 2017 11:27:06 +0200</pubDate>
-    <lastBuildDate>Fri, 07 Apr 2017 11:27:06 +0200</lastBuildDate>
+    <pubDate>Thu, 20 Apr 2017 11:11:33 +0200</pubDate>
+    <lastBuildDate>Thu, 20 Apr 2017 11:11:33 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Merge multiple PDB files into a unique multichain PDB file with awk</title>
+        <description>&lt;h1 id=&quot;merge-multiple-pdb-files-into-a-unique-multichain-pdb-file-with-awk&quot;&gt;Merge multiple PDB files into a unique multichain PDB file with awk&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5d93880c0a60903aa734111ce3e23736.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 20 Apr 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/04/20/merge_multiple_pdb_files_into_a_unique_multichain_pdb_file_with_awk.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/04/20/merge_multiple_pdb_files_into_a_unique_multichain_pdb_file_with_awk.html</guid>
+        
+        <category>awk</category>
+        
+        <category>pdb</category>
+        
+        
+      </item>
     
       <item>
         <title>Run pymol interactively from IPython notebook</title>
