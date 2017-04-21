@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 21 Apr 2017 10:01:10 +0200</pubDate>
-    <lastBuildDate>Fri, 21 Apr 2017 10:01:10 +0200</lastBuildDate>
+    <pubDate>Fri, 21 Apr 2017 13:31:24 +0200</pubDate>
+    <lastBuildDate>Fri, 21 Apr 2017 13:31:24 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -28,6 +28,47 @@ pip install borgbackup
         <category>python</category>
         
         <category>virtualenv</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Efficient backuping system using Borgbackup</title>
+        <description>&lt;h1 id=&quot;efficient-backuping-system-using-borgbackup&quot;&gt;Efficient backuping system using Borgbackup&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://borgbackup.readthedocs.io/en/latest/index.html&quot;&gt;BorgBackup&lt;/a&gt; (short: Borg) is a deduplicating backup program. Optionally, it supports compression and authenticated encryption.&lt;/p&gt;
+
+&lt;p&gt;Below, I present some trick for automatic backup using cron.&lt;/p&gt;
+
+&lt;p&gt;First, the main script:&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f9d9d772ea4e065dffcbc204cfd2b042.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;And the cron line to insert to crontab:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*/15 * * * * ionice -c 3 nice -n 19 sh /home/bougui/bin/borgbackup.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Bonus: some convenient aliases:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias borg-list=&quot;borg list --remote-path /home/pi/bin/borg pi@82.231.223.163:/mnt/usb1/mantrisse_backup&quot;
+
+borg-info () {
+    borg info --remote-path /home/pi/bin/borg pi@82.231.223.163:/mnt/usb1/mantrisse_backup::$1
+    }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 21 Apr 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/04/21/efficient_backuping_system_using_borgbackup.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/04/21/efficient_backuping_system_using_borgbackup.html</guid>
+        
+        <category>borg</category>
+        
+        <category>backup</category>
         
         
       </item>
