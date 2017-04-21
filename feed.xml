@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 20 Apr 2017 14:48:34 +0200</pubDate>
-    <lastBuildDate>Thu, 20 Apr 2017 14:48:34 +0200</lastBuildDate>
+    <pubDate>Fri, 21 Apr 2017 10:01:10 +0200</pubDate>
+    <lastBuildDate>Fri, 21 Apr 2017 10:01:10 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Installing Borg(backup) using pip and virtualenv (no root install)</title>
+        <description>&lt;h1 id=&quot;installing-borgbackup-using-pip-and-virtualenv-no-root-install&quot;&gt;Installing Borg(backup) using pip and virtualenv (no root install)&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;virtualenv --python=python3 borg-env
+source borg-env/bin/activate
+# install Borg + Python dependencies into virtualenv
+pip install borgbackup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 21 Apr 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/04/21/installing_borg(backup)_using_pip_and_virtualenv_(no_root_install).html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/04/21/installing_borg(backup)_using_pip_and_virtualenv_(no_root_install).html</guid>
+        
+        <category>python</category>
+        
+        <category>virtualenv</category>
+        
+        
+      </item>
     
       <item>
         <title>Merge multiple PDB files into a unique multichain PDB file with awk</title>
