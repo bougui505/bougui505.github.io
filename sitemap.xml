@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/05/12/pdb_selection_with_awk.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/04/25/merge_multiple_pdb_files_into_one_multimodels_pdb_file_using_awk.html</loc>
         </url>
     
