@@ -6,9 +6,32 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 May 2017 11:24:30 +0200</pubDate>
-    <lastBuildDate>Fri, 12 May 2017 11:24:30 +0200</lastBuildDate>
+    <pubDate>Sun, 14 May 2017 22:40:31 +0200</pubDate>
+    <lastBuildDate>Sun, 14 May 2017 22:40:31 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Spell checking not working in LibreOffice</title>
+        <description>&lt;h1 id=&quot;spell-checking-not-working-in-libreoffice&quot;&gt;Spell checking not working in LibreOffice&lt;/h1&gt;
+
+&lt;p&gt;Just try to install &lt;code class=&quot;highlighter-rouge&quot;&gt;myspell-en-us&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;myspell-fr&lt;/code&gt; for french:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo apt-get install myspell-fr
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and it should work!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 14 May 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/05/14/spell_checking_not_working_in_libreoffice.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/05/14/spell_checking_not_working_in_libreoffice.html</guid>
+        
+        <category>libreoffice</category>
+        
+        <category>debian</category>
+        
+        
+      </item>
     
       <item>
         <title>PDB selection with awk</title>
