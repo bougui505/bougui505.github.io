@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Mathjax in jekyll based blog</title>
+    <title>Install ggplot for python in a virtualenv and use it with ipython notebook</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/jekyll/2014/10/23/mathjax-in-jekyll-based-blog.html">
+    <link rel="canonical" href="http://bougui505.github.io/2017/06/23/install_ggplot_for_python_in_a_virtualenv_and_use_it_with_ipython_notebook.html">
 </head>
 
 
@@ -113,24 +113,46 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="mathjax-in-jekyll-based-blog">Mathjax in jekyll based blog</h1>
+        <h1 id="install-ggplot-for-python-in-a-virtualenv-and-use-it-with-ipython-notebook">Install ggplot for python in a virtualenv and use it with ipython notebook</h1>
 
-<p>To write math in your jekyll blog you can use mathjax. To enable it, just add this line in <code class="highlighter-rouge">_includes/header.html</code>:</p>
+<h2 id="create-the-virtual-environment">Create the virtual environment:</h2>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>virtualenv --system-site-packages ggplot
+</code></pre>
+</div>
 
-<p>just after the line:</p>
+<h2 id="activate-the-virtual-environment">Activate the virtual environment:</h2>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"site-header"</span><span class="nt">&gt;</span></code></pre></figure>
+<div class="highlighter-rouge"><pre class="highlight"><code>source ggplot/bin/activate
+</code></pre>
+</div>
 
-<p>That’s all, now you can use mathjax with standard LaTeX commands. For inline math use the <code class="highlighter-rouge">$$\frac{a}{b}$$</code> instead of <code class="highlighter-rouge">$\frac{a}{b}$</code>.</p>
+<h2 id="install-ggplot-in-the-virtual-environment">Install ggplot in the virtual environment:</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pip install -U ggplot
+</code></pre>
+</div>
+
+<h2 id="install-the-ipykernel-for-the-virtual-environment">Install the ipykernel for the virtual environment:</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pip install ipykernel
+</code></pre>
+</div>
+
+<h2 id="run-the-kernel-self-install-script">Run the kernel “self-install” script:</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>python -m ipykernel install --user --name=ggplot
+</code></pre>
+</div>
+
+<p>You should now be able to see your kernel in the IPython notebook menu: Kernel -&gt; Change kernel and be able so switch to it (you may need to refresh the page before it appears in the list). IPython will remember which kernel to use for that notebook from then on.</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/jekyll/2014/10/23/mathjax-in-jekyll-based-blog.html"
+      data-href="http://bougui505.github.io/2017/06/23/install_ggplot_for_python_in_a_virtualenv_and_use_it_with_ipython_notebook.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">

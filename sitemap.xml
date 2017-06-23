@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/06/23/install_ggplot_for_python_in_a_virtualenv_and_use_it_with_ipython_notebook.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/05/23/simple_topological_alignment_of_2_proteins_(which_could_be_multichains)_after_prior_structural_alignment.html</loc>
         </url>
     

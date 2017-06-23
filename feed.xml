@@ -6,9 +6,56 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 23 May 2017 16:19:10 +0200</pubDate>
-    <lastBuildDate>Tue, 23 May 2017 16:19:10 +0200</lastBuildDate>
+    <pubDate>Fri, 23 Jun 2017 10:31:42 +0200</pubDate>
+    <lastBuildDate>Fri, 23 Jun 2017 10:31:42 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Install ggplot for python in a virtualenv and use it with ipython notebook</title>
+        <description>&lt;h1 id=&quot;install-ggplot-for-python-in-a-virtualenv-and-use-it-with-ipython-notebook&quot;&gt;Install ggplot for python in a virtualenv and use it with ipython notebook&lt;/h1&gt;
+
+&lt;h2 id=&quot;create-the-virtual-environment&quot;&gt;Create the virtual environment:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;virtualenv --system-site-packages ggplot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;activate-the-virtual-environment&quot;&gt;Activate the virtual environment:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source ggplot/bin/activate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;install-ggplot-in-the-virtual-environment&quot;&gt;Install ggplot in the virtual environment:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -U ggplot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;install-the-ipykernel-for-the-virtual-environment&quot;&gt;Install the ipykernel for the virtual environment:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install ipykernel
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;run-the-kernel-self-install-script&quot;&gt;Run the kernel “self-install” script:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python -m ipykernel install --user --name=ggplot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;You should now be able to see your kernel in the IPython notebook menu: Kernel -&amp;gt; Change kernel and be able so switch to it (you may need to refresh the page before it appears in the list). IPython will remember which kernel to use for that notebook from then on.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/06/23/install_ggplot_for_python_in_a_virtualenv_and_use_it_with_ipython_notebook.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/06/23/install_ggplot_for_python_in_a_virtualenv_and_use_it_with_ipython_notebook.html</guid>
+        
+        <category>python</category>
+        
+        <category>ggplot</category>
+        
+        
+      </item>
     
       <item>
         <title>Simple topological alignment of 2 proteins (which could be multichains) after prior structural alignment</title>
