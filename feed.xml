@@ -6,9 +6,33 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 27 Jun 2017 10:46:21 +0200</pubDate>
-    <lastBuildDate>Tue, 27 Jun 2017 10:46:21 +0200</lastBuildDate>
+    <pubDate>Wed, 28 Jun 2017 16:53:37 +0200</pubDate>
+    <lastBuildDate>Wed, 28 Jun 2017 16:53:37 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Set the default language (english) for the fish (shell)</title>
+        <description>&lt;h1 id=&quot;set-the-default-language-english-for-the-fish-shell&quot;&gt;Set the default language (english) for the fish (shell)&lt;/h1&gt;
+
+&lt;p&gt;Just set the LC_ALL variable:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set -U -x LC_ALL C.UTF-8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-U&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--universal&lt;/code&gt; causes the specified shell variable to be given a universal scope. If this option is supplied, the variable will be shared between all the current users fish instances on the current computer, and will be preserved across restarts of the shell.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;-x&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--export&lt;/code&gt; causes the specified shell variable to be exported to child processes (making it an “environment variable”)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Jun 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/06/28/set_the_default_language_(english)_for_the_fish_(shell).html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/06/28/set_the_default_language_(english)_for_the_fish_(shell).html</guid>
+        
+        <category>fish</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Align two sequences using modeller and create a dictionnary mapping from the alignment object</title>
