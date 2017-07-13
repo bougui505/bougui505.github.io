@@ -6,9 +6,43 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 28 Jun 2017 16:53:37 +0200</pubDate>
-    <lastBuildDate>Wed, 28 Jun 2017 16:53:37 +0200</lastBuildDate>
+    <pubDate>Thu, 13 Jul 2017 09:16:20 +0200</pubDate>
+    <lastBuildDate>Thu, 13 Jul 2017 09:16:20 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Global distance test (GDT) and Longest Continuous Segments (LCS) with python</title>
+        <description>&lt;h1 id=&quot;global-distance-test-gdt-and-longest-continuous-segments-lcs-with-python&quot;&gt;Global distance test (GDT) and Longest Continuous Segments (LCS) with python&lt;/h1&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./gdt.py protein1.pdb ref1.pdb protein2.pdb ref2.pdb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Results:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/gdt.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/lcs.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/d6f4062ad05cc4df738adcc267aba37c.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 13 Jul 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/07/13/global_distance_test_(gdt)_and_longest_continuous_segments_(lcs)_with_python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/07/13/global_distance_test_(gdt)_and_longest_continuous_segments_(lcs)_with_python.html</guid>
+        
+        <category>python</category>
+        
+        <category>modeller</category>
+        
+        <category>science</category>
+        
+        
+      </item>
     
       <item>
         <title>Set the default language (english) for the fish (shell)</title>
