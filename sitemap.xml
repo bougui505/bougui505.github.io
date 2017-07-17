@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/07/17/a_short_history_of_traffic_engineering.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/07/13/global_distance_test_(gdt)_and_longest_continuous_segments_(lcs)_with_python.html</loc>
         </url>
     
