@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 20 Jul 2017 10:27:26 +0200</pubDate>
-    <lastBuildDate>Thu, 20 Jul 2017 10:27:26 +0200</lastBuildDate>
+    <pubDate>Fri, 25 Aug 2017 11:01:20 +0200</pubDate>
+    <lastBuildDate>Fri, 25 Aug 2017 11:01:20 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>A simple script to renumber residue ids or atom serial number in PDB file using awk</title>
+        <description>&lt;h1 id=&quot;a-simple-script-to-renumber-residue-ids-or-atom-serial-number-in-pdb-file-using-awk&quot;&gt;A simple script to renumber residue ids or atom serial number in PDB file using awk&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c177ad704da5b84b97bd89bd67a9caa7.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 25 Aug 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/08/25/a_simple_script_to_renumber_residue_ids_or_atom_serial_number_in_pdb_file_using_awk.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/08/25/a_simple_script_to_renumber_residue_ids_or_atom_serial_number_in_pdb_file_using_awk.html</guid>
+        
+        <category>pdb</category>
+        
+        <category>awk</category>
+        
+        
+      </item>
     
       <item>
         <title>A short history of traffic engineering</title>

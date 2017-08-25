@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/08/25/a_simple_script_to_renumber_residue_ids_or_atom_serial_number_in_pdb_file_using_awk.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/07/17/a_short_history_of_traffic_engineering.html</loc>
         </url>
     
