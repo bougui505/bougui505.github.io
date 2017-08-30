@@ -6,9 +6,37 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 25 Aug 2017 17:44:13 +0200</pubDate>
-    <lastBuildDate>Fri, 25 Aug 2017 17:44:13 +0200</lastBuildDate>
+    <pubDate>Wed, 30 Aug 2017 15:11:20 +0200</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2017 15:11:20 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Process each frame of a DCD trajectory file using any script file using a standard PDB file as input</title>
+        <description>&lt;h1 id=&quot;process-each-frame-of-a-dcd-trajectory-file-using-any-script-file-using-a-standard-pdb-file-as-input&quot;&gt;Process each frame of a DCD trajectory file using any script file using a standard PDB file as input&lt;/h1&gt;
+
+&lt;p&gt;Example usage:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;process_dcd traj.dcd topo.pdb &quot;myscript {} arg2 arg3 ...&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/bc327291a686a3245c39176df6bd2dd8.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 30 Aug 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/08/30/process_each_frame_of_a_dcd_trajectory_file_using_any_script_file_using_a_standard_pdb_file_as_input.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/08/30/process_each_frame_of_a_dcd_trajectory_file_using_any_script_file_using_a_standard_pdb_file_as_input.html</guid>
+        
+        <category>science</category>
+        
+        <category>catdcd</category>
+        
+        <category>dcd</category>
+        
+        
+      </item>
     
       <item>
         <title>An automatic system to commit Git changes using Incron</title>
