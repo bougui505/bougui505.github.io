@@ -129,6 +129,12 @@
 </code></pre>
 </div>
 
+<h2 id="optional-remove-all-partitions-data-and-create-empty-disk">Optional: Remove all partitions, data and create empty disk</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo dd if=/dev/zero of=/dev/sdb bs=512 count=1
+</code></pre>
+</div>
+
 <h2 id="parted">Parted</h2>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo parted /dev/sdb
