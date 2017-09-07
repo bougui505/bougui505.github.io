@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/08/30/process_each_frame_of_a_dcd_trajectory_file_using_any_script_file_using_a_standard_pdb_file_as_input.html</loc>
         </url>
     

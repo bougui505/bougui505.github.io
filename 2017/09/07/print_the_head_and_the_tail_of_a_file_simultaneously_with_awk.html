@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Moving average in python</title>
+    <title>Print the head and the tail of a file simultaneously with awk</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2016/04/05/moving_average_in_python.html">
+    <link rel="canonical" href="http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html">
 </head>
 
 
@@ -115,25 +115,21 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="moving-average-in-python">Moving average in python</h1>
+        <h1 id="print-the-head-and-the-tail-of-a-file-simultaneously-with-awk">Print the head and the tail of a file simultaneously with awk</h1>
 
-<p>Below is the code for computing a moving average in python:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">movingaverage</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window_size</span><span class="p">):</span>
-    <span class="n">window</span><span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">window_size</span><span class="p">))</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">window_size</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">numpy</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window</span><span class="p">,</span> <span class="s">'same'</span><span class="p">)</span>
-
-<span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="n">logE</span><span class="p">,</span> <span class="s">'-'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'gray'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">movingaverage</span><span class="p">(</span><span class="o">-</span><span class="n">logE</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">3.</span><span class="p">)</span></code></pre></figure>
-
-<p><img src="/assets/moving_average.png" alt="moving_average" /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>function headtail {
+	# print the head and the tail
+	awk '{i+=1; data[i]=$0} END{for (j=1; j&lt;=10; j++){print data[j]}; print "---"; for (k=i-10;k&lt;=i;k++){print data[k]}}' $1
+}
+</code></pre>
+</div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2016/04/05/moving_average_in_python.html"
+      data-href="http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
