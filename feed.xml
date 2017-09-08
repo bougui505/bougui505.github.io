@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 07 Sep 2017 16:41:13 +0200</pubDate>
-    <lastBuildDate>Thu, 07 Sep 2017 16:41:13 +0200</lastBuildDate>
+    <pubDate>Fri, 08 Sep 2017 08:59:55 +0200</pubDate>
+    <lastBuildDate>Fri, 08 Sep 2017 08:59:55 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -2980,6 +2980,12 @@ clonezilla) on an usb stick or a CD.&lt;/p&gt;
 &lt;h3 id=&quot;mount-the-lv&quot;&gt;Mount the LV:&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo mount /backup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;rename-a-logical-volume&quot;&gt;Rename a logical volume:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bougui@mantrisse ~&amp;gt; sudo lvrename VG_NAME OLD_LV_NAME NEW_LV_NAME
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
