@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/09/11/align_two_pdb_files_using_biopython.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html</loc>
         </url>
     

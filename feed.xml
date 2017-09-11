@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 08 Sep 2017 08:59:55 +0200</pubDate>
-    <lastBuildDate>Fri, 08 Sep 2017 08:59:55 +0200</lastBuildDate>
+    <pubDate>Mon, 11 Sep 2017 10:12:59 +0200</pubDate>
+    <lastBuildDate>Mon, 11 Sep 2017 10:12:59 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Align two PDB files using Biopython</title>
+        <description>&lt;h1 id=&quot;align-two-pdb-files-using-biopython&quot;&gt;Align two PDB files using Biopython&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/006e232c294db2303393c5a6270d1e8d.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 11 Sep 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/09/11/align_two_pdb_files_using_biopython.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/09/11/align_two_pdb_files_using_biopython.html</guid>
+        
+        <category>python</category>
+        
+        <category>biopython</category>
+        
+        
+      </item>
     
       <item>
         <title>Print the head and the tail of a file simultaneously with awk</title>
