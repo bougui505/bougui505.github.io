@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/09/19/simple_slurm_monitoring_using_awk.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html</loc>
         </url>
     
