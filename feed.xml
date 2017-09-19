@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Sep 2017 09:33:53 +0200</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2017 09:33:53 +0200</lastBuildDate>
+    <pubDate>Tue, 19 Sep 2017 10:57:48 +0200</pubDate>
+    <lastBuildDate>Tue, 19 Sep 2017 10:57:48 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -26,6 +26,26 @@
         <category>slurm</category>
         
         <category>awk</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Simple python clone of gnu datamash</title>
+        <description>&lt;h1 id=&quot;simple-python-clone-of-gnu-datamash&quot;&gt;Simple python clone of gnu datamash&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9a25fe14738a6e8f20cea67e1562aaf2.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 19 Sep 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/09/19/simple_python_clone_of_gnu_datamash.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/09/19/simple_python_clone_of_gnu_datamash.html</guid>
+        
+        <category>datamash</category>
+        
+        <category>python</category>
         
         
       </item>
