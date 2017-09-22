@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/09/22/simulate_a_em_map_from_a_pdb_file_using_tempy.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/09/19/simple_slurm_monitoring_using_awk.html</loc>
         </url>
     

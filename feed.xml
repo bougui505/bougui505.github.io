@@ -6,9 +6,35 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Sep 2017 10:57:48 +0200</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2017 10:57:48 +0200</lastBuildDate>
+    <pubDate>Fri, 22 Sep 2017 10:14:22 +0200</pubDate>
+    <lastBuildDate>Fri, 22 Sep 2017 10:14:22 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Simulate a EM map from a pdb file using TEMPy</title>
+        <description>&lt;h1 id=&quot;simulate-a-em-map-from-a-pdb-file-using-tempy&quot;&gt;Simulate a EM map from a pdb file using TEMPy&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3885bd615a631ec5cbaec3d731e374e8.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 22 Sep 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/09/22/simulate_a_em_map_from_a_pdb_file_using_tempy.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/09/22/simulate_a_em_map_from_a_pdb_file_using_tempy.html</guid>
+        
+        <category>python</category>
+        
+        <category>science</category>
+        
+        <category>pdb</category>
+        
+        <category>EM</category>
+        
+        <category>tempy</category>
+        
+        
+      </item>
     
       <item>
         <title>Simple slurm monitoring using awk</title>
