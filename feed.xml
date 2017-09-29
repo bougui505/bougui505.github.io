@@ -6,9 +6,35 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 22 Sep 2017 10:14:22 +0200</pubDate>
-    <lastBuildDate>Fri, 22 Sep 2017 10:14:22 +0200</lastBuildDate>
+    <pubDate>Fri, 29 Sep 2017 08:57:45 +0200</pubDate>
+    <lastBuildDate>Fri, 29 Sep 2017 08:57:45 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Automatically change the tmux pane color for SSH session</title>
+        <description>&lt;h1 id=&quot;automatically-change-the-tmux-pane-color-for-ssh-session&quot;&gt;Automatically change the tmux pane color for SSH session&lt;/h1&gt;
+
+&lt;p&gt;Add this line to your &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt; (should also work with bash – &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function color_ssh() {
+    trap &quot;tmux select-pane -P &#39;bg=default&#39;&quot; 0 1 2 3 4 5 6
+    tmux select-pane -P &#39;bg=colour230&#39;
+    ssh $@
+}
+alias ssh=color_ssh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 29 Sep 2017 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2017/09/29/automatically_change_the_tmux_pane_color_for_ssh_session.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/09/29/automatically_change_the_tmux_pane_color_for_ssh_session.html</guid>
+        
+        <category>tmux</category>
+        
+        <category>ssh</category>
+        
+        
+      </item>
     
       <item>
         <title>Simulate a EM map from a pdb file using TEMPy</title>
