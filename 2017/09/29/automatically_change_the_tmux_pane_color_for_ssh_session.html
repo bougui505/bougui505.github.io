@@ -120,8 +120,10 @@
 <p>Add this line to your <code class="highlighter-rouge">.zshrc</code> (should also work with bash – <code class="highlighter-rouge">.bashrc</code>)</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>function color_ssh() {
-    trap "tmux select-pane -P 'bg=default'" 0 1 2 3 4 5 6
-    tmux select-pane -P 'bg=colour230'
+    if [[ "$TERM" = "screen" ]]; then
+        trap "tmux select-pane -P 'bg=default'" 0 1 2 3 4 5 6
+        tmux select-pane -P 'bg=colour230'
+    fi
     ssh $@
 }
 alias ssh=color_ssh
