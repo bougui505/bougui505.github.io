@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 16 Nov 2017 13:47:57 +0100</pubDate>
-    <lastBuildDate>Thu, 16 Nov 2017 13:47:57 +0100</lastBuildDate>
+    <pubDate>Thu, 16 Nov 2017 14:37:20 +0100</pubDate>
+    <lastBuildDate>Thu, 16 Nov 2017 14:37:20 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -34,6 +34,28 @@
         <category>python</category>
         
         <category>pdb</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Fix incomplete sidechains in a pdb file with a Chimera script</title>
+        <description>&lt;h1 id=&quot;fix-incomplete-sidechains-in-a-pdb-file-with-a-chimera-script&quot;&gt;Fix incomplete sidechains in a pdb file with a Chimera script&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c8599a6659b368c18b45bc321c49a0b1.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 16 Nov 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/11/16/fix_incomplete_sidechains_in_a_pdb_file_with_a_chimera_script.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/11/16/fix_incomplete_sidechains_in_a_pdb_file_with_a_chimera_script.html</guid>
+        
+        <category>chimera</category>
+        
+        <category>pdb</category>
+        
+        <category>python</category>
         
         
       </item>
