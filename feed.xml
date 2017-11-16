@@ -6,9 +6,37 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 29 Sep 2017 09:10:01 +0200</pubDate>
-    <lastBuildDate>Fri, 29 Sep 2017 09:10:01 +0200</lastBuildDate>
+    <pubDate>Thu, 16 Nov 2017 13:47:57 +0100</pubDate>
+    <lastBuildDate>Thu, 16 Nov 2017 13:47:57 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Using chimera dockprep tool from command line</title>
+        <description>&lt;h1 id=&quot;using-chimera-dockprep-tool-from-command-line&quot;&gt;Using chimera dockprep tool from command line&lt;/h1&gt;
+
+&lt;p&gt;run dock prep from command line with:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chimera --nogui file.pdb dockprep.py outfilename.mol2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/11538913.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 16 Nov 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/11/16/using_chimera_dockprep_tool_from_command_line.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/11/16/using_chimera_dockprep_tool_from_command_line.html</guid>
+        
+        <category>chimera</category>
+        
+        <category>python</category>
+        
+        <category>pdb</category>
+        
+        
+      </item>
     
       <item>
         <title>Automatically change the tmux pane color for SSH session</title>

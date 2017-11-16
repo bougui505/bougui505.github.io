@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/11/16/using_chimera_dockprep_tool_from_command_line.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/09/29/automatically_change_the_tmux_pane_color_for_ssh_session.html</loc>
         </url>
     
