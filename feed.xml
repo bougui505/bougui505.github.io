@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 16 Nov 2017 14:37:20 +0100</pubDate>
-    <lastBuildDate>Thu, 16 Nov 2017 14:37:20 +0100</lastBuildDate>
+    <pubDate>Fri, 17 Nov 2017 08:46:58 +0100</pubDate>
+    <lastBuildDate>Fri, 17 Nov 2017 08:46:58 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -200,12 +200,10 @@ alias ssh=color_ssh
         <title>Print the head and the tail of a file simultaneously with awk</title>
         <description>&lt;h1 id=&quot;print-the-head-and-the-tail-of-a-file-simultaneously-with-awk&quot;&gt;Print the head and the tail of a file simultaneously with awk&lt;/h1&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function headtail {
-	# print the head and the tail
-	awk &#39;{i+=1; data[i]=$0} END{for (j=1; j&amp;lt;=10; j++){print data[j]}; print &quot;---&quot;; for (k=i-10;k&amp;lt;=i;k++){print data[k]}}&#39; $1
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/85d5c3d5017108739a74d143c4f44afa.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 07 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html</link>
