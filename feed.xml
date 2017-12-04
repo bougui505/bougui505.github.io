@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Dec 2017 14:33:17 +0100</pubDate>
-    <lastBuildDate>Mon, 04 Dec 2017 14:33:17 +0100</lastBuildDate>
+    <pubDate>Mon, 04 Dec 2017 14:52:50 +0100</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2017 14:52:50 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Simple script to mount or unmount a squashfs archive</title>
+        <description>&lt;h1 id=&quot;simple-script-to-mount-or-unmount-a-squashfs-archive&quot;&gt;Simple script to mount or unmount a squashfs archive&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/851560a65384d1dc3569c6b8a8d97c56.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 04 Dec 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/12/04/simple_script_to_mount_or_unmount_a_squashfs_archive.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/12/04/simple_script_to_mount_or_unmount_a_squashfs_archive.html</guid>
+        
+        <category>squashfs</category>
+        
+        
+      </item>
     
       <item>
         <title>Simple script to automate the creation of squashfs archives</title>
