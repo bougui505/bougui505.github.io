@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Dec 2017 14:52:50 +0100</pubDate>
-    <lastBuildDate>Mon, 04 Dec 2017 14:52:50 +0100</lastBuildDate>
+    <pubDate>Mon, 04 Dec 2017 17:11:08 +0100</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2017 17:11:08 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -42,6 +42,28 @@
         <guid isPermaLink="true">http://bougui505.github.io/2017/12/04/simple_script_to_automate_the_creation_of_squashfs_archives.html</guid>
         
         <category>squashfs</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Computing Solvent Accessible Surface Area (SASA) Calculation from a dcd trajectory file using MDTraj</title>
+        <description>&lt;h1 id=&quot;computing-solvent-accessible-surface-area-sasa-calculation-from-a-dcd-trajectory-file-using-mdtraj&quot;&gt;Computing Solvent Accessible Surface Area (SASA) Calculation from a dcd trajectory file using MDTraj&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/285628ec2643a56276cca31fb7ff120d.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 04 Dec 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/12/04/computing_solvent_accessible_surface_area_(sasa)_calculation_from_a_dcd_trajectory_file_using_mdtraj.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/12/04/computing_solvent_accessible_surface_area_(sasa)_calculation_from_a_dcd_trajectory_file_using_mdtraj.html</guid>
+        
+        <category>mdtraj</category>
+        
+        <category>python</category>
+        
+        <category>dcd</category>
         
         
       </item>
