@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 17 Nov 2017 08:46:58 +0100</pubDate>
-    <lastBuildDate>Fri, 17 Nov 2017 08:46:58 +0100</lastBuildDate>
+    <pubDate>Mon, 04 Dec 2017 11:12:09 +0100</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2017 11:12:09 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Simple script to automate the creation of squashfs archives</title>
+        <description>&lt;h1 id=&quot;simple-script-to-automate-the-creation-of-squashfs-archives&quot;&gt;Simple script to automate the creation of squashfs archives&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/dbdb82fba6846c1e895e7f85a82ad460.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 04 Dec 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/12/04/simple_script_to_automate_the_creation_of_squashfs_archives.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/12/04/simple_script_to_automate_the_creation_of_squashfs_archives.html</guid>
+        
+        <category>squashfs</category>
+        
+        
+      </item>
     
       <item>
         <title>Using chimera dockprep tool from command line</title>

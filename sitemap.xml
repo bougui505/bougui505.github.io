@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/12/04/simple_script_to_automate_the_creation_of_squashfs_archives.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/11/16/using_chimera_dockprep_tool_from_command_line.html</loc>
         </url>
     
