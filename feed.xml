@@ -6,9 +6,33 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Dec 2017 17:11:08 +0100</pubDate>
-    <lastBuildDate>Mon, 04 Dec 2017 17:11:08 +0100</lastBuildDate>
+    <pubDate>Thu, 14 Dec 2017 11:04:57 +0100</pubDate>
+    <lastBuildDate>Thu, 14 Dec 2017 11:04:57 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Display basic information from a electron density map MRC file</title>
+        <description>&lt;h1 id=&quot;display-basic-information-from-a-electron-density-map-mrc-file&quot;&gt;Display basic information from a electron density map MRC file&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/98a3e71027320928260fc0422328a97a.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 14 Dec 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/12/14/display_basic_information_from_a_electron_density_map_mrc_file.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/12/14/display_basic_information_from_a_electron_density_map_mrc_file.html</guid>
+        
+        <category>mrc</category>
+        
+        <category>tempy</category>
+        
+        <category>em</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Simple script to mount or unmount a squashfs archive</title>
