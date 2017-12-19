@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2017/12/19/resample_mrc_em_density_map_file_using_tempy.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2017/12/14/display_basic_information_from_a_electron_density_map_mrc_file.html</loc>
         </url>
     

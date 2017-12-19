@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 Dec 2017 11:04:57 +0100</pubDate>
-    <lastBuildDate>Thu, 14 Dec 2017 11:04:57 +0100</lastBuildDate>
+    <pubDate>Tue, 19 Dec 2017 09:16:41 +0100</pubDate>
+    <lastBuildDate>Tue, 19 Dec 2017 09:16:41 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Resample MRC EM density map file using TEMPy</title>
+        <description>&lt;h1 id=&quot;resample-mrc-em-density-map-file-using-tempy&quot;&gt;Resample MRC EM density map file using TEMPy&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1950f094bfabaf6506bc6dc7c85e2022.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 19 Dec 2017 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2017/12/19/resample_mrc_em_density_map_file_using_tempy.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2017/12/19/resample_mrc_em_density_map_file_using_tempy.html</guid>
+        
+        <category>tempy</category>
+        
+        <category>mrc</category>
+        
+        <category>EM</category>
+        
+        
+      </item>
     
       <item>
         <title>Display basic information from a electron density map MRC file</title>
