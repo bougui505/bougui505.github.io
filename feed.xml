@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2018 09:51:44 +0100</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 09:51:44 +0100</lastBuildDate>
+    <pubDate>Fri, 12 Jan 2018 10:43:04 +0100</pubDate>
+    <lastBuildDate>Fri, 12 Jan 2018 10:43:04 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -28,6 +28,30 @@
         <category>python</category>
         
         <category>mrc</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Automatic cropped (trimmed) of an EM density map in MRC format to get the minimal box size</title>
+        <description>&lt;h1 id=&quot;automatic-cropped-trimmed-of-an-em-density-map-in-mrc-format-to-get-the-minimal-box-size&quot;&gt;Automatic cropped (trimmed) of an EM density map in MRC format to get the minimal box size&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2faf00b94a4793d3171af244e35a61ee.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 12 Jan 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/01/12/automatic_cropped_(trimmed)_of_an_em_density_map_in_mrc_format_to_get_the_minimal_box_size.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/01/12/automatic_cropped_(trimmed)_of_an_em_density_map_in_mrc_format_to_get_the_minimal_box_size.html</guid>
+        
+        <category>mrc</category>
+        
+        <category>tempy</category>
+        
+        <category>python</category>
+        
+        <category>EM</category>
         
         
       </item>
