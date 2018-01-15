@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 12 Jan 2018 10:43:04 +0100</pubDate>
-    <lastBuildDate>Fri, 12 Jan 2018 10:43:04 +0100</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 11:06:04 +0100</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 11:06:04 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Simple script to download a pdb file from the command line</title>
+        <description>&lt;h1 id=&quot;simple-script-to-download-a-pdb-file-from-the-command-line&quot;&gt;Simple script to download a pdb file from the command line&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/dd73d731c3950ca3a09c87ea9989cecd.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 15 Jan 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/01/15/simple_script_to_download_a_pdb_file_from_the_command_line.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/01/15/simple_script_to_download_a_pdb_file_from_the_command_line.html</guid>
+        
+        <category>pdb</category>
+        
+        
+      </item>
     
       <item>
         <title>Shift the origin of an EM map in MRC format using Tempy</title>
