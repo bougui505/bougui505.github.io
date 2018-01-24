@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 15 Jan 2018 11:06:04 +0100</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 11:06:04 +0100</lastBuildDate>
+    <pubDate>Wed, 24 Jan 2018 16:34:56 +0100</pubDate>
+    <lastBuildDate>Wed, 24 Jan 2018 16:34:56 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Compute the global distance test (GDT) with pymol</title>
+        <description>&lt;h1 id=&quot;compute-the-global-distance-test-gdt-with-pymol&quot;&gt;Compute the global distance test (GDT) with pymol&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5d8bbd714499daa72cc158a0a9a2e1af.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 24 Jan 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/01/24/compute_the_global_distance_test_(gdt)_with_pymol.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/01/24/compute_the_global_distance_test_(gdt)_with_pymol.html</guid>
+        
+        <category>pymol</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Simple script to download a pdb file from the command line</title>

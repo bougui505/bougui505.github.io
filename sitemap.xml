@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2018/01/24/compute_the_global_distance_test_(gdt)_with_pymol.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/01/15/simple_script_to_download_a_pdb_file_from_the_command_line.html</loc>
         </url>
     
