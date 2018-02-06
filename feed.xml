@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 24 Jan 2018 16:34:56 +0100</pubDate>
-    <lastBuildDate>Wed, 24 Jan 2018 16:34:56 +0100</lastBuildDate>
+    <pubDate>Tue, 06 Feb 2018 11:23:05 +0100</pubDate>
+    <lastBuildDate>Tue, 06 Feb 2018 11:23:05 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>List and filter files based on timestamp</title>
+        <description>&lt;h1 id=&quot;list-and-filter-files-based-on-timestamp&quot;&gt;List and filter files based on timestamp&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/7f9396e1350f3b6b7cd2f6ac1bb72ab6.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 06 Feb 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/02/06/list_and_filter_files_based_on_timestamp.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/02/06/list_and_filter_files_based_on_timestamp.html</guid>
+        
+        <category>linux</category>
+        
+        <category>shell</category>
+        
+        <category>zsh</category>
+        
+        
+      </item>
     
       <item>
         <title>Compute the global distance test (GDT) with pymol</title>
