@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 06 Feb 2018 11:23:05 +0100</pubDate>
-    <lastBuildDate>Tue, 06 Feb 2018 11:23:05 +0100</lastBuildDate>
+    <pubDate>Wed, 07 Feb 2018 16:59:37 +0100</pubDate>
+    <lastBuildDate>Wed, 07 Feb 2018 16:59:37 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Simple script to monitor the memory usage of a process given its PID</title>
+        <description>&lt;h1 id=&quot;simple-script-to-monitor-the-memory-usage-of-a-process-given-its-pid&quot;&gt;Simple script to monitor the memory usage of a process given its PID&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/90583d8ab98c13d8d082ee4248876866.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 07 Feb 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/02/07/simple_script_to_monitor_the_memory_usage_of_a_process_given_its_pid.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/02/07/simple_script_to_monitor_the_memory_usage_of_a_process_given_its_pid.html</guid>
+        
+        <category>linux</category>
+        
+        <category>shell</category>
+        
+        
+      </item>
     
       <item>
         <title>List and filter files based on timestamp</title>
