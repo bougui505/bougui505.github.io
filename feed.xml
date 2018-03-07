@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 07 Feb 2018 16:59:37 +0100</pubDate>
-    <lastBuildDate>Wed, 07 Feb 2018 16:59:37 +0100</lastBuildDate>
+    <pubDate>Wed, 07 Mar 2018 09:17:27 +0100</pubDate>
+    <lastBuildDate>Wed, 07 Mar 2018 09:17:27 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>ZSH-Bash string manipulation</title>
+        <description>&lt;h1 id=&quot;zsh-bash-string-manipulation&quot;&gt;ZSH-Bash string manipulation&lt;/h1&gt;
+
+&lt;p&gt;Useful tips from &lt;a href=&quot;http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation&quot;&gt;Tim’s blag blog&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;800&quot; height=&quot;1200&quot; src=&quot;/assets/ZSH_Bash_string_manipulation_Tim_s_blag.html&quot;&gt;&lt;/iframe&gt;
+
+</description>
+        <pubDate>Wed, 07 Mar 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/03/07/zsh-bash_string_manipulation.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/03/07/zsh-bash_string_manipulation.html</guid>
+        
+        <category>zsh</category>
+        
+        <category>bash</category>
+        
+        
+      </item>
     
       <item>
         <title>Simple script to monitor the memory usage of a process given its PID</title>

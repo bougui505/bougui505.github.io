@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2018/03/07/zsh-bash_string_manipulation.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/02/07/simple_script_to_monitor_the_memory_usage_of_a_process_given_its_pid.html</loc>
         </url>
     

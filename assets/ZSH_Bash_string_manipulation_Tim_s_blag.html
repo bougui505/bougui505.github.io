@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0072)http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="MSSmartTagsPreventParsing" content="TRUE">
+  <meta name="ROBOTS" content="INDEX, FOLLOW, NOARCHIVE">
+  
+  <title>ZSH/Bash string manipulation - Tim's blag</title>
+  <meta name="description" lang="en" content="Both ZSH and Bash have some built-in string manipulations that can be useful at times. Substrings Given a test string: word=&#39;hello - world - how - are - you&#39; Take elements">
+  <meta name="copyright" content="CC BY-NC-SA 3.0">
+  <meta name="author" content="Tim">
+  <meta name="date" scheme="ISO8601" content="2012-10-28T12:21:00+01:00">
+  
+  <link rel="schema.dc" href="http://purl.org/dc/elements/1.1/">
+  <meta name="dc.title" content="ZSH/Bash string manipulation">
+  <meta name="dc.description" lang="en" content="Both ZSH and Bash have some built-in string manipulations that can be useful at times. Substrings Given a test string: word=&#39;hello - world - how - are - you&#39; Take elements">
+  <meta name="dc.creator" content="Tim">
+  <meta name="dc.language" content="en">
+  <meta name="dc.publisher" content="Tim van Werkhoven">
+  <meta name="dc.rights" content="CC BY-NC-SA 3.0">
+  <meta name="dc.date" scheme="ISO8601" content="2012-10-28T12:21:00+01:00">
+  <meta name="dc.type" content="text">
+  <meta name="dc.format" content="text/html">
+  
+  <link rel="top" href="http://tim.vanwerkhoven.org/" title="Home">
+  <link rel="contents" href="http://tim.vanwerkhoven.org/archive" title="Archives">
+  
+  <link rel="next" href="http://tim.vanwerkhoven.org/post/2013/03/04/Clone-an-OS-X-volume-using-rsync" title="Clone an OS X volume using rsync">
+  
+  <link rel="previous" href="http://tim.vanwerkhoven.org/post/2012/10/14/Utrecht-University-Solis-VPN-on-Mac-OS-X-Lion-10.7.5" title="Utrecht University Solis VPN on Mac OS X Lion 10.7.*">
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="http://tim.vanwerkhoven.org/feed/atom">
+  
+  <style type="text/css" media="screen">
+@import url(/themes/customCSS/style.css);
+</style>
+<style type="text/css" media="print">
+@import url(/themes/customCSS/../default/print.css);
+</style>
+
+<script type="text/javascript" src="./ZSH_Bash_string_manipulation_Tim_s_blag_files/jquery.js"></script>
+<script type="text/javascript" src="./ZSH_Bash_string_manipulation_Tim_s_blag_files/jquery.cookie.js"></script>
+
+
+<style type="text/css">
+@import url(http://tim.vanwerkhoven.org/?pf=lightbox/css/jquery.lightbox-0.5.css);
+</style>
+<script type="text/javascript" src="./ZSH_Bash_string_manipulation_Tim_s_blag_files/saved_resource"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(function() {
+var lb_settings = {
+imageLoading  : 'http://tim.vanwerkhoven.org/?pf=lightbox/images/lightbox-ico-loading.gif',
+imageBtnPrev  : 'http://tim.vanwerkhoven.org/?pf=lightbox/images/prev-btn.png',
+imageBtnNext  : 'http://tim.vanwerkhoven.org/?pf=lightbox/images/next-btn.png',
+imageBtnClose : 'http://tim.vanwerkhoven.org/?pf=lightbox/images/close-btn.png',
+imageBlank    : 'http://tim.vanwerkhoven.org/?pf=lightbox/images/lightbox-blank.gif'
+};$("div.post").each(function() {
+$(this).find("a[href$=.jpg],a[href$=.jpeg],a[href$=.png],a[href$=.gif],a[href$=.JPG],a[href$=.JPEG],a[href$=.PNG],a[href$=.GIF]").lightBox(lb_settings);
+})
+});
+
+//]]>
+</script>
+<style type="text/css">
+@import url(/public/custom_style.css);
+</style>
+  
+  <script type="text/javascript" src="./ZSH_Bash_string_manipulation_Tim_s_blag_files/post.js"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var post_remember_str = 'Remember me on this blog';
+  var post_captcha_str = 'I am not a robot';
+  //]]>
+  </script>
+</head>
+
+<body class="dc-post">
+<div id="page">
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+  rdf:about="http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation"
+  dc:identifier="http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation"
+  dc:title="ZSH/Bash string manipulation"
+  trackback:ping="http://tim.vanwerkhoven.org/trackback/702977" />
+</rdf:RDF>
+-->
+
+
+<div id="top">
+  <h1><span><a href="http://tim.vanwerkhoven.org/">Tim's blag</a></span></h1>
+
+  </div>
+
+<p id="prelude"><a href="http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation#main">To content</a> |
+<a href="http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation#blognav">To menu</a> |
+<a href="http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation#search">To search</a></p>
+<div id="wrapper">
+
+<div id="main">
+  <div id="content">
+  
+  <p id="navlinks">
+  <a href="http://tim.vanwerkhoven.org/post/2012/10/14/Utrecht-University-Solis-VPN-on-Mac-OS-X-Lion-10.7.5" title="Utrecht University Solis VPN on Mac OS X Lion 10.7.*" class="prev">« Utrecht University Solis VPN on Mac OS X Lion</a>
+   <span>-</span> <a href="http://tim.vanwerkhoven.org/post/2013/03/04/Clone-an-OS-X-volume-using-rsync" title="Clone an OS X volume using rsync" class="next">Clone an OS X volume using rsync »</a>
+  </p>
+  
+  <div class="post">
+    <h2 id="p702977" class="post-title">ZSH/Bash string manipulation</h2>
+    
+    <p class="post-info">By Tim    on Sunday 28 October 2012, 12:21        - <a href="http://tim.vanwerkhoven.org/category/work">work</a>
+        - <a href="http://tim.vanwerkhoven.org/post/2012/10/28/ZSH/Bash-string-manipulation">Permalink</a>
+    </p>
+    
+    
+    
+        
+    <div class="post-content"><p>Both ZSH and Bash have some built-in string manipulations that can be useful
+at times.</p>
+<h2>Substrings</h2>
+<p>Given a test string:</p>
+<pre>word='hello - world - how - are - you'
+</pre>
+<p>Take elements (letters) 5 through 10</p>
+<pre>$word[5,10] == 'o - wo' # for zsh
+${word:5:5} == '- wo'   # for bash
+</pre>
+<p>N.B.: in bash the first character is at index 0, in zsh this is at index
+1!</p>
+<h2>Substring matching</h2>
+<p>To match a string with a substring, we can use:</p>
+<ul>
+<li><code>${str#substr}</code> Deletes shortest match of <code>$substr</code>
+from front <code>$str</code></li>
+<li><code>${str##substr}</code> Deletes longest match of <code>$substr</code>
+from front <code>$str</code></li>
+</ul>
+<p>for example: take part before 'how*', or o*</p>
+<pre>${word%how*} == 'hello - world - '
+${word%o*} == 'hello - world - how - are - y'
+${word%%o*} == 'hell'
+</pre>
+<p>Or take the part after '* - '</p>
+<pre>${word#* - } = 'world - how - are - you'
+${word##* - } = 'you'
+</pre>
+<h2>Explode strings</h2>
+<p>To explode or split strings into array, we can use several zsh
+functions:</p>
+<p>To split by ' - ', take 3rd element</p>
+<pre>${word[(ws: - :)3]} == 'how' # only zsh
+</pre>
+<p>Split by ' - ', take second element, capitalize</p>
+<pre>${(C)${word[(ws: - :)2]}} == 'World' # only zsh
+</pre>
+<p>Split by word, take first word</p>
+<pre>$word[(w)1] == 'hello' # only zsh
+</pre>
+<h2>File rename examples</h2>
+<p>Get the file extension:</p>
+<pre>file=helloworld.multiple.dots.jpg
+${file##*\.} == jpg
+echo ${file##*\.}
+</pre>
+<p>Get the file base name:</p>
+<pre>file=helloworld.multiple.dots.jpg
+${file%\.*} == helloworld.multiple.dots
+echo ${file%\.*}
+</pre>
+<h2>References</h2>
+<ul>
+<li><a href="http://tldp.org/LDP/abs/html/" hreflang="en">Advanced
+Bash-Scripting Guide</a>, <a href="http://tldp.org/LDP/abs/html/string-manipulation.html" hreflang="en">10.1.
+Manipulating Strings</a></li>
+</ul></div>
+
+      </div>
+
+  
+
+    
+  
+      <div id="pings">
+    <h3>They posted on the same topic</h3>
+        </div>
+    
+      <p id="ping-url">Trackback URL&nbsp;: http://tim.vanwerkhoven.org/trackback/702977</p>
+    
+    <p id="comments-feed"><a class="feed" href="http://tim.vanwerkhoven.org/feed/atom/comments/702977" title="This post&#39;s comments Atom feed">This post's comments feed</a></p>
+    </div>
+</div> <!-- End #main -->
+
+<div id="sidebar">
+  <div id="blognav">
+    <div id="search"><h2><label for="q">Search</label></h2><form action="http://tim.vanwerkhoven.org/" method="get"><fieldset><p><input type="text" size="10" maxlength="255" id="q" name="q" value=""> <input class="submit" type="submit" value="ok"></p></fieldset></form></div><div class="categories"><h2>Categories</h2><div id="categories-results"><ul><li><a href="http://tim.vanwerkhoven.org/category/work">work</a> (9)</li><li><a href="http://tim.vanwerkhoven.org/category/science">science</a> (1)</li><li><a href="http://tim.vanwerkhoven.org/category/typo">typo</a> (2)</li><li><a href="http://tim.vanwerkhoven.org/category/code">code</a> (10)</li><li><a href="http://tim.vanwerkhoven.org/category/life">life</a> (3)</li></ul></div></div><div class="tags" id="tags-results"><h2>Tags</h2><ul><li><a href="http://tim.vanwerkhoven.org/tag/Applescript" class="tag30">Applescript</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/C" class="tag30">C</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/caffeinate" class="tag20">caffeinate</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/colours" class="tag30">colours</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/encoding" class="tag20">encoding</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/introduction" class="tag20">introduction</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/language" class="tag20">language</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/LaTeX-beamer" class="tag20">LaTeX-beamer</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/lion" class="tag20">lion</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/MEncoder" class="tag20">MEncoder</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/osx" class="tag20">osx</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/OSX" class="tag100">OSX</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/par" class="tag20">par</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/planning" class="tag20">planning</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/plotting" class="tag30">plotting</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/Python" class="tag100">Python</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/Skype" class="tag20">Skype</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/writing" class="tag30">writing</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/XeTeX" class="tag20">XeTeX</a> </li><li><a href="http://tim.vanwerkhoven.org/tag/zsh" class="tag20">zsh</a> </li></ul><p><strong><a href="http://tim.vanwerkhoven.org/tags">All tags</a></strong></p></div><div class="syndicate"><h2>Subscribe</h2><ul><li><a type="application/rss+xml" href="http://tim.vanwerkhoven.org/feed/rss2" title="This blog&#39;s entries RSS feed" class="feed">Entries feed</a></li><li><a type="application/rss+xml" href="http://tim.vanwerkhoven.org/feed/rss2/comments" title="This blog&#39;s comments RSS feed" class="feed">Comments feed</a></li></ul></div>  </div> <!-- End #blognav -->
+  
+  <div id="blogextra">
+      </div> <!-- End #blogextra -->
+</div>
+
+</div> <!-- End #wrapper -->
+
+<div id="footer">
+  <p>CC BY-NC-SA 3.0 - poweredby  - <a rel="nofollow" href="http://tim.vanwerkhoven.org/legalnotice">Informations légales</a></p>
+</div>
+</div> <!-- End #page -->
+
+
+</body></html>
