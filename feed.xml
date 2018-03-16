@@ -6,9 +6,45 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 07 Mar 2018 09:17:27 +0100</pubDate>
-    <lastBuildDate>Wed, 07 Mar 2018 09:17:27 +0100</lastBuildDate>
+    <pubDate>Fri, 16 Mar 2018 08:55:20 +0100</pubDate>
+    <lastBuildDate>Fri, 16 Mar 2018 08:55:20 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Python: Insert element in a list and keep it sorted</title>
+        <description>&lt;h1 id=&quot;python-insert-element-in-a-list-and-keep-it-sorted&quot;&gt;Python: Insert element in a list and keep it sorted&lt;/h1&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;bisect&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;bisect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 48 [48]
+1 51 [48, 51]
+2 28 [28, 48, 51]
+3 42 [28, 42, 48, 51]
+4 72 [28, 42, 48, 51, 72]
+5 47 [28, 42, 47, 48, 51, 72]
+6 82 [28, 42, 47, 48, 51, 72, 82]
+7 58 [28, 42, 47, 48, 51, 58, 72, 82]
+8 8 [8, 28, 42, 47, 48, 51, 58, 72, 82]
+9 31 [8, 28, 31, 42, 47, 48, 51, 58, 72, 82]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Fri, 16 Mar 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/03/16/python-_insert_element_in_a_list_and_keep_it_sorted.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/03/16/python-_insert_element_in_a_list_and_keep_it_sorted.html</guid>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>ZSH-Bash string manipulation</title>
