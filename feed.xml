@@ -6,9 +6,28 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 16 Mar 2018 08:55:20 +0100</pubDate>
-    <lastBuildDate>Fri, 16 Mar 2018 08:55:20 +0100</lastBuildDate>
+    <pubDate>Wed, 21 Mar 2018 10:36:54 +0100</pubDate>
+    <lastBuildDate>Wed, 21 Mar 2018 10:36:54 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Run Chrome-Chromium in application mode</title>
+        <description>&lt;h1 id=&quot;run-chrome-chromium-in-application-mode&quot;&gt;Run Chrome-Chromium in application mode&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;chromium --app=https://google.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 21 Mar 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/03/21/run_chrome-chromium_in_application_mode.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/03/21/run_chrome-chromium_in_application_mode.html</guid>
+        
+        <category>Chrome</category>
+        
+        <category>Chromium</category>
+        
+        
+      </item>
     
       <item>
         <title>Python: Insert element in a list and keep it sorted</title>
