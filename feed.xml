@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 21 Mar 2018 10:36:54 +0100</pubDate>
-    <lastBuildDate>Wed, 21 Mar 2018 10:36:54 +0100</lastBuildDate>
+    <pubDate>Thu, 29 Mar 2018 15:12:13 +0200</pubDate>
+    <lastBuildDate>Thu, 29 Mar 2018 15:12:13 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Quick method to get the index of every element of array y in array x</title>
+        <description>&lt;h1 id=&quot;quick-method-to-get-the-index-of-every-element-of-array-y-in-array-x&quot;&gt;Quick method to get the index of every element of array y in array x&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a7d0a14e47d5d058d0da9fec5549e3dc.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 29 Mar 2018 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2018/03/29/quick_method_to_get_the_index_of_every_element_of_array_y_in_array_x.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/03/29/quick_method_to_get_the_index_of_every_element_of_array_y_in_array_x.html</guid>
+        
+        <category>python</category>
+        
+        <category>numpy</category>
+        
+        
+      </item>
     
       <item>
         <title>Run Chrome-Chromium in application mode</title>
