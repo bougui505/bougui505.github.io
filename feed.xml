@@ -6,9 +6,26 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 29 Mar 2018 15:12:13 +0200</pubDate>
-    <lastBuildDate>Thu, 29 Mar 2018 15:12:13 +0200</lastBuildDate>
+    <pubDate>Fri, 06 Apr 2018 09:35:42 +0200</pubDate>
+    <lastBuildDate>Fri, 06 Apr 2018 09:35:42 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Using ffmpeg to create a movie from a list of image file</title>
+        <description>&lt;h1 id=&quot;using-ffmpeg-to-create-a-movie-from-a-list-of-image-file&quot;&gt;Using ffmpeg to create a movie from a list of image file&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ffmpeg -framerate 10 -i image_%04d.png -acodec copy -vcodec copy movie.avi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 06 Apr 2018 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2018/04/06/using_ffmpeg_to_create_a_movie_from_a_list_of_image_file.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/04/06/using_ffmpeg_to_create_a_movie_from_a_list_of_image_file.html</guid>
+        
+        <category>ffmpeg</category>
+        
+        
+      </item>
     
       <item>
         <title>Quick method to get the index of every element of array y in array x</title>
