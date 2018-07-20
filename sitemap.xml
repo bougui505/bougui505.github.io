@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2018/07/20/encode_a_string_into_a_qrcode_en_display_it_using_qrencode.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/04/06/using_ffmpeg_to_create_a_movie_from_a_list_of_image_file.html</loc>
         </url>
     
