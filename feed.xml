@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 20 Jul 2018 16:54:35 +0200</pubDate>
-    <lastBuildDate>Fri, 20 Jul 2018 16:54:35 +0200</lastBuildDate>
+    <pubDate>Mon, 17 Sep 2018 15:38:22 +0200</pubDate>
+    <lastBuildDate>Mon, 17 Sep 2018 15:38:22 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Manually add a file to the list of recently used files in Gnome</title>
+        <description>&lt;h1 id=&quot;manually-add-a-file-to-the-list-of-recently-used-files-in-gnome&quot;&gt;Manually add a file to the list of recently used files in Gnome&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/fa108d65288ca299930c5cc9ec920186.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 17 Sep 2018 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2018/09/17/manually_add_a_file_to_the_list_of_recently_used_files_in_gnome.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/09/17/manually_add_a_file_to_the_list_of_recently_used_files_in_gnome.html</guid>
+        
+        <category>gnome</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Encode a string into a qrcode en display it using qrencode</title>
