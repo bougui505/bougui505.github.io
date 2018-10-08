@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2018/10/08/running_ipython_from_vim.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/09/18/simple_command_to_bookmark_files.html</loc>
         </url>
     
