@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Oct 2018 15:33:22 +0200</pubDate>
-    <lastBuildDate>Mon, 08 Oct 2018 15:33:22 +0200</lastBuildDate>
+    <pubDate>Thu, 11 Oct 2018 13:36:31 +0200</pubDate>
+    <lastBuildDate>Thu, 11 Oct 2018 13:36:31 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>A quick Gnome 3 app indicator for crashplan</title>
+        <description>&lt;h1 id=&quot;a-quick-gnome-3-app-indicator-for-crashplan&quot;&gt;A quick Gnome 3 app indicator for crashplan&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/76d491ef98fbb69c932b26ca6b270d1e.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 11 Oct 2018 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2018/10/11/a_quick_gnome_3_app_indicator_for_crashplan.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/10/11/a_quick_gnome_3_app_indicator_for_crashplan.html</guid>
+        
+        <category>gnome</category>
+        
+        <category>crashplan</category>
+        
+        
+      </item>
     
       <item>
         <title>Running IPython from vim</title>
@@ -3984,7 +4004,10 @@ Inkscape. It can be used to convert a Sozi presentation to pdf, with no need to
 install &lt;a href=&quot;http://sozi.baierouge.fr/pages/tutorial-converting.html&quot;&gt;this script&lt;/a&gt;
 with PhantomJS library.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 27 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html</link>
