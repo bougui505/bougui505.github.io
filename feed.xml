@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 23 Oct 2018 09:20:08 +0200</pubDate>
-    <lastBuildDate>Tue, 23 Oct 2018 09:20:08 +0200</lastBuildDate>
+    <pubDate>Wed, 24 Oct 2018 15:10:34 +0200</pubDate>
+    <lastBuildDate>Wed, 24 Oct 2018 15:10:34 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Sequence alignment from the command line using mafft</title>
+        <description>&lt;h1 id=&quot;sequence-alignment-from-the-command-line-using-mafft&quot;&gt;Sequence alignment from the command line using mafft&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/d3b9f8e56f9a234de35d46259fadd920.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 24 Oct 2018 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2018/10/24/sequence_alignment_from_the_command_line_using_mafft.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/10/24/sequence_alignment_from_the_command_line_using_mafft.html</guid>
+        
+        <category>mafft</category>
+        
+        <category>science</category>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Random wallpaper from unsplash.com</title>
