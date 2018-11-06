@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 25 Oct 2018 10:16:04 +0200</pubDate>
-    <lastBuildDate>Thu, 25 Oct 2018 10:16:04 +0200</lastBuildDate>
+    <pubDate>Tue, 06 Nov 2018 09:50:44 +0100</pubDate>
+    <lastBuildDate>Tue, 06 Nov 2018 09:50:44 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>How to rescale several images to same size</title>
+        <description>&lt;h1 id=&quot;how-to-rescale-several-images-to-same-size&quot;&gt;How to rescale several images to same size&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1abe08bebc5b6a0c463835aa6b70dab2.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 06 Nov 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/11/06/how_to_rescale_several_images_to_same_size.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/11/06/how_to_rescale_several_images_to_same_size.html</guid>
+        
+        <category>imagemagick</category>
+        
+        <category>zsh</category>
+        
+        
+      </item>
     
       <item>
         <title>Aggregate statistics from the Protein Data Bank</title>
