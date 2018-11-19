@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2018/11/19/select_atoms_in_a_pdb_file_from_the_terminal_command_line_using_pymol.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/11/16/drawing_stacked_charts_using_tikz.html</loc>
         </url>
     

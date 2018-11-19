@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 16 Nov 2018 15:13:53 +0100</pubDate>
-    <lastBuildDate>Fri, 16 Nov 2018 15:13:53 +0100</lastBuildDate>
+    <pubDate>Mon, 19 Nov 2018 16:47:26 +0100</pubDate>
+    <lastBuildDate>Mon, 19 Nov 2018 16:47:26 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Select atoms in a PDB file from the terminal command line using pymol</title>
+        <description>&lt;h1 id=&quot;select-atoms-in-a-pdb-file-from-the-terminal-command-line-using-pymol&quot;&gt;Select atoms in a PDB file from the terminal command line using pymol&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/66ffcb8c16e2e299f22e24e3fd4c52df.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 19 Nov 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/11/19/select_atoms_in_a_pdb_file_from_the_terminal_command_line_using_pymol.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/11/19/select_atoms_in_a_pdb_file_from_the_terminal_command_line_using_pymol.html</guid>
+        
+        <category>python</category>
+        
+        <category>pymol</category>
+        
+        
+      </item>
     
       <item>
         <title>Drawing stacked charts using tikz</title>
