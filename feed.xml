@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 20 Nov 2018 15:31:28 +0100</pubDate>
-    <lastBuildDate>Tue, 20 Nov 2018 15:31:28 +0100</lastBuildDate>
+    <pubDate>Tue, 20 Nov 2018 16:42:24 +0100</pubDate>
+    <lastBuildDate>Tue, 20 Nov 2018 16:42:24 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -22,6 +22,26 @@
         <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/20/using_pymol_alter_command_from_command_line.html</link>
         <guid isPermaLink="true">http://bougui505.github.io/2018/11/20/using_pymol_alter_command_from_command_line.html</guid>
+        
+        <category>pymol</category>
+        
+        <category>python</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Use pymol command iterate from the shell command line</title>
+        <description>&lt;h1 id=&quot;use-pymol-command-iterate-from-the-shell-command-line&quot;&gt;Use pymol command iterate from the shell command line&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ea2ed7a865933f1d58830a394f63811e.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/11/20/use_pymol_command_iterate_from_the_shell_command_line.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/11/20/use_pymol_command_iterate_from_the_shell_command_line.html</guid>
         
         <category>pymol</category>
         
