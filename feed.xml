@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 19 Nov 2018 16:47:26 +0100</pubDate>
-    <lastBuildDate>Mon, 19 Nov 2018 16:47:26 +0100</lastBuildDate>
+    <pubDate>Tue, 20 Nov 2018 13:47:25 +0100</pubDate>
+    <lastBuildDate>Tue, 20 Nov 2018 13:47:25 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Using pymol alter command from command line</title>
+        <description>&lt;h1 id=&quot;using-pymol-alter-command-from-command-line&quot;&gt;Using pymol alter command from command line&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f4fd52e50b75a81fc835c5537c5aba68.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/11/20/using_pymol_alter_command_from_command_line.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/11/20/using_pymol_alter_command_from_command_line.html</guid>
+        
+        <category>pymol</category>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Select atoms in a PDB file from the terminal command line using pymol</title>
