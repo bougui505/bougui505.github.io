@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 20 Nov 2018 13:52:52 +0100</pubDate>
-    <lastBuildDate>Tue, 20 Nov 2018 13:52:52 +0100</lastBuildDate>
+    <pubDate>Tue, 20 Nov 2018 15:31:28 +0100</pubDate>
+    <lastBuildDate>Tue, 20 Nov 2018 15:31:28 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -26,6 +26,26 @@
         <category>pymol</category>
         
         <category>python</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Extract sequence from a PDB file from the command line using pymol</title>
+        <description>&lt;h1 id=&quot;extract-sequence-from-a-pdb-file-from-the-command-line-using-pymol&quot;&gt;Extract sequence from a PDB file from the command line using pymol&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/39149033d0d7a8667827c54fb867f1e1.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/11/20/extract_sequence_from_a_pdb_file_from_the_command_line_using_pymol.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/11/20/extract_sequence_from_a_pdb_file_from_the_command_line_using_pymol.html</guid>
+        
+        <category>python</category>
+        
+        <category>pymol</category>
         
         
       </item>
