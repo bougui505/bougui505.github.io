@@ -6,9 +6,29 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 29 Nov 2018 09:06:27 +0100</pubDate>
-    <lastBuildDate>Thu, 29 Nov 2018 09:06:27 +0100</lastBuildDate>
+    <pubDate>Thu, 29 Nov 2018 13:31:05 +0100</pubDate>
+    <lastBuildDate>Thu, 29 Nov 2018 13:31:05 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Select and save to DCD format from a molecular dynamics trajectory file using pymol from the shell command line</title>
+        <description>&lt;h1 id=&quot;select-and-save-to-dcd-format-from-a-molecular-dynamics-trajectory-file-using-pymol-from-the-shell-command-line&quot;&gt;Select and save to DCD format from a molecular dynamics trajectory file using pymol from the shell command line&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3d9d070dc813ce663d1bb93c65cfbcc9.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 29 Nov 2018 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2018/11/29/select_and_save_to_dcd_format_from_a_molecular_dynamics_trajectory_file_using_pymol_from_the_shell_command_line.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2018/11/29/select_and_save_to_dcd_format_from_a_molecular_dynamics_trajectory_file_using_pymol_from_the_shell_command_line.html</guid>
+        
+        <category>pymol</category>
+        
+        <category>dcd</category>
+        
+        
+      </item>
     
       <item>
         <title>Automatic reconnection with sshfs</title>
