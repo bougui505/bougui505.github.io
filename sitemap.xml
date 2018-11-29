@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2018/11/29/automatic_reconnection_with_sshfs.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/11/20/using_pymol_alter_command_from_command_line.html</loc>
         </url>
     

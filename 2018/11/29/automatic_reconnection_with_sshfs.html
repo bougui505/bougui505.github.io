@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Install Crashplan on a Raspberry Pi</title>
+    <title>Automatic reconnection with sshfs</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2016/11/22/install_crashplan_on_a_raspberry_pi.html">
+    <link rel="canonical" href="http://bougui505.github.io/2018/11/29/automatic_reconnection_with_sshfs.html">
 </head>
 
 
@@ -123,133 +123,18 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="install-crashplan-on-a-raspberry-pi">Install Crashplan on a Raspberry Pi</h1>
+        <h1 id="automatic-reconnection-with-sshfs">Automatic reconnection with sshfs</h1>
 
-<h2 id="update">Update:</h2>
-
-<p>Crashplan is quite difficult to install on the RPi and is not supported
-officially to be installed on ARM architectures. Thus, a possible workaround to
-backup your data on your RPi is to setup an NFS server and to backup on it.
-However, the set up of an NFS mounted disk as backup destination for Crashplan
-is not possible. The workaround is to:</p>
-
-<ul>
-  <li>
-    <p>create an empty directory as the backup destination on the local disk</p>
-  </li>
-  <li>
-    <p>create the same directory on the nfs</p>
-  </li>
-  <li>
-    <p>setup the local directory as the backup destination on Crashplan</p>
-  </li>
-  <li>
-    <p>remove the local directory while the Crashplan app is still opened</p>
-  </li>
-  <li>
-    <p>soft link (<code class="highlighter-rouge">ln -s</code>) the nfs directory to the location of the previous local directory</p>
-  </li>
-</ul>
-
-<p>and voilà!</p>
-
-<h2 id="install-the-required-packages">Install the required packages</h2>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install oracle-java8-jdk
-sudo apt-get install libjna-java
+<div class="highlighter-rouge"><pre class="highlight"><code>sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 host:/path/to/mount /path/to/mntpoint
 </code></pre>
 </div>
-
-<h2 id="install-crashplan">Install Crashplan</h2>
-
-<p><a href="https://www.crashplan.com/en-us/download/">Download Crashplan</a>.</p>
-
-<p>Untar the <code class="highlighter-rouge">tgz</code> file.</p>
-
-<p>And run the installation script, to install Crashplan as root:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>./install.sh
-</code></pre>
-</div>
-
-<p>Crashplan will not work out of the box.</p>
-
-<h2 id="patch-crashplan-to-work-on-the-pi">Patch Crashplan to work on the Pi</h2>
-
-<p>Force Crashplan to use the RPi (Raspbian) JRE:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo rm -r /usr/local/crashplan/jre
-sudo ln -s /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt /usr/local/crashplan/jre
-</code></pre>
-</div>
-
-<p>And change these two files:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>cd /usr/local/crashplan
-sudo rm libjtux.so
-sudo wget http://bougui505.github.io/assets/libjtux.so
-
-sudo rm libmd5.so
-sudo wget http://bougui505.github.io/assets/libmd5.so
-</code></pre>
-</div>
-
-<h2 id="start-crashplan">Start Crashplan</h2>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo /usr/local/crashplan/bin/CrashPlanEngine start
-$ sudo /usr/local/crashplan/bin/CrashPlanEngine status
-CrashPlan Engine (pid 1891) is running.
-</code></pre>
-</div>
-
-<h2 id="configure-crashplan-remotely-using-the-local-crashplan-user-interface-ui">Configure Crashplan remotely using the local Crashplan user interface (UI)</h2>
-
-<h3 id="definitions">Definitions:</h3>
-
-<ul>
-  <li>The local computer is defined as your desktop computer</li>
-  <li>The remote computer is the RPi</li>
-</ul>
-
-<p>See the <a href="https://support.code42.com/CrashPlan/4/Configuring/Using_CrashPlan_On_A_Headless_Computer">Crashplan
-support</a>
-for full explanations.</p>
-
-<h3 id="copy-the-token-from-the-rpi">Copy the token from the Rpi:</h3>
-
-<p>The token is located in <code class="highlighter-rouge">/var/lib/crashplan/.ui_info</code> if Crashplan is installed
-as root or in <code class="highlighter-rouge">~/.crashplan/.ui_info</code> if installed as user.</p>
-
-<p>The format of the <code class="highlighter-rouge">.ui_info</code> file is:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>PORT,Authentication_Token,IP_Address
-</code></pre>
-</div>
-
-<p>Copy the Authentication Token from the RPi and paste it to replace the
-Authentication Token in the local <code class="highlighter-rouge">.ui_info</code> file, after having backup the
-local <code class="highlighter-rouge">.ui_info</code> file.</p>
-
-<h2 id="change-the-port-in-the-local-conf-file">Change the port in the local conf file</h2>
-
-<p>Just change the port from 4243 to 4200 in the local <code class="highlighter-rouge">.ui_info</code> file.</p>
-
-<h2 id="start-port-forwarding-on-the-local-computer">Start port forwarding on the local computer</h2>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>ssh -L 4200:localhost:4243 pi@raspberrypi
-</code></pre>
-</div>
-
-<h2 id="and-start-crashplandesktop-on-local-computer">And start CrashPlanDesktop on local computer…</h2>
-
-<p>NB: This doesn’t work anymore…</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2016/11/22/install_crashplan_on_a_raspberry_pi.html"
+      data-href="http://bougui505.github.io/2018/11/29/automatic_reconnection_with_sshfs.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
