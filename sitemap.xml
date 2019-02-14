@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2019/02/14/installing_tensorflow_with_conda.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2018/11/29/select_and_save_to_dcd_format_from_a_molecular_dynamics_trajectory_file_using_pymol_from_the_shell_command_line.html</loc>
         </url>
     

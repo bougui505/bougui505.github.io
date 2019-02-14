@@ -6,9 +6,49 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 29 Nov 2018 13:31:05 +0100</pubDate>
-    <lastBuildDate>Thu, 29 Nov 2018 13:31:05 +0100</lastBuildDate>
+    <pubDate>Thu, 14 Feb 2019 09:44:39 +0100</pubDate>
+    <lastBuildDate>Thu, 14 Feb 2019 09:44:39 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Installing tensorflow with conda</title>
+        <description>&lt;h1 id=&quot;installing-tensorflow-with-conda&quot;&gt;Installing tensorflow with conda&lt;/h1&gt;
+
+&lt;h2 id=&quot;install-miniconda2-if-required&quot;&gt;Install miniconda2 (if required):&lt;/h2&gt;
+
+&lt;p&gt;Download &lt;a href=&quot;https://conda.io/en/latest/miniconda.html&quot;&gt;miniconda2&lt;/a&gt;
+and install it:
+    bash Miniconda2-latest-Linux-x86_64.sh&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-conda-environment&quot;&gt;Create a conda environment:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda create --name tensorflow-gpu python=2.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;activate-the-created-environment&quot;&gt;Activate the created environment:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd miniconda2/bin
+source activate ../envs/tensorflow-gpu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;install-tensorflow&quot;&gt;Install tensorflow:&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;conda install tensorflow-gpu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 14 Feb 2019 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2019/02/14/installing_tensorflow_with_conda.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/02/14/installing_tensorflow_with_conda.html</guid>
+        
+        <category>python</category>
+        
+        <category>tensorflow</category>
+        
+        
+      </item>
     
       <item>
         <title>Select and save to DCD format from a molecular dynamics trajectory file using pymol from the shell command line</title>
