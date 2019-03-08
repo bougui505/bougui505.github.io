@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 Feb 2019 09:44:39 +0100</pubDate>
-    <lastBuildDate>Thu, 14 Feb 2019 09:44:39 +0100</lastBuildDate>
+    <pubDate>Fri, 08 Mar 2019 17:02:56 +0100</pubDate>
+    <lastBuildDate>Fri, 08 Mar 2019 17:02:56 +0100</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Merge 2 pdbs using pymol from the shell CLI</title>
+        <description>&lt;h1 id=&quot;merge-2-pdbs-using-pymol-from-the-shell-cli&quot;&gt;Merge 2 pdbs using pymol from the shell CLI&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/0dc873d7105b444cb08269ef215c42d6.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 08 Mar 2019 00:00:00 +0100</pubDate>
+        <link>http://bougui505.github.io/2019/03/08/merge_2_pdbs_using_pymol_from_the_shell_cli.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/03/08/merge_2_pdbs_using_pymol_from_the_shell_cli.html</guid>
+        
+        <category>pymol</category>
+        
+        
+      </item>
     
       <item>
         <title>Installing tensorflow with conda</title>
