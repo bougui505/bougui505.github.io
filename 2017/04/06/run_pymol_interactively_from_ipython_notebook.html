@@ -125,14 +125,14 @@
       <div class="wrapper">
         <h1 id="run-pymol-interactively-from-ipython-notebook">Run pymol interactively from IPython notebook</h1>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># Tell PyMOL we don't want any GUI features.</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">__main__</span>
-<span class="n">__main__</span><span class="o">.</span><span class="n">pymol_argv</span> <span class="o">=</span> <span class="p">[</span> <span class="s">'pymol'</span><span class="p">,</span> <span class="s">'-qi'</span> <span class="p">]</span>
-<span class="c"># Importing the PyMOL module will create the window.</span>
+<span class="c">#__main__.pymol_argv = ['pymol', '-c'] # Optionnaly pass options to pymol</span>
 <span class="kn">import</span> <span class="nn">pymol</span>
+<span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="c"># To get the stdout in the notebook instead of in the pymol console</span>
 <span class="kn">import</span> <span class="nn">pymol.cmd</span> <span class="kn">as</span> <span class="nn">cmd</span>
-<span class="c"># Call the function below before using any PyMOL modules.</span>
-<span class="n">pymol</span><span class="o">.</span><span class="n">finish_launching</span><span class="p">()</span></code></pre></figure>
+<span class="n">pymol</span><span class="o">.</span><span class="n">finish_launching</span><span class="p">()</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">stdout</span></code></pre></figure>
 
 <p>Example usage:</p>
 
