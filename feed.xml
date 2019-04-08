@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Apr 2019 15:03:41 +0200</pubDate>
-    <lastBuildDate>Mon, 08 Apr 2019 15:03:41 +0200</lastBuildDate>
+    <pubDate>Mon, 08 Apr 2019 17:53:32 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Apr 2019 17:53:32 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -73,6 +73,28 @@
         <category>python</category>
         
         <category>EM</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Extract a zone around a model from a MRC density file</title>
+        <description>&lt;h1 id=&quot;extract-a-zone-around-a-model-from-a-mrc-density-file&quot;&gt;Extract a zone around a model from a MRC density file&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6fe478600ebf82420713d529107c0c05.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/04/08/extract_a_zone_around_a_model_from_a_mrc_density_file.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/04/08/extract_a_zone_around_a_model_from_a_mrc_density_file.html</guid>
+        
+        <category>EM</category>
+        
+        <category>mrc</category>
+        
+        <category>python</category>
         
         
       </item>
@@ -3170,10 +3192,7 @@ frequent using a 3D histogram:&lt;/p&gt;
         <title>Fill missing values in a column formatted text file with awk</title>
         <description>&lt;h1 id=&quot;fill-missing-values-in-a-column-formatted-text-file-with-awk&quot;&gt;Fill missing values in a column formatted text file with awk&lt;/h1&gt;
 
-&lt;noscript&gt;&lt;pre&gt;400: Invalid request
-&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/f4f9da37be9a31aaa1b7f0c790619969.js&quot;&gt; &lt;/script&gt;
-
+&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f4f9da37be9a31aaa1b7f0c790619969.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 22 Jun 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/06/22/fill_missing_values_in_a_column_formatted_text_file_with_awk.html</link>
