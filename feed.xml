@@ -6,8 +6,8 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Apr 2019 15:00:58 +0200</pubDate>
-    <lastBuildDate>Mon, 08 Apr 2019 15:00:58 +0200</lastBuildDate>
+    <pubDate>Mon, 08 Apr 2019 15:03:41 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Apr 2019 15:03:41 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -51,6 +51,28 @@
         <category>tar</category>
         
         <category>pv</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Read a MRC file in python</title>
+        <description>&lt;h1 id=&quot;read-a-mrc-file-in-python&quot;&gt;Read a MRC file in python&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f308341190217cd2cbf47fbb35230dcd.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/04/08/read_a_mrc_file_in_python.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/04/08/read_a_mrc_file_in_python.html</guid>
+        
+        <category>mrcfile</category>
+        
+        <category>python</category>
+        
+        <category>EM</category>
         
         
       </item>
