@@ -6,9 +6,32 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 15 Mar 2019 13:37:17 +0100</pubDate>
-    <lastBuildDate>Fri, 15 Mar 2019 13:37:17 +0100</lastBuildDate>
+    <pubDate>Mon, 08 Apr 2019 13:32:38 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Apr 2019 13:32:38 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Transfer file through ssh using tar and pv</title>
+        <description>&lt;h1 id=&quot;transfer-file-through-ssh-using-tar-and-pv&quot;&gt;Transfer file through ssh using tar and pv&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tar -zc your_directory | pv -s 10g | ssh hostname &quot;tar -zx -C /path/to/the/target/directory&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Notes: -s SIZE: Assume the total amount of data to be transferred is SIZE bytes when calculating percentages  and  ETAs. The same suffixes of “k”, “m” etc can be used as with -L. A suffix of “k”, “m”, “g”, or “t” can be added to denote kilobytes (*1024), megabytes, and so on.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/04/08/transfer_file_through_ssh_using_tar_and_pv.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/04/08/transfer_file_through_ssh_using_tar_and_pv.html</guid>
+        
+        <category>ssh</category>
+        
+        <category>tar</category>
+        
+        <category>pv</category>
+        
+        
+      </item>
     
       <item>
         <title>Merge 2 pdbs using pymol from the shell CLI</title>
