@@ -6,9 +6,31 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 08 Apr 2019 13:32:38 +0200</pubDate>
-    <lastBuildDate>Mon, 08 Apr 2019 13:32:38 +0200</lastBuildDate>
+    <pubDate>Mon, 08 Apr 2019 15:00:58 +0200</pubDate>
+    <lastBuildDate>Mon, 08 Apr 2019 15:00:58 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Write a numpy array to a mrc file using mrcfile</title>
+        <description>&lt;h1 id=&quot;write-a-numpy-array-to-a-mrc-file-using-mrcfile&quot;&gt;Write a numpy array to a mrc file using mrcfile&lt;/h1&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6992edf2bd095cff75d26ba520ea956c.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/04/08/write_a_numpy_array_to_a_mrc_file_using_mrcfile.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/04/08/write_a_numpy_array_to_a_mrc_file_using_mrcfile.html</guid>
+        
+        <category>python</category>
+        
+        <category>mrc</category>
+        
+        <category>EM</category>
+        
+        
+      </item>
     
       <item>
         <title>Transfer file through ssh using tar and pv</title>
