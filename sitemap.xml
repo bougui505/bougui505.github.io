@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2019/04/12/get_the_topology_and_coordinates_from_a_pdb_file_using_pymol.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2019/04/08/write_a_numpy_array_to_a_mrc_file_using_mrcfile.html</loc>
         </url>
     
