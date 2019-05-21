@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>mpi4py: Idle process occupies 100% CPU</title>
+    <title>Print the header of a mrc file</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2016/08/12/mpi4py-_idle_process_occupies_100-_cpu.html">
+    <link rel="canonical" href="http://bougui505.github.io/2019/05/21/print_the_header_of_a_mrc_file.html">
 </head>
 
 
@@ -123,32 +123,16 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="mpi4py-idle-process-occupies-100">mpi4py: Idle process occupies 100</h1>
+        <h1 id="print-the-header-of-a-mrc-file">Print the header of a mrc file</h1>
 
-<p>When only one node is computing, the IDLE process occupies 100% of the CPU. A
-workaround is to replace <code class="highlighter-rouge">COMM.barrier()</code> by this function:</p>
-
-<p>true<script src="https://gist.github.com/23c57990f3ebe671bb88e15211c533fc.js"> </script></p>
-
-<p>Example usage:</p>
-
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="n">comm</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span>
-<span class="n">tic</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">Wtime</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">comm</span><span class="o">.</span><span class="n">rank</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">barrier</span><span class="p">(</span><span class="n">comm</span><span class="p">)</span> <span class="c"># Instead of comm.barrier()</span>
-<span class="n">toc</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">Wtime</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">comm</span><span class="o">.</span><span class="n">rank</span><span class="p">,</span> <span class="n">toc</span><span class="o">-</span><span class="n">tic</span></code></pre></figure>
-
+<p>true<script src="https://gist.github.com/f0b3474ab37ceb145b2d895e49f379d9.js"> </script></p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2016/08/12/mpi4py-_idle_process_occupies_100-_cpu.html"
+      data-href="http://bougui505.github.io/2019/05/21/print_the_header_of_a_mrc_file.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
