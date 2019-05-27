@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Git pull that run out of memory on the server</title>
+    <title>Disable system bell</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/git/2014/10/18/git-pull-that-run-out-of-memory-on-the-server.html">
+    <link rel="canonical" href="http://bougui505.github.io/2019/05/27/disable_system_bell.html">
 </head>
 
 
@@ -125,24 +125,18 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="git-pull-that-run-out-of-memory-on-my-raspberry-pi-server">Git pull that run out of memory on my raspberry pi server</h1>
+        <h1 id="disable-system-bell">Disable system bell</h1>
 
-<p>I made a private git server with my raspberry pi.
-When you try to pull a big git project with large binary files you can get out of memory on the server.
-I found a quick fix in <a href="http://stackoverflow.com/questions/7362709/git-pull-fails-with-bad-pack-header-error">stackoverflow</a>:</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global pack.windowMemory <span class="s2">"100m"</span>
-git config --global pack.packSizeLimit <span class="s2">"100m"</span>
-git config --global pack.threads <span class="s2">"1"</span></code></pre></figure>
-
-<p>Now everything works well.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>xset -b
+</code></pre>
+</div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/git/2014/10/18/git-pull-that-run-out-of-memory-on-the-server.html"
+      data-href="http://bougui505.github.io/2019/05/27/disable_system_bell.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">

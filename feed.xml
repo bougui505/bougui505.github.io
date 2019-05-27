@@ -6,15 +6,35 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 21 May 2019 10:33:32 +0200</pubDate>
-    <lastBuildDate>Tue, 21 May 2019 10:33:32 +0200</lastBuildDate>
+    <pubDate>Mon, 27 May 2019 13:51:50 +0200</pubDate>
+    <lastBuildDate>Mon, 27 May 2019 13:51:50 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Disable system bell</title>
+        <description>&lt;h1 id=&quot;disable-system-bell&quot;&gt;Disable system bell&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;xset -b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Mon, 27 May 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/05/27/disable_system_bell.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/05/27/disable_system_bell.html</guid>
+        
+        <category>linux</category>
+        
+        
+      </item>
     
       <item>
         <title>Print the header of a mrc file</title>
         <description>&lt;h1 id=&quot;print-the-header-of-a-mrc-file&quot;&gt;Print the header of a mrc file&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f0b3474ab37ceb145b2d895e49f379d9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f0b3474ab37ceb145b2d895e49f379d9.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 21 May 2019 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2019/05/21/print_the_header_of_a_mrc_file.html</link>
@@ -31,7 +51,10 @@
         <title>Get the topology and coordinates from a PDB file using pymol</title>
         <description>&lt;h1 id=&quot;get-the-topology-and-coordinates-from-a-pdb-file-using-pymol&quot;&gt;Get the topology and coordinates from a PDB file using pymol&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e8b5b95e56c2cbacc165b9121a103110.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e8b5b95e56c2cbacc165b9121a103110.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 12 Apr 2019 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2019/04/12/get_the_topology_and_coordinates_from_a_pdb_file_using_pymol.html</link>
@@ -48,7 +71,10 @@
         <title>Write a numpy array to a mrc file using mrcfile</title>
         <description>&lt;h1 id=&quot;write-a-numpy-array-to-a-mrc-file-using-mrcfile&quot;&gt;Write a numpy array to a mrc file using mrcfile&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/6992edf2bd095cff75d26ba520ea956c.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6992edf2bd095cff75d26ba520ea956c.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2019/04/08/write_a_numpy_array_to_a_mrc_file_using_mrcfile.html</link>
@@ -90,7 +116,10 @@
         <title>Read a MRC file in python</title>
         <description>&lt;h1 id=&quot;read-a-mrc-file-in-python&quot;&gt;Read a MRC file in python&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f308341190217cd2cbf47fbb35230dcd.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f308341190217cd2cbf47fbb35230dcd.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2019/04/08/read_a_mrc_file_in_python.html</link>
@@ -109,7 +138,10 @@
         <title>Extract a zone around a model from a MRC density file</title>
         <description>&lt;h1 id=&quot;extract-a-zone-around-a-model-from-a-mrc-density-file&quot;&gt;Extract a zone around a model from a MRC density file&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/6fe478600ebf82420713d529107c0c05.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6fe478600ebf82420713d529107c0c05.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 08 Apr 2019 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2019/04/08/extract_a_zone_around_a_model_from_a_mrc_density_file.html</link>
@@ -128,7 +160,10 @@
         <title>Merge 2 pdbs using pymol from the shell CLI</title>
         <description>&lt;h1 id=&quot;merge-2-pdbs-using-pymol-from-the-shell-cli&quot;&gt;Merge 2 pdbs using pymol from the shell CLI&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/0dc873d7105b444cb08269ef215c42d6.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/0dc873d7105b444cb08269ef215c42d6.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 08 Mar 2019 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2019/03/08/merge_2_pdbs_using_pymol_from_the_shell_cli.html</link>
@@ -183,7 +218,10 @@ source activate ../envs/tensorflow-gpu
         <title>Select and save to DCD format from a molecular dynamics trajectory file using pymol from the shell command line</title>
         <description>&lt;h1 id=&quot;select-and-save-to-dcd-format-from-a-molecular-dynamics-trajectory-file-using-pymol-from-the-shell-command-line&quot;&gt;Select and save to DCD format from a molecular dynamics trajectory file using pymol from the shell command line&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/3d9d070dc813ce663d1bb93c65cfbcc9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3d9d070dc813ce663d1bb93c65cfbcc9.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 29 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/29/select_and_save_to_dcd_format_from_a_molecular_dynamics_trajectory_file_using_pymol_from_the_shell_command_line.html</link>
@@ -219,7 +257,10 @@ source activate ../envs/tensorflow-gpu
         <title>Using pymol alter command from command line</title>
         <description>&lt;h1 id=&quot;using-pymol-alter-command-from-command-line&quot;&gt;Using pymol alter command from command line&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f4fd52e50b75a81fc835c5537c5aba68.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f4fd52e50b75a81fc835c5537c5aba68.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/20/using_pymol_alter_command_from_command_line.html</link>
@@ -236,7 +277,10 @@ source activate ../envs/tensorflow-gpu
         <title>Use pymol command iterate from the shell command line</title>
         <description>&lt;h1 id=&quot;use-pymol-command-iterate-from-the-shell-command-line&quot;&gt;Use pymol command iterate from the shell command line&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/ea2ed7a865933f1d58830a394f63811e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ea2ed7a865933f1d58830a394f63811e.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/20/use_pymol_command_iterate_from_the_shell_command_line.html</link>
@@ -253,7 +297,10 @@ source activate ../envs/tensorflow-gpu
         <title>Extract sequence from a PDB file from the command line using pymol</title>
         <description>&lt;h1 id=&quot;extract-sequence-from-a-pdb-file-from-the-command-line-using-pymol&quot;&gt;Extract sequence from a PDB file from the command line using pymol&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/39149033d0d7a8667827c54fb867f1e1.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/39149033d0d7a8667827c54fb867f1e1.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 20 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/20/extract_sequence_from_a_pdb_file_from_the_command_line_using_pymol.html</link>
@@ -270,7 +317,10 @@ source activate ../envs/tensorflow-gpu
         <title>Select atoms in a PDB file from the terminal command line using pymol</title>
         <description>&lt;h1 id=&quot;select-atoms-in-a-pdb-file-from-the-terminal-command-line-using-pymol&quot;&gt;Select atoms in a PDB file from the terminal command line using pymol&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/66ffcb8c16e2e299f22e24e3fd4c52df.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/66ffcb8c16e2e299f22e24e3fd4c52df.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 19 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/19/select_atoms_in_a_pdb_file_from_the_terminal_command_line_using_pymol.html</link>
@@ -287,7 +337,9 @@ source activate ../envs/tensorflow-gpu
         <title>Drawing stacked charts using tikz</title>
         <description>&lt;h1 id=&quot;drawing-stacked-charts-using-tikz&quot;&gt;Drawing stacked charts using tikz&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/2c4d4347f9bb15c94cf97d7c8bc08ffe.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2c4d4347f9bb15c94cf97d7c8bc08ffe.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/stackedchart.png&quot; alt=&quot;stackedchart&quot; /&gt;&lt;/p&gt;
 </description>
@@ -306,7 +358,10 @@ source activate ../envs/tensorflow-gpu
         <title>How to rescale several images to same size</title>
         <description>&lt;h1 id=&quot;how-to-rescale-several-images-to-same-size&quot;&gt;How to rescale several images to same size&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/1abe08bebc5b6a0c463835aa6b70dab2.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1abe08bebc5b6a0c463835aa6b70dab2.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 06 Nov 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/11/06/how_to_rescale_several_images_to_same_size.html</link>
@@ -323,7 +378,10 @@ source activate ../envs/tensorflow-gpu
         <title>Aggregate statistics from the Protein Data Bank</title>
         <description>&lt;h1 id=&quot;aggregate-statistics-from-the-protein-data-bank&quot;&gt;Aggregate statistics from the Protein Data Bank&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b2034e5a59bd818b2580bf7716db5247.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b2034e5a59bd818b2580bf7716db5247.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 25 Oct 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/10/25/aggregate_statistics_from_the_protein_data_bank.html</link>
@@ -344,7 +402,10 @@ source activate ../envs/tensorflow-gpu
         <title>Sequence alignment from the command line using mafft</title>
         <description>&lt;h1 id=&quot;sequence-alignment-from-the-command-line-using-mafft&quot;&gt;Sequence alignment from the command line using mafft&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/d3b9f8e56f9a234de35d46259fadd920.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/d3b9f8e56f9a234de35d46259fadd920.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 24 Oct 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/10/24/sequence_alignment_from_the_command_line_using_mafft.html</link>
@@ -363,7 +424,10 @@ source activate ../envs/tensorflow-gpu
         <title>Random wallpaper from unsplash.com</title>
         <description>&lt;h1 id=&quot;random-wallpaper-from-unsplashcom&quot;&gt;Random wallpaper from unsplash.com&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/d114c63dc3de46e44ccb81f05276907c.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/d114c63dc3de46e44ccb81f05276907c.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 23 Oct 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/10/23/random_wallpaper_from_unsplash.com.html</link>
@@ -382,7 +446,10 @@ source activate ../envs/tensorflow-gpu
         <title>Reduce the size of the gnome-shell top bar</title>
         <description>&lt;h1 id=&quot;reduce-the-size-of-the-gnome-shell-top-bar&quot;&gt;Reduce the size of the gnome-shell top bar&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/77d9fb30a5dff2dc390f1e57d8bb5630.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/77d9fb30a5dff2dc390f1e57d8bb5630.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 18 Oct 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/10/18/reduce_the_size_of_the_gnome-shell_top_bar.html</link>
@@ -399,7 +466,10 @@ source activate ../envs/tensorflow-gpu
         <title>A quick Gnome 3 app indicator for crashplan</title>
         <description>&lt;h1 id=&quot;a-quick-gnome-3-app-indicator-for-crashplan&quot;&gt;A quick Gnome 3 app indicator for crashplan&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/76d491ef98fbb69c932b26ca6b270d1e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/76d491ef98fbb69c932b26ca6b270d1e.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 11 Oct 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/10/11/a_quick_gnome_3_app_indicator_for_crashplan.html</link>
@@ -416,7 +486,10 @@ source activate ../envs/tensorflow-gpu
         <title>Running IPython from vim</title>
         <description>&lt;h1 id=&quot;running-ipython-from-vim&quot;&gt;Running IPython from vim&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/8e9f7b4c508fbef3720b8370b4df1d9a.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/8e9f7b4c508fbef3720b8370b4df1d9a.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 08 Oct 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/10/08/running_ipython_from_vim.html</link>
@@ -433,7 +506,10 @@ source activate ../envs/tensorflow-gpu
         <title>Simple command to bookmark files</title>
         <description>&lt;h1 id=&quot;simple-command-to-bookmark-files&quot;&gt;Simple command to bookmark files&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/6861596086ea8fcd6a33d148be872394.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6861596086ea8fcd6a33d148be872394.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 18 Sep 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/09/18/simple_command_to_bookmark_files.html</link>
@@ -470,7 +546,10 @@ source activate ../envs/tensorflow-gpu
         <title>Encode a string into a qrcode en display it using qrencode</title>
         <description>&lt;h1 id=&quot;encode-a-string-into-a-qrcode-en-display-it-using-qrencode&quot;&gt;Encode a string into a qrcode en display it using qrencode&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e9733fe81d2ca47fce4448a4e0a69bbd.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e9733fe81d2ca47fce4448a4e0a69bbd.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 20 Jul 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/07/20/encode_a_string_into_a_qrcode_en_display_it_using_qrencode.html</link>
@@ -504,7 +583,10 @@ source activate ../envs/tensorflow-gpu
         <title>Quick method to get the index of every element of array y in array x</title>
         <description>&lt;h1 id=&quot;quick-method-to-get-the-index-of-every-element-of-array-y-in-array-x&quot;&gt;Quick method to get the index of every element of array y in array x&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a7d0a14e47d5d058d0da9fec5549e3dc.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a7d0a14e47d5d058d0da9fec5549e3dc.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 29 Mar 2018 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2018/03/29/quick_method_to_get_the_index_of_every_element_of_array_y_in_array_x.html</link>
@@ -596,7 +678,10 @@ source activate ../envs/tensorflow-gpu
         <title>Simple script to monitor the memory usage of a process given its PID</title>
         <description>&lt;h1 id=&quot;simple-script-to-monitor-the-memory-usage-of-a-process-given-its-pid&quot;&gt;Simple script to monitor the memory usage of a process given its PID&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/90583d8ab98c13d8d082ee4248876866.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/90583d8ab98c13d8d082ee4248876866.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 07 Feb 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/02/07/simple_script_to_monitor_the_memory_usage_of_a_process_given_its_pid.html</link>
@@ -613,7 +698,10 @@ source activate ../envs/tensorflow-gpu
         <title>List and filter files based on timestamp</title>
         <description>&lt;h1 id=&quot;list-and-filter-files-based-on-timestamp&quot;&gt;List and filter files based on timestamp&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/7f9396e1350f3b6b7cd2f6ac1bb72ab6.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/7f9396e1350f3b6b7cd2f6ac1bb72ab6.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 06 Feb 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/02/06/list_and_filter_files_based_on_timestamp.html</link>
@@ -632,7 +720,10 @@ source activate ../envs/tensorflow-gpu
         <title>Compute the global distance test (GDT) with pymol</title>
         <description>&lt;h1 id=&quot;compute-the-global-distance-test-gdt-with-pymol&quot;&gt;Compute the global distance test (GDT) with pymol&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5d8bbd714499daa72cc158a0a9a2e1af.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5d8bbd714499daa72cc158a0a9a2e1af.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 24 Jan 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/01/24/compute_the_global_distance_test_(gdt)_with_pymol.html</link>
@@ -649,7 +740,10 @@ source activate ../envs/tensorflow-gpu
         <title>Simple script to download a pdb file from the command line</title>
         <description>&lt;h1 id=&quot;simple-script-to-download-a-pdb-file-from-the-command-line&quot;&gt;Simple script to download a pdb file from the command line&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/dd73d731c3950ca3a09c87ea9989cecd.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/dd73d731c3950ca3a09c87ea9989cecd.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 15 Jan 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/01/15/simple_script_to_download_a_pdb_file_from_the_command_line.html</link>
@@ -664,7 +758,10 @@ source activate ../envs/tensorflow-gpu
         <title>Shift the origin of an EM map in MRC format using Tempy</title>
         <description>&lt;h1 id=&quot;shift-the-origin-of-an-em-map-in-mrc-format-using-tempy&quot;&gt;Shift the origin of an EM map in MRC format using Tempy&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/366244a475d91d0209dcb26a5b3e9ef8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/366244a475d91d0209dcb26a5b3e9ef8.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 12 Jan 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/01/12/shift_the_origin_of_an_em_map_in_mrc_format_using_tempy.html</link>
@@ -683,7 +780,10 @@ source activate ../envs/tensorflow-gpu
         <title>Automatic cropped (trimmed) of an EM density map in MRC format to get the minimal box size</title>
         <description>&lt;h1 id=&quot;automatic-cropped-trimmed-of-an-em-density-map-in-mrc-format-to-get-the-minimal-box-size&quot;&gt;Automatic cropped (trimmed) of an EM density map in MRC format to get the minimal box size&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/2faf00b94a4793d3171af244e35a61ee.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2faf00b94a4793d3171af244e35a61ee.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 12 Jan 2018 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2018/01/12/automatic_cropped_(trimmed)_of_an_em_density_map_in_mrc_format_to_get_the_minimal_box_size.html</link>
@@ -704,7 +804,10 @@ source activate ../envs/tensorflow-gpu
         <title>Resample MRC EM density map file using TEMPy</title>
         <description>&lt;h1 id=&quot;resample-mrc-em-density-map-file-using-tempy&quot;&gt;Resample MRC EM density map file using TEMPy&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/1950f094bfabaf6506bc6dc7c85e2022.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1950f094bfabaf6506bc6dc7c85e2022.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 19 Dec 2017 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2017/12/19/resample_mrc_em_density_map_file_using_tempy.html</link>
@@ -723,7 +826,10 @@ source activate ../envs/tensorflow-gpu
         <title>Display basic information from a electron density map MRC file</title>
         <description>&lt;h1 id=&quot;display-basic-information-from-a-electron-density-map-mrc-file&quot;&gt;Display basic information from a electron density map MRC file&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/98a3e71027320928260fc0422328a97a.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/98a3e71027320928260fc0422328a97a.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 14 Dec 2017 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2017/12/14/display_basic_information_from_a_electron_density_map_mrc_file.html</link>
@@ -744,7 +850,10 @@ source activate ../envs/tensorflow-gpu
         <title>Simple script to mount or unmount a squashfs archive</title>
         <description>&lt;h1 id=&quot;simple-script-to-mount-or-unmount-a-squashfs-archive&quot;&gt;Simple script to mount or unmount a squashfs archive&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/851560a65384d1dc3569c6b8a8d97c56.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/851560a65384d1dc3569c6b8a8d97c56.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2017/12/04/simple_script_to_mount_or_unmount_a_squashfs_archive.html</link>
@@ -759,7 +868,10 @@ source activate ../envs/tensorflow-gpu
         <title>Simple script to automate the creation of squashfs archives</title>
         <description>&lt;h1 id=&quot;simple-script-to-automate-the-creation-of-squashfs-archives&quot;&gt;Simple script to automate the creation of squashfs archives&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/dbdb82fba6846c1e895e7f85a82ad460.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/dbdb82fba6846c1e895e7f85a82ad460.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 04 Dec 2017 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2017/12/04/simple_script_to_automate_the_creation_of_squashfs_archives.html</link>
@@ -802,7 +914,9 @@ source activate ../envs/tensorflow-gpu
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/11538913.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/11538913.js&quot;&gt; &lt;/script&gt;
 
 </description>
         <pubDate>Thu, 16 Nov 2017 00:00:00 +0100</pubDate>
@@ -822,7 +936,10 @@ source activate ../envs/tensorflow-gpu
         <title>Fix incomplete sidechains in a pdb file with a Chimera script</title>
         <description>&lt;h1 id=&quot;fix-incomplete-sidechains-in-a-pdb-file-with-a-chimera-script&quot;&gt;Fix incomplete sidechains in a pdb file with a Chimera script&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/c8599a6659b368c18b45bc321c49a0b1.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c8599a6659b368c18b45bc321c49a0b1.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 16 Nov 2017 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2017/11/16/fix_incomplete_sidechains_in_a_pdb_file_with_a_chimera_script.html</link>
@@ -869,7 +986,10 @@ alias ssh=color_ssh
         <title>Simulate a EM map from a pdb file using TEMPy</title>
         <description>&lt;h1 id=&quot;simulate-a-em-map-from-a-pdb-file-using-tempy&quot;&gt;Simulate a EM map from a pdb file using TEMPy&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/3885bd615a631ec5cbaec3d731e374e8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3885bd615a631ec5cbaec3d731e374e8.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 22 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/22/simulate_a_em_map_from_a_pdb_file_using_tempy.html</link>
@@ -892,7 +1012,10 @@ alias ssh=color_ssh
         <title>Simple slurm monitoring using awk</title>
         <description>&lt;h1 id=&quot;simple-slurm-monitoring-using-awk&quot;&gt;Simple slurm monitoring using awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/610d61933a923e8ad665cc8de3942955.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/610d61933a923e8ad665cc8de3942955.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 19 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/19/simple_slurm_monitoring_using_awk.html</link>
@@ -909,7 +1032,10 @@ alias ssh=color_ssh
         <title>Simple python clone of gnu datamash</title>
         <description>&lt;h1 id=&quot;simple-python-clone-of-gnu-datamash&quot;&gt;Simple python clone of gnu datamash&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/9a25fe14738a6e8f20cea67e1562aaf2.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9a25fe14738a6e8f20cea67e1562aaf2.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 19 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/19/simple_python_clone_of_gnu_datamash.html</link>
@@ -926,7 +1052,10 @@ alias ssh=color_ssh
         <title>Tagging files using ext4 extended file attributes</title>
         <description>&lt;h1 id=&quot;tagging-files-using-ext4-extended-file-attributes&quot;&gt;Tagging files using ext4 extended file attributes&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/4e5dc323d3e649fd22f7fabac3edb9d8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/4e5dc323d3e649fd22f7fabac3edb9d8.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 12 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html</link>
@@ -945,7 +1074,10 @@ alias ssh=color_ssh
         <title>Align two PDB files using Biopython</title>
         <description>&lt;h1 id=&quot;align-two-pdb-files-using-biopython&quot;&gt;Align two PDB files using Biopython&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/006e232c294db2303393c5a6270d1e8d.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/006e232c294db2303393c5a6270d1e8d.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 11 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/11/align_two_pdb_files_using_biopython.html</link>
@@ -962,7 +1094,10 @@ alias ssh=color_ssh
         <title>Print the head and the tail of a file simultaneously with awk</title>
         <description>&lt;h1 id=&quot;print-the-head-and-the-tail-of-a-file-simultaneously-with-awk&quot;&gt;Print the head and the tail of a file simultaneously with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/85d5c3d5017108739a74d143c4f44afa.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/85d5c3d5017108739a74d143c4f44afa.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 07 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html</link>
@@ -983,7 +1118,10 @@ alias ssh=color_ssh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/bc327291a686a3245c39176df6bd2dd8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/bc327291a686a3245c39176df6bd2dd8.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 30 Aug 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/08/30/process_each_frame_of_a_dcd_trajectory_file_using_any_script_file_using_a_standard_pdb_file_as_input.html</link>
@@ -1002,7 +1140,10 @@ alias ssh=color_ssh
         <title>An automatic system to commit Git changes using Incron</title>
         <description>&lt;h1 id=&quot;an-automatic-system-to-commit-git-changes-using-incron&quot;&gt;An automatic system to commit Git changes using Incron&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/15c7320c00b8a10c2fa42fe4c403e129.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/15c7320c00b8a10c2fa42fe4c403e129.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 25 Aug 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/08/25/an_automatic_system_to_commit_git_changes_using_incron.html</link>
@@ -1019,7 +1160,10 @@ alias ssh=color_ssh
         <title>A simple script to renumber residue ids or atom serial number in PDB file using awk</title>
         <description>&lt;h1 id=&quot;a-simple-script-to-renumber-residue-ids-or-atom-serial-number-in-pdb-file-using-awk&quot;&gt;A simple script to renumber residue ids or atom serial number in PDB file using awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/c177ad704da5b84b97bd89bd67a9caa7.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/c177ad704da5b84b97bd89bd67a9caa7.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 25 Aug 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/08/25/a_simple_script_to_renumber_residue_ids_or_atom_serial_number_in_pdb_file_using_awk.html</link>
@@ -1063,7 +1207,10 @@ alias ssh=color_ssh
 
 &lt;p&gt;&lt;img src=&quot;/assets/lcs.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/d6f4062ad05cc4df738adcc267aba37c.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/d6f4062ad05cc4df738adcc267aba37c.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 13 Jul 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/07/13/global_distance_test_(gdt)_and_longest_continuous_segments_(lcs)_with_python.html</link>
@@ -1106,7 +1253,10 @@ alias ssh=color_ssh
         <title>Align two sequences using modeller and create a dictionnary mapping from the alignment object</title>
         <description>&lt;h1 id=&quot;align-two-sequences-using-modeller-and-create-a-dictionnary-mapping-from-the-alignment-object&quot;&gt;Align two sequences using modeller and create a dictionnary mapping from the alignment object&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e47d6dd29d2e2676e6c5e1f89f5bb6d1.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e47d6dd29d2e2676e6c5e1f89f5bb6d1.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 27 Jun 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/06/27/align_two_sequences_using_modeller_and_create_a_dictionnary_mapping_from_the_alignment_object.html</link>
@@ -1242,7 +1392,9 @@ sudo update-grub
 
 &lt;p&gt;&lt;img src=&quot;/assets/topoalign.svg&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a34dbe51199a5c2c52817ae9d3988d41.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a34dbe51199a5c2c52817ae9d3988d41.js&quot;&gt; &lt;/script&gt;
 
 </description>
         <pubDate>Tue, 23 May 2017 00:00:00 +0200</pubDate>
@@ -1262,7 +1414,10 @@ sudo update-grub
         <title>Get notified when terminal commands end</title>
         <description>&lt;h1 id=&quot;get-notified-when-terminal-commands-end&quot;&gt;Get notified when terminal commands end&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/adb5d511b9c987575a0270c174494512.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/adb5d511b9c987575a0270c174494512.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 19 May 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/05/19/get_notified_when_terminal_commands_end.html</link>
@@ -1302,7 +1457,10 @@ sudo update-grub
         <title>PDB selection with awk</title>
         <description>&lt;h1 id=&quot;pdb-selection-with-awk&quot;&gt;PDB selection with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e046a6ad576f5f74d440f2caf9cce91e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e046a6ad576f5f74d440f2caf9cce91e.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 12 May 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/05/12/pdb_selection_with_awk.html</link>
@@ -1319,7 +1477,10 @@ sudo update-grub
         <title>Merge multiple PDB files into one multimodels PDB file using awk</title>
         <description>&lt;h1 id=&quot;merge-multiple-pdb-files-into-one-multimodels-pdb-file-using-awk&quot;&gt;Merge multiple PDB files into one multimodels PDB file using awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5eb32df35ea92a04e30fb246f216bb5f.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5eb32df35ea92a04e30fb246f216bb5f.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 25 Apr 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/04/25/merge_multiple_pdb_files_into_one_multimodels_pdb_file_using_awk.html</link>
@@ -1364,7 +1525,9 @@ pip install borgbackup
 
 &lt;p&gt;First, the main script:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f9d9d772ea4e065dffcbc204cfd2b042.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f9d9d772ea4e065dffcbc204cfd2b042.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;And the cron line to insert to crontab:&lt;/p&gt;
 
@@ -1397,7 +1560,10 @@ borg-info () {
         <title>Merge multiple PDB files into a unique multichain PDB file with awk</title>
         <description>&lt;h1 id=&quot;merge-multiple-pdb-files-into-a-unique-multichain-pdb-file-with-awk&quot;&gt;Merge multiple PDB files into a unique multichain PDB file with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5d93880c0a60903aa734111ce3e23736.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5d93880c0a60903aa734111ce3e23736.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/04/20/merge_multiple_pdb_files_into_a_unique_multichain_pdb_file_with_awk.html</link>
@@ -1414,7 +1580,10 @@ borg-info () {
         <title>Get the CA trace from a PDB file using awk</title>
         <description>&lt;h1 id=&quot;get-the-ca-trace-from-a-pdb-file-using-awk&quot;&gt;Get the CA trace from a PDB file using awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e890ab7d41a8a3618ce4583251723be2.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e890ab7d41a8a3618ce4583251723be2.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 20 Apr 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/04/20/get_the_ca_trace_from_a_pdb_file_using_awk.html</link>
@@ -2179,7 +2348,10 @@ sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
         <title>Compute distance between two centers of mass from a DCD trajectory using MDAnalysis</title>
         <description>&lt;h1 id=&quot;compute-distance-between-two-centers-of-mass-from-a-dcd-trajectory-using-mdanalysis&quot;&gt;Compute distance between two centers of mass from a DCD trajectory using MDAnalysis&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b96807d98f52a5281b67a6a479064a5d.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b96807d98f52a5281b67a6a479064a5d.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 03 Nov 2016 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2016/11/03/compute_distance_between_two_centers_of_mass_from_a_dcd_trajectory_using_mdanalysis.html</link>
@@ -2196,7 +2368,10 @@ sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
         <title>Stream data in real time with python</title>
         <description>&lt;h1 id=&quot;stream-data-in-real-time-with-python&quot;&gt;Stream data in real time with python&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/59bfcad5ae9eb1fff762c204f5734d52.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/59bfcad5ae9eb1fff762c204f5734d52.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 20 Oct 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/10/20/stream_data_in_real_time_with_python.html</link>
@@ -2211,7 +2386,10 @@ sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
         <title>Compute pairwise RMSD between a given list of frame for a trajectory</title>
         <description>&lt;h1 id=&quot;compute-pairwise-rmsd-between-a-given-list-of-frame-for-a-trajectory&quot;&gt;Compute pairwise RMSD between a given list of frame for a trajectory&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/8f88f08620d46c95a018fd0a371efa1e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/8f88f08620d46c95a018fd0a371efa1e.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 10 Oct 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/10/10/compute_pairwise_rmsd_between_a_given_list_of_frame_for_a_trajectory.html</link>
@@ -2226,7 +2404,10 @@ sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
         <title>Compute the radius of gyration for each frame of a trajectory using MDAnalysis</title>
         <description>&lt;h1 id=&quot;compute-the-radius-of-gyration-for-each-frame-of-a-trajectory-using-mdanalysis&quot;&gt;Compute the radius of gyration for each frame of a trajectory using MDAnalysis&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/fe4f929c548f76f58f72e21fc42d3123.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/fe4f929c548f76f58f72e21fc42d3123.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 20 Sep 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/09/20/compute_the_radius_of_gyration_for_each_frame_of_a_trajectory_using_mdanalysis.html</link>
@@ -2252,7 +2433,10 @@ sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
   &lt;li&gt;…&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e31d472e222d693b54b7391faaef7742.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e31d472e222d693b54b7391faaef7742.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 09 Sep 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/09/09/repair_a_protein_using_modeller_and_python.html</link>
@@ -2271,7 +2455,9 @@ sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
         <title>zsh: show right prompt with date ONLY when command is executed</title>
         <description>&lt;h1 id=&quot;zsh-show-right-prompt-with-date-only-when-command-is-executed&quot;&gt;zsh: show right prompt with date ONLY when command is executed&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/ec54cca1b0517f85afbd954eb166c69c.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ec54cca1b0517f85afbd954eb166c69c.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;NB: From the &lt;a href=&quot;http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions&quot;&gt;zsh documentation on hook functions&lt;/a&gt;:&lt;/p&gt;
 
@@ -2311,7 +2497,10 @@ change the value of rand_seed (see comments in the script) each time. This may
 be useful if some models, for example, cannot be optimized due to steric
 clashes.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/efbd203e70f9103d329404ec18778ebb.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/efbd203e70f9103d329404ec18778ebb.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 06 Sep 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/09/06/mutate_a_single_residue_in_a_pdb_with_python_and_modeller.html</link>
@@ -2385,7 +2574,10 @@ SALIGN_____&amp;gt; adding the next group to the alignment; iteration    1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5226ec7909da1760c91f5159216af7f8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5226ec7909da1760c91f5159216af7f8.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 06 Sep 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/09/06/align_pdb_sequences_using_python_and_modeller.html</link>
@@ -2632,7 +2824,10 @@ seen below:&lt;/p&gt;
         <title>Compute secondary structure content from a DCD trajectory file using python, MDAnalysis and DSSP</title>
         <description>&lt;h1 id=&quot;compute-secondary-structure-content-from-a-dcd-trajectory-file-using-python-mdanalysis-and-dssp&quot;&gt;Compute secondary structure content from a DCD trajectory file using python, MDAnalysis and DSSP&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f1c166d32547b561f1961d2a28f885b3.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f1c166d32547b561f1961d2a28f885b3.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 26 Aug 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/08/26/compute_secondary_structure_content_from_a_dcd_trajectory_file_using_python,_mdanalysis_and_dssp.html</link>
@@ -2654,7 +2849,9 @@ seen below:&lt;/p&gt;
 &lt;p&gt;When only one node is computing, the IDLE process occupies 100% of the CPU. A
 workaround is to replace &lt;code class=&quot;highlighter-rouge&quot;&gt;COMM.barrier()&lt;/code&gt; by this function:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/23c57990f3ebe671bb88e15211c533fc.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/23c57990f3ebe671bb88e15211c533fc.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Example usage:&lt;/p&gt;
 
@@ -2740,7 +2937,10 @@ buggy pdb file. In that case just call the script as below:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e30a41e06c50eb8863cf43a4fa5d5743.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e30a41e06c50eb8863cf43a4fa5d5743.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 28 Jul 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/07/28/modeller-_generate_an_extended_protein_conformation_from_an_initial_pdb_file.html</link>
@@ -2924,7 +3124,10 @@ load-module module-bluetooth-discover
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/2159535114cdc4ed5701a1a6b239b715.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2159535114cdc4ed5701a1a6b239b715.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 06 Jul 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/07/06/compress_a_pdf_file_using_gs.html</link>
@@ -2981,7 +3184,10 @@ temporarly the output.&lt;/p&gt;
 
 &lt;p&gt;The function below do the job:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/6a4588669de1ea5df11dafd2d6eabb70.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/6a4588669de1ea5df11dafd2d6eabb70.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 30 Jun 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/06/30/temporarily_suppress_console_output_in_python_(from-_dave_smith's_blog).html</link>
@@ -3013,7 +3219,9 @@ plot:&lt;/p&gt;
 &lt;p&gt;The function below sort scatter data from the less frequent one to the most
 frequent using a 3D histogram:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5f6b4fa24272dc0501f6052ed4654abe.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5f6b4fa24272dc0501f6052ed4654abe.js&quot;&gt; &lt;/script&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;data_sorted&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sort_scatter_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -3041,7 +3249,10 @@ frequent using a 3D histogram:&lt;/p&gt;
         <title>Fill missing values in a column formatted text file with awk</title>
         <description>&lt;h1 id=&quot;fill-missing-values-in-a-column-formatted-text-file-with-awk&quot;&gt;Fill missing values in a column formatted text file with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f4f9da37be9a31aaa1b7f0c790619969.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f4f9da37be9a31aaa1b7f0c790619969.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 22 Jun 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/06/22/fill_missing_values_in_a_column_formatted_text_file_with_awk.html</link>
@@ -3056,7 +3267,10 @@ frequent using a 3D histogram:&lt;/p&gt;
         <title>Compute timeseries RMSD from a dcd trajectory file using MDAnalysis</title>
         <description>&lt;h1 id=&quot;compute-timeseries-rmsd-from-a-dcd-trajectory-file-using-mdanalysis&quot;&gt;Compute timeseries RMSD from a dcd trajectory file using MDAnalysis&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a0503e0a083b890f2e2b60c851b70184.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a0503e0a083b890f2e2b60c851b70184.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 21 Jun 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/06/21/compute_timeseries_rmsd_from_a_dcd_trajectory_file_using_mdanalysis.html</link>
@@ -3075,7 +3289,9 @@ frequent using a 3D histogram:&lt;/p&gt;
 
 &lt;p&gt;Below is a simple awk script that return the number of missing CA in a PDB file:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/cc94b9c57087187eb7518060e6561a39.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cc94b9c57087187eb7518060e6561a39.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
@@ -3151,7 +3367,9 @@ and in the test command line.&lt;/p&gt;
 &lt;p&gt;The script below creates a gist and clone the resulting git repo to your
 current working directory to transparently obtain a git repo:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cf4244d31e4ee4c4de1a11e985135d3b.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Usage:&lt;/p&gt;
 
@@ -3245,7 +3463,9 @@ backup has been done?&lt;/p&gt;
 install CrashPlan in the same location – and print them out in a formatted
 way:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/ba9db84a2fc6f9330f3ccf32a352a98e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ba9db84a2fc6f9330f3ccf32a352a98e.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Example usage:&lt;/p&gt;
 
@@ -3354,7 +3574,9 @@ favourite shell. To do so I added this line to the anacrontab
 &lt;p&gt;And I use the following script to print the message of the day when I start a
 new shell:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/1aa8d4d97c913e15cfc50a291b3d1753.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/1aa8d4d97c913e15cfc50a291b3d1753.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Then I added the following command to my shell configuration script (&lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt;,
 &lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;, …):&lt;/p&gt;
@@ -3400,7 +3622,9 @@ encountered (if any subcommand or pipeline returns a non-zero status).&lt;/p&gt;
 &lt;p&gt;Below is the script to change the desktop wallpaper. The images are assumed to
 be in &lt;code class=&quot;highlighter-rouge&quot;&gt;$HOME/wallpapers&lt;/code&gt; directory:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/e543ab6937ba31488d98ff081f9ef139.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/e543ab6937ba31488d98ff081f9ef139.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Just add that entry to the user crontab to change the wallpaper every hour
 (with the command &lt;code class=&quot;highlighter-rouge&quot;&gt;crontab -e&lt;/code&gt;):&lt;/p&gt;
@@ -3483,7 +3707,10 @@ detect file opening.&lt;/p&gt;
 &lt;a href=&quot;https://github.com/jeffwheeler/vimfiles/blob/master/plugin/zeitgeist.vim&quot;&gt;here&lt;/a&gt;
 to add Vim as a data-source for Zeitgeist:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a0cbacb2eb9dad685aff6b24c2ab8792.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a0cbacb2eb9dad685aff6b24c2ab8792.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 20 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/20/adding_vim_data-source_to_zeitgeist.html</link>
@@ -3537,7 +3764,10 @@ chosen display (e.g. &lt;code class=&quot;highlighter-rouge&quot;&gt;DP2&lt;/cod
 
 &lt;p&gt;The script below set the resolution of the second display &lt;code class=&quot;highlighter-rouge&quot;&gt;DP2&lt;/code&gt; to 1600x1200:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a1817073bc5ec0cd61e69a643b091fdc.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a1817073bc5ec0cd61e69a643b091fdc.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 11 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/11/setting_higher_screen_resolution_for_external_monitor_on_linux.html</link>
@@ -3568,7 +3798,10 @@ applies a Gaussian distance restraint along with the stereochemical restraints
 &lt;p&gt;The script can also handle backbone only protein structure and return a full
 atom protein. Just add the &lt;code class=&quot;highlighter-rouge&quot;&gt;bb&lt;/code&gt; keyword argument.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/07281e1e0156193c5ef047b1e0113106.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/07281e1e0156193c5ef047b1e0113106.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 11 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/11/convert_c_alpha_only_protein_structure_to_all_atoms_structure_using_modeller.html</link>
@@ -3613,7 +3846,10 @@ atom protein. Just add the &lt;code class=&quot;highlighter-rouge&quot;&gt;bb&lt
 
 &lt;p&gt;Usefull to publish matplotlib plot directly in LaTeX:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b844feb1bdfba3072ca92a6d6961f71b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b844feb1bdfba3072ca92a6d6961f71b.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 05 Apr 2016 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2016/04/05/create_pgf_plot_from_python_matplotlib.html</link>
@@ -4220,7 +4456,10 @@ Inkscape. It can be used to convert a Sozi presentation to pdf, with no need to
 install &lt;a href=&quot;http://sozi.baierouge.fr/pages/tutorial-converting.html&quot;&gt;this script&lt;/a&gt;
 with PhantomJS library.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/39e33fc7f811ee6da931.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 27 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/27/make_a_pdf_format_slideshow_from_a_unique_svg_file.html</link>
@@ -4243,7 +4482,10 @@ with PhantomJS library.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b6d38b1237ce826bbbff.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b6d38b1237ce826bbbff.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 26 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/26/write_data_to_b-factor_column_of_a_pdb_file.html</link>
@@ -4312,7 +4554,10 @@ given.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/0a1e82708a7f24c85fb4.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/0a1e82708a7f24c85fb4.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 09 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/09/progress_reporting_in_python.html</link>
@@ -4494,7 +4739,10 @@ format can be convenient to perform analysis on coordinates with python.&lt;/p&g
 &lt;p&gt;See &lt;a href=&quot;https://pythonhosted.org/MDAnalysis/documentation_pages/selections.html&quot;&gt;MDAnalysis documentation&lt;/a&gt;
 for selection syntax.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/0411d863a2c6d2df4bcc.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/0411d863a2c6d2df4bcc.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 04 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/04/select_a_subset_of_atoms_from_a_trajectory_file_with_mdanalysis.html</link>
@@ -4526,7 +4774,10 @@ generated directory in &lt;code class=&quot;highlighter-rouge&quot;&gt;$BLOGDIR/
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;./jekyll_push.sh &lt;span class=&quot;s2&quot;&gt;&quot;Message of the git commit&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/85ce0e40d36ed7c8442d.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/85ce0e40d36ed7c8442d.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 03 Nov 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/11/03/generate_jekyll_site_locally_and_push_source_file_and_static_web_site_to_github.html</link>
@@ -4591,7 +4842,10 @@ instead. This feature is conveninant to pipe from awk, for example:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/12537c00c8e1679577de.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/12537c00c8e1679577de.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 27 Oct 2015 00:00:00 +0100</pubDate>
         <link>http://bougui505.github.io/2015/10/27/extract_a_subset_of_frames_from_a_dcd_trajectory_file_with_mdanalysis.html</link>
@@ -4621,7 +4875,10 @@ selectAtoms() that produces identical selections in mobile and reference. e.g.
 &lt;p&gt;I don’t know why but the number of native contacts for the last frame is not
 computed, for the version of MDAnalyis I use (0.7.3).&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/cc8415df4102becceede.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/cc8415df4102becceede.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 23 Oct 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2015/10/23/compute_native_contacts_ratio_from_a_dcd_trajectory_file_with_md-analysis.html</link>
@@ -4664,13 +4921,18 @@ The corresponding chi value is computed from experimental data.&lt;/p&gt;
   &lt;li&gt;The main shell script:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/2fa82c1d039155503416.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/2fa82c1d039155503416.js&quot;&gt; &lt;/script&gt;
 
 &lt;ul&gt;
   &lt;li&gt;The IMP python script:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/7d32ce504bfbff965ee4.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/7d32ce504bfbff965ee4.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2015/10/22/compute_theoretical_saxs_profile_for_each_frame_of_a_dcd_format_trajectory_and_the_corresponding_chi_value_from_experimental_data.html</link>
@@ -4755,7 +5017,10 @@ selectAtoms() that produces identical selections in mobile and reference. e.g.
 
 &lt;p&gt;Remark: You can give a pdb file instead of the psf file.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/b5fbdb2de5b9c1ff106e.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/b5fbdb2de5b9c1ff106e.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 22 Oct 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2015/10/22/align_dcd_trajectory_with_mdanalysis.html</link>
@@ -4935,7 +5200,9 @@ c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Quick script to avoid overlaps of annotations for matplotlib plots.&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/45c1df58d6d142312a03.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/45c1df58d6d142312a03.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/spring_layout_annotations.png&quot; alt=&quot;Spring layout annotation in matplotlib&quot; /&gt;&lt;/p&gt;
 </description>
@@ -4958,7 +5225,9 @@ c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Here is the script:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/f0fa80ae9f0abc42e2d9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/f0fa80ae9f0abc42e2d9.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Just replace &lt;code class=&quot;highlighter-rouge&quot;&gt;PDB&lt;/code&gt; with your pdb file name and launch the script with:&lt;/p&gt;
 
@@ -5033,7 +5302,10 @@ pdz2/relax&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Usage: blogpost “Title of the post” tag1 tag2 tag3 …&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/5a04655ce65766f143e0.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/5a04655ce65766f143e0.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 29 Sep 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2015/09/29/utility_to_create_jekyll_blog_template_file_from_the_command_line_interface.html</link>
@@ -5186,7 +5458,10 @@ This file contains the names of the svg files in the order you want to produce t
 
 &lt;p&gt;Dependencies: inkscape, pdftk or gs&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/3d0be24c9a12d75a11a5.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/3d0be24c9a12d75a11a5.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 28 Aug 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/linux/2015/08/28/svg_to_pdf.html</link>
@@ -5240,7 +5515,10 @@ and an other one [Bouvier_2014]_.
         <title>Compute rmsd between two pdb with awk</title>
         <description>&lt;h1 id=&quot;compute-rmsd-between-two-pdb-with-awk&quot;&gt;Compute rmsd between two pdb with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/9468443bd82e58e9ac3f.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9468443bd82e58e9ac3f.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Fri, 17 Jul 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/linux/2015/07/17/compute_rmsd_between_two_pdb_with_awk.html</link>
@@ -5271,7 +5549,10 @@ and an other one [Bouvier_2014]_.
 
 &lt;p&gt;This script below will replace the citation occurrences with incremental number from 1 and compile the file in pdf with &lt;code class=&quot;highlighter-rouge&quot;&gt;pandoc&lt;/code&gt;:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/baa041df449fc8640369.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/baa041df449fc8640369.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 16 Jul 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/linux/2015/07/16/renumber_citations_in_restructured_text.html</link>
@@ -5353,7 +5634,10 @@ and an other one [Bouvier_2014]_.
 
 &lt;p&gt;You can use this command line interface of matplotlib (work in progress):&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/8fb357f63547a757ee87.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/8fb357f63547a757ee87.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Wed, 08 Jul 2015 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/linux/2015/07/08/plotting_from_linux_terminal.html</link>
@@ -6252,7 +6536,9 @@ However some manual operations are required to format the resulting file:&lt;/p&
 
 &lt;p&gt;Below is the script to automatically format an &lt;code class=&quot;highlighter-rouge&quot;&gt;ipynb&lt;/code&gt; file to jekyll markdown:&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/ddf7a6a5ffede1d17fc9.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/ddf7a6a5ffede1d17fc9.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;Usage: &lt;code class=&quot;highlighter-rouge&quot;&gt;./ipynb_to_jekyll.sh ipynbfile &quot;Title of the post&quot;&lt;/code&gt;&lt;/p&gt;
 
@@ -6612,7 +6898,9 @@ You can use git for this versioning but it’s not convenient to initialize the 
 
 &lt;p&gt;Below, it’s a little shell script to automatize the backup process (and &lt;a href=&quot;https://github.com/bougui505/git_backup&quot;&gt;here&lt;/a&gt; the github repository):&lt;/p&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/a572fe58168603fc3fed.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/a572fe58168603fc3fed.js&quot;&gt; &lt;/script&gt;
 
 &lt;p&gt;The usage is very simple.
 If you want to backup a file in the current working directory:&lt;/p&gt;
