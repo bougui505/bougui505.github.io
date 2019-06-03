@@ -6,9 +6,34 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 27 May 2019 13:51:50 +0200</pubDate>
-    <lastBuildDate>Mon, 27 May 2019 13:51:50 +0200</lastBuildDate>
+    <pubDate>Mon, 03 Jun 2019 16:00:29 +0200</pubDate>
+    <lastBuildDate>Mon, 03 Jun 2019 16:00:29 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Split a file based on new line pattern</title>
+        <description>&lt;h1 id=&quot;split-a-file-based-on-new-line-pattern&quot;&gt;Split a file based on new line pattern&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;csplit -z -f intro_ -b &#39;%02d.tex&#39; sectionIntroduction_.tex &#39;/\n/&#39; {8}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;with:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;intro_&lt;/code&gt;: the prefix of the output file name
+&lt;code class=&quot;highlighter-rouge&quot;&gt;%02d.tex&lt;/code&gt;: the suffix of the output file name
+&lt;code class=&quot;highlighter-rouge&quot;&gt;sectionIntroduction_.tex&lt;/code&gt; the output file name
+&lt;code class=&quot;highlighter-rouge&quot;&gt;/\n/&lt;/code&gt; the pattern to match
+&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt; the number of repeat of the pattern&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Jun 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/06/03/split_a_file_based_on_new_line_pattern.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/06/03/split_a_file_based_on_new_line_pattern.html</guid>
+        
+        <category>csplit</category>
+        
+        
+      </item>
     
       <item>
         <title>Disable system bell</title>
