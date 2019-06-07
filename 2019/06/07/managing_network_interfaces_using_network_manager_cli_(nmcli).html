@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Tagging files using ext4 extended file attributes</title>
+    <title>Managing network interfaces using network manager CLI (nmcli)</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html">
+    <link rel="canonical" href="http://bougui505.github.io/2019/06/07/managing_network_interfaces_using_network_manager_cli_(nmcli).html">
 </head>
 
 
@@ -125,16 +125,28 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="tagging-files-using-ext4-extended-file-attributes">Tagging files using ext4 extended file attributes</h1>
+        <h1 id="managing-network-interfaces-using-network-manager-cli-nmcli">Managing network interfaces using network manager CLI (nmcli)</h1>
 
-<p>true<script src="https://gist.github.com/4e5dc323d3e649fd22f7fabac3edb9d8.js"> </script></p>
+<h2 id="list-available-connections">List available connections</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nmcli connection show
+</code></pre>
+</div>
+
+<h2 id="connect-to-a-network">Connect to a network</h2>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>nmcli c up uuid UUID
+</code></pre>
+</div>
+
+<p>Where UUID is given by the command <code class="highlighter-rouge">nmcli connection show</code></p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html"
+      data-href="http://bougui505.github.io/2019/06/07/managing_network_interfaces_using_network_manager_cli_(nmcli).html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">
