@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Tagging files using ext4 extended file attributes</title>
+    <title>git pull each time you enter a git repo directory using direnv</title>
     <meta name="description" content="Blog of Guillaume Bouvier
 ">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html">
+    <link rel="canonical" href="http://bougui505.github.io/2019/06/13/git_pull_each_time_you_enter_a_git_repo_directory_using_direnv.html">
 </head>
 
 
@@ -125,19 +125,22 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <h1 id="tagging-files-using-ext4-extended-file-attributes">Tagging files using ext4 extended file attributes</h1>
+        <h1 id="git-pull-each-time-you-enter-a-git-repo-directory-using-direnv">git pull each time you enter a git repo directory using direnv</h1>
 
-<noscript><pre>400: Invalid request
-</pre></noscript>
-<script src="https://gist.github.com/4e5dc323d3e649fd22f7fabac3edb9d8.js"> </script>
+<p>Just add the following line in the directory .envrc file:</p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>(date &amp;&amp; git pull) &gt;&gt; pull.log
+</code></pre>
+</div>
+
+<p>The date and the pull stdout will be logged in <code class="highlighter-rouge">pull.log</code> file.</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 
 <script src="https://apis.google.com/js/plusone.js"></script>
   
   <div class="g-comments"
-      data-href="http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html"
+      data-href="http://bougui505.github.io/2019/06/13/git_pull_each_time_you_enter_a_git_repo_directory_using_direnv.html"
       data-width="642"
       data-first_party_property="BLOGGER"
       data-view_type="FILTERED_POSTMOD">

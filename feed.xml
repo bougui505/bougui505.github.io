@@ -6,9 +6,32 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 07 Jun 2019 14:55:34 +0200</pubDate>
-    <lastBuildDate>Fri, 07 Jun 2019 14:55:34 +0200</lastBuildDate>
+    <pubDate>Thu, 13 Jun 2019 10:45:04 +0200</pubDate>
+    <lastBuildDate>Thu, 13 Jun 2019 10:45:04 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>git pull each time you enter a git repo directory using direnv</title>
+        <description>&lt;h1 id=&quot;git-pull-each-time-you-enter-a-git-repo-directory-using-direnv&quot;&gt;git pull each time you enter a git repo directory using direnv&lt;/h1&gt;
+
+&lt;p&gt;Just add the following line in the directory .envrc file:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(date &amp;amp;&amp;amp; git pull) &amp;gt;&amp;gt; pull.log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The date and the pull stdout will be logged in &lt;code class=&quot;highlighter-rouge&quot;&gt;pull.log&lt;/code&gt; file.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 13 Jun 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/06/13/git_pull_each_time_you_enter_a_git_repo_directory_using_direnv.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/06/13/git_pull_each_time_you_enter_a_git_repo_directory_using_direnv.html</guid>
+        
+        <category>direnv</category>
+        
+        <category>git</category>
+        
+        
+      </item>
     
       <item>
         <title>Managing network interfaces using network manager CLI (nmcli)</title>
@@ -1088,7 +1111,10 @@ alias ssh=color_ssh
         <title>Simple python clone of gnu datamash</title>
         <description>&lt;h1 id=&quot;simple-python-clone-of-gnu-datamash&quot;&gt;Simple python clone of gnu datamash&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/9a25fe14738a6e8f20cea67e1562aaf2.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/9a25fe14738a6e8f20cea67e1562aaf2.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 19 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/19/simple_python_clone_of_gnu_datamash.html</link>
@@ -1105,7 +1131,10 @@ alias ssh=color_ssh
         <title>Tagging files using ext4 extended file attributes</title>
         <description>&lt;h1 id=&quot;tagging-files-using-ext4-extended-file-attributes&quot;&gt;Tagging files using ext4 extended file attributes&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/4e5dc323d3e649fd22f7fabac3edb9d8.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/4e5dc323d3e649fd22f7fabac3edb9d8.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Tue, 12 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/12/tagging_files_using_ext4_extended_file_attributes.html</link>
@@ -1124,7 +1153,10 @@ alias ssh=color_ssh
         <title>Align two PDB files using Biopython</title>
         <description>&lt;h1 id=&quot;align-two-pdb-files-using-biopython&quot;&gt;Align two PDB files using Biopython&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/006e232c294db2303393c5a6270d1e8d.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/006e232c294db2303393c5a6270d1e8d.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Mon, 11 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/11/align_two_pdb_files_using_biopython.html</link>
@@ -1141,7 +1173,10 @@ alias ssh=color_ssh
         <title>Print the head and the tail of a file simultaneously with awk</title>
         <description>&lt;h1 id=&quot;print-the-head-and-the-tail-of-a-file-simultaneously-with-awk&quot;&gt;Print the head and the tail of a file simultaneously with awk&lt;/h1&gt;
 
-&lt;p&gt;true&lt;script src=&quot;https://gist.github.com/85d5c3d5017108739a74d143c4f44afa.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/85d5c3d5017108739a74d143c4f44afa.js&quot;&gt; &lt;/script&gt;
+
 </description>
         <pubDate>Thu, 07 Sep 2017 00:00:00 +0200</pubDate>
         <link>http://bougui505.github.io/2017/09/07/print_the_head_and_the_tail_of_a_file_simultaneously_with_awk.html</link>
