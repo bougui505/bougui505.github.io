@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2019/06/20/git_save_username_and_password_for_a_git_repo.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2019/06/13/git_pull_each_time_you_enter_a_git_repo_directory_using_direnv.html</loc>
         </url>
     

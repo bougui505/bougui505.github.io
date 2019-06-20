@@ -6,9 +6,27 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 13 Jun 2019 10:45:04 +0200</pubDate>
-    <lastBuildDate>Thu, 13 Jun 2019 10:45:04 +0200</lastBuildDate>
+    <pubDate>Thu, 20 Jun 2019 13:28:39 +0200</pubDate>
+    <lastBuildDate>Thu, 20 Jun 2019 13:28:39 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Git: save username and password for a git repo</title>
+        <description>&lt;h1 id=&quot;git-save-username-and-password-for-a-git-repo&quot;&gt;Git: save username and password for a git repo&lt;/h1&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
+git config credential.helper store
+git pull
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 20 Jun 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/06/20/git_save_username_and_password_for_a_git_repo.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/06/20/git_save_username_and_password_for_a_git_repo.html</guid>
+        
+        <category>git</category>
+        
+        
+      </item>
     
       <item>
         <title>git pull each time you enter a git repo directory using direnv</title>
