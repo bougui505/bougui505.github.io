@@ -6,9 +6,30 @@
 </description>
     <link>http://bougui505.github.io/</link>
     <atom:link href="http://bougui505.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 19 Sep 2019 11:15:13 +0200</pubDate>
-    <lastBuildDate>Thu, 19 Sep 2019 11:15:13 +0200</lastBuildDate>
+    <pubDate>Fri, 25 Oct 2019 13:47:30 +0200</pubDate>
+    <lastBuildDate>Fri, 25 Oct 2019 13:47:30 +0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>PCA on dual space</title>
+        <description>&lt;h1 id=&quot;pca-on-dual-space&quot;&gt;PCA on dual space&lt;/h1&gt;
+
+&lt;p&gt;See: &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S1093326314001703#mmc0005&quot;&gt;Principal Component Analysis reveals correlation of cavities evolution and functional motions in proteins&lt;/a&gt;
+and the corresponding &lt;a href=&quot;https://ars.els-cdn.com/content/image/1-s2.0-S1093326314001703-mmc1.pdf&quot;&gt;SI&lt;/a&gt;&lt;/p&gt;
+
+&lt;noscript&gt;&lt;pre&gt;400: Invalid request
+&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/8befffc94c929e61f5bcd4cfaacceaee.js&quot;&gt; &lt;/script&gt;
+
+</description>
+        <pubDate>Fri, 25 Oct 2019 00:00:00 +0200</pubDate>
+        <link>http://bougui505.github.io/2019/10/25/pca_on_dual_space.html</link>
+        <guid isPermaLink="true">http://bougui505.github.io/2019/10/25/pca_on_dual_space.html</guid>
+        
+        <category>python</category>
+        
+        
+      </item>
     
       <item>
         <title>Filter stdout by printing file from a starting string using awk</title>

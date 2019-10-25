@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
     
         <url>
+            <loc>http://bougui505.github.io/2019/10/25/pca_on_dual_space.html</loc>
+        </url>
+    
+        <url>
             <loc>http://bougui505.github.io/2019/09/19/filter_stdout_by_printing_file_from_a_starting_string_using_awk.html</loc>
         </url>
     
