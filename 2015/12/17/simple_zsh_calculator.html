@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -136,14 +138,14 @@ shell:</p>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># bc - An arbitrary precision calculator language</span>
 <span class="k">function</span> <span class="o">=</span> 
 <span class="o">{</span>
-  <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> | bc -l
+  <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span> | bc <span class="nt">-l</span>
 <span class="o">}</span>
 
 <span class="nb">alias </span><span class="nv">calc</span><span class="o">=</span><span class="s2">"="</span></code></pre></figure>
 
 <p>Usage:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># addition
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># addition
 root@pc:~$ = 5+3
 8
 
@@ -198,8 +200,7 @@ root@pc ~$ = "scale=10; 4*a(1)"
 # more complex
 root@pc ~$ = "scale=2; 3.4+7/8-(5.94*(4*a(1)))"
 -14.26
-</code></pre>
-</div>
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

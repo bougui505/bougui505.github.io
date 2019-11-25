@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -217,19 +219,17 @@
 
 <p>And the cron line to insert to crontab:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>*/15 * * * * ionice -c 3 nice -n 19 sh /home/bougui/bin/borgbackup.sh &gt; /dev/null 2&gt;&amp;1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*/15 * * * * ionice -c 3 nice -n 19 sh /home/bougui/bin/borgbackup.sh &gt; /dev/null 2&gt;&amp;1
+</code></pre></div></div>
 
 <p>Bonus: some convenient aliases:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>alias borg-list="borg list --remote-path /home/pi/bin/borg pi@82.231.223.163:/mnt/usb1/mantrisse_backup"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias borg-list="borg list --remote-path /home/pi/bin/borg pi@82.231.223.163:/mnt/usb1/mantrisse_backup"
 
 borg-info () {
     borg info --remote-path /home/pi/bin/borg pi@82.231.223.163:/mnt/usb1/mantrisse_backup::$1
     }
-</code></pre>
-</div>
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

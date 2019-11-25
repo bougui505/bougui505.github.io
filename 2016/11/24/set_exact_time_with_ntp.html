@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,7 +133,7 @@
 
 <p>Edit the file <code class="highlighter-rouge">/etc/ntp.conf</code> and look at the server list and add eventually a server:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>server 0.europe.pool.ntp.org
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>server 0.europe.pool.ntp.org
 server 1.europe.pool.ntp.org
 server 2.europe.pool.ntp.org
 server 3.europe.pool.ntp.org
@@ -139,29 +141,25 @@ server 0.debian.pool.ntp.org iburst
 server 1.debian.pool.ntp.org iburst
 server 2.debian.pool.ntp.org iburst
 server 3.debian.pool.ntp.org iburst
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="restart-the-ntp-service">Restart the ntp service</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo /etc/init.d/ntp restart
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo /etc/init.d/ntp restart
+</code></pre></div></div>
 
 <h2 id="check-if-the-computer-is-synchronized">Check if the computer is synchronized:</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ntpstat
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ntpstat
 synchronised to NTP server (XXX.XX.XX.XX) at stratum 3
     time correct to within 137 ms
     polling server every 64 s
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="eventually-list-the-status-of-each-server-with">Eventually list the status of each server with:</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ ntpq -p
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ntpq -p
+</code></pre></div></div>
 
 <h2 id="remark">Remark:</h2>
 

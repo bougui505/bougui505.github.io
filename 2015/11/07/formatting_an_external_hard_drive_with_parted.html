@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,31 +133,27 @@
 
 <p>Plug the usb hard drive and type <code class="highlighter-rouge">df -Th</code> (<code class="highlighter-rouge">T</code>: allow to display the file system type):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/dev/sdb1        fuseblk    932G    121M  932G   1% /media/yourusername/Elements
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/dev/sdb1        fuseblk    932G    121M  932G   1% /media/yourusername/Elements
+</code></pre></div></div>
 
 <p>Unmount the partition to format; here:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>umount /dev/sdb1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>umount /dev/sdb1
+</code></pre></div></div>
 
 <h2 id="optional-remove-all-partitions-data-and-create-empty-disk">Optional: Remove all partitions, data and create empty disk</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo dd if=/dev/zero of=/dev/sdb bs=512 count=1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo dd if=/dev/zero of=/dev/sdb bs=512 count=1
+</code></pre></div></div>
 
 <h2 id="parted">Parted</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo parted /dev/sdb
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo parted /dev/sdb
+</code></pre></div></div>
 
 <h3 id="display-the-partition-table">display the partition table:</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) print
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) print
 Model: WD Elements 10B8 (scsi)
 Disk /dev/sdb: 1000GB
 Sector size (logical/physical): 512B/512B
@@ -164,36 +162,32 @@ Disk Flags:
 
 Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ntfs
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="delete-partition-1">delete partition 1:</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) rm 1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) rm 1
+</code></pre></div></div>
 
 <h3 id="create-a-new-partition-table">Create a new partition table</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) mklabel msdos
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) mklabel msdos
 Warning: The existing disk label on /dev/sdb will be destroyed and all data on this disk will be lost. Do you want to continue?
 Yes/No? Yes
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="make-a-partition">make a partition</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) mkpart
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) mkpart
 Partition type?  primary/extended? primary
 File system type?  [ext2]? ext4
 Start? 0%
 End? -1s
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Remark: <code class="highlighter-rouge">-1s</code>: last sector of the drive</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) print
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) print
 Model: WD Elements 10B8 (scsi)
 Disk /dev/sdb: 1000GB
 Sector size (logical/physical): 512B/512B
@@ -202,63 +196,55 @@ Disk Flags:
 
 Number  Start   End     Size    Type     File system  Flags
  1      1049kB  1000GB  1000GB  primary  ext4         lba
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="in-case-of-warning-the-resulting-partition-is-not-properly-aligned-for-best-performance">In case of: <code class="highlighter-rouge">Warning: The resulting partition is not properly aligned for best performance.</code></h4>
 
 <p>Cancel the operation:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Warning: The resulting partition is not properly aligned for best performance.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Warning: The resulting partition is not properly aligned for best performance.
 Ignore/Cancel? C
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And try again with <code class="highlighter-rouge">100%</code> instead of <code class="highlighter-rouge">-1s</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) mkpart
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) mkpart
 Partition type?  primary/extended? primary
 File system type?  [ext2]? ext4
 Start? 0%
 End? 100%
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="exit-parted">exit parted</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(parted) quit
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(parted) quit
 Information: You may need to update /etc/fstab.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="formating">Formating</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo mkfs.ext4 /dev/sdb1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkfs.ext4 /dev/sdb1
+</code></pre></div></div>
 
 <h2 id="test">Test</h2>
 
 <p>Unplug and plug again the disk and:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ df -hT
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ df -hT
 /dev/sdb1                            ext4         917G     72M  871G   1% /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Try to write on it:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /media/yourusername/4fc9b323-ac89-444a-9483-9af84030e1a1
 touch toto
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If you get a <code class="highlighter-rouge">permission denied</code> just try to:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ..
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
 sudo chown yourusername:yourgroupname 4fc9b323-ac89-444a-9483-9af84030e1a1
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><img src="/assets/old_files.png" alt="XKCD" />
 <a href="http://xkcd.com/1360/">http://xkcd.com/1360/</a></p>

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,10 +131,9 @@
 
 <p>I Just reinstalled grub:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo grub-install /dev/sda # Just change sda by the location of your boot partition /dev/sdX, where X is the drive (letter) on which you want GRUB to write the boot information. Normally users should not include a partition number, which would produce an error message as the command would attempt to write the information to a partition.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo grub-install /dev/sda # Just change sda by the location of your boot partition /dev/sdX, where X is the drive (letter) on which you want GRUB to write the boot information. Normally users should not include a partition number, which would produce an error message as the command would attempt to write the information to a partition.
 sudo update-grub
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then I rebooted and no more weird message.</p>
 

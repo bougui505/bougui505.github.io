@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -240,8 +242,8 @@ Angstrom.</p>
 <span class="k">def</span> <span class="nf">hessian</span><span class="p">(</span><span class="n">R</span><span class="p">):</span>
     <span class="n">s_squared</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">squareform</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">pdist</span><span class="p">(</span><span class="n">R</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s">'sqeuclidean'</span><span class="p">))</span>
     <span class="n">nr</span><span class="p">,</span><span class="n">nc</span> <span class="o">=</span> <span class="n">s_squared</span><span class="o">.</span><span class="n">shape</span>
-    <span class="n">N</span> <span class="o">=</span> <span class="n">nr</span> <span class="c"># number of atom: nr = nc</span>
-    <span class="n">K</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span><span class="n">N</span><span class="o">*</span><span class="mi">3</span><span class="p">))</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">nr</span> <span class="c1"># number of atom: nr = nc
+</span>    <span class="n">K</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span><span class="n">N</span><span class="o">*</span><span class="mi">3</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="p">):</span>
             <span class="n">xyz_i</span><span class="p">,</span> <span class="n">xyz_j</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>

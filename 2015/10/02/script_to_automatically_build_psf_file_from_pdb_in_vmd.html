@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -213,20 +215,20 @@
 
 <p>Just replace <code class="highlighter-rouge">PDB</code> with your pdb file name and launch the script with:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vmd -dispdev text -e autopsf.tcl</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">vmd <span class="nt">-dispdev</span> text <span class="nt">-e</span> autopsf.tcl</code></pre></figure>
 
 <p>In zsh shell you can automatize this script for multiple pdb with:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in </span>models/out_??.pdb; <span class="k">do
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in </span>models/out_??.pdb<span class="p">;</span> <span class="k">do
     </span><span class="nb">echo</span> <span class="nv">$x</span>
-    vmd -dispdev text -e <span class="o">=(</span>sed <span class="s2">"s,PDB,</span><span class="nv">$x</span><span class="s2">,"</span> autopsf.tcl<span class="o">)</span>
+    vmd <span class="nt">-dispdev</span> text <span class="nt">-e</span> <span class="o">=(</span><span class="nb">sed</span> <span class="s2">"s,PDB,</span><span class="nv">$x</span><span class="s2">,"</span> autopsf.tcl<span class="o">)</span>
 <span class="k">done</span></code></pre></figure>
 
 <p>Where: <code class="highlighter-rouge">models/out_??.pdb</code> are your input pdb files.</p>
 
 <p>You can even run it in <a href="/linux/2015/09/14/gnu_parallel.html">parallel</a> with GNU parallel (to use with care as I’m note quite certain that the creation of the zsh temporary file is adapted to parallel processing…):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">ls out_??.pdb | parallel --eta vmd -dispdev text -e <span class="o">=(</span>sed <span class="s2">"s,PDB,{},"</span> autopsf.tcl<span class="o">)</span> &gt; /dev/null</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">ls </span>out_??.pdb | parallel <span class="nt">--eta</span> vmd <span class="nt">-dispdev</span> text <span class="nt">-e</span> <span class="o">=(</span><span class="nb">sed</span> <span class="s2">"s,PDB,{},"</span> autopsf.tcl<span class="o">)</span> <span class="o">&gt;</span> /dev/null</code></pre></figure>
 
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -138,12 +140,12 @@
     <span class="n">tarw</span><span class="p">,</span> <span class="n">tarV</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">targar</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">targar</span><span class="p">))</span>
     <span class="n">tempw</span><span class="p">,</span> <span class="n">tempV</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">tempar</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">tempar</span><span class="p">))</span>
     <span class="n">V</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">tW</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">svd</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">tarV</span><span class="p">,</span><span class="n">tempV</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
-    <span class="c">#  change sign of the last vector if needed to assure similar orientation of bases</span>
-    <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">V</span><span class="p">)</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">tW</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1">#  change sign of the last vector if needed to assure similar orientation of bases
+</span>    <span class="k">if</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">V</span><span class="p">)</span><span class="o">*</span><span class="n">numpy</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">det</span><span class="p">(</span><span class="n">tW</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">V</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span><span class="o">*=-</span><span class="mi">1</span>
     <span class="n">rot</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">V</span><span class="p">,</span><span class="n">tW</span><span class="p">)</span>
-    <span class="c">#print rot.shape</span>
-    <span class="n">targrot</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">targar</span><span class="p">,</span><span class="n">rot</span><span class="p">)</span>
+    <span class="c1">#print rot.shape
+</span>    <span class="n">targrot</span><span class="o">=</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">targar</span><span class="p">,</span><span class="n">rot</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">targrot</span> <span class="o">+</span> <span class="n">target</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></code></pre></figure>
 
 <p><code class="highlighter-rouge">coords</code> and <code class="highlighter-rouge">target</code> must be n by 3 numpy arrays.</p>

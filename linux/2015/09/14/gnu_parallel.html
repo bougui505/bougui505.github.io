@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,14 +133,13 @@
 
 <p>For example, to process listed files in parallel:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ls relax/????c2qjkM_.1_????_noH.pdb | parallel -k --eta ./rmsd.awk c2qjkM_.1.pdb <span class="o">{}</span> &gt; rmsds.txt</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">ls </span>relax/????c2qjkM_.1_????_noH.pdb | parallel <span class="nt">-k</span> <span class="nt">--eta</span> ./rmsd.awk c2qjkM_.1.pdb <span class="o">{}</span> <span class="o">&gt;</span> rmsds.txt</code></pre></figure>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>-k             Keep same order
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-k             Keep same order
 --eta          Show the estimated number of seconds before finishing
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<p><code class="highlighter-rouge">parallel</code> replaces <code class="highlighter-rouge"><span class="p">{}</span></code> by the output files of <code class="highlighter-rouge">ls</code> for this example.</p>
+<p><code class="highlighter-rouge">parallel</code> replaces <code class="highlighter-rouge">{}</code> by the output files of <code class="highlighter-rouge">ls</code> for this example.</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -140,22 +142,19 @@ speed than a tarball archive</strong>.</p>
 
 <h2 id="in-order-to-create-a-squashed-file-system-out-of-a-single-directory-say-somedir-and-output-it-to-a-regular-file-thus-producing-a-file-system-image-you-need-to-say-only-one-magic-phrase">In order to create a squashed file system out of a single directory (say, /some/dir), and output it to a regular file (thus, producing a file system image), you need to say only one magic phrase:</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mksquashfs /some/dir dir.sqsh
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mksquashfs /some/dir dir.sqsh
+</code></pre></div></div>
 
 <h2 id="you-can-now-use-the-mount-command-to-mount-it-using-a-loopback-device">You can now use the mount command to mount it using a loopback device:</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo mkdir /mnt/squashfs
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /mnt/squashfs
 sudo mount dir.sqsh /mnt/squashfs -t squashfs -o loop
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="unmounting-the-squashfs">Unmounting the squashfs:</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo umount /mnt/squashfs
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo umount /mnt/squashfs
+</code></pre></div></div>
 
 <p><a href="http://tldp.org/HOWTO/SquashFS-HOWTO/creatingandusing.html">Original and complete howto here</a></p>
 

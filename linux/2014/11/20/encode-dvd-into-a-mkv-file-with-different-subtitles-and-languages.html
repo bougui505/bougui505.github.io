@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -130,18 +132,18 @@
 <p>First you have to find the chapter you want to encode and the ids for the subtitles and audio.
 You can use the tool <code class="highlighter-rouge">lsdvd</code> for this:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>lsdvd -as
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>lsdvd <span class="nt">-as</span>
 Disc Title: FANTASTIC
 Title: 01, Length: 01:23:17.050 Chapters: 25, Cells: 89, Audio streams: 03, Subpictures: 06
-    Audio: 1, Language: en - English, Format: ac3, Frequency: 48000, Quantization: drc, Channels: 6, AP: 0, Content: Undefined, Stream id: 0x80
-    Audio: 2, Language: fr - Francais, Format: ac3, Frequency: 48000, Quantization: drc, Channels: 6, AP: 0, Content: Undefined, Stream id: 0x81
-    Audio: 3, Language: pt - Portugues, Format: ac3, Frequency: 48000, Quantization: drc, Channels: 6, AP: 0, Content: Undefined, Stream id: 0x82
-    Subtitle: 01, Language: en - English, Content: Undefined, Stream id: 0x20, 
-    Subtitle: 02, Language: fr - Francais, Content: Undefined, Stream id: 0x21, 
-    Subtitle: 03, Language: nl - Nederlands, Content: Undefined, Stream id: 0x22, 
-    Subtitle: 04, Language: pt - Portugues, Content: Undefined, Stream id: 0x23, 
-    Subtitle: 05, Language: fr - Francais, Content: Undefined, Stream id: 0x24, 
-    Subtitle: 06, Language: pt - Portugues, Content: Undefined, Stream id: 0x25, 
+    Audio: 1, Language: en - English, Format: ac3, Frequency: 48000, Quantization: drc, Channels: 6, AP: 0, Content: Undefined, Stream <span class="nb">id</span>: 0x80
+    Audio: 2, Language: fr - Francais, Format: ac3, Frequency: 48000, Quantization: drc, Channels: 6, AP: 0, Content: Undefined, Stream <span class="nb">id</span>: 0x81
+    Audio: 3, Language: pt - Portugues, Format: ac3, Frequency: 48000, Quantization: drc, Channels: 6, AP: 0, Content: Undefined, Stream <span class="nb">id</span>: 0x82
+    Subtitle: 01, Language: en - English, Content: Undefined, Stream <span class="nb">id</span>: 0x20, 
+    Subtitle: 02, Language: fr - Francais, Content: Undefined, Stream <span class="nb">id</span>: 0x21, 
+    Subtitle: 03, Language: <span class="nb">nl</span> - Nederlands, Content: Undefined, Stream <span class="nb">id</span>: 0x22, 
+    Subtitle: 04, Language: pt - Portugues, Content: Undefined, Stream <span class="nb">id</span>: 0x23, 
+    Subtitle: 05, Language: fr - Francais, Content: Undefined, Stream <span class="nb">id</span>: 0x24, 
+    Subtitle: 06, Language: pt - Portugues, Content: Undefined, Stream <span class="nb">id</span>: 0x25, 
 
 Title: 02, Length: 00:07:47.090 Chapters: 02, Cells: 03, Audio streams: 01, Subpictures: 02
         
@@ -154,57 +156,57 @@ Longest track: 01</code></pre></figure>
 <p>First we’ll define a variable with the movie title and create a directory:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">mtitle</span><span class="o">=</span><span class="s2">"the_movie_title"</span>
-mkdir <span class="nv">$mtitle</span></code></pre></figure>
+<span class="nb">mkdir</span> <span class="nv">$mtitle</span></code></pre></figure>
 
 <p>Now we encode the audio tracks, here English and French:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># English</span>
-mencoder dvd://1 -dvd-device /dev/dvd  -aid 128 -of rawaudio -oac mp3lame -ovc copy -o <span class="nv">$mtitle</span>/english.mp3
+mencoder dvd://1 <span class="nt">-dvd-device</span> /dev/dvd  <span class="nt">-aid</span> 128 <span class="nt">-of</span> rawaudio <span class="nt">-oac</span> mp3lame <span class="nt">-ovc</span> copy <span class="nt">-o</span> <span class="nv">$mtitle</span>/english.mp3
 <span class="c"># French</span>
-mencoder dvd://1 -dvd-device /dev/dvd  -aid 129 -of rawaudio -oac mp3lame -ovc copy -o <span class="nv">$mtitle</span>/french.mp3</code></pre></figure>
+mencoder dvd://1 <span class="nt">-dvd-device</span> /dev/dvd  <span class="nt">-aid</span> 129 <span class="nt">-of</span> rawaudio <span class="nt">-oac</span> mp3lame <span class="nt">-ovc</span> copy <span class="nt">-o</span> <span class="nv">$mtitle</span>/french.mp3</code></pre></figure>
 
 <p>The audio id (<code class="highlighter-rouge">aid</code>) 128 and 129 are given by the Stream id 0x80 and 0x81 (hexadecimal notations <script type="math/tex">8\times16</script> and <script type="math/tex">8\times16+1</script>)</p>
 
 <p>The same for the subtitles:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># English subtitles</span>
-mencoder dvd://1 -dvd-device /dev/dvd -sid 1 -vobsubout <span class="nv">$mtitle</span>/subtitles_english -nosound -ovc frameno -o /dev/null
+mencoder dvd://1 <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-sid</span> 1 <span class="nt">-vobsubout</span> <span class="nv">$mtitle</span>/subtitles_english <span class="nt">-nosound</span> <span class="nt">-ovc</span> frameno <span class="nt">-o</span> /dev/null
 <span class="c"># French subtitles</span>
-mencoder dvd://1 -dvd-device /dev/dvd -sid 2 -vobsubout <span class="nv">$mtitle</span>/subtitles_french -nosound -ovc frameno -o /dev/null</code></pre></figure>
+mencoder dvd://1 <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-sid</span> 2 <span class="nt">-vobsubout</span> <span class="nv">$mtitle</span>/subtitles_french <span class="nt">-nosound</span> <span class="nt">-ovc</span> frameno <span class="nt">-o</span> /dev/null</code></pre></figure>
 
 <p>And now the video without sound and subtitles (we put -sid 1000 to be sure to not have subtitles. Some DVD put subtitles as default.):</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mencoder dvd://1 -dvd-device /dev/dvd  -sid 1000 -ovc x264 -nosound -o <span class="s2">"</span><span class="nv">$mtitle</span><span class="s2">/video.avi"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mencoder dvd://1 <span class="nt">-dvd-device</span> /dev/dvd  <span class="nt">-sid</span> 1000 <span class="nt">-ovc</span> x264 <span class="nt">-nosound</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$mtitle</span><span class="s2">/video.avi"</span></code></pre></figure>
 
 <p>Now we can merge all the files in the mkv file:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd</span> <span class="nv">$mtitle</span>
-mkvmerge -o <span class="nv">$mtitle</span>.mkv video.avi english.mp3 french.mp3 subtitles_english.idx subtitles_french.idx</code></pre></figure>
+mkvmerge <span class="nt">-o</span> <span class="nv">$mtitle</span>.mkv video.avi english.mp3 french.mp3 subtitles_english.idx subtitles_french.idx</code></pre></figure>
 
 <p>The full script below:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env sh</span>
 <span class="nv">mtitle</span><span class="o">=</span><span class="s2">"the_movie_title"</span>
-mkdir <span class="nv">$mtitle</span>
+<span class="nb">mkdir</span> <span class="nv">$mtitle</span>
 <span class="nv">track</span><span class="o">=</span>1 <span class="c"># track to encode</span>
 <span class="nv">aid1</span><span class="o">=</span>128 <span class="c"># first audio track</span>
 <span class="nv">aid2</span><span class="o">=</span>129 <span class="c"># second audio track</span>
 <span class="nv">sid1</span><span class="o">=</span>1 <span class="c"># first subtitles track</span>
 <span class="nv">sid2</span><span class="o">=</span>2 <span class="c"># second subtitles track</span>
 <span class="c"># first audio track</span>
-mencoder dvd://<span class="nv">$track</span> -dvd-device /dev/dvd -aid <span class="nv">$aid1</span> -of rawaudio -oac mp3lame -ovc copy -o <span class="nv">$mtitle</span>/audio1.mp3
+mencoder dvd://<span class="nv">$track</span> <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-aid</span> <span class="nv">$aid1</span> <span class="nt">-of</span> rawaudio <span class="nt">-oac</span> mp3lame <span class="nt">-ovc</span> copy <span class="nt">-o</span> <span class="nv">$mtitle</span>/audio1.mp3
 <span class="c"># second audio track</span>
-mencoder dvd://<span class="nv">$track</span> -dvd-device /dev/dvd -aid <span class="nv">$aid2</span> -of rawaudio -oac mp3lame -ovc copy -o <span class="nv">$mtitle</span>/audio2.mp3
+mencoder dvd://<span class="nv">$track</span> <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-aid</span> <span class="nv">$aid2</span> <span class="nt">-of</span> rawaudio <span class="nt">-oac</span> mp3lame <span class="nt">-ovc</span> copy <span class="nt">-o</span> <span class="nv">$mtitle</span>/audio2.mp3
 <span class="c"># first subtitles track</span>
-mencoder dvd://<span class="nv">$track</span> -dvd-device /dev/dvd -sid <span class="nv">$sid1</span> -vobsubout <span class="nv">$mtitle</span>/subtitles1 -nosound -ovc frameno -o /dev/null
+mencoder dvd://<span class="nv">$track</span> <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-sid</span> <span class="nv">$sid1</span> <span class="nt">-vobsubout</span> <span class="nv">$mtitle</span>/subtitles1 <span class="nt">-nosound</span> <span class="nt">-ovc</span> frameno <span class="nt">-o</span> /dev/null
 <span class="c"># second subtitles track</span>
-mencoder dvd://<span class="nv">$track</span> -dvd-device /dev/dvd -sid <span class="nv">$sid2</span> -vobsubout <span class="nv">$mtitle</span>/subtitles2 -nosound -ovc frameno -o /dev/null
+mencoder dvd://<span class="nv">$track</span> <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-sid</span> <span class="nv">$sid2</span> <span class="nt">-vobsubout</span> <span class="nv">$mtitle</span>/subtitles2 <span class="nt">-nosound</span> <span class="nt">-ovc</span> frameno <span class="nt">-o</span> /dev/null
 <span class="c"># Video without sound and subtitle</span>
-mencoder dvd://<span class="nv">$track</span> -dvd-device /dev/dvd -sid 1000 -ovc x264 -nosound -o <span class="s2">"</span><span class="nv">$mtitle</span><span class="s2">/video.avi"</span>
+mencoder dvd://<span class="nv">$track</span> <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-sid</span> 1000 <span class="nt">-ovc</span> x264 <span class="nt">-nosound</span> <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$mtitle</span><span class="s2">/video.avi"</span>
 <span class="c"># The merging:</span>
 <span class="nb">cd</span> <span class="nv">$mtitle</span>
-mkvmerge -o <span class="nv">$mtitle</span>.mkv video.avi audio<span class="k">*</span>.mp3 subtitles<span class="k">*</span>.idx
-mv <span class="nv">$mtitle</span>.mkv ../.
+mkvmerge <span class="nt">-o</span> <span class="nv">$mtitle</span>.mkv video.avi audio<span class="k">*</span>.mp3 subtitles<span class="k">*</span>.idx
+<span class="nb">mv</span> <span class="nv">$mtitle</span>.mkv ../.
 <span class="c"># Eject the DVD:</span>
 eject /dev/dvd 2&gt; /dev/null</code></pre></figure>
 
@@ -215,7 +217,7 @@ eject /dev/dvd 2&gt; /dev/null</code></pre></figure>
 <span class="nv">track</span><span class="o">=</span>1
 <span class="nv">aid1</span><span class="o">=</span>128
 <span class="nv">sid1</span><span class="o">=</span>1 <span class="c"># 1000 for no subtitles</span>
-mencoder dvd://<span class="nv">$track</span> -dvd-device /dev/dvd -sid <span class="nv">$sid1</span> -aid <span class="nv">$aid1</span> -oac mp3lame -ovc x264 -o <span class="s2">"</span><span class="nv">$mtitle</span><span class="s2">.avi"</span>
+mencoder dvd://<span class="nv">$track</span> <span class="nt">-dvd-device</span> /dev/dvd <span class="nt">-sid</span> <span class="nv">$sid1</span> <span class="nt">-aid</span> <span class="nv">$aid1</span> <span class="nt">-oac</span> mp3lame <span class="nt">-ovc</span> x264 <span class="nt">-o</span> <span class="s2">"</span><span class="nv">$mtitle</span><span class="s2">.avi"</span>
 <span class="c"># Eject the DVD:</span>
 eject /dev/dvd 2&gt; /dev/null</code></pre></figure>
 

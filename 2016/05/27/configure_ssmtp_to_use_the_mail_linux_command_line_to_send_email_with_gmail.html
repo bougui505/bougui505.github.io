@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,27 +131,24 @@
 
 <p>First of all, install the <code class="highlighter-rouge">ssmtp</code> package:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bougui@aldebaran ~&gt; sudo apt-get install ssmtp
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bougui@aldebaran ~&gt; sudo apt-get install ssmtp
+</code></pre></div></div>
 
 <p>Then edit the file <code class="highlighter-rouge">/etc/ssmtp</code> and just pust that content to the file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#Debug=YES
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Debug=YES
 root=USER@gmail.com
 AuthUser=USER@gmail.com
 AuthPass=YOUR_GMAIL_PASSWORD
 FromLineOverride=YES
 mailhub=smtp.gmail.com:465
 UseTLS=YES
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Then, a quick test:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bougui@aldebaran ~&gt; echo "This is a test" | mail -s "Test" USER@gmail.com
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bougui@aldebaran ~&gt; echo "This is a test" | mail -s "Test" USER@gmail.com
+</code></pre></div></div>
 
 <p>For sure, just replace <code class="highlighter-rouge">USER</code> by your Gmail username, in the configuration file
 and in the test command line.</p>

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -165,20 +167,18 @@ This is sufficient for the conformational clustering.</p>
 
 <p>Below, the <code class="highlighter-rouge">makeVectorsFromdcd_PCA.conf</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[makeVectors]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[makeVectors]
 nframes: 750000
 structFile: struct.pdb
 trajFile: traj.dcd
 projection: True
 nProcess: 2
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now, we can run the script:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ python makeVectorsFromdcd_PCA.py makeVectorsFromdcd_PCA.conf
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python makeVectorsFromdcd_PCA.py makeVectorsFromdcd_PCA.conf
+</code></pre></div></div>
 
 <p>To generate the conformational descriptors for each frame of the trajectory as described in the publication.</p>
 
@@ -192,11 +192,11 @@ nProcess: 2
 <span class="kn">import</span> <span class="nn">SOMTools</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.axes_grid1</span> <span class="kn">import</span> <span class="n">make_axes_locatable</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="n">font</span> <span class="o">=</span> <span class="p">{</span><span class="s">'family'</span> <span class="p">:</span> <span class="s">'normal'</span><span class="p">,</span> <span class="s">'size'</span> <span class="p">:</span> <span class="mi">14</span><span class="p">}</span>
 <span class="n">rc</span><span class="p">(</span><span class="s">'font'</span><span class="p">,</span> <span class="o">**</span><span class="n">font</span><span class="p">)</span>
 <span class="n">rc</span><span class="p">(</span><span class="s">'text'</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="o">%</span> <span class="n">pylab</span> <span class="n">inline</span> <span class="c"># if you use ipython notebook</span></code></pre></figure>
+<span class="o">%</span> <span class="n">pylab</span> <span class="n">inline</span> <span class="c1"># if you use ipython notebook</span></code></pre></figure>
 
 <p>Then, we load the input matrix containing the conformational descriptors.
 After that we can learn the SOM with <code class="highlighter-rouge">som.learn</code>.</p>
@@ -204,15 +204,15 @@ After that we can learn the SOM with <code class="highlighter-rouge">som.learn</
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">inputmatrix</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">'projections.npy'</span><span class="p">)</span>
 <span class="n">som</span> <span class="o">=</span> <span class="n">SOM2</span><span class="o">.</span><span class="n">SOM</span><span class="p">(</span><span class="n">inputmatrix</span><span class="p">)</span>
 <span class="n">som</span><span class="o">.</span><span class="n">learn</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">smap</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">smap</span> <span class="c"># The SOM map</span>
-<span class="n">numpy</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'smap'</span><span class="p">,</span> <span class="n">smap</span><span class="p">)</span> <span class="c"># We save the SOM map (smap) as a numpy file (npy format)</span></code></pre></figure>
+<span class="n">smap</span> <span class="o">=</span> <span class="n">som</span><span class="o">.</span><span class="n">smap</span> <span class="c1"># The SOM map
+</span><span class="n">numpy</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s">'smap'</span><span class="p">,</span> <span class="n">smap</span><span class="p">)</span> <span class="c1"># We save the SOM map (smap) as a numpy file (npy format)</span></code></pre></figure>
 
 <h3 id="the-u-matrix">The U-matrix</h3>
 
 <p>Now we can compute the U-matrix corresponding to the map:</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">nres</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">4</span> <span class="c"># this line give the number of residue (C alpha)</span>
-<span class="n">umat1</span><span class="p">,</span> <span class="n">umat2</span><span class="p">,</span> <span class="n">umat3</span><span class="p">,</span> <span class="n">umat4</span> <span class="o">=</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,:</span><span class="n">nres</span><span class="p">]),</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,</span><span class="n">nres</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">nres</span><span class="p">]),</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,</span><span class="mi">2</span><span class="o">*</span><span class="n">nres</span><span class="p">:</span><span class="mi">3</span><span class="o">*</span><span class="n">nres</span><span class="p">]),</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,</span><span class="mi">3</span><span class="o">*</span><span class="n">nres</span><span class="p">:</span><span class="mi">4</span><span class="o">*</span><span class="n">nres</span><span class="p">])</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">nres</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mi">4</span> <span class="c1"># this line give the number of residue (C alpha)
+</span><span class="n">umat1</span><span class="p">,</span> <span class="n">umat2</span><span class="p">,</span> <span class="n">umat3</span><span class="p">,</span> <span class="n">umat4</span> <span class="o">=</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,:</span><span class="n">nres</span><span class="p">]),</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,</span><span class="n">nres</span><span class="p">:</span><span class="mi">2</span><span class="o">*</span><span class="n">nres</span><span class="p">]),</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,</span><span class="mi">2</span><span class="o">*</span><span class="n">nres</span><span class="p">:</span><span class="mi">3</span><span class="o">*</span><span class="n">nres</span><span class="p">]),</span> <span class="n">SOMTools</span><span class="o">.</span><span class="n">getUmatrix</span><span class="p">(</span><span class="n">smap</span><span class="p">[:,:,</span><span class="mi">3</span><span class="o">*</span><span class="n">nres</span><span class="p">:</span><span class="mi">4</span><span class="o">*</span><span class="n">nres</span><span class="p">])</span>
 <span class="n">umat</span> <span class="o">=</span> <span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">umat1</span><span class="p">)</span><span class="o">+</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">umat2</span><span class="p">)</span><span class="o">+</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">umat3</span><span class="p">)</span><span class="o">+</span><span class="n">numpy</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">umat4</span><span class="p">))</span><span class="o">/</span><span class="n">nres</span></code></pre></figure>
 
 <p>We decompose the U-matrix according to the four eigenvectors to compute the U-matrix in Angstrom.</p>
@@ -265,8 +265,8 @@ Below is the code to flood the map and unwrap it:</p>
 <span class="n">divider</span> <span class="o">=</span> <span class="n">make_axes_locatable</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">cax</span> <span class="o">=</span> <span class="n">divider</span><span class="o">.</span><span class="n">append_axes</span><span class="p">(</span><span class="s">"left"</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s">"5</span><span class="si">%</span><span class="s">"</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">cb1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im1</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">)</span>
-<span class="n">cb1</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_children</span><span class="p">()[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidths</span><span class="p">(</span><span class="mf">18.0</span><span class="p">)</span> <span class="c"># for the line width in the colorbar of the contour plot</span>
-<span class="n">cb1</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s">"Local similarity (</span><span class="err">\</span><span class="s">AA)"</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=-</span><span class="mi">70</span><span class="p">)</span>
+<span class="n">cb1</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_children</span><span class="p">()[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidths</span><span class="p">(</span><span class="mf">18.0</span><span class="p">)</span> <span class="c1"># for the line width in the colorbar of the contour plot
+</span><span class="n">cb1</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s">"Local similarity (</span><span class="err">\</span><span class="s">AA)"</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=-</span><span class="mi">70</span><span class="p">)</span>
 <span class="n">im2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">clust</span><span class="o">.</span><span class="n">flood</span><span class="p">(</span><span class="n">projectmap</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">clust</span><span class="o">.</span><span class="n">mask</span><span class="p">),</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">'nearest'</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">PRGn</span><span class="p">)</span>
 <span class="n">cax</span> <span class="o">=</span> <span class="n">divider</span><span class="o">.</span><span class="n">append_axes</span><span class="p">(</span><span class="s">"right"</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="s">"5</span><span class="si">%</span><span class="s">"</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">cb2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im2</span><span class="p">,</span> <span class="n">cax</span><span class="o">=</span><span class="n">cax</span><span class="p">)</span>
@@ -282,9 +282,9 @@ Below is the code to flood the map and unwrap it:</p>
 
 <h4 id="sausagepy"><code class="highlighter-rouge">sausage.py</code></h4>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#!/usr/bin/env python</span>
-<span class="c"># -*- coding: UTF8 -*-</span>
-<span class="s">"""
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#!/usr/bin/env python
+# -*- coding: UTF8 -*-
+</span><span class="s">"""
 author: Guillaume Bouvier
 email: guillaume.bouvier@ens-cachan.org
 creation date: 2014 07 24
@@ -297,8 +297,8 @@ Thanks!
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s">'/c5/shared/pymol/1.7.0.0-python-2.7.5-shared/lib/python2.7/site-packages/'</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">__main__</span>
-<span class="c">#__main__.pymol_argv = ['pymol','-qc'] # Pymol: quiet and no GUI</span>
-<span class="kn">import</span> <span class="nn">pymol</span>
+<span class="c1">#__main__.pymol_argv = ['pymol','-qc'] # Pymol: quiet and no GUI
+</span><span class="kn">import</span> <span class="nn">pymol</span>
 <span class="n">pymol</span><span class="o">.</span><span class="n">finish_launching</span><span class="p">()</span>
 
 <span class="kn">import</span> <span class="nn">align_all</span>
@@ -341,12 +341,12 @@ Thanks!
 
 <p>This script requires these pymol scripts:</p>
 
-<h4 id="alignallpy"><code class="highlighter-rouge">align_all.py</code></h4>
+<h4 id="align_allpy"><code class="highlighter-rouge">align_all.py</code></h4>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#! /usr/bin/env python</span>
-<span class="c"># original Written by Jules Jacobsen (jacobsen@ebi.ac.uk). Feel free to do whatever you like with this code.</span>
-<span class="c"># extensively modified by Robert L. Campbell (rlc1@queensu.ca)</span>
-
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#! /usr/bin/env python
+# original Written by Jules Jacobsen (jacobsen@ebi.ac.uk). Feel free to do whatever you like with this code.
+# extensively modified by Robert L. Campbell (rlc1@queensu.ca)
+</span>
 <span class="kn">from</span> <span class="nn">pymol</span> <span class="kn">import</span> <span class="n">cmd</span>
 
 <span class="k">def</span> <span class="nf">align_all</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">mobile_selection</span><span class="o">=</span><span class="s">'name ca'</span><span class="p">,</span><span class="n">target_selection</span><span class="o">=</span><span class="s">'name ca'</span><span class="p">,</span><span class="n">cutoff</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cycles</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">cgo_object</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -389,8 +389,8 @@ Thanks!
     <span class="n">rmsd_list</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">object_list</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">rms</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">rms</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 
   <span class="n">rmsd_list</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="nb">cmp</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="c"># loop over dictionary and print out matrix of final rms values</span>
-  <span class="k">print</span> <span class="s">"Aligning against:"</span><span class="p">,</span><span class="n">target</span>
+<span class="c1"># loop over dictionary and print out matrix of final rms values
+</span>  <span class="k">print</span> <span class="s">"Aligning against:"</span><span class="p">,</span><span class="n">target</span>
   <span class="k">for</span> <span class="n">object_name</span> <span class="ow">in</span> <span class="n">object_list</span><span class="p">:</span>
     <span class="k">print</span> <span class="s">"</span><span class="si">%</span><span class="s">s: </span><span class="si">%6.3</span><span class="s">f using </span><span class="si">%</span><span class="s">d atoms"</span> <span class="o">%</span> <span class="p">(</span><span class="n">object_name</span><span class="p">,</span><span class="n">rmsd</span><span class="p">[</span><span class="n">object_name</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span><span class="n">rmsd</span><span class="p">[</span><span class="n">object_name</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
 
@@ -400,11 +400,11 @@ Thanks!
 
 <span class="n">cmd</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="s">'align_all'</span><span class="p">,</span><span class="n">align_all</span><span class="p">)</span></code></pre></figure>
 
-<h4 id="rmsfstatespy"><code class="highlighter-rouge">rmsf_states.py</code></h4>
+<h4 id="rmsf_statespy"><code class="highlighter-rouge">rmsf_states.py</code></h4>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c">#! /usr/bin/python</span>
-<span class="c"># Copyright (c) 2009 Robert L. Campbell (rlc1@queensu.ca)</span>
-<span class="kn">import</span> <span class="nn">math</span><span class="o">,</span><span class="nn">sys</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="c1">#! /usr/bin/python
+# Copyright (c) 2009 Robert L. Campbell (rlc1@queensu.ca)
+</span><span class="kn">import</span> <span class="nn">math</span><span class="p">,</span><span class="n">sys</span>
 <span class="kn">from</span> <span class="nn">pymol</span> <span class="kn">import</span> <span class="n">cmd</span>
 <span class="kn">from</span> <span class="nn">pymol</span> <span class="kn">import</span> <span class="n">stored</span>
 
@@ -441,12 +441,12 @@ Thanks!
     change this by specifying setting reference_state to the number of another state.
   """</span>
 
-<span class="c"># setting byres to true only makes sense if the selection is only for the alpha-carbons</span>
-  <span class="n">byres</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">byres</span><span class="p">)</span>
+<span class="c1"># setting byres to true only makes sense if the selection is only for the alpha-carbons
+</span>  <span class="n">byres</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">byres</span><span class="p">)</span>
   <span class="n">reference_state</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">reference_state</span><span class="p">)</span>
 
-<span class="c"># initialize the arrays used</span>
-  <span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># initialize the arrays used
+</span>  <span class="n">models</span> <span class="o">=</span> <span class="p">[]</span>
   <span class="n">coord_array</span> <span class="o">=</span> <span class="p">[]</span>
   <span class="n">chain</span><span class="o">=</span><span class="p">[]</span>
   <span class="n">resi</span><span class="o">=</span><span class="p">[]</span>
@@ -455,13 +455,13 @@ Thanks!
 
   <span class="n">num_states</span> <span class="o">=</span> <span class="n">cmd</span><span class="o">.</span><span class="n">count_states</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 
-<span class="c"># get models into models array</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_states</span><span class="p">):</span>
+<span class="c1"># get models into models array
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_states</span><span class="p">):</span>
     <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cmd</span><span class="o">.</span><span class="n">get_model</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span><span class="n">state</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
 
-<span class="c"># extract coordinates and atom identification information out of the models</span>
-<span class="c"># loop over the states</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_states</span><span class="p">):</span>
+<span class="c1"># extract coordinates and atom identification information out of the models
+# loop over the states
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_states</span><span class="p">):</span>
     <span class="n">coord_array</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
     <span class="n">chain</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
     <span class="n">resi</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
@@ -469,8 +469,8 @@ Thanks!
     <span class="n">name</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
 
     <span class="k">if</span> <span class="n">byres</span><span class="p">:</span>
-<span class="c"># loop over the atoms in each state</span>
-      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">atom</span><span class="p">)):</span>
+<span class="c1"># loop over the atoms in each state
+</span>      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">atom</span><span class="p">)):</span>
         <span class="n">atom</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">atom</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">atom</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">'CA'</span><span class="p">:</span>
           <span class="n">coord_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">coord</span><span class="p">)</span>
@@ -479,8 +479,8 @@ Thanks!
           <span class="n">resn</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">resn</span><span class="p">)</span>
           <span class="n">name</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-<span class="c"># loop over the atoms in each state</span>
-      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">atom</span><span class="p">)):</span>
+<span class="c1"># loop over the atoms in each state
+</span>      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">atom</span><span class="p">)):</span>
         <span class="n">atom</span> <span class="o">=</span> <span class="n">models</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">atom</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
         <span class="n">coord_array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">coord</span><span class="p">)</span>
         <span class="n">chain</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">chain</span><span class="p">)</span>
@@ -488,30 +488,30 @@ Thanks!
         <span class="n">resn</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">resn</span><span class="p">)</span>
         <span class="n">name</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">atom</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 
-<span class="c"># initialize array</span>
-  <span class="n">diff2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># initialize array
+</span>  <span class="n">diff2</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c"># calculate the square of the fluctuation</span>
-<span class="c"># = the sum of the distance between the atoms in each state from the reference state, squared</span>
-  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coord_array</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+<span class="c1"># calculate the square of the fluctuation
+# = the sum of the distance between the atoms in each state from the reference state, squared
+</span>  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coord_array</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
     <span class="n">diff2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_states</span><span class="p">):</span>
 
-<span class="c"># reference_state is 1-based, but coord_array is zero-based, so subtract 1 from </span>
-<span class="c"># reference_state to get the correct reference_state</span>
-      <span class="n">diff2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">distx2</span><span class="p">(</span><span class="n">coord_array</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">coord_array</span><span class="p">[</span><span class="n">reference_state</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
+<span class="c1"># reference_state is 1-based, but coord_array is zero-based, so subtract 1 from 
+# reference_state to get the correct reference_state
+</span>      <span class="n">diff2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">distx2</span><span class="p">(</span><span class="n">coord_array</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="n">coord_array</span><span class="p">[</span><span class="n">reference_state</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
 
-<span class="c"># divide the fluctuation squared by the number of states and take the square root of that to get the RMSF</span>
-    <span class="n">diff2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">num_states</span><span class="p">)</span>
+<span class="c1"># divide the fluctuation squared by the number of states and take the square root of that to get the RMSF
+</span>    <span class="n">diff2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff2</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">/</span><span class="n">num_states</span><span class="p">)</span>
 
-<span class="c"># reset all the B-factors to zero</span>
-  <span class="n">cmd</span><span class="o">.</span><span class="n">alter</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span><span class="s">"b=0"</span><span class="p">)</span>
+<span class="c1"># reset all the B-factors to zero
+</span>  <span class="n">cmd</span><span class="o">.</span><span class="n">alter</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span><span class="s">"b=0"</span><span class="p">)</span>
 
   <span class="n">b_dict</span> <span class="o">=</span> <span class="p">{}</span>
 
   <span class="n">sum_rmsf</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c"># if byres, alter all B-factors in a residue to be the same</span>
-  <span class="k">if</span> <span class="n">byres</span><span class="p">:</span>
+<span class="c1"># if byres, alter all B-factors in a residue to be the same
+</span>  <span class="k">if</span> <span class="n">byres</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">b_lookup</span><span class="p">(</span><span class="n">chain</span><span class="p">,</span> <span class="n">resi</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
       <span class="k">if</span> <span class="n">chain</span> <span class="ow">in</span> <span class="n">b_dict</span><span class="p">:</span>
         <span class="n">b</span> <span class="o">=</span> <span class="n">b_dict</span><span class="p">[</span><span class="n">chain</span><span class="p">][</span><span class="n">resi</span><span class="p">]</span>
@@ -526,8 +526,8 @@ Thanks!
     <span class="n">mean_rmsf</span> <span class="o">=</span> <span class="n">sum_rmsf</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">diff2</span><span class="p">)</span>
     <span class="n">cmd</span><span class="o">.</span><span class="n">alter</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span><span class="s">'</span><span class="si">%</span><span class="s">s=stored.b(chain,resi,name)'</span> <span class="o">%</span> <span class="p">(</span><span class="s">'b'</span><span class="p">))</span>
 
-<span class="c"># if not byres, alter all B-factors individually according to the RMSF for each atom</span>
-  <span class="k">else</span><span class="p">:</span>
+<span class="c1"># if not byres, alter all B-factors individually according to the RMSF for each atom
+</span>  <span class="k">else</span><span class="p">:</span>
     <span class="n">quiet</span><span class="o">=</span><span class="mi">0</span>
     <span class="k">def</span> <span class="nf">b_lookup</span><span class="p">(</span><span class="n">chain</span><span class="p">,</span> <span class="n">resi</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
       <span class="k">if</span> <span class="n">chain</span> <span class="ow">in</span> <span class="n">b_dict</span><span class="p">:</span>

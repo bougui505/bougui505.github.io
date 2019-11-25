@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -146,17 +148,15 @@
 <p>You can transparently connect to <code class="highlighter-rouge">host1</code> through <code class="highlighter-rouge">host2</code> with ssh by setting up
 a ProxyCommand in <code class="highlighter-rouge">.ssh/config</code> file:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Host host1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host host1
     User username1
     ProxyCommand ssh username2@host2 exec nc host1 22
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Now you can connect directly to <code class="highlighter-rouge">host1</code> with the following command:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ssh host1
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh host1
+</code></pre></div></div>
 
 <p><img src="/assets/im_an_idiot.png" alt="XKCD comics" />
 <a href="https://xkcd.com/530/">https://xkcd.com/530/</a></p>

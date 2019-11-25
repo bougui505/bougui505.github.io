@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,9 +133,9 @@
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env zsh</span>
 <span class="nb">cd</span> /path/to/the/server/git/repo
-env -i git pull
-env -i git push github master <span class="c"># for github backup (add github to the remote)</span>
-/path/to/jekyll build --destination /path/to/your/_site</code></pre></figure>
+<span class="nb">env</span> <span class="nt">-i</span> git pull
+<span class="nb">env</span> <span class="nt">-i</span> git push github master <span class="c"># for github backup (add github to the remote)</span>
+/path/to/jekyll build <span class="nt">--destination</span> /path/to/your/_site</code></pre></figure>
 
 <p>Now when you push commits, the site is automaticcaly built.</p>
 

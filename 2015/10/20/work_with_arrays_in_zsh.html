@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -127,34 +129,34 @@
       <div class="wrapper">
         <h1 id="work-with-arrays-in-zsh">Work with arrays in zsh</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">a</span><span class="o">=(</span>a b c<span class="o">)</span>
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ a</span><span class="o">=(</span>a b c<span class="o">)</span>
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
 a b c
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>1]
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>1]
 a
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>2]
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$a</span><span class="o">[</span>2]
 b</code></pre></figure>
 
 <h2 id="iterate-values">Iterate values:</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="k">for </span>x <span class="k">in</span> <span class="nv">$a</span>; <span class="k">do </span><span class="nb">echo</span> <span class="nv">$x</span>; <span class="k">done
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="k">for </span>x <span class="k">in</span> <span class="nv">$a</span><span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="nv">$x</span><span class="p">;</span> <span class="k">done
 </span>a
 b
 c</code></pre></figure>
 
 <h2 id="append-values">Append values</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">a</span><span class="o">=()</span>
-<span class="gp">$ </span>a+<span class="o">=</span>1
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ a</span><span class="o">=()</span>
+<span class="nv">$ </span>a+<span class="o">=</span>1
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
 1
-<span class="gp">$ </span>a+<span class="o">=</span>2
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
+<span class="nv">$ </span>a+<span class="o">=</span>2
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$a</span>
 1 2</code></pre></figure>
 
 <h2 id="get-the-length-of-the-array">Get the length of the array</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">echo</span> <span class="k">${#</span><span class="nv">a</span><span class="p">[@]</span><span class="k">}</span>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">echo</span> <span class="k">${#</span><span class="nv">a</span><span class="p">[@]</span><span class="k">}</span>
 3</code></pre></figure>
 
 

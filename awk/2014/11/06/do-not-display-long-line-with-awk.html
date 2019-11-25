@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,9 +133,8 @@
 It’s not convenient to display the raw text in a terminal.
 Awk can be used to filter the display:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>awk 'length($0)&lt;1000' myfile.ipynb | less
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awk 'length($0)&lt;1000' myfile.ipynb | less
+</code></pre></div></div>
 
 <p>With this command you won’t display line with more than 999 characters.</p>
 

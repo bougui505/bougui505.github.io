@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,25 +133,22 @@
 
 <h2 id="install-the-required-packages">Install the required packages:</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware pulseaudio-module-gconf
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install pulseaudio pulseaudio-module-bluetooth pavucontrol bluez-firmware pulseaudio-module-gconf
+</code></pre></div></div>
 
 <h2 id="edit-and-check-etcpulsedefaultpa">Edit and check /etc/pulse/default.pa</h2>
 
 <p>Be sure that the lines below are present in <code class="highlighter-rouge">/etc/pulse/default.pa</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>.ifexists module-bluetooth-discover.so
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.ifexists module-bluetooth-discover.so
 load-module module-bluetooth-discover
 .endif
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And add the line below (or check if presents):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>load-module module-switch-on-connect
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>load-module module-switch-on-connect
+</code></pre></div></div>
 
 <p>Then restart the computer and it should work!</p>
 

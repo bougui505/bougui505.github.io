@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -143,8 +145,8 @@ matrices.</p>
 <p>The trajectory is given as a numpy array.
 The first dimension gives the frames, the second the atoms and the third the <script type="math/tex">x</script>, <script type="math/tex">y</script>, <script type="math/tex">z</script> coordinates.</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fittingCoordsets</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">50001</span><span class="p">,</span><span class="mi">341</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c"># the numpy array containing the trajectory</span>
-                                                    <span class="c"># for this exemple: 50001 frames, 341 atoms</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">fittingCoordsets</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">50001</span><span class="p">,</span><span class="mi">341</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># the numpy array containing the trajectory
+</span>                                                    <span class="c1"># for this exemple: 50001 frames, 341 atoms</span></code></pre></figure>
 
 <p>And now we can compute the RMSD between the first frame <code class="highlighter-rouge">0</code> and the following ones with optimal alignment:</p>
 

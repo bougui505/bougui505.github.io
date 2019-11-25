@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -170,18 +172,17 @@ reject selected changes only.</p>
 
 <p>First install <code class="highlighter-rouge">latexdiff</code></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>sudo apt-get install latexdiff</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">sudo </span>apt-get <span class="nb">install </span>latexdiff</code></pre></figure>
 
 <p>To use it with git, just add this line to your <code class="highlighter-rouge">~/.gitconfig</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[difftool.latexdiff]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[difftool.latexdiff]
     cmd = latexdiff "$LOCAL" "$REMOTE"
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>For example to generate a diff file <code class="highlighter-rouge">diff.tex</code> between the current version of the file <code class="highlighter-rouge">document.tex</code> and the commit <code class="highlighter-rouge">83533d8</code> just type:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>git difftool -t latexdiff 83533d8 -- document.tex &gt; diff.tex</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>git difftool <span class="nt">-t</span> latexdiff 83533d8 <span class="nt">--</span> document.tex <span class="o">&gt;</span> diff.tex</code></pre></figure>
 
 <p>And now you can compile the <code class="highlighter-rouge">diff.tex</code> to highlight the difference easily.</p>
 

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -139,24 +141,21 @@ Because of this, automounting NFS/Samba shares conserves bandwidth and offers be
 
 <p>In Debian:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install autofs
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install autofs
+</code></pre></div></div>
 
 <p>And edit the file <code class="highlighter-rouge">/etc/auto.master</code> by adding this line:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/mnt/sshfs /etc/auto.sshfs uid=1000,gid=1000,--timeout=30,--ghost
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/mnt/sshfs /etc/auto.sshfs uid=1000,gid=1000,--timeout=30,--ghost
+</code></pre></div></div>
 
 <p>Replace the uid and gid by your user-id and group-id respectively (obtained respectively with id -u username and id -g username).
 <code class="highlighter-rouge">--timeout=30</code> is to unmount the disk when you didn’t use it for 30 seconds.</p>
 
 <p>Create the file <code class="highlighter-rouge">/etc/auto.sshfs</code> with this content:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mydisk -fstype=fuse,port=22,rw,allow_other :sshfs\#username@host\:/path/to/your/disk/to/mount/
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mydisk -fstype=fuse,port=22,rw,allow_other :sshfs\#username@host\:/path/to/your/disk/to/mount/
+</code></pre></div></div>
 
 <ul>
   <li><code class="highlighter-rouge">mydisk</code> is the name of the local directory created</li>
@@ -167,9 +166,8 @@ Because of this, automounting NFS/Samba shares conserves bandwidth and offers be
 
 <p>Then, reload autofs:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo /etc/init.d/autofs restart
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo /etc/init.d/autofs restart
+</code></pre></div></div>
 
 <p>When you will access to <code class="highlighter-rouge">/mnt/sshfs/mydisk</code> the disk will be automatically mount.
 The ssh keys must be properly!</p>

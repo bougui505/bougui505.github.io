@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,43 +131,38 @@
 
 <p>First install inadyn:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install inadyn
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install inadyn
+</code></pre></div></div>
 
 <p>And then open <a href="http://freedns.afraid.org/dynamic">http://freedns.afraid.org/dynamic</a> and copy the alphanumeric string just after ‘?’ in the link ‘Direct URL’ of your corresponding domain.</p>
 
 <p>Then create the inadyn configuration file <code class="highlighter-rouge">/etc/inadyn.conf</code> with this content:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>--username &lt;your_username&gt;
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--username &lt;your_username&gt;
 --password &lt;your_password&gt;
 --update_period 60000
 --alias &lt;your_host&gt;.&lt;your domain&gt;,&lt;alphanumeric string&gt;
 --background
 --dyndns_system default@freedns.afraid.org
 --syslog
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>and replace <code class="highlighter-rouge">&lt;your_host&gt;.&lt;your domain&gt;,&lt;alphanumeric string&gt;</code> with the corresponding informations.</p>
 
 <p>Now try to run inadyn:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>/usr/sbin/inadyn
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/sbin/inadyn
+</code></pre></div></div>
 
 <p>and if it works, launch inadyn at boot with the root crontab:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo crontab -e
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo crontab -e
+</code></pre></div></div>
 
 <p>and add the following line to crontab:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>@reboot /usr/sbin/inadyn
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@reboot /usr/sbin/inadyn
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

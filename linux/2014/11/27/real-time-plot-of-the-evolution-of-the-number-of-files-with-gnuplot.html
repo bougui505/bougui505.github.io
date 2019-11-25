@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,33 +131,33 @@
 
 <p>Usage example to monitor the number of files <code class="highlighter-rouge">dms/smap_*_no_H.dms</code></p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>./file_monitor.sh dms/smap_<span class="se">\*</span>_no_H.dms</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>./file_monitor.sh dms/smap_<span class="se">\*</span>_no_H.dms</code></pre></figure>
 
-<h2 id="the-main-script-filemonitorsh">The main script: <code class="highlighter-rouge">file_monitor.sh</code></h2>
+<h2 id="the-main-script-file_monitorsh">The main script: <code class="highlighter-rouge">file_monitor.sh</code></h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 <span class="c"># -*- coding: UTF8 -*-</span>
 <span class="nv">infile</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
 <span class="nv">outfile</span><span class="o">=</span>/dev/shm/nfiles.txt
-<span class="nv">t_0</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">"%s"</span><span class="k">)</span>
-<span class="k">for </span>i <span class="k">in</span> <span class="k">$(</span>seq 1 10<span class="k">)</span>
+<span class="nv">t_0</span><span class="o">=</span><span class="k">$(</span><span class="nb">date</span> +<span class="s2">"%s"</span><span class="k">)</span>
+<span class="k">for </span>i <span class="k">in</span> <span class="k">$(</span><span class="nb">seq </span>1 10<span class="k">)</span>
 <span class="k">do
-</span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">"%s"</span><span class="k">)</span>
+</span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span><span class="nb">date</span> +<span class="s2">"%s"</span><span class="k">)</span>
 <span class="nv">delta_t</span><span class="o">=</span><span class="k">$((</span><span class="nv">$t</span><span class="o">-</span><span class="nv">$t_0</span><span class="k">))</span>
-<span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$infile</span> | wc -w<span class="k">)</span>
-<span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> &gt;&gt; <span class="nv">$outfile</span>
-sleep 2
+<span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$infile</span> | <span class="nb">wc</span> <span class="nt">-w</span><span class="k">)</span>
+<span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> <span class="o">&gt;&gt;</span> <span class="nv">$outfile</span>
+<span class="nb">sleep </span>2
 <span class="k">done
 </span>gnuplot loop.plt &amp;
 <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$infile</span><span class="s2">"</span>
 <span class="k">while </span><span class="nb">true
     </span><span class="k">do
-        </span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">"%s"</span><span class="k">)</span>
+        </span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span><span class="nb">date</span> +<span class="s2">"%s"</span><span class="k">)</span>
         <span class="nv">delta_t</span><span class="o">=</span><span class="k">$((</span><span class="nv">$t</span><span class="o">-</span><span class="nv">$t_0</span><span class="k">))</span>
-        <span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$infile</span> | wc -w<span class="k">)</span>
-        <span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> &gt;&gt; <span class="nv">$outfile</span>
+        <span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="nv">$infile</span> | <span class="nb">wc</span> <span class="nt">-w</span><span class="k">)</span>
+        <span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> <span class="o">&gt;&gt;</span> <span class="nv">$outfile</span>
         <span class="nb">trap</span> <span class="s2">"echo Exited!; break"</span> SIGINT
-        sleep 2
+        <span class="nb">sleep </span>2
     <span class="k">done</span>
 /bin/rm <span class="nv">$outfile</span></code></pre></figure>
 
@@ -170,29 +172,29 @@ pause 2
 replot
 reread</code></pre></figure>
 
-<h2 id="to-monitor-the-number-of-qsub-jobs-qstatmonitorsh">To monitor the number of qsub jobs: <code class="highlighter-rouge">qstat_monitor.sh</code></h2>
+<h2 id="to-monitor-the-number-of-qsub-jobs-qstat_monitorsh">To monitor the number of qsub jobs: <code class="highlighter-rouge">qstat_monitor.sh</code></h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
 <span class="c"># -*- coding: UTF8 -*-</span>
 <span class="nv">outfile</span><span class="o">=</span>/dev/shm/nfiles.txt
-<span class="nv">t_0</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">"%s"</span><span class="k">)</span>
-<span class="k">for </span>i <span class="k">in</span> <span class="k">$(</span>seq 1 2<span class="k">)</span>
+<span class="nv">t_0</span><span class="o">=</span><span class="k">$(</span><span class="nb">date</span> +<span class="s2">"%s"</span><span class="k">)</span>
+<span class="k">for </span>i <span class="k">in</span> <span class="k">$(</span><span class="nb">seq </span>1 2<span class="k">)</span>
 <span class="k">do
-</span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">"%s"</span><span class="k">)</span>
+</span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span><span class="nb">date</span> +<span class="s2">"%s"</span><span class="k">)</span>
 <span class="nv">delta_t</span><span class="o">=</span><span class="k">$((</span><span class="nv">$t</span><span class="o">-</span><span class="nv">$t_0</span><span class="k">))</span>
-<span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span>qstat -u <span class="nv">$USER</span> | grep <span class="nv">$USER</span> | wc -l<span class="k">)</span>
-<span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> &gt;&gt; <span class="nv">$outfile</span>
-sleep 20
+<span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span>qstat <span class="nt">-u</span> <span class="nv">$USER</span> | <span class="nb">grep</span> <span class="nv">$USER</span> | <span class="nb">wc</span> <span class="nt">-l</span><span class="k">)</span>
+<span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> <span class="o">&gt;&gt;</span> <span class="nv">$outfile</span>
+<span class="nb">sleep </span>20
 <span class="k">done
 </span>gnuplot loop.plt &amp;
 <span class="k">while </span><span class="nb">true
     </span><span class="k">do
-        </span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span>date +<span class="s2">"%s"</span><span class="k">)</span>
+        </span><span class="nv">t</span><span class="o">=</span><span class="k">$(</span><span class="nb">date</span> +<span class="s2">"%s"</span><span class="k">)</span>
         <span class="nv">delta_t</span><span class="o">=</span><span class="k">$((</span><span class="nv">$t</span><span class="o">-</span><span class="nv">$t_0</span><span class="k">))</span>
-        <span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span>qstat -u <span class="nv">$USER</span> | grep <span class="nv">$USER</span> | wc -l<span class="k">)</span>
-        <span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> &gt;&gt; <span class="nv">$outfile</span>
+        <span class="nv">nfiles</span><span class="o">=</span><span class="k">$(</span>qstat <span class="nt">-u</span> <span class="nv">$USER</span> | <span class="nb">grep</span> <span class="nv">$USER</span> | <span class="nb">wc</span> <span class="nt">-l</span><span class="k">)</span>
+        <span class="nb">echo</span> <span class="nv">$delta_t</span> <span class="nv">$nfiles</span> <span class="o">&gt;&gt;</span> <span class="nv">$outfile</span>
         <span class="nb">trap</span> <span class="s2">"echo Exited!; break"</span> SIGINT
-        sleep 20
+        <span class="nb">sleep </span>20
     <span class="k">done</span>
 /bin/rm <span class="nv">$outfile</span></code></pre></figure>
 

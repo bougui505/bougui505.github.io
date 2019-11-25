@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,7 +131,7 @@
 
 <p>First install jekyll-scholar:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install --no-rdoc --no-ri --user-install jekyll-scholar</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem <span class="nb">install</span> <span class="nt">--no-rdoc</span> <span class="nt">--no-ri</span> <span class="nt">--user-install</span> jekyll-scholar</code></pre></figure>
 
 <p>It takes a long time (several minutes) on the raspberry pi.</p>
 
@@ -139,13 +141,13 @@
 
 <p>Then create the directory <code class="highlighter-rouge">_bibliography</code>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir _bibliography</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">mkdir </span>_bibliography</code></pre></figure>
 
 <p>In this directory put your bib file under the name <code class="highlighter-rouge">references.bib</code>.</p>
 
 <p>In the root directory of the jekyll web site create the file <code class="highlighter-rouge">bibliography.md</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>---
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
 layout: default
 title: Bibliography
 ---
@@ -153,19 +155,17 @@ title: Bibliography
 # Bibliography
 
 {% bibliography %}
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>That’s all.
 With the default jekyll theme a link to the generated bibliography page should appear in the top navigation bar of the generated web site (<code class="highlighter-rouge">jekyll build</code>).</p>
 
 <p>If you want to sort the bibliography by year you can add this in the <code class="highlighter-rouge">_config.yml</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>scholar:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scholar:
     sort_by: year
     order: descending
-</code></pre>
-</div>
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

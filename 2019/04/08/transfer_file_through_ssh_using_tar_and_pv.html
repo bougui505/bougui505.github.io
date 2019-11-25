@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -127,9 +129,8 @@
       <div class="wrapper">
         <h1 id="transfer-file-through-ssh-using-tar-and-pv">Transfer file through ssh using tar and pv</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>tar -zc your_directory | pv -s 10g | ssh hostname "tar -zx -C /path/to/the/target/directory"
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -zc your_directory | pv -s 10g | ssh hostname "tar -zx -C /path/to/the/target/directory"
+</code></pre></div></div>
 
 <p>Notes: -s SIZE: Assume the total amount of data to be transferred is SIZE bytes when calculating percentages  and  ETAs. The same suffixes of “k”, “m” etc can be used as with -L. A suffix of “k”, “m”, “g”, or “t” can be added to denote kilobytes (*1024), megabytes, and so on.</p>
 

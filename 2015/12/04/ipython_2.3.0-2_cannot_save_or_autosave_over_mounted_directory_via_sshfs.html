@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,15 +131,13 @@
 
 <p>A workaround for this bug is to add this options to the file <code class="highlighter-rouge">/etc/auto.sshfs</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>workaround=rename,noexec
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>workaround=rename,noexec
+</code></pre></div></div>
 
 <p>The full line of my <code class="highlighter-rouge">/etc/auto.sshfs</code> is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>home_pro -fstype=fuse,port=22,rw,allow_other,workaround=rename,noexec :sshfs\#username@hostname\:/path/to/the/directory/to/mount
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>home_pro -fstype=fuse,port=22,rw,allow_other,workaround=rename,noexec :sshfs\#username@hostname\:/path/to/the/directory/to/mount
+</code></pre></div></div>
 
 <h2 id="related-post">Related post:</h2>
 

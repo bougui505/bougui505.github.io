@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,10 +131,10 @@
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">__main__</span>
-<span class="c">#__main__.pymol_argv = ['pymol', '-c'] # Optionnaly pass options to pymol</span>
-<span class="kn">import</span> <span class="nn">pymol</span>
-<span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="c"># To get the stdout in the notebook instead of in the pymol console</span>
-<span class="kn">import</span> <span class="nn">pymol.cmd</span> <span class="kn">as</span> <span class="nn">cmd</span>
+<span class="c1">#__main__.pymol_argv = ['pymol', '-c'] # Optionnaly pass options to pymol
+</span><span class="kn">import</span> <span class="nn">pymol</span>
+<span class="n">stdout</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="c1"># To get the stdout in the notebook instead of in the pymol console
+</span><span class="kn">import</span> <span class="nn">pymol.cmd</span> <span class="k">as</span> <span class="n">cmd</span>
 <span class="n">pymol</span><span class="o">.</span><span class="n">finish_launching</span><span class="p">()</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span> <span class="o">=</span> <span class="n">stdout</span></code></pre></figure>
 
@@ -141,8 +143,8 @@
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">cmd</span><span class="o">.</span><span class="n">bg_color</span><span class="p">(</span><span class="s">'white'</span><span class="p">)</span>
 <span class="n">cmd</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">'4ci0_A.pdb'</span><span class="p">,</span> <span class="nb">object</span><span class="o">=</span><span class="s">'native'</span><span class="p">)</span>
 <span class="n">cmd</span><span class="o">.</span><span class="n">show_as</span><span class="p">(</span><span class="s">'ribbon'</span><span class="p">,</span> <span class="s">'native'</span><span class="p">)</span>
-<span class="n">cmd</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">cbc</span><span class="p">()</span> <span class="c"># Color By Chain</span>
-<span class="n">cmd</span><span class="o">.</span><span class="n">orient</span><span class="p">()</span></code></pre></figure>
+<span class="n">cmd</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">cbc</span><span class="p">()</span> <span class="c1"># Color By Chain
+</span><span class="n">cmd</span><span class="o">.</span><span class="n">orient</span><span class="p">()</span></code></pre></figure>
 
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>

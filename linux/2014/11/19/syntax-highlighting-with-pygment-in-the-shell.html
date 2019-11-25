@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,29 +131,29 @@
 
 <p>First install Pygments:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>apt-get install python-pygments</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>apt-get <span class="nb">install </span>python-pygments</code></pre></figure>
 
 <p>And create this function in your <code class="highlighter-rouge">.zshrc</code> or <code class="highlighter-rouge">.bashrc</code>:</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">colorize_via_pygmentize <span class="o">()</span> <span class="o">{</span>
-    <span class="k">if</span> <span class="o">[</span> ! -x <span class="k">$(</span>which pygmentize<span class="k">)</span> <span class="o">]</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-x</span> <span class="k">$(</span>which pygmentize<span class="k">)</span> <span class="o">]</span>
     <span class="k">then
         </span><span class="nb">echo </span>package <span class="se">\'</span>pygmentize<span class="se">\'</span> is not installed!
-        <span class="nb">exit</span> -1
+        <span class="nb">exit</span> <span class="nt">-1</span>
     <span class="k">fi
-    if</span> <span class="o">[</span> <span class="nv">$# </span>-eq 0 <span class="o">]</span>
+    if</span> <span class="o">[</span> <span class="nv">$# </span><span class="nt">-eq</span> 0 <span class="o">]</span>
     <span class="k">then
-        </span>pygmentize -g <span class="nv">$@</span>
+        </span>pygmentize <span class="nt">-g</span> <span class="nv">$@</span>
     <span class="k">fi
     for </span>FNAME <span class="k">in</span> <span class="nv">$@</span>
     <span class="k">do
-        </span><span class="nv">filename</span><span class="o">=</span><span class="k">$(</span>basename <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span><span class="k">)</span> 
-        <span class="nv">lexer</span><span class="o">=</span><span class="sb">`</span>pygmentize -N <span class="se">\"</span><span class="nv">$filename</span><span class="se">\"</span><span class="sb">`</span> 
-        <span class="k">if</span> <span class="o">[</span> <span class="s2">"Z</span><span class="nv">$lexer</span><span class="s2">"</span> !<span class="o">=</span> <span class="s2">"Ztext"</span> <span class="o">]</span>
+        </span><span class="nv">filename</span><span class="o">=</span><span class="k">$(</span><span class="nb">basename</span> <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span><span class="k">)</span> 
+        <span class="nv">lexer</span><span class="o">=</span><span class="sb">`</span>pygmentize <span class="nt">-N</span> <span class="se">\"</span><span class="nv">$filename</span><span class="se">\"</span><span class="sb">`</span> 
+        <span class="k">if</span> <span class="o">[</span> <span class="s2">"Z</span><span class="nv">$lexer</span><span class="s2">"</span> <span class="o">!=</span> <span class="s2">"Ztext"</span> <span class="o">]</span>
         <span class="k">then
-            </span>pygmentize -l <span class="nv">$lexer</span> <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span>
+            </span>pygmentize <span class="nt">-l</span> <span class="nv">$lexer</span> <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span>
         <span class="k">else
-            </span>pygmentize -g <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span>
+            </span>pygmentize <span class="nt">-g</span> <span class="s2">"</span><span class="nv">$FNAME</span><span class="s2">"</span>
         <span class="k">fi
     done</span>
 <span class="o">}</span></code></pre></figure>
@@ -164,7 +166,7 @@
 
 <p>Now, you should have syntax highlighting if you use:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>cless yourfilename</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>cless yourfilename</code></pre></figure>
 
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,21 +131,19 @@
 
 <p>The command below return the modulo 15 of variable <code class="highlighter-rouge">$i</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>t=$(expr $i % 15)
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>t=$(expr $i % 15)
+</code></pre></div></div>
 
 <p>For example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>i=0
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i=0
 for x in ????_protein.pdb; do
     my_command &amp;
     ((i++))
     t=$(expr $i % 15 + 2)
     sleep $t
 done
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>allows to increment the sleep by <code class="highlighter-rouge">$i % 15 + 2</code> which can be convenient to wait for a long process in background and to avoid overloading of the machine.</p>
 

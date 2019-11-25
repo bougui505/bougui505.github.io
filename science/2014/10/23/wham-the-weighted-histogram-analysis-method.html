@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -139,8 +141,8 @@ Carlo (<strong>MCMC</strong>)</p>
 <p>Here the import in the ipython notebook:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
-<span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">as</span> <span class="nn">gridspec</span>
-<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="kn">as</span> <span class="nn">optim</span></code></pre></figure>
+<span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="k">as</span> <span class="n">gridspec</span>
+<span class="kn">import</span> <span class="nn">scipy.optimize</span> <span class="k">as</span> <span class="n">optim</span></code></pre></figure>
 
 <p>The 1D potential is constructed with a 1D polynomial fit of some points</p>
 
@@ -171,15 +173,15 @@ Carlo (<strong>MCMC</strong>)</p>
             <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span> <span class="o">+</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span>
         <span class="n">delta</span> <span class="o">=</span> <span class="n">potential</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">-</span> <span class="n">potential</span><span class="p">(</span><span class="n">pos_prev</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c">#print p(delta)</span>
-            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
+            <span class="c1">#print p(delta)
+</span>            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
                 <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
-        <span class="c">#print pos, pos_prev, delta, potential(pos), potential(pos_prev)</span>
-        <span class="n">traj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+        <span class="c1">#print pos, pos_prev, delta, potential(pos), potential(pos_prev)
+</span>        <span class="n">traj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">asarray</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span></code></pre></figure>
 
 <p>We used six different temperature (\(T=\beta^{-1}\)):</p>
@@ -217,7 +219,7 @@ Carlo (<strong>MCMC</strong>)</p>
 <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">traj</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">traj_list</span><span class="p">):</span>
     <span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">])</span>
-    <span class="n">title</span><span class="p">(</span><span class="s">r'$</span><span class="err">\</span><span class="s">beta$ = </span><span class="si">%.2</span><span class="s">f'</span><span class="o">%</span><span class="n">beta_list</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">title</span><span class="p">(</span><span class="s">r'$\beta$ = </span><span class="si">%.2</span><span class="s">f'</span><span class="o">%</span><span class="n">beta_list</span><span class="p">[</span><span class="n">c</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">ylabel</span><span class="p">(</span><span class="s">'$</span><span class="err">\</span><span class="s">pi$'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -271,11 +273,11 @@ chosen such that <script type="math/tex">\sum_{j}p_{ij}=1</script>:</p>
 
 <p>We can compute \(c_{ij}\):</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">n_sim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">beta_list</span><span class="p">)</span> <span class="c"># number of simulations</span>
-<span class="n">n_bin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_lin</span><span class="p">)</span> <span class="c"># number of bins</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_sim</span><span class="p">,</span> <span class="n">n_bin</span><span class="p">))</span>
-<span class="n">beta0</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># the beta of the unbias distribution we want to compute</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">beta</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">beta_list</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">n_sim</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">beta_list</span><span class="p">)</span> <span class="c1"># number of simulations
+</span><span class="n">n_bin</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_lin</span><span class="p">)</span> <span class="c1"># number of bins
+</span><span class="n">c</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">((</span><span class="n">n_sim</span><span class="p">,</span> <span class="n">n_bin</span><span class="p">))</span>
+<span class="n">beta0</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># the beta of the unbias distribution we want to compute
+</span><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">beta</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">beta_list</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span><span class="p">,</span><span class="n">e</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">E</span><span class="p">(</span><span class="n">x_lin</span><span class="p">)):</span>
         <span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">beta</span><span class="o">-</span><span class="n">beta0</span><span class="p">)</span><span class="o">*</span><span class="n">e</span><span class="p">)</span></code></pre></figure>
 
@@ -321,14 +323,14 @@ bins (here \(M=100\)).</p>
 <span class="n">N</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">([</span><span class="n">traj</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">traj</span> <span class="ow">in</span> <span class="n">traj_list</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">residual</span><span class="p">(</span><span class="n">P</span><span class="p">):</span>
     <span class="n">p0</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="n">P</span><span class="p">[:</span><span class="n">n_bin</span><span class="p">],</span><span class="n">P</span><span class="p">[</span><span class="n">n_bin</span><span class="p">:]</span>
-    <span class="c">#print p0.shape, f.shape</span>
-    <span class="n">res1</span> <span class="o">=</span> <span class="n">p0</span> <span class="o">-</span> <span class="n">n</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">f</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c1">#print p0.shape, f.shape
+</span>    <span class="n">res1</span> <span class="o">=</span> <span class="n">p0</span> <span class="o">-</span> <span class="n">n</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">f</span><span class="o">*</span><span class="n">c</span><span class="o">.</span><span class="n">T</span><span class="p">)</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">res2</span> <span class="o">=</span> <span class="n">f</span> <span class="o">-</span> <span class="mi">1</span><span class="o">/</span><span class="p">((</span><span class="n">c</span><span class="o">*</span><span class="n">p0</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">res1</span><span class="p">,</span> <span class="n">res2</span><span class="p">))</span>
-<span class="c">#residual(concatenate((p0_guess,f_guess)))</span>
-<span class="n">P</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">fsolve</span><span class="p">(</span><span class="n">residual</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">p0_guess</span><span class="p">,</span> <span class="n">f_guess</span><span class="p">)))</span>
-<span class="c">#print P.x</span>
-<span class="n">p0</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="n">P</span><span class="p">[:</span><span class="n">n_bin</span><span class="p">],</span><span class="n">P</span><span class="p">[</span><span class="n">n_bin</span><span class="p">:]</span></code></pre></figure>
+<span class="c1">#residual(concatenate((p0_guess,f_guess)))
+</span><span class="n">P</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">fsolve</span><span class="p">(</span><span class="n">residual</span><span class="p">,</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">p0_guess</span><span class="p">,</span> <span class="n">f_guess</span><span class="p">)))</span>
+<span class="c1">#print P.x
+</span><span class="n">p0</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="n">P</span><span class="p">[:</span><span class="n">n_bin</span><span class="p">],</span><span class="n">P</span><span class="p">[</span><span class="n">n_bin</span><span class="p">:]</span></code></pre></figure>
 
 <p>And here the result; the unbias distribution for \(\beta=1\)</p>
 

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,15 +133,13 @@
 download upgraded packages. Therefore it basically calls the command
 <a href="https://help.ubuntu.com/community/AutoWeeklyUpdateHowTo">[1]</a>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>apt-get update
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt-get update
+</code></pre></div></div>
 
 <p>To install <code class="highlighter-rouge">cron-apt</code>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install cron-apt
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install cron-apt
+</code></pre></div></div>
 
 <p>By default, <code class="highlighter-rouge">cron-apt</code> uses <code class="highlighter-rouge">cron</code> to run regularly (each day at 4am). This
 method is not convenient for a personal desktop computer which is often turned
@@ -148,9 +148,8 @@ off at that time.</p>
 <p>You can use <code class="highlighter-rouge">anacron</code> instead of cron to execute <code class="highlighter-rouge">cron-apt</code> regularly. For
 doing this, just link the executable in the <code class="highlighter-rouge">/etc/cron.daily/</code> directory:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo ln -s /usr/sbin/cron-apt /etc/cron.daily/
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo ln -s /usr/sbin/cron-apt /etc/cron.daily/
+</code></pre></div></div>
 
 <p>However <code class="highlighter-rouge">anacron</code> is automatically launched each day at 7:30 am by <code class="highlighter-rouge">cron</code>. The
 command that launch <code class="highlighter-rouge">anacron</code> by <code class="highlighter-rouge">cron</code> is found in this file:
@@ -160,24 +159,22 @@ won’t be launched. You can then add another, more convenient, entry in the
 <code class="highlighter-rouge">/etc/cron.d/anacron</code> file to launch <code class="highlighter-rouge">anacron</code> at 12:30 pm for example. The
 full <code class="highlighter-rouge">/etc/cron.d/anacron</code> file then looks like:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># /etc/cron.d/anacron: crontab entries for the anacron package
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /etc/cron.d/anacron: crontab entries for the anacron package
 
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 30 7    * * *   root    test -x /etc/init.d/anacron &amp;&amp; /usr/sbin/invoke-rc.d anacron start &gt;/dev/null
 30 12    * * *   root   test -x /etc/init.d/anacron &amp;&amp; /usr/sbin/invoke-rc.d anacron start &gt;/dev/null
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>I always use the command line, then it can be very convenient to display a
 message with the number of updates available for my system when I log in to my
 favourite shell. To do so I added this line to the anacrontab
 (<code class="highlighter-rouge">/etc/anacrontab</code>):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>1   10  check_update echo "$(date +'%Y%m%d %T') $(aptitude search '~U' | wc -l) packages can be updated." &gt; /home/USER/.motd # message of the day
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1   10  check_update echo "$(date +'%Y%m%d %T') $(aptitude search '~U' | wc -l) packages can be updated." &gt; /home/USER/.motd # message of the day
+</code></pre></div></div>
 
 <p>And I use the following script to print the message of the day when I start a
 new shell:</p>
@@ -267,9 +264,8 @@ new shell:</p>
 <p>Then I added the following command to my shell configuration script (<code class="highlighter-rouge">.bashrc</code>,
 <code class="highlighter-rouge">.zshrc</code>, …):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>~/PATH/TO/THE/SCRIPT/print_motd.sh # Message of the day
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/PATH/TO/THE/SCRIPT/print_motd.sh # Message of the day
+</code></pre></div></div>
 
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>

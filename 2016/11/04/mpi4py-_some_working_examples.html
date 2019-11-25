@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,8 +133,8 @@
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">mpi4py</span> <span class="kn">import</span> <span class="n">MPI</span>
 <span class="n">COMM</span> <span class="o">=</span> <span class="n">MPI</span><span class="o">.</span><span class="n">COMM_WORLD</span>
-<span class="n">SIZE</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">Get_size</span><span class="p">()</span> <span class="c"># Number of CPUS</span>
-<span class="n">RANK</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">Get_rank</span><span class="p">()</span></code></pre></figure>
+<span class="n">SIZE</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">Get_size</span><span class="p">()</span> <span class="c1"># Number of CPUS
+</span><span class="n">RANK</span> <span class="o">=</span> <span class="n">COMM</span><span class="o">.</span><span class="n">Get_rank</span><span class="p">()</span></code></pre></figure>
 
 <h2 id="broadcasting-data-between-nodes">Broadcasting data between nodes:</h2>
 
@@ -231,7 +233,7 @@ process:</p>
 
 <p>Example output:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>bougui@mantrisse /d/shm&gt;  mpirun -np 2 ./scatter_jobs_mpi.py
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bougui@mantrisse /d/shm&gt;  mpirun -np 2 ./scatter_jobs_mpi.py
 Job array:
 [[0 1]
  [2 None]]
@@ -239,8 +241,7 @@ rank 0: job 0
 rank 1: job 1
 rank 0: job 2
 {0: 0, 1: 1, 2: 4}
-</code></pre>
-</div>
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

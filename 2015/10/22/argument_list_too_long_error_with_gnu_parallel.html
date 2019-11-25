@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,17 +133,17 @@
 
 <p>A possible solution is to use the <code class="highlighter-rouge">find</code> command:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    find directory -name <span class="s2">"*.dat"</span> |<span class="se">\</span>
-    parallel -k --eta <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> &gt; out.txt</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    find directory <span class="nt">-name</span> <span class="s2">"*.dat"</span> |<span class="se">\</span>
+    parallel <span class="nt">-k</span> <span class="nt">--eta</span> <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> <span class="o">&gt;</span> out.txt</code></pre></figure>
 
 <p>instead of the classical syntax:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    ls directory/<span class="k">*</span>.dat |<span class="se">\</span>
-    parallel -k --eta <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> &gt; out.txt</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    <span class="nb">ls </span>directory/<span class="k">*</span>.dat |<span class="se">\</span>
+    parallel <span class="nt">-k</span> <span class="nt">--eta</span> <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> <span class="o">&gt;</span> out.txt</code></pre></figure>
 
 <p>or</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    parallel -k --eta <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> ::: directory/<span class="k">*</span>.dat &gt; out.txt</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">    parallel <span class="nt">-k</span> <span class="nt">--eta</span> <span class="s2">"grep Chi {} | awk -F'Chi = ' '{print </span><span class="nv">$2</span><span class="s2">}'"</span> ::: directory/<span class="k">*</span>.dat <span class="o">&gt;</span> out.txt</code></pre></figure>
 
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -157,10 +159,9 @@ is not possible. The workaround is to:</p>
 
 <h2 id="install-the-required-packages">Install the required packages</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo apt-get install oracle-java8-jdk
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install oracle-java8-jdk
 sudo apt-get install libjna-java
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="install-crashplan">Install Crashplan</h2>
 
@@ -170,9 +171,8 @@ sudo apt-get install libjna-java
 
 <p>And run the installation script, to install Crashplan as root:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>./install.sh
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./install.sh
+</code></pre></div></div>
 
 <p>Crashplan will not work out of the box.</p>
 
@@ -180,29 +180,26 @@ sudo apt-get install libjna-java
 
 <p>Force Crashplan to use the RPi (Raspbian) JRE:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo rm -r /usr/local/crashplan/jre
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo rm -r /usr/local/crashplan/jre
 sudo ln -s /usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt /usr/local/crashplan/jre
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>And change these two files:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd /usr/local/crashplan
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /usr/local/crashplan
 sudo rm libjtux.so
 sudo wget http://bougui505.github.io/assets/libjtux.so
 
 sudo rm libmd5.so
 sudo wget http://bougui505.github.io/assets/libmd5.so
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="start-crashplan">Start Crashplan</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ sudo /usr/local/crashplan/bin/CrashPlanEngine start
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo /usr/local/crashplan/bin/CrashPlanEngine start
 $ sudo /usr/local/crashplan/bin/CrashPlanEngine status
 CrashPlan Engine (pid 1891) is running.
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="configure-crashplan-remotely-using-the-local-crashplan-user-interface-ui">Configure Crashplan remotely using the local Crashplan user interface (UI)</h2>
 
@@ -224,9 +221,8 @@ as root or in <code class="highlighter-rouge">~/.crashplan/.ui_info</code> if in
 
 <p>The format of the <code class="highlighter-rouge">.ui_info</code> file is:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>PORT,Authentication_Token,IP_Address
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PORT,Authentication_Token,IP_Address
+</code></pre></div></div>
 
 <p>Copy the Authentication Token from the RPi and paste it to replace the
 Authentication Token in the local <code class="highlighter-rouge">.ui_info</code> file, after having backup the
@@ -238,9 +234,8 @@ local <code class="highlighter-rouge">.ui_info</code> file.</p>
 
 <h2 id="start-port-forwarding-on-the-local-computer">Start port forwarding on the local computer</h2>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>ssh -L 4200:localhost:4243 pi@raspberrypi
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -L 4200:localhost:4243 pi@raspberrypi
+</code></pre></div></div>
 
 <h2 id="and-start-crashplandesktop-on-local-computer">And start CrashPlanDesktop on local computer…</h2>
 

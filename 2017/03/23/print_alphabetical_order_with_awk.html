@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -127,7 +129,7 @@
       <div class="wrapper">
         <h1 id="print-alphabetical-order-with-awk">Print alphabetical order with awk</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ for i in $(seq 10); do echo $i; done | awk 'BEGIN {split("ABCDEFGHIJKLMNOPQRSTUVWXYZ", A, "")}{print $0, A[$0]}'
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ for i in $(seq 10); do echo $i; done | awk 'BEGIN {split("ABCDEFGHIJKLMNOPQRSTUVWXYZ", A, "")}{print $0, A[$0]}'
 1 A
 2 B
 3 C
@@ -138,8 +140,7 @@
 8 H
 9 I
 10 J
-</code></pre>
-</div>
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -131,9 +133,9 @@
 When you try to pull a big git project with large binary files you can get out of memory on the server.
 I found a quick fix in <a href="http://stackoverflow.com/questions/7362709/git-pull-fails-with-bad-pack-header-error">stackoverflow</a>:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git config --global pack.windowMemory <span class="s2">"100m"</span>
-git config --global pack.packSizeLimit <span class="s2">"100m"</span>
-git config --global pack.threads <span class="s2">"1"</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git config <span class="nt">--global</span> pack.windowMemory <span class="s2">"100m"</span>
+git config <span class="nt">--global</span> pack.packSizeLimit <span class="s2">"100m"</span>
+git config <span class="nt">--global</span> pack.threads <span class="s2">"1"</span></code></pre></figure>
 
 <p>Now everything works well.</p>
 

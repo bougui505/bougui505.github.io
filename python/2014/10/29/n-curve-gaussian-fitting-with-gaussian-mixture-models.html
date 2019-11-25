@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -134,7 +136,7 @@
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">mixture</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span>
 <span class="kn">import</span> <span class="nn">matplotlib.mlab</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="n">clf</span> <span class="o">=</span> <span class="n">mixture</span><span class="o">.</span><span class="n">GMM</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">covariance_type</span><span class="o">=</span><span class="s">'full'</span><span class="p">)</span>
 <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">yourdata</span><span class="p">)</span>
 <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">means_</span>

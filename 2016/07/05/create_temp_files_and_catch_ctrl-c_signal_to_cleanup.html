@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -132,15 +134,14 @@ script is over even when <code class="highlighter-rouge">ctrl-c</code> is presse
 is the sequence for creating temp files with <code class="highlighter-rouge">mktemp</code> and cleaning them up when
 <code class="highlighter-rouge">ctrl-c</code> is pressed:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code># Decompress the log files in a tmp file:
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Decompress the log files in a tmp file:
 TMPFILE=$(mktemp -p /dev/shm)
 zcat -f $LOGFILE &gt; $TMPFILE
 
 # cleanup function
 # see: http://goo.gl/2aUQc
 trap "rm $TMPFILE; exit" SIGHUP SIGINT SIGTERM
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>The example above, decompress some log files in a temp file located in ram disk
 <code class="highlighter-rouge">/dev/shm</code>.</p>

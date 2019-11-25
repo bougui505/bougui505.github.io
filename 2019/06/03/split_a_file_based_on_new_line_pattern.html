@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -127,9 +129,8 @@
       <div class="wrapper">
         <h1 id="split-a-file-based-on-new-line-pattern">Split a file based on new line pattern</h1>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>csplit -z -f intro_ -b '%02d.tex' sectionIntroduction_.tex '/\n/' {8}
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>csplit -z -f intro_ -b '%02d.tex' sectionIntroduction_.tex '/\n/' {8}
+</code></pre></div></div>
 
 <p>with:</p>
 
@@ -137,7 +138,7 @@
 <code class="highlighter-rouge">%02d.tex</code>: the suffix of the output file name
 <code class="highlighter-rouge">sectionIntroduction_.tex</code> the output file name
 <code class="highlighter-rouge">/\n/</code> the pattern to match
-<code class="highlighter-rouge"><span class="p">{</span><span class="err">8</span><span class="p">}</span></code> the number of repeat of the pattern</p>
+<code class="highlighter-rouge">{8}</code> the number of repeat of the pattern</p>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

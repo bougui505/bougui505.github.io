@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,20 +131,20 @@
 
 <h2 id="create-temporary-file-on-the-fly-containing-the-results-of-a-command">Create temporary file, on the fly, containing the results of a command:</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">multivalue <span class="o">=(</span>awk <span class="s1">'{print $4","$5","$6}'</span> 4MBR.dms<span class="o">)</span> 4MBO.dx 4MBO.surf</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">multivalue <span class="o">=(</span><span class="nb">awk</span> <span class="s1">'{print $4","$5","$6}'</span> 4MBR.dms<span class="o">)</span> 4MBO.dx 4MBO.surf</code></pre></figure>
 
 <p>Will get the columns 4, 5 and 6 as input of multivalue</p>
 
 <h2 id="get-the-filename-without-extension-modifier">Get the filename without extension (modifier)</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nv">pdbfile</span><span class="o">=</span>pdb2l0s.ent.gz
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$pdbfile</span>:r
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ pdbfile</span><span class="o">=</span>pdb2l0s.ent.gz
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$pdbfile</span>:r
 pdb2l0s.ent</code></pre></figure>
 
 <h2 id="remove-a-trailing-pathname-component-leaving-the-head-modifier">Remove a trailing pathname component, leaving the head. (modifier)</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span><span class="nb">test</span><span class="o">=</span>pdz2/relax/0056pdz2_0019.pdb
-<span class="gp">$ </span><span class="nb">echo</span> <span class="nv">$test</span>:h
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span><span class="nb">test</span><span class="o">=</span>pdz2/relax/0056pdz2_0019.pdb
+<span class="nv">$ </span><span class="nb">echo</span> <span class="nv">$test</span>:h
 pdz2/relax</code></pre></figure>
 
 

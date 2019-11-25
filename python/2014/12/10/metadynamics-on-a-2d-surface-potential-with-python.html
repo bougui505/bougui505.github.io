@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -130,7 +132,7 @@
 <p>First, the python import in the ipython notebook:</p>
 
 <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
-<span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">as</span> <span class="nn">gridspec</span>
+<span class="kn">import</span> <span class="nn">matplotlib.gridspec</span> <span class="k">as</span> <span class="n">gridspec</span>
 <span class="kn">import</span> <span class="nn">scipy.spatial.distance</span>
 <span class="kn">from</span> <span class="nn">skimage.feature</span> <span class="kn">import</span> <span class="n">peak_local_max</span>
 <span class="kn">import</span> <span class="nn">scipy.ndimage.filters</span>
@@ -139,7 +141,7 @@
 <span class="kn">from</span> <span class="nn">JSAnimation</span> <span class="kn">import</span> <span class="n">IPython_display</span>
 <span class="kn">from</span> <span class="nn">JSAnimation.IPython_display</span> <span class="kn">import</span> <span class="n">display_animation</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">Populating</span> <span class="n">the</span> <span class="n">interactive</span> <span class="n">namespace</span> <span class="kn">from</span> <span class="nn">numpy</span> <span class="nn">and</span> <span class="nn">matplotlib</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">Populating</span> <span class="n">the</span> <span class="n">interactive</span> <span class="n">namespace</span> <span class="k">from</span> <span class="n">numpy</span> <span class="ow">and</span> <span class="n">matplotlib</span></code></pre></figure>
 
 <p>As usual, we define the Müller potential as the sampled potential:</p>
 
@@ -167,8 +169,8 @@
     <span class="n">AA</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="o">-</span><span class="mi">170</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
     <span class="n">XX</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     <span class="n">YY</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="c"># use symbolic algebra if you supply symbolic quantities</span>
-    <span class="n">exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span>
+    <span class="c1"># use symbolic algebra if you supply symbolic quantities
+</span>    <span class="n">exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span>
     <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">):</span>
         <span class="n">value</span> <span class="o">+=</span> <span class="n">AA</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">aa</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">XX</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">bb</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">XX</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">YY</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">+</span> <span class="n">cc</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">YY</span><span class="p">[</span><span class="n">j</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
@@ -229,8 +231,8 @@
         <span class="n">pos_prev</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">pos_prev</span><span class="p">)</span>
         <span class="n">delta</span> <span class="o">=</span> <span class="n">potential</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">-</span> <span class="n">potential</span><span class="p">[</span><span class="n">pos_prev</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c">#print p(delta)</span>
-            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
+            <span class="c1">#print p(delta)
+</span>            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
                 <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
@@ -287,18 +289,18 @@ the sampling:</p>
         <span class="n">pos_prev</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">pos_prev</span><span class="p">)</span>
         <span class="n">delta</span> <span class="o">=</span> <span class="n">potential</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">-</span> <span class="n">potential</span><span class="p">[</span><span class="n">pos_prev</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c">#print p(delta)</span>
-            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
+            <span class="c1">#print p(delta)
+</span>            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
                 <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
         <span class="n">potential</span> <span class="o">+=</span> <span class="n">Gaussian</span><span class="p">(</span><span class="n">xx</span><span class="p">,</span><span class="n">yy</span><span class="p">,</span> <span class="n">xx</span><span class="p">[</span><span class="n">pos</span><span class="p">],</span><span class="n">yy</span><span class="p">[</span><span class="n">pos</span><span class="p">],</span> <span class="n">w</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">grid_width</span><span class="p">)</span>
-        <span class="c">#potential_k = copy.deepcopy(potential)</span>
-        <span class="c">#potential_flooding.append(potential_k)</span>
-        <span class="n">traj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">asarray</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span><span class="c">#, asarray(potential_flooding)</span></code></pre></figure>
+        <span class="c1">#potential_k = copy.deepcopy(potential)
+</span>        <span class="c1">#potential_flooding.append(potential_k)
+</span>        <span class="n">traj</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">asarray</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span><span class="c1">#, asarray(potential_flooding)</span></code></pre></figure>
 
 <p>Now we sample with the same parameters <code class="highlighter-rouge">beta</code> and <code class="highlighter-rouge">nstep</code> but with the ‘Gaussian
 flooding’</p>
@@ -379,14 +381,14 @@ comparison:</p>
     <span class="n">subtraj</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">trajs</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">delta</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">sub_density</span> <span class="o">=</span> <span class="n">get_density</span><span class="p">(</span><span class="n">subtraj</span><span class="p">)</span>
     <span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">u</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">v</span><span class="p">])</span>
-    <span class="n">imshow</span><span class="p">(</span><span class="n">bg2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">bg2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
     <span class="n">contour</span><span class="p">(</span><span class="n">V</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="nb">max</span><span class="o">=</span><span class="mi">200</span><span class="p">),</span> <span class="mi">15</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">V</span><span class="o">.</span><span class="nb">min</span><span class="p">(),</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
     <span class="n">imshow</span><span class="p">(</span><span class="n">sub_density</span><span class="o">/</span><span class="n">max_density</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">LogNorm</span><span class="p">(),</span> <span class="n">interpolation</span><span class="o">=</span><span class="s">'nearest'</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">axis</span><span class="p">(</span><span class="s">'off'</span><span class="p">)</span>
-    <span class="c">#starts = starts_list[i]</span>
-    
+    <span class="c1">#starts = starts_list[i]
+</span>    
     <span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">])</span>
-    <span class="n">imshow</span><span class="p">(</span><span class="n">bg1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">bg1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
     <span class="n">contour</span><span class="p">(</span><span class="n">potential_flooding</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="nb">max</span><span class="o">=</span><span class="mi">200</span><span class="p">),</span> <span class="mi">15</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
     <span class="n">trajs_meta</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">traj_meta</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">delta</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">delta</span><span class="p">])</span>
     <span class="n">subtraj_meta</span> <span class="o">=</span> <span class="n">asarray</span><span class="p">(</span><span class="n">trajs_meta</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">delta</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>

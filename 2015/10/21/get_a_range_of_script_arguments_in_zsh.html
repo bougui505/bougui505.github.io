@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,19 +131,19 @@
 
 <h2 id="get-for-example-3-arguments-from-the-fourth-one">Get, for example, 3 arguments from the fourth one:</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in</span> <span class="k">${</span><span class="p">@</span>:4:3<span class="k">}</span>; <span class="k">do
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in</span> <span class="k">${</span><span class="p">@</span>:4:3<span class="k">}</span><span class="p">;</span> <span class="k">do
     </span><span class="nb">echo</span> <span class="nv">$x</span>
 <span class="k">done</span></code></pre></figure>
 
 <h2 id="get-all-the-arguments">Get all the arguments:</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in</span> <span class="nv">$@</span>; <span class="k">do
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in</span> <span class="nv">$@</span><span class="p">;</span> <span class="k">do
     </span><span class="nb">echo</span> <span class="nv">$x</span>
 <span class="k">done</span></code></pre></figure>
 
 <h2 id="get-all-the-arguments-from-the-second-one">Get all the arguments from the second one:</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in</span> <span class="k">${</span><span class="p">@</span>:2<span class="k">}</span>; <span class="k">do
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>x <span class="k">in</span> <span class="k">${</span><span class="p">@</span>:2<span class="k">}</span><span class="p">;</span> <span class="k">do
     </span><span class="nb">echo</span> <span class="nv">$x</span>
 <span class="k">done</span></code></pre></figure>
 

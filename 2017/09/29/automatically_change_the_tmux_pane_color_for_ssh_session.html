@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -129,7 +131,7 @@
 
 <p>Add these lines to your <code class="highlighter-rouge">.zshrc</code> (should also work with bash – <code class="highlighter-rouge">.bashrc</code>)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>function color_ssh() {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function color_ssh() {
     if [[ "$TERM" = "screen" ]]; then
         trap "tmux select-pane -P 'bg=default'" 0 1 2 3 4 5 6
         tmux select-pane -P 'bg=colour230'
@@ -137,8 +139,7 @@
     ssh $@
 }
 alias ssh=color_ssh
-</code></pre>
-</div>
+</code></pre></div></div>
 
         <mark>If you want to ask me a question or leave me a message add @bougui505 in your comment.</mark>
 

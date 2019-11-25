@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -215,21 +217,18 @@ be in <code class="highlighter-rouge">$HOME/wallpapers</code> directory:</p>
 <p>Just add that entry to the user crontab to change the wallpaper every hour
 (with the command <code class="highlighter-rouge">crontab -e</code>):</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>0 * * * * sh /PATH/TO/SCRIPT/random_wallpaper.sh
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 * * * * sh /PATH/TO/SCRIPT/random_wallpaper.sh
+</code></pre></div></div>
 
 <p>If you get the following error message:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>(process:21381): dconf-WARNING **: failed to commit changes to dconf: Cannot autolaunch D-Bus without X11 $DISPLAY
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(process:21381): dconf-WARNING **: failed to commit changes to dconf: Cannot autolaunch D-Bus without X11 $DISPLAY
+</code></pre></div></div>
 
 <p>Just add that line to your crontab:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>DISPLAY=:0
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DISPLAY=:0
+</code></pre></div></div>
 
 <p>This line tell cron that the display it requires to run the windowed applications is found at 0. (see <a href="http://www.codecoffee.com/tipsforlinux/articles/23.html">http://www.codecoffee.com/tipsforlinux/articles/23.html</a>)</p>
 

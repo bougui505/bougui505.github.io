@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -214,12 +216,12 @@
 <h2 id="add-model--for-multiple-models-pdb-files">Add MODEL # for multiple models pdb files</h2>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function </span>mspdb <span class="o">()</span> <span class="o">{</span>
-    grep -v <span class="s1">'CRYST1'</span> <span class="nv">$1</span> | awk <span class="s1">'{if ($2==1){c+=1;print "MODEL "c}{print $0}}'</span> | sed <span class="s1">'s/END/ENDMDL/'</span> &gt; /dev/shm/tmp.pdb <span class="o">&amp;&amp;</span> mv -f /dev/shm/tmp.pdb <span class="nv">$1</span>
+    <span class="nb">grep</span> <span class="nt">-v</span> <span class="s1">'CRYST1'</span> <span class="nv">$1</span> | <span class="nb">awk</span> <span class="s1">'{if ($2==1){c+=1;print "MODEL "c}{print $0}}'</span> | <span class="nb">sed</span> <span class="s1">'s/END/ENDMDL/'</span> <span class="o">&gt;</span> /dev/shm/tmp.pdb <span class="o">&amp;&amp;</span> <span class="nb">mv</span> <span class="nt">-f</span> /dev/shm/tmp.pdb <span class="nv">$1</span>
     <span class="o">}</span></code></pre></figure>
 
 <h2 id="compute-the-geometric-center-from-a-pdb-file">Compute the geometric center from a <code class="highlighter-rouge">pdb</code> file</h2>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">awk <span class="s1">'{if ($1 == "ATOM") {sx+=$6;sy+=$7;sz+=$8;n+=1}} END {print sx/n,sy/n,sz/n}'</span> model1.pdb</code></pre></figure>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">awk</span> <span class="s1">'{if ($1 == "ATOM") {sx+=$6;sy+=$7;sz+=$8;n+=1}} END {print sx/n,sy/n,sz/n}'</span> model1.pdb</code></pre></figure>
 
 <p>Just adapt the column numbers for <code class="highlighter-rouge">x</code>, <code class="highlighter-rouge">y</code> and <code class="highlighter-rouge">z</code> depending of the presence of a chain id.</p>
 
@@ -233,9 +235,9 @@ files.</p>
 $tmpfile $1</code> to <code class="highlighter-rouge">mv $tmpfile newfilename.pdb</code> to avoid this feature.</p>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">function </span>stripH <span class="o">()</span> <span class="o">{</span>
-    <span class="nv">tmpfile</span><span class="o">=</span><span class="k">$(</span>mktemp -p /dev/shm<span class="k">)</span>
-    awk <span class="s1">'{if ($1=="ATOM" &amp;&amp; $3 !~ /H/) {c+=1; printf("%-6s%5s %4s %3s %s%4s    %8s%8s%8s\n", $1,c,$3,$4,$5,$6,$7,$8,$9)} \
-    else if ($1=="MODEL" || $1=="ENDMDL") {c=0; print $0}}'</span> <span class="nv">$1</span> &gt; <span class="nv">$tmpfile</span> <span class="o">&amp;&amp;</span> mv <span class="nv">$tmpfile</span> <span class="nv">$1</span>
+    <span class="nv">tmpfile</span><span class="o">=</span><span class="k">$(</span><span class="nb">mktemp</span> <span class="nt">-p</span> /dev/shm<span class="k">)</span>
+    <span class="nb">awk</span> <span class="s1">'{if ($1=="ATOM" &amp;&amp; $3 !~ /H/) {c+=1; printf("%-6s%5s %4s %3s %s%4s    %8s%8s%8s\n", $1,c,$3,$4,$5,$6,$7,$8,$9)} \
+    else if ($1=="MODEL" || $1=="ENDMDL") {c=0; print $0}}'</span> <span class="nv">$1</span> <span class="o">&gt;</span> <span class="nv">$tmpfile</span> <span class="o">&amp;&amp;</span> <span class="nb">mv</span> <span class="nv">$tmpfile</span> <span class="nv">$1</span>
 <span class="o">}</span></code></pre></figure>
 
 

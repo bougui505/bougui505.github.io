@@ -117,6 +117,8 @@
         
           
         
+          
+        
       </div>
     </nav>
   </div>
@@ -184,8 +186,8 @@ do this each input data is not attributed to a unique cell but to an ensemble
         <span class="n">pos_prev</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">pos_prev</span><span class="p">)</span>
         <span class="n">delta</span> <span class="o">=</span> <span class="n">potential</span><span class="p">[</span><span class="n">pos</span><span class="p">]</span> <span class="o">-</span> <span class="n">potential</span><span class="p">[</span><span class="n">pos_prev</span><span class="p">]</span>
         <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c">#print p(delta)</span>
-            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
+            <span class="c1">#print p(delta)
+</span>            <span class="k">if</span> <span class="n">p</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">():</span>
                 <span class="n">pos</span> <span class="o">=</span> <span class="n">pos_prev</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">pos_prev</span> <span class="o">=</span> <span class="n">pos</span>
@@ -263,8 +265,8 @@ The membership to all but the closest <script type="math/tex">s</script> bins is
     <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">n</span> <span class="o">=</span> <span class="n">smap</span><span class="o">.</span><span class="n">shape</span>
     <span class="n">sdhmat</span> <span class="o">=</span> <span class="n">zeros</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
     <span class="n">dmat</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">cdist</span><span class="p">(</span><span class="n">inputmat</span><span class="p">,</span> <span class="n">smap</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
-    <span class="c">#hmat = dmat.argsort(axis=1)[:,:s] # hit matrix</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">())</span>
+    <span class="c1">#hmat = dmat.argsort(axis=1)[:,:s] # hit matrix
+</span>    <span class="n">c</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="nb">sum</span><span class="p">())</span>
     <span class="k">for</span> <span class="n">ds</span> <span class="ow">in</span> <span class="n">dmat</span><span class="p">:</span>
         <span class="n">l</span> <span class="o">=</span> <span class="n">argsort</span><span class="p">(</span><span class="n">ds</span><span class="p">)[:</span><span class="n">s</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">ind</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">l</span><span class="p">):</span>
